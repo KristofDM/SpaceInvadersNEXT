@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<object>
+	<type>weapon</type>
+	<model>
+		<speed>100</speed>
+		<damage>1</damage>
+	</model>
+	
+	<view>
+		<sprite>bullet1.png</sprite>
+		<scale>0.5</scale>
+	</view>
+	
+	<controller>
+		<move direction="y"/>
+	</controller>
+</object>

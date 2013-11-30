@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<object>
+	<type>ship</type>
+	<model>
+		<position x="400" y="550"/>
+		<lives>3</lives>
+		<fireRate>480</fireRate> <!-- expressed in rounds per minute-->
+		<speed>5</speed>
+	</model>
+	
+	<view>
+		<sprite>spaceship1.png</sprite>
+		<scale>0.5</scale>
+	</view>
+	
+	<controller>
+		<move direction="xy"/>
+	</controller>
+</object>

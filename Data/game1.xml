@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<game>
+	<spaceShip>SpaceShip.xml</spaceShip>
+	<enemies enemy1="Alien1.xml" enemy2="Alien2.xml" enemy3="Alien3.xml" />
+	
+</game>
