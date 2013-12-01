@@ -28,6 +28,8 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
 
+	virtual bool checkRelevant(unsigned int, unsigned int);
+
 protected:
 	std::shared_ptr<models::Model> model_;
 	std::shared_ptr<views::ModelView> view_;

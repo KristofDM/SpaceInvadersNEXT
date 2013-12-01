@@ -10,11 +10,16 @@
 
 #include <SFML/Graphics.hpp>
 #include <string>
+#include <tuple>
 #include <vector>
+#include <list>
 #include <memory>
+#include "observers/controllers/EnemyShipController.h"
+#include "observers/controllers/SpaceShipController.h"
 #include "observers/controllers/ShipController.h"
 #include "models/Model.h"
 #include "models/SpaceShip.h"
+#include "models/EnemyShip.h"
 #include "factories/DataParser.h"
 #include "observers/views/SpaceShipView.h"
 
@@ -22,6 +27,9 @@ typedef std::vector<std::shared_ptr<models::Model> > modelsVec;
 typedef std::vector<std::shared_ptr<views::ModelView> > viewsVec;
 typedef std::vector<std::shared_ptr<controllers::ShipController> > shipControllerVec;
 typedef std::vector<std::shared_ptr<controllers::Controller> > controllersVec;
+
+typedef std::list<std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::ShipController> > > shipTriplets;
+typedef std::list<std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::ShipController> > > dumbTriplets;
 
 namespace game {
 
@@ -57,6 +65,10 @@ private:
 	shipControllerVec shipControllers_;
 
 	controllersVec staticControllers_;
+
+	shipTriplets ships;
+
+	dumbTriplets other;
 
 	void setupModels(factories::DataParser );
 	void setupViews(factories::DataParser );

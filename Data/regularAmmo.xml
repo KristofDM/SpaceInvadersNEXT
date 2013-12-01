@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <object>
-	<type>weapon</type>
+	<type>ammotype</type>
 	<model>
-		<speed>100</speed>
+		<speed>10</speed>
 		<damage>1</damage>
 	</model>
 	

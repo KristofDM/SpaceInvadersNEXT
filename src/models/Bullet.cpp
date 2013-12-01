@@ -6,6 +6,7 @@
  */
 
 #include "Bullet.h"
+#include <iostream>
 
 namespace models {
 
@@ -32,6 +33,20 @@ void Bullet::setUp(factories::DataParser data) {
 	catch (Exception& e) {
 		std::cout << e.what() << std::endl;
 	}
+}
+
+std::shared_ptr<Model> Bullet::getOwner() {
+	return owner_;
+}
+
+unsigned int Bullet::getDamage() {
+	return damage_;
+}
+
+bool Bullet::collided(std::shared_ptr<Model>) {
+	// remove bullet.
+	std::cout << "bullet disappeared" << std::endl;
+	return true;
 }
 
 

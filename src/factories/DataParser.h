@@ -16,7 +16,7 @@
 
 namespace factories {
 
-enum EDataType {ship, weapon, none};
+enum EDataType {ship, ammotype, enemyship, none};
 
 class DataParser {
 public:

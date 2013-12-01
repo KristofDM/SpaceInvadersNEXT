@@ -19,7 +19,6 @@ public:
 	virtual ~BulletController();
 
 	virtual void handleMoveInput(unsigned int, unsigned int);
-
 };
 
 } /* namespace controllers */

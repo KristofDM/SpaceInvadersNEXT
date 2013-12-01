@@ -44,11 +44,14 @@ void DataParser::parse(std::string dataFile) {
 			if (oPart == "type") {
 				TiXmlText* text = o->FirstChild()->ToText();
 				std::string typeName = text->Value();
-				if (typeName == "weapon") {
-					type_ = weapon;
+				if (typeName == "ammotype") {
+					type_ = ammotype;
 				}
 				else if (typeName == "ship") {
 					type_ = ship;
+				}
+				else if (typeName == "enemyship") {
+					type_ = enemyship;
 				}
 				else {
 					throw(Exception(typeName + " is an unknown type of object."));

@@ -38,4 +38,5 @@ void FlyingObject::moveDown() {
 	this->notify();
 }
 
+
 } /* namespace models */

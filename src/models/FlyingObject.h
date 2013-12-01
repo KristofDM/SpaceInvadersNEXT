@@ -26,9 +26,13 @@ public:
 
 	virtual void moveDown();
 
-	virtual bool shoot() { };
+	virtual bool shoot() {return false;};
 
-private:
+	virtual unsigned int getDamage() = 0;
+
+	virtual bool collided(std::shared_ptr<Model>) = 0;
+
+protected:
 	double speed_;
 
 };

@@ -21,6 +21,12 @@ public:
 
 	virtual void setUp(factories::DataParser);
 
+	virtual std::shared_ptr<Model> getOwner();
+
+	virtual unsigned int getDamage();
+
+	virtual bool collided(std::shared_ptr<Model>);
+
 private:
 	unsigned int damage_;
 

@@ -34,13 +34,13 @@ public:
 	//! Detaches Observer from our registry.
 	void detach(std::shared_ptr<observers::Observer>);
 
-	sf::Sprite getSprite();
+	sf::Sprite getSprite() const;
 
-	sf::Vector2f getPosition();
+	sf::Vector2f getPosition() const;
 
 	virtual void setUp(factories::DataParser);
 
-	sf::FloatRect getBounds();
+	sf::FloatRect getBounds() const;
 
 	virtual void moveLeft() = 0;
 
@@ -52,7 +52,18 @@ public:
 
 	virtual bool shoot() = 0;
 
-	EOrientation getOrientation();
+	virtual bool collided(std::shared_ptr<Model>) = 0;
+
+	virtual unsigned int getDamage() = 0;
+
+	virtual bool checkCollision(std::shared_ptr<Model>) const;
+
+	EOrientation getOrientation() const;
+
+	bool checkRelevant(unsigned int, unsigned int) const;
+
+	//! This will return the objects owner. By default this is itself.
+	virtual std::shared_ptr<Model> getOwner();
 
 protected:
 	//! sprite_ is a member of the model because it's used in logic. (Data collision etc. is calculated with sprite_ methods.) It also hold the position etc.
@@ -64,7 +75,7 @@ protected:
 	std::vector<std::shared_ptr<observers::Observer> > registry_;
 
 	//! Notifies all observers of Model changes.
-	virtual void notify();
+	virtual void notify() const;
 };
 
 } /* namespace models */

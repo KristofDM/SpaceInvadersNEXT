@@ -25,7 +25,6 @@ void BulletController::handleMoveInput(unsigned int width, unsigned int height) 
 		else {
 			model_->moveDown();
 		}
-		// What to do with aliens their bullets? They need to move down, need to find a clean way to do this.
 	}
 }
 

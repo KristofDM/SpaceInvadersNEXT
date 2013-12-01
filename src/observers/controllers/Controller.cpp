@@ -20,4 +20,9 @@ Controller::~Controller() {
 	model_->detach(thisController);
 }
 
+bool Controller::checkRelevant(unsigned int width, unsigned int height) {
+	return model_->checkRelevant(width, height);
+}
+
+
 } /* namespace controllers */

@@ -30,9 +30,9 @@ class ShipController : public Controller {
 public:
 	ShipController(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser);
 
-	virtual void handleMoveInput(unsigned int, unsigned int);
+	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
 
-	virtual void handleShooting(std::vector<std::shared_ptr<models::Model> >&, std::vector<std::shared_ptr<views::ModelView> >&, std::vector<std::shared_ptr<controllers::Controller> >&);
+	virtual void handleShooting(modelsVec& m, viewsVec& v, controllersVec& c) = 0;
 
 };
 } /* namespace controllers */

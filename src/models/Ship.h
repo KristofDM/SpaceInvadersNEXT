@@ -35,16 +35,20 @@ public:
 
 	virtual bool shoot();
 
+	virtual bool collided(std::shared_ptr<Model>);
 
+	virtual unsigned int getDamage();
 
 protected:
 	int lives_;
 
 	int fireRate_;
 
-	std::vector<std::shared_ptr<Bullet> > bullets;
+	unsigned int damage_;
 
-	sf::Clock clock_;
+	sf::Clock shootTimer_;
+
+	sf::Clock invincibleTimer_;
 };
 
 } /* namespace models */
