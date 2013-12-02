@@ -9,6 +9,7 @@
 #define CONTROLLER_H_
 
 #include <tuple>
+#include <list>
 #include <iostream>
 #include <memory>
 #include "../../models/Model.h"
@@ -17,6 +18,9 @@
 namespace controllers {
 
 enum EMoveDirection {x, y, xy, none};
+
+class Controller;
+typedef std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::Controller> > mvcTriple;
 
 class Controller : public observers::Observer{
 public:
@@ -27,6 +31,8 @@ public:
 	virtual void update() { }; // Not needed yet. (Change controller because of view)
 
 	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
+
+	virtual void gameInput(std::vector<mvcTriple>&, unsigned int, unsigned int) = 0;
 
 	virtual bool checkRelevant(unsigned int, unsigned int);
 

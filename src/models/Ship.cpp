@@ -52,10 +52,7 @@ bool Ship::collided(std::shared_ptr<Model> other) {
 	float t2 = t.asSeconds();
 	if (t2 > 3) {
 		lives_ -= other->getDamage();
-		std::cout << "Ship got hit! rem lives_ = " << lives_ << std::endl;
-
 		if (lives_ <= 0) {
-			std::cout << "Ship should be removed." << std::endl;
 		}
 		invincibleTimer_.restart();
 	}

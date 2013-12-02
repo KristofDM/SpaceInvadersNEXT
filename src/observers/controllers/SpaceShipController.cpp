@@ -18,9 +18,10 @@ SpaceShipController::~SpaceShipController() {
 	// TODO Auto-generated destructor stub
 }
 
-void SpaceShipController::handleShooting(modelsVec& m, viewsVec& v, controllersVec& c) {
+void SpaceShipController::handleShooting(std::vector<mvcTriple>& mvcTriples) {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && model_->shoot()) {
 		// Shoot!
+		std::cout << "YOU ARE SHOOTING!" << std::endl;
 
 		factories::DataParser data;
 		data.parse("Data/regularAmmo.xml");
@@ -28,14 +29,16 @@ void SpaceShipController::handleShooting(modelsVec& m, viewsVec& v, controllersV
 		float x = model_->getPosition().x + (model_->getBounds().width/2);
 		sf::Vector2f pos(x, model_->getPosition().y);
 		std::shared_ptr<models::Model> newBullet = std::make_shared<models::Bullet>(model_, pos, model_->getOrientation());
-		m.push_back(newBullet);
 		newBullet->setUp(data);
 
 		std::shared_ptr<views::ModelView> newBulletView = std::make_shared<views::BulletView>(newBullet, data, view_->getWindow());
-		v.push_back(newBulletView);
 
 		std::shared_ptr<controllers::Controller> newBulletController = std::make_shared<controllers::BulletController>(newBullet, newBulletView, data);
-		c.push_back(newBulletController);
+
+		mvcTriple bullet(newBullet, newBulletView, newBulletController);
+		mvcTriples.push_back(bullet);
+
+		std::cout << "you have shot" << std::endl;
 	}
 }
 

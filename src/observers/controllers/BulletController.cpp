@@ -28,4 +28,10 @@ void BulletController::handleMoveInput(unsigned int width, unsigned int height) 
 	}
 }
 
+void BulletController::gameInput(std::vector<mvcTriple>& mvcTriples, unsigned int width, unsigned int height) {
+	this->handleMoveInput(width, height);
+}
+
+
+
 } /* namespace controllers */

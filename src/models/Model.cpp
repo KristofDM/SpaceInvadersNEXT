@@ -86,10 +86,8 @@ bool Model::checkCollision(std::shared_ptr<Model> other) const{
 	if (otherPos.x >= thisPos.x && otherPos.x <= (thisPos.x + sprite_.getGlobalBounds().width) && otherPos.y >= thisPos.y && otherPos.y <= (thisPos.y + sprite_.getGlobalBounds().height)) {
 		if (this == other->getOwner().get()) {
 			// Colliding with its owner, nothing happens.
-			std::cout << "Collided with owner" << std::endl;
 			return false;
 		}
-		std::cout << this << " " << other->getOwner().get() << std::endl;
 		return true;
 	}
 	return false;

@@ -9,6 +9,7 @@
 #define BULLETCONTROLLER_H_
 
 #include "Controller.h"
+#include <list>
 
 namespace controllers {
 
@@ -19,6 +20,9 @@ public:
 	virtual ~BulletController();
 
 	virtual void handleMoveInput(unsigned int, unsigned int);
+
+	virtual void gameInput(std::vector<mvcTriple>&, unsigned int, unsigned int);
+
 };
 
 } /* namespace controllers */

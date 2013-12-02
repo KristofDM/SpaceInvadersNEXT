@@ -20,7 +20,7 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int);
 
-	virtual void handleShooting(modelsVec& m, viewsVec& v, controllersVec& c);
+	virtual void handleShooting(std::vector<mvcTriple>&);
 };
 
 } /* namespace controllers */

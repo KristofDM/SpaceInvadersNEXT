@@ -32,7 +32,10 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
 
-	virtual void handleShooting(modelsVec& m, viewsVec& v, controllersVec& c) = 0;
+	virtual void handleShooting(std::vector<mvcTriple>&) = 0;
+
+	virtual void gameInput(std::vector<mvcTriple>&, unsigned int, unsigned int);
+
 
 };
 } /* namespace controllers */

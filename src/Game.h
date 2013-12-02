@@ -23,13 +23,7 @@
 #include "factories/DataParser.h"
 #include "observers/views/SpaceShipView.h"
 
-typedef std::vector<std::shared_ptr<models::Model> > modelsVec;
-typedef std::vector<std::shared_ptr<views::ModelView> > viewsVec;
-typedef std::vector<std::shared_ptr<controllers::ShipController> > shipControllerVec;
-typedef std::vector<std::shared_ptr<controllers::Controller> > controllersVec;
-
-typedef std::list<std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::ShipController> > > shipTriplets;
-typedef std::list<std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::ShipController> > > dumbTriplets;
+typedef std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::Controller> > mvcTriple;
 
 namespace game {
 
@@ -58,21 +52,9 @@ private:
 
 	std::shared_ptr<controllers::ShipController> spaceShipController_;
 
-	modelsVec models_;
+	std::vector<mvcTriple> mvcTriples_;
 
-	viewsVec views_;
-
-	shipControllerVec shipControllers_;
-
-	controllersVec staticControllers_;
-
-	shipTriplets ships;
-
-	dumbTriplets other;
-
-	void setupModels(factories::DataParser );
-	void setupViews(factories::DataParser );
-	void setupControllers(factories::DataParser );
+	void setupTriples(factories::DataParser);
 };
 
 } /* namespace game */

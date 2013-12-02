@@ -30,49 +30,53 @@ void Game::setUp() {
 
     // ITERATE OVER ALL MODELS
     data.parse("Data/SpaceShip.xml");
-	setupModels(data);
 
-	setupViews(data);
+    setupTriples(data);
 
-	setupControllers(data);
+//	setupModels(data);
+//
+//	setupViews(data);
+//
+//	setupControllers(data);
 }
 
 void Game::cycle() {
 	// User actions.
-	handleMoveInput();
-	handleShooting();
+//	handleMoveInput();
+//	handleShooting();
 
 	// AI actions.
 
-	// Movement
-	for (auto e : shipControllers_) {
-		e->handleMoveInput(width_, height_);
-	}
+//	for (auto e : mvcTriples_) {
+////		std::cout << "1" << std::endl;
+//		std::get<2>(e)->gameInput(mvcTriples_, width_, height_);
+////		std::cout << "2" << std::endl;
+//	}
 
-//	 Shooting
-	for (auto e : shipControllers_) {
-		e->handleShooting(models_, views_, staticControllers_);
-	}
-
-	// Bullets travel.
-	for (auto bullet : staticControllers_) {
-		bullet->handleMoveInput(width_, height_);
+	unsigned int size = mvcTriples_.size();
+	for (unsigned int i = 0; i < size; i++) {
+		std::get<2>(mvcTriples_[i])->gameInput(mvcTriples_, width_, height_);
 	}
 
 	// Collision detection.
-
-	for (unsigned int i = 0; i < models_.size(); i++) {
-		for (unsigned int j = i; j < models_.size(); j++) {
-			if (models_.at(i) == models_.at(j)) {
+	for (unsigned int i = 0; i < mvcTriples_.size(); i++) {
+		for (unsigned int j = i; j < mvcTriples_.size(); j++) {
+			if (mvcTriples_.at(i) == mvcTriples_.at(j)) {
 				// Same object, no point in checking for collision.
 				continue;
 			}
 			else {
 				// Check for collision.
-				if (models_.at(i)->checkCollision(models_.at(j))) {
+				if (std::get<0>(mvcTriples_.at(i))->checkCollision(std::get<0>(mvcTriples_.at(j)))) {
 					// Handle collision.
-					models_.at(i)->collided(models_.at(j));
-					models_.at(j)->collided(models_.at(i));
+					if (std::get<0>(mvcTriples_.at(i))->collided(std::get<0>(mvcTriples_.at(j)))) {
+						// delete
+						mvcTriples_.erase(mvcTriples_.begin() + i);
+					}
+					if (std::get<0>(mvcTriples_.at(j))->collided(std::get<0>(mvcTriples_.at(i)))) {
+						// delete
+						mvcTriples_.erase(mvcTriples_.begin() + j);
+					}
 				}
 			}
 		}
@@ -109,50 +113,47 @@ void Game::cycle() {
 //	}
 }
 
-void Game::handleMoveInput() {
-	spaceShipController_->handleMoveInput(width_, height_);
-}
-
-void Game::handleShooting() {
-	spaceShipController_->handleShooting(models_, views_, staticControllers_);
-}
+//void Game::handleMoveInput() {
+//	spaceShipController_->handleMoveInput(width_, height_);
+//}
+//
+//void Game::handleShooting() {
+//	spaceShipController_->handleShooting(mvcTriples_);
+//}
 
 void Game::render() {
-	for (auto view : views_) {
-		view->draw();
+	for (auto triple : mvcTriples_) {
+		std::get<1>(triple)->draw();
 	}
 }
 
-void Game::setupModels(factories::DataParser data) {
+void Game::setupTriples(factories::DataParser data) {
+	// model
 	std::shared_ptr<models::Model> model = std::make_shared<models::SpaceShip>(data);
 	model->setUp(data);
-    models_.push_back(model);
+	// View
+	std::shared_ptr<views::ModelView> view = std::make_shared<views::SpaceShipView>(model, data, window_);
+	// Controller
+	spaceShipController_ = std::make_shared<controllers::SpaceShipController>(model, view, data);
 
-    factories::DataParser data2;
-    data2.parse("Data/enemyShip.xml");
-    std::shared_ptr<models::Model> model2 = std::make_shared<models::EnemyShip>(data2);
-    model2->setUp(data2);
-    models_.push_back(model2);
+	mvcTriple test(model, view, spaceShipController_);
+	mvcTriples_.push_back(test);
+
+	/* --- */
+
+	factories::DataParser data2;
+	data2.parse("Data/enemyShip.xml");
+	std::shared_ptr<models::Model> model2 = std::make_shared<models::EnemyShip>(data2);
+	model2->setUp(data2);
+
+	std::shared_ptr<views::ModelView> view2 = std::make_shared<views::SpaceShipView>(model2, data, window_);
+
+	std::shared_ptr<controllers::Controller> controller2 = std::make_shared<controllers::EnemyShipController>(model2, view2, data2);
+
+	mvcTriple test2(model2, view2, controller2);
+	mvcTriples_.push_back(test2);
+
 }
 
-void Game::setupViews(factories::DataParser data) {
-	for (auto model : models_) {
-		views_.push_back(std::make_shared<views::SpaceShipView>(model, data, window_));
-	}
-}
-
-void Game::setupControllers(factories::DataParser data) {
-	spaceShipController_ = std::make_shared<controllers::SpaceShipController>(models_.at(0), views_.at(0), data);
-	for (unsigned int i = 0; i < models_.size(); i++) {
-		if (i == 0) {
-			//shipControllers_.push_back(spaceShipController_);
-		}
-		else {
-			factories::DataParser data2;
-			data2.parse("Data/enemyShip.xml");
-			shipControllers_.push_back(std::make_shared<controllers::EnemyShipController>(models_.at(i), views_.at(1), data2));
-		}
-	}
-}
 
 } /* namespace game */
