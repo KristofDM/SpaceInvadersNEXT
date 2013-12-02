@@ -12,14 +12,14 @@
 #include <memory>
 #include "Model.h"
 #include "Bullet.h"
-#include "FlyingObject.h"
+#include "MovingObject.h"
 //#include "../observers/views/ModelView.h"
 //#include "../factories/ViewFactory.h"
 //#include "../factories/ControllerFactory.h"
 
 namespace models {
 
-class Ship : public FlyingObject {
+class Ship : public MovingObject {
 public:
 	Ship(int, int, double, EOrientation);
 

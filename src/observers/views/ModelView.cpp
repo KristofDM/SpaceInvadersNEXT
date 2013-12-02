@@ -9,7 +9,7 @@
 
 namespace views {
 
-ModelView::ModelView(std::shared_ptr<models::Model> model, factories::DataParser data, sf::RenderWindow& window)
+ModelView::ModelView(modelPtr model, factories::DataParser data, sf::RenderWindow& window)
 	: window_(window),
 	  model_(model)
 {

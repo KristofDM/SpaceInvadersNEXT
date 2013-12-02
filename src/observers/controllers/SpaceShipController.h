@@ -9,12 +9,13 @@
 #define SPACESHIPCONTROLLER_H_
 
 #include "ShipController.h"
+typedef std::shared_ptr<models::Model> modelPtr;
 
 namespace controllers {
 
 class SpaceShipController : public ShipController{
 public:
-	SpaceShipController(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser data);
+	SpaceShipController(modelPtr model, modelViewPtr view, factories::DataParser data);
 
 	virtual ~SpaceShipController();
 

@@ -14,7 +14,7 @@ namespace controllers {
 
 class EnemyShipController : public ShipController {
 public:
-	EnemyShipController(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser);
+	EnemyShipController(modelPtr model, modelViewPtr view, factories::DataParser);
 
 	virtual ~EnemyShipController();
 

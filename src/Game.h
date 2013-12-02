@@ -16,14 +16,18 @@
 #include <memory>
 #include "observers/controllers/EnemyShipController.h"
 #include "observers/controllers/SpaceShipController.h"
+#include "observers/controllers/StaticController.h"
 #include "observers/controllers/ShipController.h"
 #include "models/Model.h"
 #include "models/SpaceShip.h"
 #include "models/EnemyShip.h"
+#include "models/Shield.h"
 #include "factories/DataParser.h"
+#include "factories/GameParser.h"
 #include "observers/views/SpaceShipView.h"
 
-typedef std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::Controller> > mvcTriple;
+typedef std::shared_ptr<controllers::Controller> controllerPtr;
+typedef std::tuple<modelPtr, modelViewPtr, controllerPtr > mvcTriple;
 
 namespace game {
 
@@ -54,9 +58,9 @@ private:
 
 	std::vector<std::shared_ptr<mvcTriple> > mvcTriples_;
 
-	std::vector<std::shared_ptr<controllers::Controller> > test_;
+	std::vector<controllerPtr > test_;
 
-	void setupTriples(factories::DataParser);
+	void setupTriples(factories::GameParser);
 };
 
 } /* namespace game */

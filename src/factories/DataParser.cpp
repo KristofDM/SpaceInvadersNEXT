@@ -20,9 +20,9 @@ DataParser::DataParser()
 	  moveDirection_(-1)
 {}
 
-// Parse gamefiles and datafiles.
+// Parse datafiles.
 
-void DataParser::parse(std::string dataFile) {
+void DataParser::parseObject(std::string dataFile) {
 	try {
 		TiXmlDocument doc;
 		if(!doc.LoadFile(dataFile.c_str())) {

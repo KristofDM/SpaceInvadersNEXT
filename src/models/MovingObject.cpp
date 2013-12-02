@@ -1,39 +1,39 @@
 /*
- * FlyingObject.cpp
+ * MovingObject.cpp
  *
  *  Created on: Nov 30, 2013
  *      Author: kristof
  */
 
-#include "FlyingObject.h"
+#include "MovingObject.h"
 
 namespace models {
 
-FlyingObject::FlyingObject(double speed, EOrientation orientation)
+MovingObject::MovingObject(double speed, EOrientation orientation)
 	: Model(orientation),
 	  speed_(speed)
 {}
 
-FlyingObject::~FlyingObject() {
+MovingObject::~MovingObject() {
 	// TODO Auto-generated destructor stub
 }
 
-void FlyingObject::moveLeft() {
+void MovingObject::moveLeft() {
 	sprite_.move(-speed_, 0);
 	this->notify();
 }
 
-void FlyingObject::moveRight() {
+void MovingObject::moveRight() {
 	sprite_.move(speed_, 0);
 	this->notify();
 }
 
-void FlyingObject::moveUp() {
+void MovingObject::moveUp() {
 	sprite_.move(0, -speed_);
 	this->notify();
 }
 
-void FlyingObject::moveDown() {
+void MovingObject::moveDown() {
 	sprite_.move(0, speed_);
 	this->notify();
 }

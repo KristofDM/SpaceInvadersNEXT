@@ -9,7 +9,7 @@
 
 namespace views {
 
-BulletView::BulletView(std::shared_ptr<models::Model> model, factories::DataParser data, sf::RenderWindow& window)
+BulletView::BulletView(modelPtr model, factories::DataParser data, sf::RenderWindow& window)
 	: ModelView(model, data, window)
 {
 }

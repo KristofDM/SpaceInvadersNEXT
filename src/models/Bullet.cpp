@@ -11,7 +11,7 @@
 namespace models {
 
 Bullet::Bullet(std::shared_ptr<Model> owner, sf::Vector2f pos, EOrientation orientation)
-	: FlyingObject(3, orientation),
+	: MovingObject(3, orientation),
 	  damage_(1),
 	  owner_(owner),
 	  initPosition_(pos)

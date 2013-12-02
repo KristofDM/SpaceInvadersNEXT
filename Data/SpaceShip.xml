@@ -4,7 +4,7 @@
 	<model>
 		<position x="400" y="550"/>
 		<lives>3</lives>
-		<fireRate>60</fireRate> <!-- expressed in rounds per minute-->
+		<fireRate>420</fireRate> <!-- expressed in rounds per minute-->
 		<speed>3</speed>
 	</model>
 	
@@ -14,6 +14,6 @@
 	</view>
 	
 	<controller>
-		<move direction="x"/>
+		<move direction="xy"/>
 	</controller>
 </object>

@@ -10,12 +10,12 @@
 namespace models {
 
 Ship::Ship(int lives, int fireRate, double speed, EOrientation orientation)
-	: FlyingObject(speed, orientation),
+	: MovingObject(speed, orientation),
 	  lives_(lives),
 	  fireRate_(fireRate),
 	  shootTimer_(),
 	  invincibleTimer_(),
-	  damage_(20)
+	  damage_(100)
 {}
 
 int Ship::getLives() {
@@ -50,7 +50,7 @@ bool Ship::shoot() {
 bool Ship::collided(std::shared_ptr<Model> other) {
 	sf::Time t = invincibleTimer_.getElapsedTime();
 	float t2 = t.asSeconds();
-	if (t2 > 3) {
+	if (t2 > 1) {
 		lives_ -= other->getDamage();
 		if (lives_ <= 0) {
 			return true;

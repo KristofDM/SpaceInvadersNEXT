@@ -9,7 +9,7 @@
 
 namespace controllers {
 
-SpaceShipController::SpaceShipController(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser data)
+SpaceShipController::SpaceShipController(modelPtr model, modelViewPtr view, factories::DataParser data)
 	: ShipController(model, view, data)
 {
 }
@@ -22,16 +22,16 @@ void SpaceShipController::handleShooting(std::vector<std::shared_ptr<mvcTriple> 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && model_->shoot()) {
 		// Shoot!
 		factories::DataParser data;
-		data.parse("Data/regularAmmo.xml");
+		data.parseObject("Data/regularAmmo.xml");
 
 		float x = model_->getPosition().x + (model_->getBounds().width/2);
 		sf::Vector2f pos(x, model_->getPosition().y);
-		std::shared_ptr<models::Model> newBullet = std::make_shared<models::Bullet>(model_, pos, model_->getOrientation());
+		modelPtr newBullet = std::make_shared<models::Bullet>(model_, pos, model_->getOrientation());
 		newBullet->setUp(data);
 
-		std::shared_ptr<views::ModelView> newBulletView = std::make_shared<views::BulletView>(newBullet, data, view_->getWindow());
+		modelViewPtr newBulletView = std::make_shared<views::BulletView>(newBullet, data, view_->getWindow());
 
-		std::shared_ptr<controllers::Controller> newBulletController = std::make_shared<controllers::BulletController>(newBullet, newBulletView, data);
+		controllerPtr newBulletController = std::make_shared<controllers::BulletController>(newBullet, newBulletView, data);
 
 		bullets_.push_back(newBulletController);
 

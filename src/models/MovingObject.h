@@ -1,22 +1,22 @@
 /*
- * FlyingObject.h
+ * MovingObject.h
  *
  *  Created on: Nov 30, 2013
  *      Author: kristof
  */
 
-#ifndef FLYINGOBJECT_H_
-#define FLYINGOBJECT_H_
+#ifndef MovingObject_H_
+#define MovingObject_H_
 
 #include "Model.h"
 
 namespace models {
 
-class FlyingObject : public Model {
+class MovingObject : public Model {
 public:
-	FlyingObject(double, EOrientation);
+	MovingObject(double, EOrientation);
 
-	virtual ~FlyingObject();
+	virtual ~MovingObject();
 
 	virtual void moveLeft();
 
@@ -39,4 +39,4 @@ protected:
 
 } /* namespace models */
 
-#endif /* FLYINGOBJECT_H_ */
+#endif /* MovingObject_H_ */

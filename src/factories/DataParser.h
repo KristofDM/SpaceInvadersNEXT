@@ -25,7 +25,7 @@ public:
 
 	virtual ~DataParser();
 
-	void parse(std::string);
+	void parseObject(std::string);
 
 	EDataType getType();
 

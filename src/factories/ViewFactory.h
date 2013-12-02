@@ -25,7 +25,7 @@
 //
 //	virtual ~ViewFactory();
 //
-//	std::shared_ptr<views::ModelView> create(std::string, std::shared_ptr<models::Model>);
+//	modelViewPtr create(std::string, modelPtr);
 //
 //private:
 //	std::shared_ptr<sf::RenderWindow> window_;

@@ -9,7 +9,7 @@
 
 namespace controllers {
 
-ShipController::ShipController(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser data)
+ShipController::ShipController(modelPtr model, modelViewPtr view, factories::DataParser data)
 	: Controller(model, view, data)
 {
 

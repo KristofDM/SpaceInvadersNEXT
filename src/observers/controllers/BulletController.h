@@ -11,11 +11,14 @@
 #include "Controller.h"
 #include <list>
 
+typedef std::shared_ptr<models::Model> modelPtr;
+
+
 namespace controllers {
 
 class BulletController : public Controller{
 public:
-	BulletController(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser data);
+	BulletController(modelPtr model, modelViewPtr view, factories::DataParser data);
 
 	virtual ~BulletController();
 

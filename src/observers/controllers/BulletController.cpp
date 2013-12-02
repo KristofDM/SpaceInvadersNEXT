@@ -9,7 +9,7 @@
 
 namespace controllers {
 
-BulletController::BulletController(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser data)
+BulletController::BulletController(modelPtr model, modelViewPtr view, factories::DataParser data)
 		: Controller(model, view, data)
 {}
 

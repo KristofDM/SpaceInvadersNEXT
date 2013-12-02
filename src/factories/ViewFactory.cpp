@@ -17,7 +17,7 @@
 //	// TODO Auto-generated destructor stub
 //}
 //
-//std::shared_ptr<views::ModelView> ViewFactory::create(std::string dataFile, std::shared_ptr<models::Model> model) {
+//modelViewPtr ViewFactory::create(std::string dataFile, modelPtr model) {
 //	DataParser data(dataFile);
 //	switch (data.getType()) {
 //	case ship:

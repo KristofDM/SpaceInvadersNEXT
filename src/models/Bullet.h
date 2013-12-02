@@ -9,11 +9,11 @@
 #define BULLET_H_
 
 #include "Model.h"
-#include "FlyingObject.h"
+#include "MovingObject.h"
 
 namespace models {
 
-class Bullet : public FlyingObject {
+class Bullet : public MovingObject {
 public:
 	Bullet(std::shared_ptr<Model> owner, sf::Vector2f pos, EOrientation orientation);
 

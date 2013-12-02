@@ -26,18 +26,11 @@ void Game::setUp() {
 	 * Iterate over models, setupModel(), setupView() and setupController() will take care of 1 each and will be added in our triplets.
 	 */
 
-    factories::DataParser data;
+	factories::GameParser gameP;
+	gameP.parseGame("Data/game1.xml");
 
-    // ITERATE OVER ALL MODELS
-    data.parse("Data/SpaceShip.xml");
+    setupTriples(gameP);
 
-    setupTriples(data);
-
-//	setupModels(data);
-//
-//	setupViews(data);
-//
-//	setupControllers(data);
 }
 
 void Game::cycle() {
@@ -61,7 +54,6 @@ void Game::cycle() {
 					if (std::get<2>(*mvcTriples_.at(i))->collided(std::get<0>(*mvcTriples_.at(j)))) {
 						// delete
 						std::get<2>(*mvcTriples_.at(i))->markDeleted();
-
 					}
 					if (std::get<2>(*mvcTriples_.at(j))->collided(std::get<0>(*mvcTriples_.at(i)))) {
 						// delete
@@ -93,12 +85,21 @@ void Game::render() {
 	}
 }
 
-void Game::setupTriples(factories::DataParser data) {
+void Game::setupTriples(factories::GameParser game) {
+
+//	// Setup spaceship
+//	factories::DataParser data;
+//	data.parseObject(game.spaceShipXML_)
+//	modelPtr model = std::make_shared<models::SpaceShip>(data);
+//	model->setUp(data);
+
+	// Setup factories?
+
 	// model
-	std::shared_ptr<models::Model> model = std::make_shared<models::SpaceShip>(data);
+	modelPtr model = std::make_shared<models::SpaceShip>(data);
 	model->setUp(data);
 	// View
-	std::shared_ptr<views::ModelView> view = std::make_shared<views::SpaceShipView>(model, data, window_);
+	modelViewPtr view = std::make_shared<views::SpaceShipView>(model, data, window_);
 	// Controller
 	spaceShipController_ = std::make_shared<controllers::SpaceShipController>(model, view, data);
 
@@ -108,19 +109,70 @@ void Game::setupTriples(factories::DataParser data) {
 	/* --- */
 
 	factories::DataParser data2;
-	data2.parse("Data/enemyShip.xml");
-	std::shared_ptr<models::Model> model2 = std::make_shared<models::EnemyShip>(data2);
+	data2.parseObject("Data/enemyShip.xml");
+	modelPtr model2 = std::make_shared<models::EnemyShip>(data2);
 	model2->setUp(data2);
 
-	std::shared_ptr<views::ModelView> view2 = std::make_shared<views::SpaceShipView>(model2, data, window_);
+	modelViewPtr view2 = std::make_shared<views::SpaceShipView>(model2, data, window_);
 
-	std::shared_ptr<controllers::Controller> controller2 (new controllers::EnemyShipController(model2, view2, data2));
+	controllerPtr controller2 (new controllers::EnemyShipController(model2, view2, data2));
 
 	test_.push_back(controller2);
 
 	std::shared_ptr<mvcTriple> test2 (new mvcTriple(model2, view2, controller2));
 
 	mvcTriples_.push_back(test2);
+
+	/* --- */
+
+	factories::DataParser data3;
+	data3.parseObject("Data/shield1.xml");
+	modelPtr model3 = std::make_shared<models::Shield>(models::none, data3.getLives(), 100);
+	model3->setUp(data3);
+
+	modelViewPtr view3 = std::make_shared<views::SpaceShipView>(model3, data3, window_);
+
+	controllerPtr controller3 (new controllers::StaticController(model3, view3, data3));
+
+	test_.push_back(controller3);
+
+	std::shared_ptr<mvcTriple> test3 (new mvcTriple(model3, view3, controller3));
+
+	mvcTriples_.push_back(test3);
+
+	/* --- */
+
+	factories::DataParser data4;
+	data4.parseObject("Data/shield2.xml");
+	modelPtr model4 = std::make_shared<models::Shield>(models::none, data4.getLives(), 100);
+	model4->setUp(data4);
+
+	modelViewPtr view4 = std::make_shared<views::SpaceShipView>(model4, data4, window_);
+
+	controllerPtr controller4 (new controllers::StaticController(model4, view4, data4));
+
+	test_.push_back(controller4);
+
+	std::shared_ptr<mvcTriple> test4 (new mvcTriple(model4, view4, controller4));
+
+	mvcTriples_.push_back(test4);
+
+	/* --- */
+
+	factories::DataParser data5;
+	data5.parseObject("Data/shield.xml");
+	modelPtr model5 = std::make_shared<models::Shield>(models::none, data5.getLives(), 100);
+	model5->setUp(data5);
+
+	modelViewPtr view5 = std::make_shared<views::SpaceShipView>(model5, data5, window_);
+
+	controllerPtr controller5 (new controllers::StaticController(model5, view5, data5));
+
+	test_.push_back(controller5);
+
+	std::shared_ptr<mvcTriple> test5 (new mvcTriple(model5, view5, controller5));
+
+	mvcTriples_.push_back(test5);
 }
 
 

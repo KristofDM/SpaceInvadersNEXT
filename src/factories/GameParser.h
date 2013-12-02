@@ -1,0 +1,43 @@
+/*
+ * GameParser.h
+ *
+ *  Created on: Dec 2, 2013
+ *      Author: kristof
+ */
+
+#ifndef GAMEPARSER_H_
+#define GAMEPARSER_H_
+
+#include <tuple>
+#include <string>
+#include <vector>
+#include <iostream>
+#include "../tinyXML/tinyxml.h"
+#include "../Exception.h"
+
+typedef std::tuple<int, std::string, double, double> infoTuple;
+
+namespace factories {
+
+class GameParser {
+public:
+	GameParser();
+
+	virtual ~GameParser();
+
+	void parseGame(std::string);
+
+private:
+	std::string spaceShipXML_;
+
+	infoTuple shieldInfo_;
+
+	std::vector<infoTuple> enemyInfo_;
+
+	void parseRow(TiXmlElement*);
+
+};
+
+} /* namespace factories */
+
+#endif /* GAMEPARSER_H_ */

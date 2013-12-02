@@ -14,7 +14,7 @@ namespace views {
 
 class BulletView : public ModelView {
 public:
-	BulletView(std::shared_ptr<models::Model> model, factories::DataParser data, sf::RenderWindow& window);
+	BulletView(modelPtr model, factories::DataParser data, sf::RenderWindow& window);
 
 	virtual ~BulletView();
 

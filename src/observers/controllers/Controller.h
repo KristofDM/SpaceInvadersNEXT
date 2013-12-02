@@ -15,16 +15,20 @@
 #include "../../models/Model.h"
 #include "../views/ModelView.h"
 
+typedef std::shared_ptr<models::Model> modelPtr;
+typedef std::shared_ptr<views::ModelView> modelViewPtr;
+
 namespace controllers {
 
 enum EMoveDirection {x, y, xy, none};
 
 class Controller;
-typedef std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::Controller> > mvcTriple;
+typedef std::shared_ptr<controllers::Controller> controllerPtr;
+typedef std::tuple<modelPtr, modelViewPtr, std::shared_ptr<Controller> > mvcTriple;
 
 class Controller : public observers::Observer{
 public:
-	Controller(std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, factories::DataParser);
+	Controller(modelPtr, modelViewPtr, factories::DataParser);
 
 	virtual ~Controller();
 
@@ -38,13 +42,13 @@ public:
 
 	virtual void markDeleted();
 
-	virtual bool collided(std::shared_ptr<models::Model>);
+	virtual bool collided(modelPtr);
 
-	virtual bool checkCollision(std::shared_ptr<models::Model>);
+	virtual bool checkCollision(modelPtr);
 
 protected:
-	std::shared_ptr<models::Model> model_;
-	std::shared_ptr<views::ModelView> view_;
+	modelPtr model_;
+	modelViewPtr view_;
 	EMoveDirection moveDir_;
 };
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<object>
+	<type>ship</type>
+	<model>
+		<position x="400" y="500"/>
+		<lives>5</lives>
+	</model>
+	
+	<view>
+		<sprite>shield.png</sprite>
+		<scale>0.5</scale>
+	</view>
+	
+	<controller>
+		<move direction="none"/>
+	</controller>
+</object>

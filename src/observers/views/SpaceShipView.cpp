@@ -9,7 +9,7 @@
 #include <iostream>
 namespace views {
 
-SpaceShipView::SpaceShipView(std::shared_ptr<models::Model> model, factories::DataParser data, sf::RenderWindow& window)
+SpaceShipView::SpaceShipView(modelPtr model, factories::DataParser data, sf::RenderWindow& window)
 	: ModelView(model, data, window)
 {
 }

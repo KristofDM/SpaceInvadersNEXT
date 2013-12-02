@@ -19,16 +19,13 @@
 #include "../views/BulletView.h"
 
 
-typedef std::tuple<std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>, std::shared_ptr<controllers::Controller> > triple;
-typedef std::vector<std::shared_ptr<models::Model> > modelsVec;
-typedef std::vector<std::shared_ptr<views::ModelView> > viewsVec;
-typedef std::vector<std::shared_ptr<controllers::Controller> > controllersVec;
+typedef std::shared_ptr<models::Model> modelPtr;
 
 namespace controllers {
 
 class ShipController : public Controller {
 public:
-	ShipController(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser);
+	ShipController(modelPtr model, modelViewPtr view, factories::DataParser);
 
 	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
 
@@ -37,7 +34,7 @@ public:
 	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int);
 
 protected:
-	std::vector<std::shared_ptr<controllers::Controller> > bullets_;
+	std::vector<controllerPtr > bullets_;
 };
 } /* namespace controllers */
 

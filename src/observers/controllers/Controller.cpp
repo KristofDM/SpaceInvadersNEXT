@@ -9,7 +9,7 @@
 
 namespace controllers {
 
-Controller::Controller(std::shared_ptr<models::Model> model, std::shared_ptr<views::ModelView> view, factories::DataParser data)
+Controller::Controller(modelPtr model, modelViewPtr view, factories::DataParser data)
 	: model_(model),
 	  view_(view),
 	  moveDir_(EMoveDirection(data.getMoveDirection()))
@@ -33,11 +33,11 @@ void Controller::markDeleted() {
 	model_->markDeleted();
 }
 
-bool Controller::collided(std::shared_ptr<models::Model> other) {
+bool Controller::collided(modelPtr other) {
 	return model_->collided(other);
 }
 
-bool Controller::checkCollision(std::shared_ptr<models::Model> other) {
+bool Controller::checkCollision(modelPtr other) {
 	return model_->checkCollision(other);
 }
 

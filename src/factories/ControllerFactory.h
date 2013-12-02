@@ -31,7 +31,7 @@
 //
 //	virtual ~ControllerFactory();
 //
-//	std::shared_ptr<controllers::Controller> create(std::string, std::shared_ptr<models::Model>, std::shared_ptr<views::ModelView>);
+//	controllerPtr create(std::string, modelPtr, modelViewPtr);
 //
 //
 //private:

@@ -15,18 +15,19 @@
 #include "../../models/Model.h"
 #include "../../Exception.h"
 #include "../../factories/DataParser.h"
+typedef std::shared_ptr<models::Model> modelPtr;
 
 namespace views {
 
 class ModelView : public observers::Observer{
 public:
-	ModelView(std::shared_ptr<models::Model>, factories::DataParser, sf::RenderWindow&);
+	ModelView(modelPtr, factories::DataParser, sf::RenderWindow&);
 
 	virtual void update() = 0;
 
 	virtual void draw() = 0;
 
-	std::shared_ptr<models::Model> getModel();
+	modelPtr getModel();
 
 	sf::RenderWindow& getWindow();
 
@@ -34,7 +35,7 @@ public:
 
 protected:
 	sf::RenderWindow& window_;
-	std::shared_ptr<models::Model> model_;
+	modelPtr model_;
 };
 
 
