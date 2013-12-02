@@ -65,11 +65,16 @@ public:
 	//! This will return the objects owner. By default this is itself.
 	virtual std::shared_ptr<Model> getOwner();
 
+	void markDeleted();
+
+	bool getDeleted();
+
 protected:
 	//! sprite_ is a member of the model because it's used in logic. (Data collision etc. is calculated with sprite_ methods.) It also hold the position etc.
 	sf::Texture texture_;
 	sf::Sprite sprite_;
 	EOrientation orientation_;
+	bool deleted_;
 
 	//! Registry that holds all Obervers.
 	std::vector<std::shared_ptr<observers::Observer> > registry_;

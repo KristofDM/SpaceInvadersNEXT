@@ -10,7 +10,8 @@
 namespace models {
 
 Model::Model(EOrientation orientation)
-	: orientation_(orientation)
+	: orientation_(orientation),
+	  deleted_(false)
 {}
 
 Model::~Model() {
@@ -91,6 +92,14 @@ bool Model::checkCollision(std::shared_ptr<Model> other) const{
 		return true;
 	}
 	return false;
+}
+
+void Model::markDeleted() {
+	deleted_ = true;
+}
+
+bool Model::getDeleted() {
+	return deleted_;
 }
 
 } /* namespace models */

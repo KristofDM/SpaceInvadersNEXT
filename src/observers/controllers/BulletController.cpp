@@ -28,7 +28,7 @@ void BulletController::handleMoveInput(unsigned int width, unsigned int height) 
 	}
 }
 
-void BulletController::gameInput(std::vector<mvcTriple>& mvcTriples, unsigned int width, unsigned int height) {
+void BulletController::gameInput(std::vector<std::shared_ptr<mvcTriple> >& mvcTriples, unsigned int width, unsigned int height) {
 	this->handleMoveInput(width, height);
 }
 

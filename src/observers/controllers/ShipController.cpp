@@ -18,7 +18,7 @@ ShipController::ShipController(std::shared_ptr<models::Model> model, std::shared
 	//model_->attach(thisController);
 }
 
-void ShipController::gameInput(std::vector<mvcTriple>& mvcTriples, unsigned int width, unsigned int height) {
+void ShipController::gameInput(std::vector<std::shared_ptr<mvcTriple> >& mvcTriples, unsigned int width, unsigned int height) {
 	this->handleMoveInput(width, height);
 	this->handleShooting(mvcTriples);
 }

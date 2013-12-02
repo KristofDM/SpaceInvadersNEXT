@@ -15,6 +15,19 @@
 int main() {
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "Space Invaders NEXT");
+    sf::Texture texture_;
+    sf::Sprite sprite_;
+
+    try{
+    		// Load texture/sprite
+    		if(!texture_.loadFromFile("Graphics/space-1.png")) {
+    			throw Exception("Could not load sprite on location Graphics/space-1");
+    		}
+    		sprite_.setTexture(texture_);
+    	}
+	catch (Exception& e) {
+		std::cout << e.what() << std::endl;
+	}
 
     game::Game game(800, 600, window);
     game.setUp();
@@ -37,6 +50,7 @@ int main() {
         	}
         }
         window.clear();
+        window.draw(sprite_);
         game.render();
         window.display();
     }

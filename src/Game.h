@@ -52,7 +52,9 @@ private:
 
 	std::shared_ptr<controllers::ShipController> spaceShipController_;
 
-	std::vector<mvcTriple> mvcTriples_;
+	std::vector<std::shared_ptr<mvcTriple> > mvcTriples_;
+
+	std::vector<std::shared_ptr<controllers::Controller> > test_;
 
 	void setupTriples(factories::DataParser);
 };

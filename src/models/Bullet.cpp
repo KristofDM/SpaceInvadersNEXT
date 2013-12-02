@@ -45,7 +45,6 @@ unsigned int Bullet::getDamage() {
 
 bool Bullet::collided(std::shared_ptr<Model>) {
 	// remove bullet.
-	std::cout << "bullet disappeared" << std::endl;
 	return true;
 }
 

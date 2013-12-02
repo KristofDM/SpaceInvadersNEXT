@@ -20,7 +20,7 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int);
 
-	virtual void handleShooting(std::vector<mvcTriple>&);
+	virtual void handleShooting(std::vector<std::shared_ptr<mvcTriple> >&);
 
 };
 

@@ -24,7 +24,7 @@ void EnemyShipController::handleMoveInput(unsigned int width, unsigned int heigh
 
 }
 
-void EnemyShipController::handleShooting(std::vector<mvcTriple>& mvcTriples) {
+void EnemyShipController::handleShooting(std::vector<std::shared_ptr<mvcTriple> >& mvcTriples) {
 
 	// AI CONTROLLED
 	if (model_->shoot()) {
@@ -40,8 +40,8 @@ void EnemyShipController::handleShooting(std::vector<mvcTriple>& mvcTriples) {
 		std::shared_ptr<views::ModelView> newBulletView = std::make_shared<views::BulletView>(newBullet, data, view_->getWindow());
 
 		std::shared_ptr<controllers::Controller> newBulletController = std::make_shared<controllers::BulletController>(newBullet, newBulletView, data);
-
-		mvcTriple bullet(newBullet, newBulletView, newBulletController);
+		bullets_.push_back(newBulletController);
+		std::shared_ptr<mvcTriple> bullet = std::make_shared<mvcTriple>(newBullet, newBulletView, newBulletController);
 		mvcTriples.push_back(bullet);
 	}
 }

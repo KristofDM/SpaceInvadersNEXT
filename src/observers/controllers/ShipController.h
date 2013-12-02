@@ -32,11 +32,12 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
 
-	virtual void handleShooting(std::vector<mvcTriple>&) = 0;
+	virtual void handleShooting(std::vector<std::shared_ptr<mvcTriple> >&) = 0;
 
-	virtual void gameInput(std::vector<mvcTriple>&, unsigned int, unsigned int);
+	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int);
 
-
+protected:
+	std::vector<std::shared_ptr<controllers::Controller> > bullets_;
 };
 } /* namespace controllers */
 

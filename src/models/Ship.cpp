@@ -53,10 +53,10 @@ bool Ship::collided(std::shared_ptr<Model> other) {
 	if (t2 > 3) {
 		lives_ -= other->getDamage();
 		if (lives_ <= 0) {
+			return true;
 		}
 		invincibleTimer_.restart();
 	}
-
 	return false;
 }
 

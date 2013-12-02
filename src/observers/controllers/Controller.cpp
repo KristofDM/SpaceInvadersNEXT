@@ -21,8 +21,26 @@ Controller::~Controller() {
 }
 
 bool Controller::checkRelevant(unsigned int width, unsigned int height) {
-	return model_->checkRelevant(width, height);
+	if (model_->getDeleted() || !model_->checkRelevant(width, height)) {
+		return false;
+	}
+	else {
+		return true;
+	}
 }
+
+void Controller::markDeleted() {
+	model_->markDeleted();
+}
+
+bool Controller::collided(std::shared_ptr<models::Model> other) {
+	return model_->collided(other);
+}
+
+bool Controller::checkCollision(std::shared_ptr<models::Model> other) {
+	return model_->checkCollision(other);
+}
+
 
 
 } /* namespace controllers */

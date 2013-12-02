@@ -32,22 +32,21 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
 
-	virtual void gameInput(std::vector<mvcTriple>&, unsigned int, unsigned int) = 0;
+	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int) = 0;
 
 	virtual bool checkRelevant(unsigned int, unsigned int);
+
+	virtual void markDeleted();
+
+	virtual bool collided(std::shared_ptr<models::Model>);
+
+	virtual bool checkCollision(std::shared_ptr<models::Model>);
 
 protected:
 	std::shared_ptr<models::Model> model_;
 	std::shared_ptr<views::ModelView> view_;
 	EMoveDirection moveDir_;
 };
-
-
-//class AlienController : public Controller {
-//public:
-//	AlienController();
-//	virtual ~AlienController();
-//};
 
 } /* namespace controllers */
 
