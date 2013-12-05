@@ -7,10 +7,7 @@
 //============================================================================
 
 
-#include <memory>
-
 #include "Game.h"
-//#include "Utility.h"
 
 int main() {
 
@@ -41,9 +38,7 @@ int main() {
         	switch(event.type) {
 				case sf::Event::Closed:
 					window.close();
-					// Should not use exit, no stack unwinding!
-					exit(0);
-//					return 0;
+					return 0;
 					break;
 				default:
 					break;

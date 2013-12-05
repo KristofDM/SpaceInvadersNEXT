@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <game>
-	<spaceShip file="SpaceShip.xml" />
+	<spaceShip file="Data/SpaceShip.xml" />
 	<enemies>
-		<row amount="5" file="enemyShip1.xml" space="100" height="100"/>
-		<row amount="5" file="enemyShip1.xml" space="100" height="200"/>
-		<row amount="5" file="enemyShip1.xml" space="100" height="300"/>
-		<row amount="5" file="enemyShip1.xml" space="100" height="400"/>
+		<row amount="7" file="Data/enemyShip.xml"/>
+		<row amount="7" file="Data/enemyShip2.xml"/>
+		<row amount="7" file="Data/enemyShip3.xml"/>
+		<!---<row amount="5" file="Data/enemyShip.xml"/>--->
 	</enemies>
-	<shield amount="3" file="shield1.xml" space="150" height="500"/>
+	<shield amount="3" file="Data/shield1.xml"/>
 </game>

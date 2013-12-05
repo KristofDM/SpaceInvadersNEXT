@@ -16,8 +16,9 @@ Controller::Controller(modelPtr model, modelViewPtr view, factories::DataParser 
 {}
 
 Controller::~Controller() {
-	std::shared_ptr<observers::Observer> thisController(this);
-	model_->detach(thisController);
+//	std::shared_ptr<observers::Observer> thisController(this);
+//	model_->detach(thisController);
+
 }
 
 bool Controller::checkRelevant(unsigned int width, unsigned int height) {

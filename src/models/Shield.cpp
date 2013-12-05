@@ -33,4 +33,5 @@ bool Shield::collided(std::shared_ptr<Model> other) {
 	}
 }
 
+
 } /* namespace models */

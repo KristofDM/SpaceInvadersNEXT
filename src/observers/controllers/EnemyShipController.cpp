@@ -40,7 +40,6 @@ void EnemyShipController::handleShooting(std::vector<std::shared_ptr<mvcTriple> 
 		modelViewPtr newBulletView = std::make_shared<views::BulletView>(newBullet, data, view_->getWindow());
 
 		controllerPtr newBulletController = std::make_shared<controllers::BulletController>(newBullet, newBulletView, data);
-		bullets_.push_back(newBulletController);
 		std::shared_ptr<mvcTriple> bullet = std::make_shared<mvcTriple>(newBullet, newBulletView, newBulletController);
 		mvcTriples.push_back(bullet);
 	}

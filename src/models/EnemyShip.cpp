@@ -34,6 +34,7 @@ void EnemyShip::moveLeft() {
 	}
 }
 
+
 //bool EnemyShip::shoot() {
 //	// Model itself
 //	sf::Time t = clock_.getElapsedTime();

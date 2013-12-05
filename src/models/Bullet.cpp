@@ -21,7 +21,7 @@ Bullet::Bullet(std::shared_ptr<Model> owner, sf::Vector2f pos, EOrientation orie
 Bullet::~Bullet() {
 }
 
-void Bullet::setUp(factories::DataParser data) {
+void Bullet::setUp(factories::DataParser data, int space) {
 	try{
 		// Load texture/sprite
 		if(!texture_.loadFromFile(data.getSpritePath())) {
@@ -29,6 +29,15 @@ void Bullet::setUp(factories::DataParser data) {
 		}
 		sprite_.setTexture(texture_);
 		sprite_.setPosition(initPosition_);
+		// We rotate it in our model because it is also relevant for logic purposes.
+		switch(owner_->getOrientation()) {
+		case down:
+			sprite_.rotate(180);
+			break;
+		case up:
+		default:
+			break;
+		}
 	}
 	catch (Exception& e) {
 		std::cout << e.what() << std::endl;

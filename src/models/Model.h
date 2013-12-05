@@ -29,16 +29,16 @@ public:
 	virtual ~Model();
 
 	//! Attaches Observer to our registry.
-	void attach(std::shared_ptr<observers::Observer>);
+	void attach(std::weak_ptr<observers::Observer>);
 
 	//! Detaches Observer from our registry.
-	void detach(std::shared_ptr<observers::Observer>);
+	void detach(std::weak_ptr<observers::Observer>);
 
 	sf::Sprite getSprite() const;
 
 	sf::Vector2f getPosition() const;
 
-	virtual void setUp(factories::DataParser);
+	virtual void setUp(factories::DataParser data, int space = 0);
 
 	sf::FloatRect getBounds() const;
 
@@ -77,7 +77,7 @@ protected:
 	bool deleted_;
 
 	//! Registry that holds all Obervers.
-	std::vector<std::shared_ptr<observers::Observer> > registry_;
+	std::vector<std::weak_ptr<observers::Observer> > registry_;
 
 	//! Notifies all observers of Model changes.
 	virtual void notify() const;

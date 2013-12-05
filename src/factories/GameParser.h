@@ -15,7 +15,7 @@
 #include "../tinyXML/tinyxml.h"
 #include "../Exception.h"
 
-typedef std::tuple<int, std::string, double, double> infoTuple;
+typedef std::tuple<int, std::string> infoTuple;
 
 namespace factories {
 
@@ -26,6 +26,12 @@ public:
 	virtual ~GameParser();
 
 	void parseGame(std::string);
+
+	std::string getSpaceShipXML();
+
+	infoTuple getShieldInfo();
+
+	std::vector<infoTuple> getEnemyInfo();
 
 private:
 	std::string spaceShipXML_;

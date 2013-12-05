@@ -46,7 +46,7 @@ void GameParser::parseGame(std::string dataFile) {
 			parseRow(o);
 		}
 		else if (oPart == "shield") {
-			infoTuple shieldInfo(std::stoi(o->Attribute("amount")), o->Attribute("file"), std::stod(o->Attribute("space")), std::stod(o->Attribute("height")));
+			infoTuple shieldInfo(std::stoi(o->Attribute("amount")), o->Attribute("file"));
 			shieldInfo_ = shieldInfo;
 		}
 		else {
@@ -64,7 +64,7 @@ void GameParser::parseRow(TiXmlElement* p) {
 		for (TiXmlElement* var = p->FirstChildElement(); var != NULL; var = var->NextSiblingElement()) {
 			std::string fieldName = var->Value();
 			if (fieldName == "row") {
-				infoTuple entry(std::stoi(var->Attribute("amount")), var->Attribute("file"), std::stod(var->Attribute("space")), std::stod(var->Attribute("height")));
+				infoTuple entry(std::stoi(var->Attribute("amount")), var->Attribute("file"));
 				enemyInfo_.push_back(entry);
 			}
 			else {
@@ -75,6 +75,18 @@ void GameParser::parseRow(TiXmlElement* p) {
 	catch(Exception& e) {
 		std::cout << e.what() << std::endl;
 	}
+}
+
+std::string GameParser::getSpaceShipXML() {
+	return spaceShipXML_;
+}
+
+infoTuple GameParser::getShieldInfo() {
+	return shieldInfo_;
+}
+
+std::vector<infoTuple> GameParser::getEnemyInfo() {
+	return enemyInfo_;
 }
 
 } /* namespace factories */

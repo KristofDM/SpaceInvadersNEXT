@@ -17,7 +17,8 @@ DataParser::DataParser()
 	  speed_(-1),
 	  sprite_(),
 	  scale_(-1),
-	  moveDirection_(-1)
+	  moveDirection_(-1),
+	  space_(0)
 {}
 
 // Parse datafiles.
@@ -149,6 +150,15 @@ void DataParser::parseModel(TiXmlElement* p) {
 				 std::string value = text->Value();
 				 speed_ = std::stod(value);
 			}
+			else if (fieldName == "space") {
+				TiXmlText* text = var->FirstChild()->ToText();
+				 if (text == NULL) {
+					 // No value given.
+					 throw Exception("Space not specified for object.");
+				 }
+				 std::string value = text->Value();
+				 space_ = std::stoi(value);
+			}
 		}
 	}
 	catch(Exception& e) {
@@ -215,6 +225,10 @@ double DataParser::getSpeed() {
 
 EDataType DataParser::getType() {
 	return type_;
+}
+
+int DataParser::getSpace() {
+	return space_;
 }
 
 

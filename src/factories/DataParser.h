@@ -33,6 +33,7 @@ public:
 	int getLives();
 	int getFireRate();
 	double getSpeed();
+	int getSpace();
 
 	std::string getSpritePath();
 	double getScale();
@@ -49,6 +50,7 @@ private:
 	int lives_;
 	int fireRate_;
 	double speed_;
+	int space_;
 
 	// View
 	std::string sprite_;
@@ -65,8 +67,6 @@ private:
 
 	//! Parses controller portion of the data file.
 	void parseController(TiXmlElement*);
-
-
 
 };
 

@@ -19,7 +19,7 @@ public:
 
 	virtual ~Bullet();
 
-	virtual void setUp(factories::DataParser);
+	virtual void setUp(factories::DataParser, int space = 0);
 
 	virtual std::shared_ptr<Model> getOwner();
 

@@ -27,14 +27,16 @@ sf::Vector2f Model::getPosition() const {
 }
 
 
-void Model::setUp(factories::DataParser data) {
+void Model::setUp(factories::DataParser data, int space) {
 	try{
 		// Load texture/sprite
 		if(!texture_.loadFromFile(data.getSpritePath())) {
 			throw Exception("Could not load sprite on location " + data.getSpritePath());
 		}
 		sprite_.setTexture(texture_);
-		sprite_.setPosition(data.getPos());
+		sf::Vector2f position = data.getPos();
+		position.x += space;
+		sprite_.setPosition(position);
 	}
 	catch (Exception& e) {
 		std::cout << e.what() << std::endl;
@@ -45,18 +47,30 @@ sf::FloatRect Model::getBounds() const {
 	return sprite_.getGlobalBounds();
 }
 
-void Model::attach(std::shared_ptr<observers::Observer> obs) {
-	registry_.push_back(obs);
+void Model::attach(std::weak_ptr<observers::Observer> obs) {
+//	registry_.push_back(obs);
 }
 
-void Model::detach(std::shared_ptr<observers::Observer> obs) {
-	registry_.push_back(obs);
+void Model::detach(std::weak_ptr<observers::Observer> obs) {
+//	std::vector<std::weak_ptr<observers::Observer> >::iterator it;
+//	for (it = registry_.begin(); it != registry_.end(); it++) {
+//		std::shared_ptr<observers::Observer> p = it->lock();
+//		std::shared_ptr<observers::Observer> p2 = obs.lock();
+//		if (p == p2) {
+//			break;
+//		}
+//		p.reset();
+//		p2.reset();
+//	}
+//	registry_.erase(it);
 }
 
 void Model::notify() const {
-	for (auto observer : registry_) {
-		observer->update();
-	}
+//	for (auto observer : registry_) {
+//		std::shared_ptr<observers::Observer> p = observer.lock();
+//		p->update();
+//		p.reset();
+//	}
 }
 
 EOrientation Model::getOrientation() const {

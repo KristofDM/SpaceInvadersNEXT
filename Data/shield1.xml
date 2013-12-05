@@ -2,7 +2,8 @@
 <object>
 	<type>ship</type>
 	<model>
-		<position x="200" y="500"/>
+		<position x="150" y="500"/>
+		<space>200</space>
 		<lives>5</lives>
 	</model>
 	

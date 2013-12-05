@@ -25,7 +25,7 @@ public:
 
 	virtual void update() = 0;
 
-	virtual void draw() = 0;
+	virtual void draw();
 
 	modelPtr getModel();
 
@@ -37,16 +37,6 @@ protected:
 	sf::RenderWindow& window_;
 	modelPtr model_;
 };
-
-
-
-//class AlienView : public ModelView {
-//public:
-//	AlienView(sf::Sprite, std::shared_ptr<sf::RenderWindow>);
-////	virtual void updateView();
-//	virtual ~AlienView();
-//private:
-//};
 
 } /* namespace views */
 

@@ -13,14 +13,25 @@ ModelView::ModelView(modelPtr model, factories::DataParser data, sf::RenderWindo
 	: window_(window),
 	  model_(model)
 {
-	std::shared_ptr<observers::Observer> thisView(this);
-	model_->attach(thisView);
+//	std::shared_ptr<observers::Observer> thisView(this);
+//	std::weak_ptr<observers::Observer> tv2 = thisView;
+//	thisView.reset();
+//	model_->attach(tv2);
+
 }
 
 ModelView::~ModelView() {
-	std::shared_ptr<observers::Observer> thisView(this);
-	model_->detach(thisView);
+//	std::weak_ptr<observers::Observer> thisView(this);
+//	model_->detach(thisView);
+//
+//	model_.reset();
 }
+
+void ModelView::draw() {
+	window_.draw(model_->getSprite());
+}
+
+
 
 sf::RenderWindow& ModelView::getWindow() {
 	return window_;
