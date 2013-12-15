@@ -38,5 +38,10 @@ void MovingObject::moveDown() {
 	this->notify();
 }
 
+void MovingObject::setFlags(bool invincible, bool shooting) {
+	invincible_ = invincible;
+}
+
+
 
 } /* namespace models */

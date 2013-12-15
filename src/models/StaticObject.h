@@ -32,6 +32,8 @@ public:
 
 	virtual bool collided(std::shared_ptr<Model>) = 0;
 
+	virtual void setFlags(bool, bool);
+
 };
 
 

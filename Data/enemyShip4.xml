@@ -2,7 +2,7 @@
 <object>
 	<type>enemyship</type>
 	<model>
-		<position x="100" y="150"/>
+		<position x="100" y="350"/>
 		<lives>1</lives>
 		<fireRate>60</fireRate> <!-- expressed in rounds per minute-->
 		<speed>1</speed>

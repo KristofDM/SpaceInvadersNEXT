@@ -4,7 +4,7 @@
 	<model>
 		<position x="150" y="500"/>
 		<space>200</space>
-		<lives>5</lives>
+		<lives>90000</lives>
 	</model>
 	
 	<view>

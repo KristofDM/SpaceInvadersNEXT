@@ -29,6 +29,7 @@ void EnemyShipController::handleShooting(std::vector<std::shared_ptr<mvcTriple> 
 	// AI CONTROLLED
 	if (model_->shoot()) {
 		// Shoot!
+
 		factories::DataParser data;
 		data.parseObject("Data/regularAmmo.xml");
 
@@ -40,7 +41,11 @@ void EnemyShipController::handleShooting(std::vector<std::shared_ptr<mvcTriple> 
 		modelViewPtr newBulletView = std::make_shared<views::BulletView>(newBullet, data, view_->getWindow());
 
 		controllerPtr newBulletController = std::make_shared<controllers::BulletController>(newBullet, newBulletView, data);
+
 		std::shared_ptr<mvcTriple> bullet = std::make_shared<mvcTriple>(newBullet, newBulletView, newBulletController);
+
+//		std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
+//		std::shared_ptr<mvcTriple> bullet = factory->createBullet("Data/regularAmmo.xml", model_, view_->getWindow());
 		mvcTriples.push_back(bullet);
 	}
 }

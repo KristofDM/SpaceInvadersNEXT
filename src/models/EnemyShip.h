@@ -14,13 +14,22 @@ namespace models {
 
 class EnemyShip : public Ship {
 public:
-	EnemyShip(factories::DataParser);
+	EnemyShip(factories::DataParser, int);
 	virtual ~EnemyShip();
 
 	virtual void moveLeft();
+//	virtual bool checkCollision(std::shared_ptr<Model> other) const;
+	int getPoints();
 
 private:
+
 	static double amountTravelled_;
+	static int amount_;
+	static int movedTimes_;
+	static double movedDown_;
+	int moveAmount_;
+	int points_;
+
 
 };
 

@@ -42,6 +42,8 @@ bool Controller::checkCollision(modelPtr other) {
 	return model_->checkCollision(other);
 }
 
-
+void Controller::setFlags(bool invincible, bool shooting) {
+	model_->setFlags(invincible, shooting);
+}
 
 } /* namespace controllers */

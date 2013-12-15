@@ -36,17 +36,17 @@ void GameParser::parseGame(std::string dataFile) {
 		}
 		for(TiXmlElement* o = object->FirstChildElement(); o != NULL; o = o->NextSiblingElement()) {
 		std::string oPart = o->Value();
-		std::cout << oPart << std::endl;
 		if (oPart == "spaceShip") {
 			// Parse spaceship info
 			spaceShipXML_ = o->Attribute("file");
 		}
 		else if (oPart == "enemies") {
 			// Parse enemies
-			parseRow(o);
+			int amount = std::stoi(o->Attribute("maxSize"));
+			parseRow(o, amount);
 		}
 		else if (oPart == "shield") {
-			infoTuple shieldInfo(std::stoi(o->Attribute("amount")), o->Attribute("file"));
+			infoTuple shieldInfo(std::stoi(o->Attribute("amount")), std::stoi(o->Attribute("space")), o->Attribute("file"), "", 0);
 			shieldInfo_ = shieldInfo;
 		}
 		else {
@@ -59,12 +59,12 @@ void GameParser::parseGame(std::string dataFile) {
 	}
 }
 
-void GameParser::parseRow(TiXmlElement* p) {
+void GameParser::parseRow(TiXmlElement* p, int amount) {
 	try {
 		for (TiXmlElement* var = p->FirstChildElement(); var != NULL; var = var->NextSiblingElement()) {
 			std::string fieldName = var->Value();
 			if (fieldName == "row") {
-				infoTuple entry(std::stoi(var->Attribute("amount")), var->Attribute("file"));
+				infoTuple entry(amount, std::stoi(var->Attribute("space")), var->Attribute("file"), var->Attribute("order"), std::stoi(var->Attribute("moveAmount")));
 				enemyInfo_.push_back(entry);
 			}
 			else {

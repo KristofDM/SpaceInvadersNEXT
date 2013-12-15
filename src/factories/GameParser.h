@@ -15,7 +15,7 @@
 #include "../tinyXML/tinyxml.h"
 #include "../Exception.h"
 
-typedef std::tuple<int, std::string> infoTuple;
+typedef std::tuple<int, int, std::string, std::string, int> infoTuple;
 
 namespace factories {
 
@@ -40,7 +40,7 @@ private:
 
 	std::vector<infoTuple> enemyInfo_;
 
-	void parseRow(TiXmlElement*);
+	void parseRow(TiXmlElement*, int);
 
 };
 

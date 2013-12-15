@@ -29,6 +29,16 @@ int main() {
     game::Game game(800, 600, window);
     game.setUp();
 
+    sf::Font font;
+	// Load it from a file
+	if (!font.loadFromFile("Graphics/SPACEMAN.TTF"))
+	{
+		// Throw exception
+	}
+
+	sf::Text text("Space Invaders: NEXT", font, 30);
+	text.setColor(sf::Color(100, 100, 100));
+
     while (window.isOpen()) {
     	// Main program loop.
     	game.cycle();
@@ -45,7 +55,9 @@ int main() {
         	}
         }
         window.clear();
+        game.endGame();
         window.draw(sprite_);
+    	window.draw(text);
         game.render();
         window.display();
     }

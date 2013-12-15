@@ -21,10 +21,13 @@
 #include "models/Model.h"
 #include "models/SpaceShip.h"
 #include "models/EnemyShip.h"
+#include "models/Ship.h"
 #include "models/Shield.h"
 #include "factories/DataParser.h"
 #include "factories/GameParser.h"
 #include "observers/views/SpaceShipView.h"
+#include "factories/MainFactory.h"
+#include "factories/Factory.h"
 
 typedef std::shared_ptr<controllers::Controller> controllerPtr;
 typedef std::tuple<modelPtr, modelViewPtr, controllerPtr > mvcTriple;
@@ -49,18 +52,25 @@ public:
 
 	void setUp();
 
+	bool endGame();
+
 private:
 	unsigned int width_;
 	unsigned int height_;
 	sf::RenderWindow& window_;
+	bool gameOver_;
 
 	std::shared_ptr<controllers::ShipController> spaceShipController_;
 
 	std::vector<std::shared_ptr<mvcTriple> > mvcTriples_;
 
+	std::vector<std::vector<std::shared_ptr<mvcTriple> > > enemies_;
+
 	std::vector<controllerPtr > test_;
 
 	void setupTriples(factories::GameParser);
+
+	void determineShooters();
 };
 
 } /* namespace game */

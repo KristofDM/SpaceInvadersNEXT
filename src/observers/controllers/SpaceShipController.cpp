@@ -34,6 +34,9 @@ void SpaceShipController::handleShooting(std::vector<std::shared_ptr<mvcTriple> 
 		controllerPtr newBulletController = std::make_shared<controllers::BulletController>(newBullet, newBulletView, data);
 
 		std::shared_ptr<mvcTriple> bullet = std::make_shared<mvcTriple>(newBullet, newBulletView, newBulletController);
+
+//		std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
+//		std::shared_ptr<mvcTriple> bullet = std::shared_ptr<mvcTriple> bullet = factory->createBullet("Data/regularAmmo.xml", model_, view_->getWindow()); //std::make_shared<mvcTriple>(newBullet, newBulletView, newBulletController);
 		mvcTriples.push_back(bullet);
 	}
 }

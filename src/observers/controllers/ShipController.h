@@ -12,12 +12,11 @@
 #include "Controller.h"
 #include "../../models/Ship.h"
 #include "../../factories/DataParser.h"
-#include "../../factories/ControllerFactory.h"
-#include "../../factories/ViewFactory.h"
 #include "../../models/Bullet.h"
 #include "BulletController.h"
 #include "../views/BulletView.h"
-
+#include "../../factories/MainFactory.h"
+#include "../../factories/Factory.h"
 
 typedef std::shared_ptr<models::Model> modelPtr;
 
@@ -32,6 +31,9 @@ public:
 	virtual void handleShooting(std::vector<std::shared_ptr<mvcTriple> >&) = 0;
 
 	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int);
+
+	virtual void setFlags(bool, bool);
+
 };
 } /* namespace controllers */
 

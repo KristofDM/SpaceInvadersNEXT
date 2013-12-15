@@ -13,6 +13,8 @@
 #include "Model.h"
 #include "Bullet.h"
 #include "MovingObject.h"
+#include "Shield.h"
+
 //#include "../observers/views/ModelView.h"
 //#include "../factories/ViewFactory.h"
 //#include "../factories/ControllerFactory.h"
@@ -39,6 +41,10 @@ public:
 
 	virtual unsigned int getDamage();
 
+	virtual void setFlags(bool, bool);
+
+	virtual bool getFatalCollision() const;
+
 protected:
 	int lives_;
 
@@ -49,6 +55,10 @@ protected:
 	sf::Clock shootTimer_;
 
 	sf::Clock invincibleTimer_;
+
+	bool shooting_;
+
+	bool fatalCollision_;
 };
 
 } /* namespace models */

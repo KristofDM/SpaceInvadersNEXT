@@ -17,4 +17,9 @@ StaticController::~StaticController() {
 	// TODO Auto-generated destructor stub
 }
 
+void StaticController::setFlags(bool invincible, bool shooting) {
+	model_->setFlags(invincible, shooting);
+}
+
+
 } /* namespace controllers */

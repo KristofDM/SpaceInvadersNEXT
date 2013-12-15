@@ -38,6 +38,8 @@ public:
 
 	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int) = 0;
 
+	virtual void setFlags(bool, bool);
+
 	virtual bool checkRelevant(unsigned int, unsigned int);
 
 	virtual void markDeleted();

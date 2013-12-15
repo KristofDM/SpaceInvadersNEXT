@@ -17,6 +17,10 @@ StaticObject::~StaticObject() {
 	// TODO Auto-generated destructor stub
 }
 
+void StaticObject::setFlags(bool invincible, bool shooting) {
+	invincible_ = invincible;
+}
+
 
 
 } /* namespace models */

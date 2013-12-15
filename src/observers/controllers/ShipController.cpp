@@ -23,6 +23,10 @@ void ShipController::gameInput(std::vector<std::shared_ptr<mvcTriple> >& mvcTrip
 	this->handleShooting(mvcTriples);
 }
 
+void ShipController::setFlags(bool invincible, bool shooting) {
+	model_->setFlags(invincible, shooting);
+}
+
 
 
 } /* namespace controllers */

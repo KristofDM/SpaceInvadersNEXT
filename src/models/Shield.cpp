@@ -24,9 +24,14 @@ unsigned int Shield::getDamage() {
 }
 
 bool Shield::collided(std::shared_ptr<Model> other) {
-	lives_ -= other->getDamage();
-	if (lives_ <= 0) {
-		return true;
+	if (!invincible_) {
+		lives_ -= other->getDamage();
+		if (lives_ <= 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	else {
 		return false;

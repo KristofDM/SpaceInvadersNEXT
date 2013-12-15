@@ -12,7 +12,8 @@ namespace game {
 Game::Game(unsigned int width, unsigned int height, sf::RenderWindow& window)
 	: width_(width),
 	  height_(height),
-	  window_(window)
+	  window_(window),
+	  gameOver_(false)
 {}
 
 Game::~Game() {
@@ -30,52 +31,97 @@ void Game::setUp() {
 	gameP.parseGame("Data/game1.xml");
 
     setupTriples(gameP);
-
+	determineShooters();
 }
 
 void Game::cycle() {
+	if (!this->endGame()) {
+		unsigned int size = mvcTriples_.size();
+		for (unsigned int i = 0; i < size; i++) {
+			std::get<2>(*mvcTriples_[i])->gameInput(mvcTriples_, width_, height_);
+		}
 
-	unsigned int size = mvcTriples_.size();
-	for (unsigned int i = 0; i < size; i++) {
-		std::get<2>(*mvcTriples_[i])->gameInput(mvcTriples_, width_, height_);
-	}
-
-	// Collision detection.
-	for (unsigned int i = 0; i < mvcTriples_.size(); i++) {
-		for (unsigned int j = i; j < mvcTriples_.size(); j++) {
-			if (mvcTriples_.at(i) == mvcTriples_.at(j)) {
-				// Same object, no point in checking for collision.
-				continue;
-			}
-			else {
-				// Check for collision.
-				if (std::get<2>(*mvcTriples_.at(i))->checkCollision(std::get<0>(*mvcTriples_.at(j)))) {
-					// Handle collision.
-					if (std::get<2>(*mvcTriples_.at(i))->collided(std::get<0>(*mvcTriples_.at(j)))) {
-						// delete
-						std::get<2>(*mvcTriples_.at(i))->markDeleted();
-					}
-					if (std::get<2>(*mvcTriples_.at(j))->collided(std::get<0>(*mvcTriples_.at(i)))) {
-						// delete
-						std::get<2>(*mvcTriples_.at(j))->markDeleted();
+		// Collision detection.
+		for (unsigned int i = 0; i < mvcTriples_.size(); i++) {
+			for (unsigned int j = i; j < mvcTriples_.size(); j++) {
+				if (mvcTriples_.at(i) == mvcTriples_.at(j)) {
+					// Same object, no point in checking for collision.
+					continue;
+				}
+				else {
+					// Check for collision.
+					if (std::get<2>(*mvcTriples_.at(i))->checkCollision(std::get<0>(*mvcTriples_.at(j)))) {
+						// Handle collision.
+						if (std::get<2>(*mvcTriples_.at(i))->collided(std::get<0>(*mvcTriples_.at(j)))) {
+							// delete
+							std::get<2>(*mvcTriples_.at(i))->markDeleted();
+						}
+						if (std::get<2>(*mvcTriples_.at(j))->collided(std::get<0>(*mvcTriples_.at(i)))) {
+							// delete
+							std::get<2>(*mvcTriples_.at(j))->markDeleted();
+						}
 					}
 				}
 			}
 		}
-	}
 
-	// Get rid of objects that are outside of the window.
-
-	bool change = true;
-	while (change) {
-		change = false;
-		for (unsigned int i = 0; i < mvcTriples_.size(); i++) {
-			if (!std::get<2>(*mvcTriples_.at(i))->checkRelevant(width_, height_)) {
-			std::shared_ptr<mvcTriple> test32 = mvcTriples_.at(0);
-				mvcTriples_.erase(mvcTriples_.begin()+i);
-				change = true;
-				break;
+		for (unsigned int i = 0; i < enemies_.size(); i++) {
+			for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
+				std::shared_ptr<mvcTriple> test = enemies_.at(i).at(j);
+				if (test != nullptr) {
+					modelPtr model = std::get<0>(*test);
+					std::shared_ptr<models::Ship> ship = std::dynamic_pointer_cast<models::Ship>(model);
+					if (ship->getFatalCollision()) {
+						gameOver_ = true;
+					}
+				}
 			}
+		}
+
+		// Get rid of objects that are outside of the window.
+		bool change = true;
+		while (change) {
+			change = false;
+			for (unsigned int i = 0; i < mvcTriples_.size(); i++) {
+				if (!std::get<2>(*mvcTriples_.at(i))->checkRelevant(width_, height_)) {
+					mvcTriples_.erase(mvcTriples_.begin()+i);
+					change = true;
+					break;
+				}
+			}
+
+			for (unsigned int i = 0; i < enemies_.size(); i++) {
+				for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
+					if (enemies_.at(i).at(j) != nullptr && !std::get<2>(*enemies_.at(i).at(j))->checkRelevant(width_, height_)) {
+						enemies_[i][j] = nullptr;
+						change = true;
+						break;
+					}
+				}
+			}
+			determineShooters();
+		}
+	}
+	else {
+		// Prompt for user input on what to do next. Restart or quit?
+
+		// On restart -> set up again.
+	}
+}
+
+void Game::determineShooters() {
+	// Determine what enemies are allowed to shoot.
+	for (unsigned int column = 0; column < enemies_.at(0).size(); column++) {
+		// Check highest column index.
+		int highest = -1;
+		for (int j = 0; j < enemies_.size(); j++) {
+			if (enemies_.at(j).at(column) != 0 && j > highest) {
+				highest = j;
+			}
+		}
+		// Set the shooting flag to true unless there was no enemy left on that column.
+		if (highest != -1) {
+			std::get<2>(*enemies_.at(highest).at(column))->setFlags(false, false);
 		}
 	}
 }
@@ -87,161 +133,86 @@ void Game::render() {
 }
 
 void Game::setupTriples(factories::GameParser game) {
-	factories::DataParser data;
 
-	// Setup spaceship
-	data.parseObject(game.getSpaceShipXML());
-		// FACTORY WITH DATA/FACTORY WITH XML?
+	// Make our factory.
+	std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
 
-	modelPtr spaceShip = std::make_shared<models::SpaceShip>(data);
-	spaceShip->setUp(data);
-
-	// model
-	modelPtr model = std::make_shared<models::SpaceShip>(data);
-	model->setUp(data);
-	// View
-	modelViewPtr view = std::make_shared<views::SpaceShipView>(model, data, window_);
-	// Controller
-	spaceShipController_ = std::make_shared<controllers::SpaceShipController>(model, view, data);
-
-	std::shared_ptr<mvcTriple> test (new mvcTriple(model, view, spaceShipController_));
-	mvcTriples_.push_back(test);
+	std::shared_ptr<mvcTriple> triple = factory->createSpaceShip(game.getSpaceShipXML(), window_);
+	mvcTriples_.push_back(triple);
 
 	// Setup shields
 	infoTuple shieldInfo = game.getShieldInfo();
 	int amount = std::get<0>(shieldInfo);
-	std::string file = std::get<1>(shieldInfo);
-//	int space = std::get<2>(shieldInfo);
-//	int height = std::get<3>(shieldInfo);
+	int space_amount = std::get<1>(shieldInfo);
+	std::string file = std::get<2>(shieldInfo);
 	int space = 0;
 
-	data.parseObject(file);
 	for (int i = 0; i < amount; i++) {
-		modelPtr shield = std::make_shared<models::Shield>(models::none, data.getLives(), 100);
-		shield->setUp(data, space);
-
-		// need to adjust shield places.
-		modelViewPtr view = std::make_shared<views::SpaceShipView>(shield, data, window_);
-
-		controllerPtr controller (new controllers::StaticController(shield, view, data));
-
-		std::shared_ptr<mvcTriple> triple (new mvcTriple(shield, view, controller));
-
+		triple = factory->createShield(file, space, window_);
 		mvcTriples_.push_back(triple);
-
-		space += data.getSpace();
-
+		space += space_amount;
 	}
-
-
-//	// Setup spaceship
-//	factories::DataParser data;
-//	data.parseObject("Data/SpaceShip.xml");
-//	modelPtr model = std::make_shared<models::SpaceShip>(data);
-//	model->setUp(data);
-
-	// Setup factories?
-
-//	// model
-//	modelPtr model = std::make_shared<models::SpaceShip>(data);
-//	model->setUp(data);
-//	// View
-//	modelViewPtr view = std::make_shared<views::SpaceShipView>(model, data, window_);
-//	// Controller
-//	spaceShipController_ = std::make_shared<controllers::SpaceShipController>(model, view, data);
-//
-//	std::shared_ptr<mvcTriple> test (new mvcTriple(model, view, spaceShipController_));
-//	mvcTriples_.push_back(test);
-
-	/* --- */
 
 	space = 0;
 
-	std::vector<infoTuple> enemyInfo = game.getEnemyInfo();
-	for (unsigned int i = 0; i < enemyInfo.size(); i++) {
-		int amount = std::get<0>(enemyInfo.at(i));
-		data.parseObject(std::get<1>(enemyInfo.at(i)));
-		for (int j = 0; j < amount; j++) {
+	try {
+		std::vector<infoTuple> enemyInfo = game.getEnemyInfo();
+		for (unsigned int i = 0; i < enemyInfo.size(); i++) {
+			int amount = std::get<0>(enemyInfo.at(i));
+			int space_amount = std::get<1>(enemyInfo.at(i));
+			std::string file = std::get<2>(enemyInfo.at(i));
+			std::string order = std::get<3>(enemyInfo.at(i));
+			int moveAmount = std::get<4>(enemyInfo.at(i));
 
-			modelPtr ship = std::make_shared<models::EnemyShip>(data);
-			ship->setUp(data, space);
+			std::vector<std::shared_ptr<mvcTriple> > row;
+			if (order.size() != amount) {
+				throw Exception("Every row order should have the same amount of characters as the maxSize of all the enemy rows.");
+			}
+				for (auto c : order) {
+					if (c == 'x') {
+						triple = factory->createEnemyShip(file, space, moveAmount, window_);
+						row.push_back(triple);
+						mvcTriples_.push_back(triple);
+						space += space_amount;
+					}
+					else if (c == ' ') {
+						row.push_back(nullptr);
+						space += space_amount;
+					}
+					else {
+						throw Exception("Invalid symbol in a row order. You can only use spaces and x'es for the order.");
+					}
+				}
+			space = 0;
 
-			modelViewPtr view = std::make_shared<views::SpaceShipView>(ship, data, window_);
-			controllerPtr controller (new controllers::EnemyShipController(ship, view, data));
-			std::shared_ptr<mvcTriple> triple (new mvcTriple(ship, view, controller));
-
-			mvcTriples_.push_back(triple);
-
-			space += data.getSpace();
+			enemies_.push_back(row);
 		}
-		space = 0;
 	}
+	catch(Exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+}
 
-	factories::DataParser data2;
-	data2.parseObject("Data/enemyShip.xml");
-	modelPtr model2 = std::make_shared<models::EnemyShip>(data2);
-	model2->setUp(data2);
-
-	modelViewPtr view2 = std::make_shared<views::SpaceShipView>(model2, data, window_);
-
-	controllerPtr controller2 (new controllers::EnemyShipController(model2, view2, data2));
-
-//	test_.push_back(controller2);
-
-	std::shared_ptr<mvcTriple> test2 (new mvcTriple(model2, view2, controller2));
-
-	mvcTriples_.push_back(test2);
-
-//	/* --- */
+bool Game::endGame() {
+	// Send signal to HUD view.
+	if (gameOver_) {
+		std::cout << "GAMEOVER!" << std::endl;
+		//
+//		sf::Font font;
+//		// Load it from a file
+//		if (!font.loadFromFile("Graphics/SPACEMAN.TTF"))
+//		{
+//			// Throw exception
+//		}
 //
-//	factories::DataParser data3;
-//	data3.parseObject("Data/shield1.xml");
-//	modelPtr model3 = std::make_shared<models::Shield>(models::none, data3.getLives(), 100);
-//	model3->setUp(data3);
-//
-//	modelViewPtr view3 = std::make_shared<views::SpaceShipView>(model3, data3, window_);
-//
-//	controllerPtr controller3 (new controllers::StaticController(model3, view3, data3));
-//
-////	test_.push_back(controller3);
-//
-//	std::shared_ptr<mvcTriple> test3 (new mvcTriple(model3, view3, controller3));
-//
-//	mvcTriples_.push_back(test3);
-//
-//	/* --- */
-//
-//	factories::DataParser data4;
-//	data4.parseObject("Data/shield2.xml");
-//	modelPtr model4 = std::make_shared<models::Shield>(models::none, data4.getLives(), 100);
-//	model4->setUp(data4);
-//
-//	modelViewPtr view4 = std::make_shared<views::SpaceShipView>(model4, data4, window_);
-//
-//	controllerPtr controller4 (new controllers::StaticController(model4, view4, data4));
-//
-////	test_.push_back(controller4);
-//
-//	std::shared_ptr<mvcTriple> test4 (new mvcTriple(model4, view4, controller4));
-//
-//	mvcTriples_.push_back(test4);
-//
-//	/* --- */
-//
-//	factories::DataParser data5;
-//	data5.parseObject("Data/shield.xml");
-//	modelPtr model5 = std::make_shared<models::Shield>(models::none, data5.getLives(), 100);
-//	model5->setUp(data5);
-//
-//	modelViewPtr view5 = std::make_shared<views::SpaceShipView>(model5, data5, window_);
-//
-//	controllerPtr controller5 (new controllers::StaticController(model5, view5, data5));
-//
-////	test_.push_back(controller5);
-//
-//	std::shared_ptr<mvcTriple> test5 (new mvcTriple(model5, view5, controller5));
-//
-//	mvcTriples_.push_back(test5);
+//		sf::Text text("Space Invaders: NEXT", font, 400);
+//		text.setColor(sf::Color(100, 100, 100));
+//		window_.draw(text);
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 
