@@ -3,13 +3,11 @@
 	<type>ship</type>
 	<model>
 		<position x="150" y="500"/>
-		<space>200</space>
 		<lives>90000</lives>
 	</model>
 	
 	<view>
 		<sprite>shield.png</sprite>
-		<scale>0.5</scale>
 	</view>
 	
 	<controller>

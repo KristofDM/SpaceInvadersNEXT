@@ -13,7 +13,8 @@ Game::Game(unsigned int width, unsigned int height, sf::RenderWindow& window)
 	: width_(width),
 	  height_(height),
 	  window_(window),
-	  gameOver_(false)
+	  gameOver_(false),
+	  levelMultiplier_(1)
 {}
 
 Game::~Game() {
@@ -30,30 +31,17 @@ void Game::setUp() {
 	factories::GameParser gameP;
 	gameP.parseGame("Data/game1.xml");
 
+	levelMultiplier_ = gameP.getSpeedMult();
+
+	//Setup triples.
     setupTriples(gameP);
-
-    // Set up HUD.
-    // Font
-    sf::Font font;
-    if (!font.loadFromFile("Graphics/SPACEMAN.TTF"));
-    {
-        // error...
-    }
-
-    std::shared_ptr<models::Model> HUDModel = std::make_shared<models::HUD>();
-    std::shared_ptr<views::ModelView> HUDView = std::make_shared<views::HUDView>(font, HUDModel, factories::DataParser(), window_);
-    std::shared_ptr<controllers::Controller> HUDController = std::make_shared<controllers::HUDController>(HUDModel, HUDView, factories::DataParser());
-    HUDView->update();
-    HUD_ = std::make_shared<mvcTriple>(std::tuple<modelPtr, modelViewPtr, controllerPtr>(HUDModel, HUDView, HUDController));
-
     determineShooters();
-
-
 }
 
 void Game::cycle() {
 	std::get<2>(*HUD_)->draw();
 	if (!this->endGame()) {
+
 		unsigned int size = mvcTriples_.size();
 		for (unsigned int i = 0; i < size; i++) {
 			std::get<2>(*mvcTriples_[i])->gameInput(mvcTriples_, width_, height_);
@@ -71,11 +59,11 @@ void Game::cycle() {
 					if (std::get<2>(*mvcTriples_.at(i))->checkCollision(std::get<0>(*mvcTriples_.at(j)))) {
 						// Handle collision.
 						if (std::get<2>(*mvcTriples_.at(i))->collided(std::get<0>(*mvcTriples_.at(j)))) {
-							// delete
+							// Mark for deletion.
 							std::get<2>(*mvcTriples_.at(i))->markDeleted();
 						}
 						if (std::get<2>(*mvcTriples_.at(j))->collided(std::get<0>(*mvcTriples_.at(i)))) {
-							// delete
+							// Mark for deletion.
 							std::get<2>(*mvcTriples_.at(j))->markDeleted();
 						}
 					}
@@ -97,8 +85,16 @@ void Game::cycle() {
 						std::shared_ptr<controllers::HUDController> HUDC = std::dynamic_pointer_cast<controllers::HUDController>(std::get<2>(*HUD_));
 						HUDC->changePoints(ship->getPoints());
 					}
-					// If not relevant anymore-> ADD POINTS TO HUD! (cast to Enemyship instead btw)
 				}
+			}
+		}
+
+		// Check if our spaceShip is dead.
+		for (auto triple : mvcTriples_) {
+			modelPtr obj = std::get<0>(*triple);
+			std::shared_ptr<models::SpaceShip> spaceShip = std::dynamic_pointer_cast<models::SpaceShip>(obj);
+			if (spaceShip != nullptr && spaceShip->getLives() <= 0) {
+				gameOver_ = true;
 			}
 		}
 
@@ -125,11 +121,16 @@ void Game::cycle() {
 			}
 			determineShooters();
 		}
+
+		if (this->checkForNextLevel()) {
+			this->nextLevel();
+		}
 	}
 	else {
 		// Prompt for user input on what to do next. Restart or quit?
-//		std::get<2>(*HUD_)->draw();
-		// On restart -> set up again.
+
+		std::shared_ptr<controllers::HUDController> HUDC = std::dynamic_pointer_cast<controllers::HUDController>(std::get<2>(*HUD_));
+		HUDC->drawEnd();
 	}
 }
 
@@ -145,7 +146,7 @@ void Game::determineShooters() {
 		}
 		// Set the shooting flag to true unless there was no enemy left on that column.
 		if (highest != -1) {
-			std::get<2>(*enemies_.at(highest).at(column))->setFlags(false, false);
+			std::get<2>(*enemies_.at(highest).at(column))->setFlags(false, true);
 		}
 	}
 }
@@ -164,6 +165,11 @@ void Game::setupTriples(factories::GameParser game) {
 	std::shared_ptr<mvcTriple> triple = factory->createSpaceShip(game.getSpaceShipXML(), window_);
 	mvcTriples_.push_back(triple);
 
+	// Set up HUD
+    HUD_ = factory->createHUD(game.getSpaceShipXML(), window_, std::get<0>(*triple));
+
+    /* --- */
+
 	// Setup shields
 	infoTuple shieldInfo = game.getShieldInfo();
 	int amount = std::get<0>(shieldInfo);
@@ -177,8 +183,14 @@ void Game::setupTriples(factories::GameParser game) {
 		space += space_amount;
 	}
 
-	space = 0;
+	this->setupEnemies(game);
 
+}
+
+void Game::setupEnemies(factories::GameParser game) {
+	std::shared_ptr<mvcTriple> triple;
+	std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
+	int space = 0;
 	try {
 		std::vector<infoTuple> enemyInfo = game.getEnemyInfo();
 		for (unsigned int i = 0; i < enemyInfo.size(); i++) {
@@ -187,6 +199,7 @@ void Game::setupTriples(factories::GameParser game) {
 			std::string file = std::get<2>(enemyInfo.at(i));
 			std::string order = std::get<3>(enemyInfo.at(i));
 			int moveAmount = std::get<4>(enemyInfo.at(i));
+			int speed = std::get<5>(enemyInfo.at(i));
 
 			std::vector<std::shared_ptr<mvcTriple> > row;
 			if (order.size() != amount) {
@@ -194,7 +207,7 @@ void Game::setupTriples(factories::GameParser game) {
 			}
 				for (auto c : order) {
 					if (c == 'x') {
-						triple = factory->createEnemyShip(file, space, moveAmount, window_);
+						triple = factory->createEnemyShip(file, space, moveAmount, window_, speed);
 						row.push_back(triple);
 						mvcTriples_.push_back(triple);
 						space += space_amount;
@@ -208,7 +221,6 @@ void Game::setupTriples(factories::GameParser game) {
 					}
 				}
 			space = 0;
-
 			enemies_.push_back(row);
 		}
 	}
@@ -218,26 +230,55 @@ void Game::setupTriples(factories::GameParser game) {
 }
 
 bool Game::endGame() {
-	// Send signal to HUD view.
-	if (gameOver_) {
-		std::cout << "GAMEOVER!" << std::endl;
-		//
-//		sf::Font font;
-//		// Load it from a file
-//		if (!font.loadFromFile("Graphics/SPACEMAN.TTF"))
-//		{
-//			// Throw exception
-//		}
-//
-//		sf::Text text("Space Invaders: NEXT", font, 400);
-//		text.setColor(sf::Color(100, 100, 100));
-//		window_.draw(text);
-		return true;
-	}
-	else {
-		return false;
-	}
+	return gameOver_;
 }
+
+Game& Game::operator=(const Game rhs)
+{
+	width_ = rhs.width_;
+	height_ = rhs.height_;
+	gameOver_ = rhs.gameOver_;
+	spaceShipController_ = rhs.spaceShipController_;
+	mvcTriples_ = rhs.mvcTriples_;
+	enemies_ = rhs.enemies_;
+	HUD_ = rhs.HUD_;
+	levelMultiplier_ = rhs.levelMultiplier_;
+	return *this;
+}
+
+void Game::nextLevel() {
+	static int level = 1;
+	std::shared_ptr<controllers::HUDController> HUDC = std::dynamic_pointer_cast<controllers::HUDController>(std::get<2>(*HUD_));
+	HUDC->addLevel(1);
+
+	enemies_.clear();
+	factories::GameParser gameP;
+	gameP.parseGame("Data/game1.xml");
+	this->setupEnemies(gameP);
+
+//	// Increase their speed.
+	for (unsigned int i = 0; i < enemies_.size(); i++) {
+		for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
+			if (enemies_.at(i).at(j) != nullptr) {
+				std::shared_ptr<controllers::MovingObjectController> movC = std::dynamic_pointer_cast<controllers::MovingObjectController>(std::get<2>(*enemies_.at(i).at(j)));
+				movC->changeSpeed(levelMultiplier_ * level);
+			}
+		}
+	}
+	level++;
+}
+
+bool Game::checkForNextLevel() {
+	for (unsigned int i = 0; i < enemies_.size(); i++) {
+		for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
+			if (enemies_.at(i).at(j) != nullptr) {
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
 
 
 } /* namespace game */

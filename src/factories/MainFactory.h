@@ -27,9 +27,10 @@ typedef std::tuple<modelPtr, modelViewPtr, controllerPtr > mvcTriple;
 class MainFactory {
 public:
 	virtual std::shared_ptr<mvcTriple> createSpaceShip(std::string, sf::RenderWindow&) = 0;
-	virtual std::shared_ptr<mvcTriple> createEnemyShip(std::string, int, int, sf::RenderWindow&) = 0;
+	virtual std::shared_ptr<mvcTriple> createEnemyShip(std::string, int, int, sf::RenderWindow&, int) = 0;
 	virtual std::shared_ptr<mvcTriple> createShield(std::string, int, sf::RenderWindow&) = 0;
 	virtual std::shared_ptr<mvcTriple> createBullet(std::string, std::shared_ptr<models::Model>, sf::RenderWindow&) = 0;
+	virtual std::shared_ptr<mvcTriple> createHUD(std::string, sf::RenderWindow&, modelPtr) = 0;
 };
 
 } /* namespace factories */

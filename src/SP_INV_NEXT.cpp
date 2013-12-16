@@ -29,19 +29,8 @@ int main() {
     game::Game game(800, 600, window);
     game.setUp();
 
-    sf::Font font;
-	// Load it from a file
-	if (!font.loadFromFile("Graphics/SPACEMAN.TTF"))
-	{
-		// Throw exception
-	}
-
-	sf::Text text("Space Invaders: NEXT", font, 30);
-	text.setColor(sf::Color(100, 100, 100));
-
     while (window.isOpen()) {
     	// Main program loop.
-    	game.cycle();
 		sf::Event event;
         while (window.pollEvent(event)) {
         	// Events loop (polling).
@@ -50,14 +39,26 @@ int main() {
 					window.close();
 					return 0;
 					break;
+				case sf::Event::KeyPressed:
+					if (event.key.code == sf::Keyboard::Y && game.endGame()) {
+						// RESET GAME
+						game = game::Game(800, 600, window);
+						game.setUp();
+					}
+					else if (event.key.code == sf::Keyboard::N && game.endGame()) {
+						window.close();
+						return 0;
+						break;
+					}
+					break;
 				default:
 					break;
         	}
         }
         window.clear();
-        game.endGame();
         window.draw(sprite_);
-    	window.draw(text);
+    	game.cycle();
+        game.endGame();
         game.render();
         window.display();
     }

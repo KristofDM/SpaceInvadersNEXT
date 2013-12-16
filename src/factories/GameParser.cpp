@@ -43,11 +43,14 @@ void GameParser::parseGame(std::string dataFile) {
 		else if (oPart == "enemies") {
 			// Parse enemies
 			int amount = std::stoi(o->Attribute("maxSize"));
-			parseRow(o, amount);
+			parseRow(o, amount, std::stoi(o->Attribute("speed")));
 		}
 		else if (oPart == "shield") {
-			infoTuple shieldInfo(std::stoi(o->Attribute("amount")), std::stoi(o->Attribute("space")), o->Attribute("file"), "", 0);
+			infoTuple shieldInfo(std::stoi(o->Attribute("amount")), std::stoi(o->Attribute("space")), o->Attribute("file"), "", 0, 0);
 			shieldInfo_ = shieldInfo;
+		}
+		else if (oPart == "level") {
+			speedMultiplier_ = std::stod(o->Attribute("multiplier"));
 		}
 		else {
 			throw(Exception(oPart + " is not supported by the game parser."));
@@ -59,12 +62,12 @@ void GameParser::parseGame(std::string dataFile) {
 	}
 }
 
-void GameParser::parseRow(TiXmlElement* p, int amount) {
+void GameParser::parseRow(TiXmlElement* p, int amount, int speed) {
 	try {
 		for (TiXmlElement* var = p->FirstChildElement(); var != NULL; var = var->NextSiblingElement()) {
 			std::string fieldName = var->Value();
 			if (fieldName == "row") {
-				infoTuple entry(amount, std::stoi(var->Attribute("space")), var->Attribute("file"), var->Attribute("order"), std::stoi(var->Attribute("moveAmount")));
+				infoTuple entry(amount, std::stoi(var->Attribute("space")), var->Attribute("file"), var->Attribute("order"), std::stoi(var->Attribute("moveAmount")), speed);
 				enemyInfo_.push_back(entry);
 			}
 			else {
@@ -77,16 +80,20 @@ void GameParser::parseRow(TiXmlElement* p, int amount) {
 	}
 }
 
-std::string GameParser::getSpaceShipXML() {
+std::string GameParser::getSpaceShipXML() const{
 	return spaceShipXML_;
 }
 
-infoTuple GameParser::getShieldInfo() {
+infoTuple GameParser::getShieldInfo() const{
 	return shieldInfo_;
 }
 
-std::vector<infoTuple> GameParser::getEnemyInfo() {
+std::vector<infoTuple> GameParser::getEnemyInfo() const{
 	return enemyInfo_;
+}
+
+double GameParser::getSpeedMult() const{
+	return speedMultiplier_;
 }
 
 } /* namespace factories */

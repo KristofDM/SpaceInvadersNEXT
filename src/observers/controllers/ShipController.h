@@ -9,7 +9,7 @@
 #define SHIPCONTROLLER_H_
 
 #include <memory>
-#include "Controller.h"
+#include "MovingObjectController.h"
 #include "../../models/Ship.h"
 #include "../../factories/DataParser.h"
 #include "../../models/Bullet.h"
@@ -22,7 +22,7 @@ typedef std::shared_ptr<models::Model> modelPtr;
 
 namespace controllers {
 
-class ShipController : public Controller {
+class ShipController : public MovingObjectController {
 public:
 	ShipController(modelPtr model, modelViewPtr view, factories::DataParser);
 

@@ -34,6 +34,8 @@ public:
 
 	virtual void setFlags(bool, bool);
 
+	virtual void changeSpeed(double);
+
 protected:
 	double speed_;
 

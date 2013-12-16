@@ -22,9 +22,14 @@ void HUDController::changePoints(int points) {
 	hud->changePoints(points);
 }
 
-void HUDController::changeLives(int lives) {
+void HUDController::addLevel(int lives) {
 	std::shared_ptr<models::HUD> hud = std::dynamic_pointer_cast<models::HUD>(model_);
-	hud->changeLives(lives);
+	hud->addLevel(lives);
+}
+
+void HUDController::drawEnd() {
+	std::shared_ptr<views::HUDView> hud = std::dynamic_pointer_cast<views::HUDView>(view_);
+	hud->drawEnd();
 }
 
 } /* namespace controllers */

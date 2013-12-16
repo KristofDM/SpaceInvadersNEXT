@@ -10,6 +10,7 @@
 
 #include "StaticController.h"
 #include "../../models/HUD.h"
+#include "../views/HUDView.h"
 
 namespace controllers {
 
@@ -21,7 +22,10 @@ public:
 
 	void changePoints(int);
 
-	void changeLives(int);
+	void addLevel(int);
+
+	void drawEnd();
+
 };
 
 } /* namespace controllers */

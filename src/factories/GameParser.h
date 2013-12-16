@@ -15,7 +15,8 @@
 #include "../tinyXML/tinyxml.h"
 #include "../Exception.h"
 
-typedef std::tuple<int, int, std::string, std::string, int> infoTuple;
+// amount, space, file, order, moveAmount, speed
+typedef std::tuple<int, int, std::string, std::string, int, int> infoTuple;
 
 namespace factories {
 
@@ -27,11 +28,10 @@ public:
 
 	void parseGame(std::string);
 
-	std::string getSpaceShipXML();
-
-	infoTuple getShieldInfo();
-
-	std::vector<infoTuple> getEnemyInfo();
+	std::string getSpaceShipXML() const;
+	infoTuple getShieldInfo() const;
+	std::vector<infoTuple> getEnemyInfo() const;
+	double getSpeedMult() const;
 
 private:
 	std::string spaceShipXML_;
@@ -40,7 +40,9 @@ private:
 
 	std::vector<infoTuple> enemyInfo_;
 
-	void parseRow(TiXmlElement*, int);
+	double speedMultiplier_;
+
+	void parseRow(TiXmlElement*, int, int);
 
 };
 

@@ -25,7 +25,7 @@ class Ship : public MovingObject {
 public:
 	Ship(int, int, double, EOrientation);
 
-	int getLives();
+	virtual int getLives();
 
 	void setLives(int);
 

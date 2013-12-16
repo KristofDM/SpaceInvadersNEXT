@@ -15,6 +15,7 @@
 #include <list>
 #include <memory>
 #include "observers/controllers/EnemyShipController.h"
+#include "observers/controllers/MovingObjectController.h"
 #include "observers/controllers/SpaceShipController.h"
 #include "observers/controllers/StaticController.h"
 #include "observers/controllers/ShipController.h"
@@ -58,12 +59,16 @@ public:
 
 	bool endGame();
 
+	void nextLevel();
+
+	Game& operator=(const Game rhs);
+
 private:
 	unsigned int width_;
 	unsigned int height_;
 	sf::RenderWindow& window_;
 	bool gameOver_;
-
+	double levelMultiplier_;
 
 	std::shared_ptr<controllers::ShipController> spaceShipController_;
 
@@ -76,6 +81,10 @@ private:
 	void setupTriples(factories::GameParser);
 
 	void determineShooters();
+
+	void setupEnemies(factories::GameParser);
+
+	bool checkForNextLevel();
 };
 
 } /* namespace game */

@@ -62,10 +62,12 @@ bool Ship::collided(std::shared_ptr<Model> other) {
 		if (t2 > 1) {
 			lives_ -= other->getDamage();
 			if (lives_ <= 0) {
+				this->notify();
 				return true;
 			}
 			invincibleTimer_.restart();
 		}
+		this->notify();
 		return false;
 	}
 	else {

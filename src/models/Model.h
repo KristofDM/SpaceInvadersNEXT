@@ -15,8 +15,6 @@
 #include "../observers/Observer.h"
 #include "../Exception.h"
 #include "../factories/DataParser.h"
-#include "../factories/ControllerFactory.h"
-#include "../factories/ViewFactory.h"
 
 namespace models {
 

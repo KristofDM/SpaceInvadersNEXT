@@ -1,11 +1,12 @@
 <?xml version="1.0" ?>
 <game>
 	<spaceShip file="Data/SpaceShip.xml" />
-	<enemies maxSize="7">
+	<enemies maxSize="7" speed="1">
 		<row order="xxxxxxx" space="100" moveAmount="100" file="Data/enemyShip.xml"/>
 		<row order=" xxxxx " space="100" moveAmount="100" file="Data/enemyShip2.xml"/>
 		<row order="  xxx  " space="100" moveAmount="100" file="Data/enemyShip3.xml"/>
 		<row order="   x   " space="100" moveAmount="100" file="Data/enemyShip4.xml"/>
 	</enemies>
 	<shield amount="3" space="200" file="Data/shield1.xml"/>
+	<level multiplier="1.5" />
 </game>

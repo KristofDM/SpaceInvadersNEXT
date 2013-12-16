@@ -10,7 +10,7 @@
 namespace controllers {
 
 ShipController::ShipController(modelPtr model, modelViewPtr view, factories::DataParser data)
-	: Controller(model, view, data)
+	: MovingObjectController(model, view, data)
 {
 
 	// Attach to Observer registry of model? No we don't need this... (yet).

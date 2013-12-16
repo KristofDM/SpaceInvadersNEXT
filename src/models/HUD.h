@@ -23,15 +23,15 @@ public:
 
 	void changePoints(int);
 
-	void changeLives(int);
+	void addLevel(int);
 
 	int getTotalScore() const;
 
-	int getTotalLives() const;
+	int getLevel() const;
 
 private:
 	int totalScore_;
-	int lives_;
+	int level_;
 };
 
 } /* namespace models */

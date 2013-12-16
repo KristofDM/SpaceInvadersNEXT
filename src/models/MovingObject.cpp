@@ -42,6 +42,8 @@ void MovingObject::setFlags(bool invincible, bool shooting) {
 	invincible_ = invincible;
 }
 
-
+void MovingObject::changeSpeed(double multiplier) {
+	speed_ *= multiplier;
+}
 
 } /* namespace models */

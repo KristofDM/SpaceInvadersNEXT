@@ -12,7 +12,7 @@ namespace models {
 HUD::HUD()
 	: StaticObject(none),
 	  totalScore_(0),
-	  lives_(0)
+	  level_(1)
 {}
 
 HUD::~HUD() {
@@ -22,11 +22,10 @@ HUD::~HUD() {
 void HUD::changePoints(int points) {
 	totalScore_ += points;
 	this->notify();
-	std::cout << "totalScore_ = " << totalScore_ << std::endl;
 }
 
-void HUD::changeLives(int lives) {
-	lives_ += lives;
+void HUD::addLevel(int lives) {
+	level_ += lives;
 	this->notify();
 }
 
@@ -34,8 +33,8 @@ int HUD::getTotalScore() const {
 	return totalScore_;
 }
 
-int HUD::getTotalLives() const {
-	return lives_;
+int HUD::getLevel() const {
+	return level_;
 }
 
 } /* namespace models */

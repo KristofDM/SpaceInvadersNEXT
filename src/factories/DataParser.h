@@ -27,18 +27,19 @@ public:
 
 	void parseObject(std::string);
 
-	EDataType getType();
+	EDataType getType() const;
 
-	sf::Vector2f getPos();
-	int getLives();
-	int getFireRate();
-	double getSpeed();
-	int getSpace();
+	sf::Vector2f getPos() const;
+	int getLives() const;
+	int getFireRate() const;
+	double getSpeed() const;
+	int getSpace() const;
+	int getPoints() const;
 
-	std::string getSpritePath();
-	double getScale();
+	std::string getSpritePath() const;
+	double getScale() const;
 
-	int getMoveDirection();
+	int getMoveDirection() const;
 
 
 private:
@@ -51,6 +52,7 @@ private:
 	int fireRate_;
 	double speed_;
 	int space_;
+	int points_;
 
 	// View
 	std::string sprite_;

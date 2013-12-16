@@ -18,7 +18,8 @@ DataParser::DataParser()
 	  sprite_(),
 	  scale_(-1),
 	  moveDirection_(-1),
-	  space_(0)
+	  space_(0),
+	  points_(0)
 {}
 
 // Parse datafiles.
@@ -159,6 +160,15 @@ void DataParser::parseModel(TiXmlElement* p) {
 				 std::string value = text->Value();
 				 space_ = std::stoi(value);
 			}
+			else if (fieldName == "points" && type_ == enemyship) {
+				TiXmlText* text = var->FirstChild()->ToText();
+				 if (text == NULL) {
+					 // No value given.
+					 throw Exception("Points_ not specified for object.");
+				 }
+				 std::string value = text->Value();
+				 points_ = std::stoi(value);
+			}
 		}
 	}
 	catch(Exception& e) {
@@ -195,40 +205,44 @@ void DataParser::parseController(TiXmlElement* p) {
 	}
 }
 
-sf::Vector2f DataParser::getPos() {
+sf::Vector2f DataParser::getPos() const{
 	return pos_;
 }
 
-int DataParser::getLives() {
+int DataParser::getLives() const{
 	return lives_;
 }
 
-int DataParser::getFireRate() {
+int DataParser::getFireRate() const{
 	return fireRate_;
 }
 
-std::string DataParser::getSpritePath() {
+std::string DataParser::getSpritePath() const{
 	return sprite_;
 }
 
-double DataParser::getScale() {
+double DataParser::getScale() const{
 	return scale_;
 }
 
-int DataParser::getMoveDirection() {
+int DataParser::getMoveDirection() const{
 	return moveDirection_;
 }
 
-double DataParser::getSpeed() {
+double DataParser::getSpeed() const{
 	return speed_;
 }
 
-EDataType DataParser::getType() {
+EDataType DataParser::getType() const{
 	return type_;
 }
 
-int DataParser::getSpace() {
+int DataParser::getSpace() const{
 	return space_;
+}
+
+int DataParser::getPoints() const{
+	return points_;
 }
 
 

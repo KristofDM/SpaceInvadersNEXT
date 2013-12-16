@@ -9,49 +9,56 @@
 
 namespace models {
 
-double EnemyShip::amountTravelled_ = 0;
-int EnemyShip::amount_ = 0;
-int EnemyShip::movedTimes_ = 0;
-double EnemyShip::movedDown_ = 0;
-
-EnemyShip::EnemyShip(factories::DataParser data, int moveAmount)
-	: Ship(data.getLives(), data.getFireRate(), data.getSpeed(), down),
+EnemyShip::EnemyShip(factories::DataParser data, int moveAmount, int speed)
+	: Ship(data.getLives(), data.getFireRate(), speed, down),
 	  moveAmount_(moveAmount),
-	  points_(20)
+	  points_(data.getPoints()),
+	  dirSwitch(true),
+	  travelled_(0),
+	  moveDown_(false)
 {
-	amount_++;
 }
 
 EnemyShip::~EnemyShip() {
-	amount_--;
 }
 
 void EnemyShip::moveLeft() {
-	if (movedTimes_ != 2) {
-		if (amountTravelled_ <= moveAmount_ * amount_) {
-			sprite_.move(-speed_, 0);
-			amountTravelled_ += speed_;
-			this->notify();
+	if (moveDown_) {
+		if (travelled_ < (0.25 * moveAmount_)) {
+			this->moveDown();
+			travelled_ += speed_;
 		}
 		else {
-			amountTravelled_ += speed_;
-			this->moveRight();
-			if (amountTravelled_ >= (2 * moveAmount_) * amount_) {
-				amountTravelled_ = 0;
-				movedTimes_++;
-			}
+			moveDown_ = false;
+			travelled_ = 0;
+		}
+	}
+	else if (dirSwitch) {
+		// True goes to left.
+		if (travelled_ < moveAmount_) {
+			sprite_.move(-speed_, 0);
+			travelled_ += speed_;
+		}
+		else {
+			// Reset amount travelled.
+			dirSwitch = false;
+			travelled_ = 0;
+			moveDown_ = true;
 		}
 	}
 	else {
-		if (movedDown_ < 25 * amount_) {
-			this->moveDown();
-			movedDown_ += speed_;
+		if (travelled_ < moveAmount_) {
+			sprite_.move(speed_, 0);
+			travelled_ += speed_;
 		}
 		else {
-			movedDown_ = 0;
-			movedTimes_ = 1;
+			// Reset amount travelled.
+			dirSwitch = true;
+			travelled_ = 0;
+			moveDown_ = true;
 		}
 	}
+
 }
 
 int EnemyShip::getPoints() {
@@ -86,19 +93,27 @@ bool EnemyShip::collided(std::shared_ptr<Model> other) {
 	}
 }
 
+bool EnemyShip::shoot() {
+	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+	std::default_random_engine generator(seed);
+	std::uniform_int_distribution<int> distribution(0,499);
+    int number = distribution(generator);
 
-//bool EnemyShip::shoot() {
-//	// Model itself
-//	sf::Time t = clock_.getElapsedTime();
-//	float t2= t.asSeconds();
-//	if (t2 > 60.0/fireRate_) {
-//		clock_.restart();
-//		return true;
-//	}
-//	else {
-//		return false;
-//	}
-//}
-
+	if (shooting_ && number == 0) {
+		// Model itself
+		sf::Time t = shootTimer_.getElapsedTime();
+		float t2= t.asSeconds();
+		if (t2 > 60.0/fireRate_) {
+			shootTimer_.restart();
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	else {
+		return false;
+	}
+}
 
 } /* namespace models */
