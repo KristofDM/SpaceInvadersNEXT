@@ -9,6 +9,7 @@
 #define HUDVIEW_H_
 
 #include "ModelView.h"
+#include "../../models/HUD.h"
 
 namespace views {
 
@@ -18,6 +19,7 @@ public:
 	virtual ~HUDView();
 	virtual void update();
 	virtual void draw();
+	void drawEnd(bool);
 
 private:
 	sf::Font font_;

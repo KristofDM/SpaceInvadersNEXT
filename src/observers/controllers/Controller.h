@@ -48,6 +48,8 @@ public:
 
 	virtual bool checkCollision(modelPtr);
 
+	virtual void draw();
+
 protected:
 	modelPtr model_;
 	modelViewPtr view_;

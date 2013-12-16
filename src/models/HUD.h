@@ -25,6 +25,10 @@ public:
 
 	void changeLives(int);
 
+	int getTotalScore() const;
+
+	int getTotalLives() const;
+
 private:
 	int totalScore_;
 	int lives_;

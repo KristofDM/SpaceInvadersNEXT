@@ -58,39 +58,33 @@ int EnemyShip::getPoints() {
 	return points_;
 }
 
-//bool EnemyShip::checkCollision(std::shared_ptr<Model> other) const{
-//	sf::Vector2f otherPos = other->getSprite().getPosition();
-//	sf::Vector2f thisPos = sprite_.getPosition();
-//
-//	double thisHeight = sprite_.getGlobalBounds().height;
-//	double thisWidth = sprite_.getGlobalBounds().width;
-//
-//	if ((thisPos.y + thisHeight) > otherPos.y && (thisPos.y + thisHeight) < (otherPos.y + other->getSprite().getGlobalBounds().height)) {
-//		if (this != other->getOwner().get()) {
-//			// Colliding with its owner, nothing happens.
-//			std::cout << "allejoppa" << std::endl;
-//		}
-//	}
-//
-////	if ((thisPos.y + sprite_.getGlobalBounds().height < otherPos.y + other->getSprite().getGlobalBounds().height && thisPos.y + sprite_.getGlobalBounds().height > otherPos.y &&
-////			   (thisPos.x + (sprite_.getGlobalBounds().width/2) >= otherPos.x && thisPos.x + (sprite_.getGlobalBounds().width/2) <= (otherPos.x + other->getSprite().getGlobalBounds().width)))) {
-////		if (this != other->getOwner().get()) {
-////			// Colliding with its owner, nothing happens.
-////			std::cout << "allejoppa" << std::endl;
-////		}
-////	}
-//
-//	if ((thisPos.y + sprite_.getGlobalBounds().height < otherPos.y + other->getSprite().getGlobalBounds().height && thisPos.y + sprite_.getGlobalBounds().height > otherPos.y &&
-//			   (thisPos.x + (sprite_.getGlobalBounds().width/2) >= otherPos.x && thisPos.x + (sprite_.getGlobalBounds().width/2) <= (otherPos.x + other->getSprite().getGlobalBounds().width))) || (otherPos.x >= thisPos.x && otherPos.x <= (thisPos.x + sprite_.getGlobalBounds().width) && otherPos.y >= thisPos.y && (otherPos.y <= (thisPos.y + sprite_.getGlobalBounds().height))))
-//	{
-//		if (this == other->getOwner().get()) {
-//			// Colliding with its owner, nothing happens.
-//			return false;
-//		}
-//		return true;
-//	}
-//	return false;
-//}
+bool EnemyShip::collided(std::shared_ptr<Model> other) {
+	// Need to check whether or not fatalCollision_ is needs to be turned on.
+	std::shared_ptr<Shield> test;
+	test = std::dynamic_pointer_cast<Shield>(other);
+	std::shared_ptr<SpaceShip> test2;
+	test2 = std::dynamic_pointer_cast<SpaceShip>(other);
+	if (test != nullptr || test2 != nullptr) {
+		// Set fatalCollision_ to true.
+		fatalCollision_ = true;
+	}
+
+	if (!invincible_) {
+		sf::Time t = invincibleTimer_.getElapsedTime();
+		float t2 = t.asSeconds();
+		if (t2 > 1) {
+			lives_ -= other->getDamage();
+			if (lives_ <= 0) {
+				return true;
+			}
+			invincibleTimer_.restart();
+		}
+		return false;
+	}
+	else {
+		return false;
+	}
+}
 
 
 //bool EnemyShip::shoot() {

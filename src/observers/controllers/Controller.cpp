@@ -46,4 +46,9 @@ void Controller::setFlags(bool invincible, bool shooting) {
 	model_->setFlags(invincible, shooting);
 }
 
+void Controller::draw() {
+	view_->draw();
+}
+
+
 } /* namespace controllers */

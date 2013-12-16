@@ -31,10 +31,28 @@ void Game::setUp() {
 	gameP.parseGame("Data/game1.xml");
 
     setupTriples(gameP);
-	determineShooters();
+
+    // Set up HUD.
+    // Font
+    sf::Font font;
+    if (!font.loadFromFile("Graphics/SPACEMAN.TTF"));
+    {
+        // error...
+    }
+
+    std::shared_ptr<models::Model> HUDModel = std::make_shared<models::HUD>();
+    std::shared_ptr<views::ModelView> HUDView = std::make_shared<views::HUDView>(font, HUDModel, factories::DataParser(), window_);
+    std::shared_ptr<controllers::Controller> HUDController = std::make_shared<controllers::HUDController>(HUDModel, HUDView, factories::DataParser());
+    HUDView->update();
+    HUD_ = std::make_shared<mvcTriple>(std::tuple<modelPtr, modelViewPtr, controllerPtr>(HUDModel, HUDView, HUDController));
+
+    determineShooters();
+
+
 }
 
 void Game::cycle() {
+	std::get<2>(*HUD_)->draw();
 	if (!this->endGame()) {
 		unsigned int size = mvcTriples_.size();
 		for (unsigned int i = 0; i < size; i++) {
@@ -70,10 +88,16 @@ void Game::cycle() {
 				std::shared_ptr<mvcTriple> test = enemies_.at(i).at(j);
 				if (test != nullptr) {
 					modelPtr model = std::get<0>(*test);
-					std::shared_ptr<models::Ship> ship = std::dynamic_pointer_cast<models::Ship>(model);
+					std::shared_ptr<models::EnemyShip> ship = std::dynamic_pointer_cast<models::EnemyShip>(model);
 					if (ship->getFatalCollision()) {
 						gameOver_ = true;
 					}
+
+					if (!std::get<2>(*test)->checkRelevant(width_, height_)) {
+						std::shared_ptr<controllers::HUDController> HUDC = std::dynamic_pointer_cast<controllers::HUDController>(std::get<2>(*HUD_));
+						HUDC->changePoints(ship->getPoints());
+					}
+					// If not relevant anymore-> ADD POINTS TO HUD! (cast to Enemyship instead btw)
 				}
 			}
 		}
@@ -104,7 +128,7 @@ void Game::cycle() {
 	}
 	else {
 		// Prompt for user input on what to do next. Restart or quit?
-
+//		std::get<2>(*HUD_)->draw();
 		// On restart -> set up again.
 	}
 }
@@ -128,7 +152,7 @@ void Game::determineShooters() {
 
 void Game::render() {
 	for (auto triple : mvcTriples_) {
-		std::get<1>(*triple)->draw();
+		std::get<2>(*triple)->draw();
 	}
 }
 

@@ -9,6 +9,7 @@
 #define ENEMYSHIP_H_
 
 #include "Ship.h"
+#include "SpaceShip.h"
 
 namespace models {
 
@@ -19,6 +20,7 @@ public:
 
 	virtual void moveLeft();
 //	virtual bool checkCollision(std::shared_ptr<Model> other) const;
+	virtual bool collided(std::shared_ptr<Model> other);
 	int getPoints();
 
 private:

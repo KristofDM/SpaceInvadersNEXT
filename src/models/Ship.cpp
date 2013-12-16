@@ -56,16 +56,6 @@ bool Ship::shoot() {
 }
 
 bool Ship::collided(std::shared_ptr<Model> other) {
-	// Need to check whether or not fatalCollision_ is needs to be turned on.
-	std::shared_ptr<Shield> test;
-	test = std::dynamic_pointer_cast<Shield>(other);
-	std::shared_ptr<SpaceShip> test2;
-	test2 = std::dynamic_pointer_cast<SpaceShip>(other);
-	if (test != nullptr || test2 != nullptr) {
-		// Set fatalCollision_ to true.
-		fatalCollision_ = true;
-	}
-
 	if (!invincible_) {
 		sf::Time t = invincibleTimer_.getElapsedTime();
 		float t2 = t.asSeconds();
