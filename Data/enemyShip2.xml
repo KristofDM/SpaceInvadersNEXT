@@ -5,12 +5,11 @@
 		<position x="100" y="150"/>
 		<lives>1</lives>
 		<fireRate>60</fireRate> <!-- expressed in rounds per minute-->
-		<speed>1</speed>
+		<points>20</points>
 	</model>
 	
 	<view>
 		<sprite>enemy1.png</sprite>
-		<scale>0.5</scale>
 	</view>
 	
 	<controller>

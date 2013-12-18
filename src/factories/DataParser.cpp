@@ -78,6 +78,7 @@ void DataParser::parseObject(std::string dataFile) {
 	}
 	catch (Exception& e) {
 		std::cout << e.what() << std::endl;
+		exit(1);
 	}
 }
 

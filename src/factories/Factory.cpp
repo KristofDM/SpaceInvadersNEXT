@@ -46,7 +46,8 @@ std::shared_ptr<mvcTriple> Factory::createSpaceShip(std::string file, sf::Render
 	return triple;
 }
 
-std::shared_ptr<mvcTriple> Factory::createEnemyShip(std::string file, int space, int moveAmount, sf::RenderWindow& window, int speed) {
+std::shared_ptr<mvcTriple> Factory::createEnemyShip(std::string file, int space, int moveAmount, sf::RenderWindow& window, double speed) {
+	std::cout << speed << std::endl;
 	DataParser data;
 	data.parseObject(file);
 

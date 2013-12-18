@@ -43,7 +43,7 @@ void GameParser::parseGame(std::string dataFile) {
 		else if (oPart == "enemies") {
 			// Parse enemies
 			int amount = std::stoi(o->Attribute("maxSize"));
-			parseRow(o, amount, std::stoi(o->Attribute("speed")));
+			parseRow(o, amount, std::stod(o->Attribute("speed")));
 		}
 		else if (oPart == "shield") {
 			infoTuple shieldInfo(std::stoi(o->Attribute("amount")), std::stoi(o->Attribute("space")), o->Attribute("file"), "", 0, 0);
@@ -62,7 +62,7 @@ void GameParser::parseGame(std::string dataFile) {
 	}
 }
 
-void GameParser::parseRow(TiXmlElement* p, int amount, int speed) {
+void GameParser::parseRow(TiXmlElement* p, int amount, double speed) {
 	try {
 		for (TiXmlElement* var = p->FirstChildElement(); var != NULL; var = var->NextSiblingElement()) {
 			std::string fieldName = var->Value();

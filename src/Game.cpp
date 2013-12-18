@@ -199,7 +199,7 @@ void Game::setupEnemies(factories::GameParser game) {
 			std::string file = std::get<2>(enemyInfo.at(i));
 			std::string order = std::get<3>(enemyInfo.at(i));
 			int moveAmount = std::get<4>(enemyInfo.at(i));
-			int speed = std::get<5>(enemyInfo.at(i));
+			double speed = std::get<5>(enemyInfo.at(i));
 
 			std::vector<std::shared_ptr<mvcTriple> > row;
 			if (order.size() != amount) {

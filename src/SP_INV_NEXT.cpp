@@ -12,6 +12,7 @@
 int main() {
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "Space Invaders NEXT");
+    window.setFramerateLimit(60);
     sf::Texture texture_;
     sf::Sprite sprite_;
 

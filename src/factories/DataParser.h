@@ -41,9 +41,7 @@ public:
 
 	int getMoveDirection() const;
 
-
 private:
-
 	EDataType type_;
 
 	// Model

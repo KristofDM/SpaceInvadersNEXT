@@ -5,7 +5,6 @@
 		<position x="100" y="50"/>
 		<lives>1</lives>
 		<fireRate>60</fireRate> <!-- expressed in rounds per minute-->
-		<speed>1</speed>
 		<points>20</points>
 	</model>
 	

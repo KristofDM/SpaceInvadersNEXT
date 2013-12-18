@@ -26,7 +26,7 @@ public:
 	Factory();
 	virtual ~Factory();
 	virtual std::shared_ptr<mvcTriple> createSpaceShip(std::string, sf::RenderWindow&);
-	virtual std::shared_ptr<mvcTriple> createEnemyShip(std::string, int, int, sf::RenderWindow&, int);
+	virtual std::shared_ptr<mvcTriple> createEnemyShip(std::string, int, int, sf::RenderWindow&, double);
 	virtual std::shared_ptr<mvcTriple> createShield(std::string, int, sf::RenderWindow&);
 	virtual std::shared_ptr<mvcTriple> createBullet(std::string, std::shared_ptr<models::Model>, sf::RenderWindow&);
 	virtual std::shared_ptr<mvcTriple> createHUD(std::string, sf::RenderWindow&, modelPtr);

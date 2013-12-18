@@ -17,7 +17,7 @@ namespace models {
 
 class EnemyShip : public Ship {
 public:
-	EnemyShip(factories::DataParser, int, int);
+	EnemyShip(factories::DataParser, int, double);
 	virtual ~EnemyShip();
 
 	virtual void moveLeft();

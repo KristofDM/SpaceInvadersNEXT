@@ -9,7 +9,7 @@
 
 namespace models {
 
-EnemyShip::EnemyShip(factories::DataParser data, int moveAmount, int speed)
+EnemyShip::EnemyShip(factories::DataParser data, int moveAmount, double speed)
 	: Ship(data.getLives(), data.getFireRate(), speed, down),
 	  moveAmount_(moveAmount),
 	  points_(data.getPoints()),
