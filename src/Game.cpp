@@ -41,7 +41,7 @@ void Game::setUp() {
 }
 
 void Game::cycle() {
-	std::get<2>(*HUD_)->draw();
+	HUD_->draw();
 	if (!this->endGame()) {
 
 		unsigned int size = mvcTriples_.size();
@@ -84,8 +84,7 @@ void Game::cycle() {
 					}
 
 					if (!std::get<2>(*test)->checkRelevant(width_, height_)) {
-						std::shared_ptr<controllers::HUDController> HUDC = std::dynamic_pointer_cast<controllers::HUDController>(std::get<2>(*HUD_));
-						HUDC->changePoints(ship->getPoints());
+						HUD_->changePoints(ship->getPoints());
 					}
 				}
 			}
@@ -131,8 +130,7 @@ void Game::cycle() {
 	else {
 		// Prompt for user input on what to do next. Restart or quit?
 
-		std::shared_ptr<controllers::HUDController> HUDC = std::dynamic_pointer_cast<controllers::HUDController>(std::get<2>(*HUD_));
-		HUDC->drawEnd();
+		HUD_->drawEnd();
 	}
 }
 
@@ -190,40 +188,43 @@ void Game::setupTriples(factories::GameParser game) {
 }
 
 void Game::setupEnemies(factories::GameParser game) {
-	std::shared_ptr<mvcTriple> triple;
-	std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
+	std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::EnemyShipFactory>();
 	int space = 0;
 	try {
 		std::vector<infoTuple> enemyInfo = game.getEnemyInfo();
 		for (unsigned int i = 0; i < enemyInfo.size(); i++) {
 			int amount = std::get<0>(enemyInfo.at(i));
-			int space_amount = std::get<1>(enemyInfo.at(i));
-			std::string file = std::get<2>(enemyInfo.at(i));
+//			int space_amount = std::get<1>(enemyInfo.at(i));
+//			std::string file = std::get<2>(enemyInfo.at(i));
 			std::string order = std::get<3>(enemyInfo.at(i));
-			int moveAmount = std::get<4>(enemyInfo.at(i));
-			double speed = std::get<5>(enemyInfo.at(i));
+//			int moveAmount = std::get<4>(enemyInfo.at(i));
+//			double speed = std::get<5>(enemyInfo.at(i));
 
-			std::vector<std::shared_ptr<mvcTriple> > row;
+			std::vector<std::shared_ptr<controllers::EnemyShipController> > row;
 			if (order.size() != amount) {
 				throw Exception("Every row order should have the same amount of characters as the maxSize of all the enemy rows.");
 			}
 				for (auto c : order) {
 					if (c == 'x') {
-						triple = factory->createEnemyShip(file, space, moveAmount, window_, speed);
-						row.push_back(triple);
-						mvcTriples_.push_back(triple);
-						space += space_amount;
+						controllerPtr enemyC = factory->getEntity(game.getFileName(), window_);
+//						triple = factory->createEnemyShip(file, space, moveAmount, window_, speed);
+//						row.push_back(triple);
+//						mvcTriples_.push_back(triple);
+						std::shared_ptr<controllers::EnemyShipController> esc = std::dynamic_pointer_cast<controllers::EnemyShipController>(enemyC);
+						row.push_back(esc);
+						entityControllers_.push_back(enemyC);
+//						space += space_amount;
 					}
 					else if (c == ' ') {
 						row.push_back(nullptr);
-						space += space_amount;
+//						space += space_amount;
 					}
 					else {
 						throw Exception("Invalid symbol in a row order. You can only use spaces and x'es for the order.");
 					}
 				}
 			space = 0;
-			enemies_.push_back(row);
+			enemyControllers_.push_back(row);
 		}
 	}
 	catch(Exception& e) {
@@ -249,8 +250,7 @@ Game& Game::operator=(const Game rhs)
 }
 
 void Game::nextLevel() {
-	std::shared_ptr<controllers::HUDController> HUDC = std::dynamic_pointer_cast<controllers::HUDController>(std::get<2>(*HUD_));
-	HUDC->addLevel(1);
+	HUD_->addLevel(1);
 
 	enemies_.clear();
 	factories::GameParser gameP;
@@ -290,7 +290,7 @@ void Game::setupControllers(factories::GameParser game) {
 	spaceShipController_ = std::dynamic_pointer_cast<controllers::SpaceShipController>(spaceC);
 	// Set up HUD
 	factory = std::make_shared<factories::HUDFactory>();
-    HUD_ = factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_);
+    HUD_ = std::dynamic_pointer_cast<std::shared_ptr<controllers::HUDController> >(factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_));
 
     /* --- */
 
@@ -304,6 +304,7 @@ void Game::setupControllers(factories::GameParser game) {
 
 	for (int i = 0; i < amount; i++) {
 		entityControllers_.push_back(factory->getEntity(game.getFileName(), window_));
+		// Work with spacing in the factory.
 	}
 
 	this->setupEnemies(game);

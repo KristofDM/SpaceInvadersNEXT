@@ -37,6 +37,7 @@
 #include "factories/SpaceShipFactory.h"
 #include "factories/HUDFactory.h"
 #include "factories/ShieldFactory.h"
+#include "factories/EnemyShipFactory.h"
 
 
 typedef std::shared_ptr<controllers::Controller> controllerPtr;
@@ -87,7 +88,7 @@ private:
 
 	std::vector<std::vector<std::shared_ptr<controllers::EnemyShipController> > > enemyControllers_;
 
-	controllerPtr HUD_;
+	std::shared_ptr<controllers::HUDController> HUD_;
 
 	void setupTriples(factories::GameParser);
 
