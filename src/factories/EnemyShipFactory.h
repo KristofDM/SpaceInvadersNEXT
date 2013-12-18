@@ -22,9 +22,9 @@ class EnemyShipFactory : public AbstractFactory {
 public:
 	EnemyShipFactory();
 	virtual ~EnemyShipFactory();
-	virtual controllerPtr getEntity(std::string, sf::RenderWindow&);
+	virtual controllerPtr getEntity(std::string, sf::RenderWindow&) { return nullptr	; }
 	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&) { return nullptr; };
-
+	virtual controllerPtr getEntity(std::string, int, int, sf::RenderWindow&);
 private:
 	int counter_;
 };

@@ -18,6 +18,7 @@ class AbstractFactory {
 public:
 	virtual controllerPtr getEntity(std::string, sf::RenderWindow&) = 0;
 	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&) = 0;
+	virtual controllerPtr getEntity(std::string, int, int, sf::RenderWindow&) = 0;
 };
 
 } /* namespace factories */

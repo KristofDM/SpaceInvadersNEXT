@@ -20,17 +20,17 @@ EnemyShipFactory::~EnemyShipFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-controllerPtr EnemyShipFactory::getEntity(std::string file, sf::RenderWindow& window) {
+controllerPtr EnemyShipFactory::getEntity(std::string file, int row, int space, sf::RenderWindow& window) {
 	GameParser game;
 	game.parseGame(file);
 
-	infoTuple info = game.getEnemyInfo().at(counter_ % game.getEnemyInfo().size()); // They all contain the same data.
+	infoTuple info = game.getEnemyInfo().at(row); // They all contain the same data.
 
 	DataParser data;
 	data.parseObject(std::get<2>(info));
 
-	modelPtr ship = std::make_shared<models::EnemyShip>(data, std::get<0>(info), std::get<5>(info));
-	ship->setUp(data, std::get<1>(info));
+	modelPtr ship = std::make_shared<models::EnemyShip>(data, std::get<4>(info), std::get<5>(info));
+	ship->setUp(data, space);
 
 	modelViewPtr view = std::make_shared<views::SpaceShipView>(ship, data, window);
 	controllerPtr controller (new controllers::EnemyShipController(ship, view, data));

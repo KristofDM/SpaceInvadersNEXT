@@ -7,7 +7,7 @@
 //============================================================================
 
 
-#include "Game.h"
+#include "GameController.h"
 
 int main() {
 
@@ -27,8 +27,8 @@ int main() {
 		std::cout << e.what() << std::endl;
 	}
 
-    game::Game game(800, 600, window);
-    game.setUp();
+    controllers::GameController gameController(800, 600, window);
+    gameController.setUp();
 
     while (window.isOpen()) {
     	// Main program loop.
@@ -41,12 +41,12 @@ int main() {
 					return 0;
 					break;
 				case sf::Event::KeyPressed:
-					if (event.key.code == sf::Keyboard::Y && game.endGame()) {
+					if (event.key.code == sf::Keyboard::Y && gameController.endGame()) {
 						// RESET GAME
-						game = game::Game(800, 600, window);
-						game.setUp();
+						gameController = controllers::GameController(800, 600, window);
+						gameController.setUp();
 					}
-					else if (event.key.code == sf::Keyboard::N && game.endGame()) {
+					else if (event.key.code == sf::Keyboard::N && gameController.endGame()) {
 						window.close();
 						return 0;
 						break;
@@ -58,9 +58,9 @@ int main() {
         }
         window.clear();
         window.draw(sprite_);
-    	game.cycle();
-        game.endGame();
-        game.render();
+    	gameController.cycle();
+    	gameController.endGame();
+    	gameController.render();
         window.display();
     }
     return 0;

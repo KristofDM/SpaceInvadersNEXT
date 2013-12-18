@@ -14,24 +14,6 @@
 #include <vector>
 #include <list>
 #include <memory>
-#include "observers/controllers/EnemyShipController.h"
-#include "observers/controllers/MovingObjectController.h"
-#include "observers/controllers/SpaceShipController.h"
-#include "observers/controllers/StaticController.h"
-#include "observers/controllers/ShipController.h"
-#include "observers/controllers/HUDController.h"
-#include "models/Model.h"
-#include "models/SpaceShip.h"
-#include "models/EnemyShip.h"
-#include "models/Ship.h"
-#include "models/Shield.h"
-#include "models/HUD.h"
-#include "factories/DataParser.h"
-#include "factories/GameParser.h"
-#include "observers/views/SpaceShipView.h"
-#include "observers/views/HUDView.h"
-#include "factories/MainFactory.h"
-#include "factories/Factory.h"
 
 #include "factories/AbstractFactory.h"
 #include "factories/SpaceShipFactory.h"
@@ -41,9 +23,8 @@
 
 
 typedef std::shared_ptr<controllers::Controller> controllerPtr;
-typedef std::tuple<modelPtr, modelViewPtr, controllerPtr > mvcTriple;
 
-namespace game {
+namespace models {
 
 class Game {
 public:
@@ -78,8 +59,6 @@ private:
 	int level_;
 	std::shared_ptr<controllers::SpaceShipController> spaceShipController_;
 
-	// TODO: Get rid of mvcTriple and only use controllers: much cleaner and makes a lot more sense.
-
 	std::vector<controllerPtr> entityControllers_;
 
 	std::vector<std::vector<std::shared_ptr<controllers::EnemyShipController> > > enemies_;
@@ -95,6 +74,6 @@ private:
 	bool checkForNextLevel();
 };
 
-} /* namespace game */
+} /* namespace models */
 
 #endif /* GAME_H_ */

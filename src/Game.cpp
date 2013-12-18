@@ -7,7 +7,7 @@
 
 #include "Game.h"
 
-namespace game {
+namespace models {
 
 Game::Game(unsigned int width, unsigned int height, sf::RenderWindow& window)
 	: width_(width),
@@ -35,7 +35,6 @@ void Game::setUp() {
 	levelMultiplier_ = gameP.getSpeedMult();
 
 	//Setup triples.
-//    setupTriples(gameP);
     setupControllers(gameP);
     determineShooters();
 }
@@ -79,7 +78,7 @@ void Game::cycle() {
 						gameOver_ = true;
 					}
 
-					if (c->checkRelevant(width_, height_)) {
+					if (!c->checkRelevant(width_, height_)) {
 						HUD_->changePoints(c->getPoints());
 					}
 				}
@@ -96,7 +95,7 @@ void Game::cycle() {
 		while (change) {
 			change = false;
 			for (unsigned int i = 0; i < entityControllers_.size(); i++) {
-				if (entityControllers_.at(i)->checkRelevant(width_, height_)) {
+				if (!entityControllers_.at(i)->checkRelevant(width_, height_)) {
 					entityControllers_.erase(entityControllers_.begin()+i);
 					change = true;
 					break;
@@ -156,11 +155,8 @@ void Game::setupEnemies(factories::GameParser game) {
 		std::vector<infoTuple> enemyInfo = game.getEnemyInfo();
 		for (unsigned int i = 0; i < enemyInfo.size(); i++) {
 			int amount = std::get<0>(enemyInfo.at(i));
-//			int space_amount = std::get<1>(enemyInfo.at(i));
-//			std::string file = std::get<2>(enemyInfo.at(i));
+			int space_amount = std::get<1>(enemyInfo.at(i));
 			std::string order = std::get<3>(enemyInfo.at(i));
-//			int moveAmount = std::get<4>(enemyInfo.at(i));
-//			double speed = std::get<5>(enemyInfo.at(i));
 
 			std::vector<std::shared_ptr<controllers::EnemyShipController> > row;
 			if (order.size() != amount) {
@@ -168,18 +164,15 @@ void Game::setupEnemies(factories::GameParser game) {
 			}
 				for (auto c : order) {
 					if (c == 'x') {
-						controllerPtr enemyC = factory->getEntity(game.getFileName(), window_);
-//						triple = factory->createEnemyShip(file, space, moveAmount, window_, speed);
-//						row.push_back(triple);
-//						mvcTriples_.push_back(triple);
+						controllerPtr enemyC = factory->getEntity(game.getFileName(), i, space, window_);
 						std::shared_ptr<controllers::EnemyShipController> esc = std::dynamic_pointer_cast<controllers::EnemyShipController>(enemyC);
 						row.push_back(esc);
 						entityControllers_.push_back(enemyC);
-//						space += space_amount;
+						space += space_amount;
 					}
 					else if (c == ' ') {
 						row.push_back(nullptr);
-//						space += space_amount;
+						space += space_amount;
 					}
 					else {
 						throw Exception("Invalid symbol in a row order. You can only use spaces and x'es for the order.");
@@ -205,8 +198,10 @@ Game& Game::operator=(const Game rhs)
 	gameOver_ = rhs.gameOver_;
 	spaceShipController_ = rhs.spaceShipController_;
 	enemies_ = rhs.enemies_;
+	entityControllers_ = rhs.entityControllers_;
 	HUD_ = rhs.HUD_;
 	levelMultiplier_ = rhs.levelMultiplier_;
+	level_ = rhs.level_;
 	return *this;
 }
 
@@ -243,7 +238,6 @@ bool Game::checkForNextLevel() {
 
 void Game::setupControllers(factories::GameParser game) {
 	// Make our factory.
-//	std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
 
 	std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::SpaceShipFactory>();
 	controllerPtr spaceC = factory->getEntity(game.getSpaceShipXML(), window_);
@@ -251,9 +245,8 @@ void Game::setupControllers(factories::GameParser game) {
 	spaceShipController_ = std::dynamic_pointer_cast<controllers::SpaceShipController>(spaceC);
 	// Set up HUD
 	factory = std::make_shared<factories::HUDFactory>();
-    HUD_ = std::dynamic_pointer_cast<std::shared_ptr<controllers::HUDController>>(factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_));
-
-    /* --- */
+	controllerPtr HUD = factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_);
+    HUD_ = std::dynamic_pointer_cast<controllers::HUDController>(HUD);
 
 	// Setup shields
     factory = std::make_shared<factories::ShieldFactory>();
@@ -265,7 +258,6 @@ void Game::setupControllers(factories::GameParser game) {
 
 	for (int i = 0; i < amount; i++) {
 		entityControllers_.push_back(factory->getEntity(game.getFileName(), window_));
-		// Work with spacing in the factory.
 	}
 
 	this->setupEnemies(game);
@@ -274,4 +266,4 @@ void Game::setupControllers(factories::GameParser game) {
 
 
 
-} /* namespace game */
+} /* namespace models */
