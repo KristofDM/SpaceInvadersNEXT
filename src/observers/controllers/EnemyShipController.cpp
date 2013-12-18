@@ -24,15 +24,18 @@ void EnemyShipController::handleMoveInput(unsigned int width, unsigned int heigh
 
 }
 
-void EnemyShipController::handleShooting(std::vector<std::shared_ptr<mvcTriple> >& mvcTriples) {
-
+void EnemyShipController::handleShooting(std::vector<controllerPtr>& entities) {
 	// AI CONTROLLED
 	if (model_->shoot()) {
 		// Shoot!
-		std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
-		std::shared_ptr<mvcTriple> bullet = factory->createBullet("Data/regularAmmo.xml", model_, view_->getWindow());
-		mvcTriples.push_back(bullet);
+		std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::BulletFactory>();
+		entities.push_back(factory->getEntity("Data/regularAmmo.xml", model_, view_->getWindow()));
 	}
+}
+
+int EnemyShipController::getPoints() {
+	std::shared_ptr<models::EnemyShip> enemy = std::dynamic_pointer_cast<models::EnemyShip>(model_);
+	return enemy->getPoints();
 }
 
 } /* namespace controllers */

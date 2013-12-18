@@ -9,6 +9,7 @@
 #define ENEMYSHIPCONTROLLER_H_
 
 #include "ShipController.h"
+#include "../../models/EnemyShip.h"
 
 namespace controllers {
 
@@ -20,8 +21,9 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int);
 
-	virtual void handleShooting(std::vector<std::shared_ptr<mvcTriple> >&);
+	virtual void handleShooting(std::vector<controllerPtr>& entities);
 
+	int getPoints();
 };
 
 } /* namespace controllers */

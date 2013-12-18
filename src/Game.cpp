@@ -43,30 +43,28 @@ void Game::setUp() {
 void Game::cycle() {
 	HUD_->draw();
 	if (!this->endGame()) {
-
-		unsigned int size = mvcTriples_.size();
-		for (unsigned int i = 0; i < size; i++) {
-			std::get<2>(*mvcTriples_[i])->gameInput(mvcTriples_, width_, height_);
+		for (auto c : entityControllers_) {
+			c->gameInput(entityControllers_, width_, height_);
 		}
 
 		// Collision detection.
-		for (unsigned int i = 0; i < mvcTriples_.size(); i++) {
-			for (unsigned int j = i; j < mvcTriples_.size(); j++) {
-				if (mvcTriples_.at(i) == mvcTriples_.at(j)) {
+		for (unsigned int i = 0; i < entityControllers_.size(); i++) {
+			for (unsigned int j = i; j < entityControllers_.size(); j++) {
+				if (entityControllers_.at(i) == entityControllers_.at(j)) {
 					// Same object, no point in checking for collision.
 					continue;
 				}
 				else {
 					// Check for collision.
-					if (std::get<2>(*mvcTriples_.at(i))->checkCollision(std::get<0>(*mvcTriples_.at(j)))) {
+					if ((entityControllers_.at(i))->checkCollision(entityControllers_.at(j)->getModel())) {
 						// Handle collision.
-						if (std::get<2>(*mvcTriples_.at(i))->collided(std::get<0>(*mvcTriples_.at(j)))) {
+						if ((entityControllers_.at(i))->collided(entityControllers_.at(j)->getModel())) {
 							// Mark for deletion.
-							std::get<2>(*mvcTriples_.at(i))->markDeleted();
+							entityControllers_.at(i)->markDeleted();
 						}
-						if (std::get<2>(*mvcTriples_.at(j))->collided(std::get<0>(*mvcTriples_.at(i)))) {
+						if ((entityControllers_.at(j))->collided(entityControllers_.at(i)->getModel())) {
 							// Mark for deletion.
-							std::get<2>(*mvcTriples_.at(j))->markDeleted();
+							entityControllers_.at(j)->markDeleted();
 						}
 					}
 				}
@@ -75,37 +73,31 @@ void Game::cycle() {
 
 		for (unsigned int i = 0; i < enemies_.size(); i++) {
 			for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
-				std::shared_ptr<mvcTriple> test = enemies_.at(i).at(j);
-				if (test != nullptr) {
-					modelPtr model = std::get<0>(*test);
-					std::shared_ptr<models::EnemyShip> ship = std::dynamic_pointer_cast<models::EnemyShip>(model);
-					if (ship->getFatalCollision()) {
+				std::shared_ptr<controllers::EnemyShipController> c = enemies_.at(i).at(j);
+				if (c != nullptr) {
+					if (c->getFatalCollision()) {
 						gameOver_ = true;
 					}
 
-					if (!std::get<2>(*test)->checkRelevant(width_, height_)) {
-						HUD_->changePoints(ship->getPoints());
+					if (c->checkRelevant(width_, height_)) {
+						HUD_->changePoints(c->getPoints());
 					}
 				}
 			}
 		}
 
 		// Check if our spaceShip is dead.
-		for (auto triple : entityControllers_) {
-			modelPtr obj = std::get<0>(*triple);
-			std::shared_ptr<models::SpaceShip> spaceShip = std::dynamic_pointer_cast<models::SpaceShip>(obj);
-			if (spaceShip != nullptr && spaceShip->getLives() <= 0) {
-				gameOver_ = true;
-			}
+		if (spaceShipController_->checkDead()) {
+			gameOver_ = true;
 		}
 
 		// Get rid of objects that are outside of the window.
 		bool change = true;
 		while (change) {
 			change = false;
-			for (unsigned int i = 0; i < mvcTriples_.size(); i++) {
-				if (->checkRelevant(width_, height_)) {
-					mvcTriples_.erase(mvcTriples_.begin()+i);
+			for (unsigned int i = 0; i < entityControllers_.size(); i++) {
+				if (entityControllers_.at(i)->checkRelevant(width_, height_)) {
+					entityControllers_.erase(entityControllers_.begin()+i);
 					change = true;
 					break;
 				}
@@ -259,7 +251,7 @@ void Game::setupControllers(factories::GameParser game) {
 	spaceShipController_ = std::dynamic_pointer_cast<controllers::SpaceShipController>(spaceC);
 	// Set up HUD
 	factory = std::make_shared<factories::HUDFactory>();
-    HUD_ = std::dynamic_pointer_cast<std::shared_ptr<controllers::HUDController> >(factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_));
+    HUD_ = std::dynamic_pointer_cast<std::shared_ptr<controllers::HUDController>>(factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_));
 
     /* --- */
 

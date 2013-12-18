@@ -50,5 +50,9 @@ void Controller::draw() {
 	view_->draw();
 }
 
+modelPtr Controller::getModel() {
+	return model_;
+}
+
 
 } /* namespace controllers */

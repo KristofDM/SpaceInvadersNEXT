@@ -18,6 +18,9 @@
 #include "../../factories/MainFactory.h"
 #include "../../factories/Factory.h"
 
+#include "../../factories/AbstractFactory.h"
+#include "../../factories/BulletFactory.h"
+
 typedef std::shared_ptr<models::Model> modelPtr;
 
 namespace controllers {
@@ -28,11 +31,13 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
 
-	virtual void handleShooting(std::vector<std::shared_ptr<mvcTriple> >&) = 0;
+	virtual void handleShooting(std::vector<controllerPtr>&) = 0;
 
-	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int);
+	virtual void gameInput(std::vector<controllerPtr>&, unsigned int, unsigned int);
 
 	virtual void setFlags(bool, bool);
+
+	virtual bool getFatalCollision();
 
 };
 } /* namespace controllers */

@@ -10,6 +10,7 @@
 
 #include "ShipController.h"
 #include "../../models/SpaceShip.h"
+
 typedef std::shared_ptr<models::Model> modelPtr;
 
 namespace controllers {
@@ -22,7 +23,7 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int);
 
-	virtual void handleShooting(std::vector<std::shared_ptr<mvcTriple> >&);
+	virtual void handleShooting(std::vector<controllerPtr>&);
 
 	modelPtr getSpaceShip();
 

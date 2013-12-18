@@ -18,12 +18,11 @@ SpaceShipController::~SpaceShipController() {
 	// TODO Auto-generated destructor stub
 }
 
-void SpaceShipController::handleShooting(std::vector<std::shared_ptr<mvcTriple> >& mvcTriples) {
+void SpaceShipController::handleShooting(std::vector<controllerPtr>& entities) {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && model_->shoot()) {
 		// Shoot!
-		std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
-		std::shared_ptr<mvcTriple> bullet = factory->createBullet("Data/regularAmmo.xml", model_, view_->getWindow()); //std::make_shared<mvcTriple>(newBullet, newBulletView, newBulletController);
-		mvcTriples.push_back(bullet);
+		std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::BulletFactory>();
+		entities.push_back(factory->getEntity("Data/regularAmmo.xml", model_, view_->getWindow()));
 	}
 }
 
@@ -72,8 +71,8 @@ modelPtr SpaceShipController::getSpaceShip() {
 }
 
 bool SpaceShipController::checkDead() {
-	std::shared_ptr<models::SpaceShip> spaceShip = std::dynamic_pointer_cast<models::spaceShip>(model_);
-	if (spaceShip != nullptr && spaceShip->lives_ <= 0) {
+	std::shared_ptr<models::SpaceShip> spaceShip = std::dynamic_pointer_cast<models::SpaceShip>(model_);
+	if (spaceShip != nullptr && spaceShip->getLives() <= 0) {
 		return true;
 	}
 	else {

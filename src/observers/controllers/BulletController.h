@@ -10,6 +10,7 @@
 
 #include "Controller.h"
 #include <list>
+#include <vector>
 
 typedef std::shared_ptr<models::Model> modelPtr;
 
@@ -24,7 +25,7 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int);
 
-	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int);
+	virtual void gameInput(std::vector<controllerPtr>&, unsigned int, unsigned int);
 
 };
 

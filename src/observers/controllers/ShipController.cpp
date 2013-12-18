@@ -18,15 +18,19 @@ ShipController::ShipController(modelPtr model, modelViewPtr view, factories::Dat
 	//model_->attach(thisController);
 }
 
-void ShipController::gameInput(std::vector<std::shared_ptr<mvcTriple> >& mvcTriples, unsigned int width, unsigned int height) {
+void ShipController::gameInput(std::vector<controllerPtr>& entities, unsigned int width, unsigned int height) {
 	this->handleMoveInput(width, height);
-	this->handleShooting(mvcTriples);
+	this->handleShooting(entities);
 }
 
 void ShipController::setFlags(bool invincible, bool shooting) {
 	model_->setFlags(invincible, shooting);
 }
 
+bool ShipController::getFatalCollision() {
+	std::shared_ptr<models::Ship> ship = std::dynamic_pointer_cast<models::Ship>(model_);
+	return ship->getFatalCollision();
+}
 
 
 

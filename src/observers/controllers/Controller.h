@@ -36,7 +36,7 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int) = 0;
 
-	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int) = 0;
+	virtual void gameInput(std::vector<controllerPtr>&, unsigned int, unsigned int) = 0;
 
 	virtual void setFlags(bool, bool);
 
@@ -49,6 +49,8 @@ public:
 	virtual bool checkCollision(modelPtr);
 
 	virtual void draw();
+
+	virtual modelPtr getModel();
 
 protected:
 	modelPtr model_;

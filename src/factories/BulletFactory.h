@@ -20,7 +20,7 @@ public:
 	BulletFactory();
 	virtual ~BulletFactory();
 	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&);
-	virtual controllerPtr getEntity(std::string, sf::RenderWindow&) { return nullptr; };
+	virtual controllerPtr getEntity(std::string, sf::RenderWindow&) { return nullptr; }
 };
 
 } /* namespace factories */

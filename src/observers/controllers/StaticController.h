@@ -20,7 +20,7 @@ public:
 
 	virtual void handleMoveInput(unsigned int, unsigned int) { /* do nothing */};
 
-	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int) { /* do nothing */};
+	virtual void gameInput(std::vector<controllerPtr>&, unsigned int, unsigned int) { /* Do nothing. */ }
 
 	void setFlags(bool, bool);
 
