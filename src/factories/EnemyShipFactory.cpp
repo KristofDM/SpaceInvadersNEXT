@@ -9,7 +9,9 @@
 
 namespace factories {
 
-EnemyShipFactory::EnemyShipFactory() {
+EnemyShipFactory::EnemyShipFactory()
+	: counter_(0)
+{
 	// TODO Auto-generated constructor stub
 
 }
@@ -18,11 +20,11 @@ EnemyShipFactory::~EnemyShipFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-controllerPtr getEntity(std::string file, sf::RenderWindow& window) {
+controllerPtr EnemyShipFactory::getEntity(std::string file, sf::RenderWindow& window) {
 	GameParser game;
 	game.parseGame(file);
 
-	infoTuple info = game.getEnemyInfo();
+	infoTuple info = game.getEnemyInfo().at(counter_ % game.getEnemyInfo().size()); // They all contain the same data.
 
 	DataParser data;
 	data.parseObject(std::get<2>(info));

@@ -20,7 +20,7 @@ public:
 	HUDFactory();
 	virtual ~HUDFactory();
 	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&);
-	virtual controllerPtr getEntity(std::string, sf::RenderWindow&) { /* Do nothing */ }
+	virtual controllerPtr getEntity(std::string, sf::RenderWindow&) { return nullptr; }
 };
 
 } /* namespace factories */

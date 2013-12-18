@@ -8,6 +8,7 @@
 #ifndef SHIELDFACTORY_H_
 #define SHIELDFACTORY_H_
 
+#include "GameParser.h"
 #include "AbstractFactory.h"
 #include "../observers/views/SpaceShipView.h"
 #include "../observers/controllers/StaticController.h"
@@ -20,7 +21,7 @@ public:
 	ShieldFactory();
 	virtual ~ShieldFactory();
 	virtual controllerPtr getEntity(std::string, sf::RenderWindow&);
-	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&) { /* nothing. */ };
+	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&) { return nullptr; };
 };
 
 } /* namespace factories */

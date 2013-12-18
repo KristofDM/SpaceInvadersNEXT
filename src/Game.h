@@ -33,6 +33,8 @@
 #include "factories/MainFactory.h"
 #include "factories/Factory.h"
 
+#include "AbstractFactory.h"
+
 
 typedef std::shared_ptr<controllers::Controller> controllerPtr;
 typedef std::tuple<modelPtr, modelViewPtr, controllerPtr > mvcTriple;
@@ -85,6 +87,8 @@ private:
 	std::shared_ptr<mvcTriple> HUD_;
 
 	void setupTriples(factories::GameParser);
+
+    void setupControllers(factories::GameParser);
 
 	void determineShooters();
 

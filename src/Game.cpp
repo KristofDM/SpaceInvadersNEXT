@@ -280,6 +280,35 @@ bool Game::checkForNextLevel() {
 	return true;
 }
 
+void setupControllers(factories::GameParser) {
+	// Make our factory.
+	std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
+
+	std::shared_ptr<mvcTriple> triple = factory->createSpaceShip(game.getSpaceShipXML(), window_);
+	mvcTriples_.push_back(triple);
+
+	// Set up HUD
+    HUD_ = factory->createHUD(game.getSpaceShipXML(), window_, std::get<0>(*triple));
+
+    /* --- */
+
+	// Setup shields
+	infoTuple shieldInfo = game.getShieldInfo();
+	int amount = std::get<0>(shieldInfo);
+	int space_amount = std::get<1>(shieldInfo);
+	std::string file = std::get<2>(shieldInfo);
+	int space = 0;
+
+	for (int i = 0; i < amount; i++) {
+		triple = factory->createShield(file, space, window_);
+		mvcTriples_.push_back(triple);
+		space += space_amount;
+	}
+
+	this->setupEnemies(game);
+}
+
+
 
 
 } /* namespace game */

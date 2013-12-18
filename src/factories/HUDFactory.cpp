@@ -18,7 +18,7 @@ HUDFactory::~HUDFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-controllerPtr getEntity(std::string file, modelPtr spaceShip, sf::RenderWindow& window) {
+controllerPtr HUDFactory::getEntity(std::string file, modelPtr spaceShip, sf::RenderWindow& window) {
     sf::Font font;
     if (!font.loadFromFile("Graphics/SPACEMAN.TTF"))
     {

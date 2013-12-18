@@ -20,7 +20,7 @@ public:
 	SpaceShipFactory();
 	virtual ~SpaceShipFactory();
 	virtual controllerPtr getEntity(std::string, sf::RenderWindow&);
-	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&) { /* nothing. */ };
+	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&) { return nullptr; };
 };
 
 } /* namespace factories */
