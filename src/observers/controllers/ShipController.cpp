@@ -29,4 +29,5 @@ void ShipController::setFlags(bool invincible, bool shooting) {
 
 
 
+
 } /* namespace controllers */

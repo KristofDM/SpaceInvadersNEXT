@@ -33,6 +33,7 @@ public:
 	virtual void gameInput(std::vector<std::shared_ptr<mvcTriple> >&, unsigned int, unsigned int);
 
 	virtual void setFlags(bool, bool);
+
 };
 } /* namespace controllers */
 

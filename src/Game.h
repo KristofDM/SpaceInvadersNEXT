@@ -80,17 +80,11 @@ private:
 
 	// TODO: Get rid of mvcTriple and only use controllers: much cleaner and makes a lot more sense.
 
-	std::vector<std::shared_ptr<mvcTriple> > mvcTriples_;
-
 	std::vector<controllerPtr> entityControllers_;
 
-	std::vector<std::vector<std::shared_ptr<mvcTriple> > > enemies_;
-
-	std::vector<std::vector<std::shared_ptr<controllers::EnemyShipController> > > enemyControllers_;
+	std::vector<std::vector<std::shared_ptr<controllers::EnemyShipController> > > enemies_;
 
 	std::shared_ptr<controllers::HUDController> HUD_;
-
-	void setupTriples(factories::GameParser);
 
     void setupControllers(factories::GameParser);
 
@@ -99,8 +93,6 @@ private:
 	void setupEnemies(factories::GameParser);
 
 	bool checkForNextLevel();
-
-	void setupControllers(factories::GameParser);
 };
 
 } /* namespace game */

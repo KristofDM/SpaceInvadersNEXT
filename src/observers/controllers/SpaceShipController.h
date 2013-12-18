@@ -9,6 +9,7 @@
 #define SPACESHIPCONTROLLER_H_
 
 #include "ShipController.h"
+#include "../../models/SpaceShip.h"
 typedef std::shared_ptr<models::Model> modelPtr;
 
 namespace controllers {
@@ -24,6 +25,8 @@ public:
 	virtual void handleShooting(std::vector<std::shared_ptr<mvcTriple> >&);
 
 	modelPtr getSpaceShip();
+
+	bool checkDead();
 };
 
 } /* namespace controllers */

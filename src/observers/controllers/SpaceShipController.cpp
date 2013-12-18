@@ -71,5 +71,16 @@ modelPtr SpaceShipController::getSpaceShip() {
 	return model_;
 }
 
+bool SpaceShipController::checkDead() {
+	std::shared_ptr<models::SpaceShip> spaceShip = std::dynamic_pointer_cast<models::spaceShip>(model_);
+	if (spaceShip != nullptr && spaceShip->lives_ <= 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+
 
 } /* namespace controllers */

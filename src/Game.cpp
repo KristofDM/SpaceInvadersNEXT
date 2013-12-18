@@ -35,7 +35,7 @@ void Game::setUp() {
 	levelMultiplier_ = gameP.getSpeedMult();
 
 	//Setup triples.
-    setupTriples(gameP);
+//    setupTriples(gameP);
     setupControllers(gameP);
     determineShooters();
 }
@@ -91,7 +91,7 @@ void Game::cycle() {
 		}
 
 		// Check if our spaceShip is dead.
-		for (auto triple : mvcTriples_) {
+		for (auto triple : entityControllers_) {
 			modelPtr obj = std::get<0>(*triple);
 			std::shared_ptr<models::SpaceShip> spaceShip = std::dynamic_pointer_cast<models::SpaceShip>(obj);
 			if (spaceShip != nullptr && spaceShip->getLives() <= 0) {
@@ -104,7 +104,7 @@ void Game::cycle() {
 		while (change) {
 			change = false;
 			for (unsigned int i = 0; i < mvcTriples_.size(); i++) {
-				if (!std::get<2>(*mvcTriples_.at(i))->checkRelevant(width_, height_)) {
+				if (->checkRelevant(width_, height_)) {
 					mvcTriples_.erase(mvcTriples_.begin()+i);
 					change = true;
 					break;
@@ -113,7 +113,7 @@ void Game::cycle() {
 
 			for (unsigned int i = 0; i < enemies_.size(); i++) {
 				for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
-					if (enemies_.at(i).at(j) != nullptr && !std::get<2>(*enemies_.at(i).at(j))->checkRelevant(width_, height_)) {
+					if (enemies_.at(i).at(j) != nullptr && !(enemies_.at(i).at(j))->checkRelevant(width_, height_)) {
 						enemies_[i][j] = nullptr;
 						change = true;
 						break;
@@ -146,45 +146,15 @@ void Game::determineShooters() {
 		}
 		// Set the shooting flag to true unless there was no enemy left on that column.
 		if (highest != -1) {
-			std::get<2>(*enemies_.at(highest).at(column))->setFlags(false, true);
+			(enemies_.at(highest).at(column))->setFlags(false, true);
 		}
 	}
 }
 
 void Game::render() {
-	for (auto triple : mvcTriples_) {
-		std::get<2>(*triple)->draw();
+	for (auto controller : entityControllers_) {
+		controller->draw();
 	}
-}
-
-void Game::setupTriples(factories::GameParser game) {
-
-	// Make our factory.
-	std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
-
-	std::shared_ptr<mvcTriple> triple = factory->createSpaceShip(game.getSpaceShipXML(), window_);
-	mvcTriples_.push_back(triple);
-
-	// Set up HUD
-    HUD_ = factory->createHUD(game.getSpaceShipXML(), window_, std::get<0>(*triple));
-
-    /* --- */
-
-	// Setup shields
-	infoTuple shieldInfo = game.getShieldInfo();
-	int amount = std::get<0>(shieldInfo);
-	int space_amount = std::get<1>(shieldInfo);
-	std::string file = std::get<2>(shieldInfo);
-	int space = 0;
-
-	for (int i = 0; i < amount; i++) {
-		triple = factory->createShield(file, space, window_);
-		mvcTriples_.push_back(triple);
-		space += space_amount;
-	}
-
-	this->setupEnemies(game);
-
 }
 
 void Game::setupEnemies(factories::GameParser game) {
@@ -224,7 +194,7 @@ void Game::setupEnemies(factories::GameParser game) {
 					}
 				}
 			space = 0;
-			enemyControllers_.push_back(row);
+			enemies_.push_back(row);
 		}
 	}
 	catch(Exception& e) {
@@ -242,7 +212,6 @@ Game& Game::operator=(const Game rhs)
 	height_ = rhs.height_;
 	gameOver_ = rhs.gameOver_;
 	spaceShipController_ = rhs.spaceShipController_;
-	mvcTriples_ = rhs.mvcTriples_;
 	enemies_ = rhs.enemies_;
 	HUD_ = rhs.HUD_;
 	levelMultiplier_ = rhs.levelMultiplier_;
@@ -261,7 +230,7 @@ void Game::nextLevel() {
 	for (unsigned int i = 0; i < enemies_.size(); i++) {
 		for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
 			if (enemies_.at(i).at(j) != nullptr) {
-				std::shared_ptr<controllers::MovingObjectController> movC = std::dynamic_pointer_cast<controllers::MovingObjectController>(std::get<2>(*enemies_.at(i).at(j)));
+				std::shared_ptr<controllers::MovingObjectController> movC = std::dynamic_pointer_cast<controllers::MovingObjectController>(enemies_.at(i).at(j));
 				movC->changeSpeed(levelMultiplier_ * level_);
 			}
 		}
