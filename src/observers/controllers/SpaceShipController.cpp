@@ -67,4 +67,9 @@ void SpaceShipController::handleMoveInput(unsigned int width, unsigned int heigh
 	}
 }
 
+modelPtr SpaceShipController::getSpaceShip() {
+	return model_;
+}
+
+
 } /* namespace controllers */

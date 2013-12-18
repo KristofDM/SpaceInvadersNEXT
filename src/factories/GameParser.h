@@ -32,8 +32,11 @@ public:
 	infoTuple getShieldInfo() const;
 	std::vector<infoTuple> getEnemyInfo() const;
 	double getSpeedMult() const;
+	std::string getFileName() const;
 
 private:
+	std::string file_;
+
 	std::string spaceShipXML_;
 
 	infoTuple shieldInfo_;

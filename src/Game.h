@@ -33,7 +33,10 @@
 #include "factories/MainFactory.h"
 #include "factories/Factory.h"
 
-#include "AbstractFactory.h"
+#include "factories/AbstractFactory.h"
+#include "factories/SpaceShipFactory.h"
+#include "factories/HUDFactory.h"
+#include "factories/ShieldFactory.h"
 
 
 typedef std::shared_ptr<controllers::Controller> controllerPtr;
@@ -72,7 +75,7 @@ private:
 	bool gameOver_;
 	double levelMultiplier_;
 	int level_;
-	std::shared_ptr<controllers::ShipController> spaceShipController_;
+	std::shared_ptr<controllers::SpaceShipController> spaceShipController_;
 
 	// TODO: Get rid of mvcTriple and only use controllers: much cleaner and makes a lot more sense.
 
@@ -84,7 +87,7 @@ private:
 
 	std::vector<std::vector<std::shared_ptr<controllers::EnemyShipController> > > enemyControllers_;
 
-	std::shared_ptr<mvcTriple> HUD_;
+	controllerPtr HUD_;
 
 	void setupTriples(factories::GameParser);
 

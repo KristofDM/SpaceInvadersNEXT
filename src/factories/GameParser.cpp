@@ -9,10 +9,9 @@
 
 namespace factories {
 
-GameParser::GameParser() {
-	// TODO Auto-generated constructor stub
-
-}
+GameParser::GameParser()
+	: file_("")
+{}
 
 GameParser::~GameParser() {
 	// TODO Auto-generated destructor stub
@@ -20,6 +19,9 @@ GameParser::~GameParser() {
 
 void GameParser::parseGame(std::string dataFile) {
 	try {
+
+		file_ = dataFile;
+
 		TiXmlDocument doc;
 		if(!doc.LoadFile(dataFile.c_str())) {
 			std::cout << doc.ErrorDesc() << std::endl;
@@ -94,6 +96,10 @@ std::vector<infoTuple> GameParser::getEnemyInfo() const{
 
 double GameParser::getSpeedMult() const{
 	return speedMultiplier_;
+}
+
+std::string GameParser::getFileName() const {
+	return file_;
 }
 
 } /* namespace factories */

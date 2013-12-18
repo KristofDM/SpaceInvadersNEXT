@@ -280,19 +280,22 @@ bool Game::checkForNextLevel() {
 	return true;
 }
 
-void setupControllers(factories::GameParser) {
+void Game::setupControllers(factories::GameParser game) {
 	// Make our factory.
-	std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
+//	std::shared_ptr<factories::MainFactory> factory = std::make_shared<factories::Factory>();
 
-	std::shared_ptr<mvcTriple> triple = factory->createSpaceShip(game.getSpaceShipXML(), window_);
-	mvcTriples_.push_back(triple);
-
+	std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::SpaceShipFactory>();
+	controllerPtr spaceC = factory->getEntity(game.getSpaceShipXML(), window_);
+	entityControllers_.push_back(spaceC);
+	spaceShipController_ = std::dynamic_pointer_cast<controllers::SpaceShipController>(spaceC);
 	// Set up HUD
-    HUD_ = factory->createHUD(game.getSpaceShipXML(), window_, std::get<0>(*triple));
+	factory = std::make_shared<factories::HUDFactory>();
+    HUD_ = factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_);
 
     /* --- */
 
 	// Setup shields
+    factory = std::make_shared<factories::ShieldFactory>();
 	infoTuple shieldInfo = game.getShieldInfo();
 	int amount = std::get<0>(shieldInfo);
 	int space_amount = std::get<1>(shieldInfo);
@@ -300,9 +303,7 @@ void setupControllers(factories::GameParser) {
 	int space = 0;
 
 	for (int i = 0; i < amount; i++) {
-		triple = factory->createShield(file, space, window_);
-		mvcTriples_.push_back(triple);
-		space += space_amount;
+		entityControllers_.push_back(factory->getEntity(game.getFileName(), window_));
 	}
 
 	this->setupEnemies(game);
