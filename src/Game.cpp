@@ -14,7 +14,8 @@ Game::Game(unsigned int width, unsigned int height, sf::RenderWindow& window)
 	  height_(height),
 	  window_(window),
 	  gameOver_(false),
-	  levelMultiplier_(1)
+	  levelMultiplier_(1),
+	  level_(1)
 {}
 
 Game::~Game() {
@@ -35,6 +36,7 @@ void Game::setUp() {
 
 	//Setup triples.
     setupTriples(gameP);
+    setupControllers(gameP);
     determineShooters();
 }
 
@@ -247,7 +249,6 @@ Game& Game::operator=(const Game rhs)
 }
 
 void Game::nextLevel() {
-	static int level = 1;
 	std::shared_ptr<controllers::HUDController> HUDC = std::dynamic_pointer_cast<controllers::HUDController>(std::get<2>(*HUD_));
 	HUDC->addLevel(1);
 
@@ -261,11 +262,11 @@ void Game::nextLevel() {
 		for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
 			if (enemies_.at(i).at(j) != nullptr) {
 				std::shared_ptr<controllers::MovingObjectController> movC = std::dynamic_pointer_cast<controllers::MovingObjectController>(std::get<2>(*enemies_.at(i).at(j)));
-				movC->changeSpeed(levelMultiplier_ * level);
+				movC->changeSpeed(levelMultiplier_ * level_);
 			}
 		}
 	}
-	level++;
+	level_++;
 }
 
 bool Game::checkForNextLevel() {

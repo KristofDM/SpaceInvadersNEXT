@@ -69,7 +69,7 @@ private:
 	sf::RenderWindow& window_;
 	bool gameOver_;
 	double levelMultiplier_;
-
+	int level_;
 	std::shared_ptr<controllers::ShipController> spaceShipController_;
 
 	// TODO: Get rid of mvcTriple and only use controllers: much cleaner and makes a lot more sense.
@@ -91,6 +91,8 @@ private:
 	void setupEnemies(factories::GameParser);
 
 	bool checkForNextLevel();
+
+	void setupControllers(factories::GameParser);
 };
 
 } /* namespace game */
