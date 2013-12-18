@@ -11,7 +11,7 @@
 namespace models {
 
 Bullet::Bullet(std::shared_ptr<Model> owner, sf::Vector2f pos, EOrientation orientation)
-	: MovingObject(3, orientation),
+	: MovingObject(0, orientation),
 	  damage_(1),
 	  owner_(owner),
 	  initPosition_(pos)
@@ -23,6 +23,8 @@ Bullet::~Bullet() {
 
 void Bullet::setUp(factories::DataParser data, int space) {
 	try{
+		speed_ = data.getSpeed();
+
 		// Load texture/sprite
 		if(!texture_.loadFromFile(data.getSpritePath())) {
 			throw Exception("Could not load sprite on location " + data.getSpritePath());

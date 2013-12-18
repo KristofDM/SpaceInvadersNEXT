@@ -29,7 +29,7 @@ private:
 	int moveAmount_;
 	int points_;
 	bool dirSwitch;
-	int travelled_;
+	double travelled_;
 	bool moveDown_;
 
 };
