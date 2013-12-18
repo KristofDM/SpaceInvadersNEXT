@@ -72,9 +72,15 @@ private:
 
 	std::shared_ptr<controllers::ShipController> spaceShipController_;
 
+	// TODO: Get rid of mvcTriple and only use controllers: much cleaner and makes a lot more sense.
+
 	std::vector<std::shared_ptr<mvcTriple> > mvcTriples_;
 
+	std::vector<controllerPtr> entityControllers_;
+
 	std::vector<std::vector<std::shared_ptr<mvcTriple> > > enemies_;
+
+	std::vector<std::vector<std::shared_ptr<controllers::EnemyShipController> > > enemyControllers_;
 
 	std::shared_ptr<mvcTriple> HUD_;
 
