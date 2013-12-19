@@ -17,9 +17,10 @@ public:
 	HUD();
 	virtual ~HUD();
 
-	virtual unsigned int getDamage() { }
+	// Not applicable.
+	virtual unsigned int getDamage() {return 0; }
 
-	virtual bool collided(std::shared_ptr<Model>) { }
+	virtual bool collided(std::shared_ptr<Model>) {return false;}
 
 	void changePoints(int);
 

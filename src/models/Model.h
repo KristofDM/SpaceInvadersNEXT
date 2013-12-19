@@ -32,12 +32,16 @@ public:
 	//! Detaches Observer from our registry.
 	void detach(observers::Observer* obs);
 
+	//! Return the Entity's sprite.
 	sf::Sprite getSprite() const;
 
+	//! Return the Entity's position.
 	sf::Vector2f getPosition() const;
 
+	//! Set up the Entity with the delivered data.
 	virtual void setUp(factories::DataParser data, int space = 0);
 
+	//! Returns the global bounds of the sprite.
 	sf::FloatRect getBounds() const;
 
 	virtual void moveLeft() = 0;
@@ -50,23 +54,31 @@ public:
 
 	virtual bool shoot() = 0;
 
+	//! Determines what happens when this object collides with another Entity.
 	virtual bool collided(std::shared_ptr<Model>) = 0;
 
+	//! Returns the amount of damage taken when collided with this object.
 	virtual unsigned int getDamage() = 0;
 
+	//! Check if a collision took place between this object and the parameter object.
 	virtual bool checkCollision(std::shared_ptr<Model>) const;
 
+	//! Return the orientation of this object.
 	EOrientation getOrientation() const;
 
+	//! Check if this object is still relevant. (Inside the field etc.)
 	bool checkRelevant(unsigned int, unsigned int) const;
 
 	//! This will return the objects owner. By default this is itself.
 	virtual std::shared_ptr<Model> getOwner();
 
+	//! Set the deleted_ flag to true so we know it can be deleted.
 	void markDeleted();
 
+	//! Returns the deleted_ flag to let the caller know if it's ok to delete this object.
 	bool getDeleted();
 
+	//! Sets flags in the object.
 	virtual void setFlags(bool, bool) = 0;
 
 protected:
