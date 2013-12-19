@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$d3/dcc/StaticController_8h.html" title="StaticController.h" alt="" coords="363,83,485,112"/>
+<area shape="rect" id="node49" href="$d0/d0b/HUD_8h.html" title="../../models/HUD.h" alt="" coords="725,160,859,189"/>
+<area shape="rect" id="node54" href="$d7/df9/HUDView_8h.html" title="../views/HUDView.h" alt="" coords="537,83,679,112"/>
+<area shape="rect" id="node5" href="$de/d4a/Controller_8h.html" title="Controller.h" alt="" coords="147,237,235,267"/>
+<area shape="rect" id="node15" href="$d3/d5a/Model_8h.html" title="../../models/Model.h" alt="" coords="603,392,741,421"/>
+<area shape="rect" id="node39" href="$d2/d73/ModelView_8h.html" title="../views/ModelView.h" alt="" coords="309,315,456,344"/>
+<area shape="rect" id="node23" href="$d8/df1/Observer_8h.html" title="../observers/Observer.h" alt="" coords="704,469,861,499"/>
+<area shape="rect" id="node25" href="$d8/d8a/Exception_8h.html" title="../Exception.h" alt="" coords="601,547,703,576"/>
+<area shape="rect" id="node31" href="$dd/dbf/DataParser_8h.html" title="../factories/DataParser.h" alt="" coords="312,469,477,499"/>
+<area shape="rect" id="node51" href="$d5/d33/StaticObject_8h.html" title="StaticObject.h" alt="" coords="819,315,923,344"/>
+<area shape="rect" id="node60" href="$d6/d03/Ship_8h.html" title="../../models/Ship.h" alt="" coords="573,160,701,189"/>
+<area shape="rect" id="node65" href="$d4/d9a/Bullet_8h.html" title="Bullet.h" alt="" coords="553,237,620,267"/>
+<area shape="rect" id="node68" href="$d7/d6d/MovingObject_8h.html" title="MovingObject.h" alt="" coords="581,315,693,344"/>
+<area shape="rect" id="node72" href="$d7/d9b/Shield_8h.html" title="Shield.h" alt="" coords="765,237,835,267"/>
+</map>

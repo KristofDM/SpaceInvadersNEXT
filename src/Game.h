@@ -24,7 +24,7 @@
 
 typedef std::shared_ptr<controllers::Controller> controllerPtr;
 
-namespace models {
+namespace game {
 
 class Game {
 public:
@@ -36,7 +36,6 @@ public:
 	//! Perform one game cycle.
 	void cycle();
 
-	//! Render one frame.
 	void render();
 
 	//! Set up the game.
@@ -50,6 +49,8 @@ public:
 	void nextLevel();
 
 	Game& operator=(const Game rhs);
+
+	std::vector<controllerPtr> getEntities();
 
 private:
 	//! Field width. (== window_ width)
@@ -89,6 +90,6 @@ private:
 	bool checkForNextLevel();
 };
 
-} /* namespace models */
+} /* namespace game */
 
 #endif /* GAME_H_ */

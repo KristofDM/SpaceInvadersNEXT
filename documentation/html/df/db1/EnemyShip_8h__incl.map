@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node7" href="$d6/d03/Ship_8h.html" title="Ship.h" alt="" coords="197,160,256,189"/>
+<area shape="rect" id="node50" href="$d5/d9f/SpaceShip_8h.html" title="SpaceShip.h" alt="" coords="264,83,360,112"/>
+<area shape="rect" id="node13" href="$d3/d5a/Model_8h.html" title="Model.h" alt="" coords="179,392,245,421"/>
+<area shape="rect" id="node37" href="$d4/d9a/Bullet_8h.html" title="Bullet.h" alt="" coords="123,237,189,267"/>
+<area shape="rect" id="node40" href="$d7/d6d/MovingObject_8h.html" title="MovingObject.h" alt="" coords="160,315,272,344"/>
+<area shape="rect" id="node44" href="$d7/d9b/Shield_8h.html" title="Shield.h" alt="" coords="275,237,344,267"/>
+<area shape="rect" id="node21" href="$d8/df1/Observer_8h.html" title="../observers/Observer.h" alt="" coords="247,469,404,499"/>
+<area shape="rect" id="node23" href="$d8/d8a/Exception_8h.html" title="../Exception.h" alt="" coords="412,547,513,576"/>
+<area shape="rect" id="node29" href="$dd/dbf/DataParser_8h.html" title="../factories/DataParser.h" alt="" coords="521,469,687,499"/>
+<area shape="rect" id="node47" href="$d5/d33/StaticObject_8h.html" title="StaticObject.h" alt="" coords="347,315,451,344"/>
+</map>

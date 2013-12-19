@@ -221,6 +221,30 @@ src/GameController.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.s
 .PHONY : src/GameController.cpp.s
 
+src/GameView.o: src/GameView.cpp.o
+.PHONY : src/GameView.o
+
+# target to build an object file
+src/GameView.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o
+.PHONY : src/GameView.cpp.o
+
+src/GameView.i: src/GameView.cpp.i
+.PHONY : src/GameView.i
+
+# target to preprocess a source file
+src/GameView.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.i
+.PHONY : src/GameView.cpp.i
+
+src/GameView.s: src/GameView.cpp.s
+.PHONY : src/GameView.s
+
+# target to generate assembly for a file
+src/GameView.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.s
+.PHONY : src/GameView.cpp.s
+
 src/SP_INV_NEXT.o: src/SP_INV_NEXT.cpp.o
 .PHONY : src/SP_INV_NEXT.o
 
@@ -244,30 +268,6 @@ src/SP_INV_NEXT.s: src/SP_INV_NEXT.cpp.s
 src/SP_INV_NEXT.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.s
 .PHONY : src/SP_INV_NEXT.cpp.s
-
-src/factories/AbstractFactory.o: src/factories/AbstractFactory.cpp.o
-.PHONY : src/factories/AbstractFactory.o
-
-# target to build an object file
-src/factories/AbstractFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/src/factories/AbstractFactory.cpp.o
-.PHONY : src/factories/AbstractFactory.cpp.o
-
-src/factories/AbstractFactory.i: src/factories/AbstractFactory.cpp.i
-.PHONY : src/factories/AbstractFactory.i
-
-# target to preprocess a source file
-src/factories/AbstractFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/src/factories/AbstractFactory.cpp.i
-.PHONY : src/factories/AbstractFactory.cpp.i
-
-src/factories/AbstractFactory.s: src/factories/AbstractFactory.cpp.s
-.PHONY : src/factories/AbstractFactory.s
-
-# target to generate assembly for a file
-src/factories/AbstractFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceInvaders.dir/build.make CMakeFiles/SpaceInvaders.dir/src/factories/AbstractFactory.cpp.s
-.PHONY : src/factories/AbstractFactory.cpp.s
 
 src/factories/BulletFactory.o: src/factories/BulletFactory.cpp.o
 .PHONY : src/factories/BulletFactory.o
@@ -1083,12 +1083,12 @@ help:
 	@echo "... src/GameController.o"
 	@echo "... src/GameController.i"
 	@echo "... src/GameController.s"
+	@echo "... src/GameView.o"
+	@echo "... src/GameView.i"
+	@echo "... src/GameView.s"
 	@echo "... src/SP_INV_NEXT.o"
 	@echo "... src/SP_INV_NEXT.i"
 	@echo "... src/SP_INV_NEXT.s"
-	@echo "... src/factories/AbstractFactory.o"
-	@echo "... src/factories/AbstractFactory.i"
-	@echo "... src/factories/AbstractFactory.s"
 	@echo "... src/factories/BulletFactory.o"
 	@echo "... src/factories/BulletFactory.i"
 	@echo "... src/factories/BulletFactory.s"

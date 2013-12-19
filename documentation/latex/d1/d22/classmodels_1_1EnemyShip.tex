@@ -1,0 +1,155 @@
+\hypertarget{classmodels_1_1EnemyShip}{\section{models\-:\-:\-Enemy\-Ship \-Class \-Reference}
+\label{d1/d22/classmodels_1_1EnemyShip}\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}}
+}
+
+
+{\ttfamily \#include $<$\-Enemy\-Ship.\-h$>$}
+
+
+
+\-Inheritance diagram for models\-:\-:\-Enemy\-Ship\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d8/dfa/classmodels_1_1EnemyShip__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\-Collaboration diagram for models\-:\-:\-Enemy\-Ship\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/dbd/classmodels_1_1EnemyShip__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodels_1_1EnemyShip_a80ebc0b6a1e58ab2f963f087786dcd8f}{\-Enemy\-Ship} (\hyperlink{classfactories_1_1DataParser}{factories\-::\-Data\-Parser}, int, double)
+\item 
+virtual \hyperlink{classmodels_1_1EnemyShip_a17c83db2f35e566465f75a78ead3b444}{$\sim$\-Enemy\-Ship} ()
+\item 
+virtual void \hyperlink{classmodels_1_1EnemyShip_a858923dce4ae65652ed4513d5da9fb1d}{move\-Left} ()
+\begin{DoxyCompactList}\small\item\em \-Move the spaceship. \-This method takes care of every movement of the enemyships. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classmodels_1_1EnemyShip_a25d00521cb35008d405cb9e1300eb9ae}{collided} (std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$ other)
+\begin{DoxyCompactList}\small\item\em \-Specifies what this object should do when it collided with another entity. \end{DoxyCompactList}\item 
+int \hyperlink{classmodels_1_1EnemyShip_a2e431ef058cc7ba92da1ab4d349a884d}{get\-Points} ()
+\begin{DoxyCompactList}\small\item\em \-Returns the amount of points destroying this ship awards the player. \end{DoxyCompactList}\item 
+bool \hyperlink{classmodels_1_1EnemyShip_aa25f4cfb211186150ac3b229722b07ae}{shoot} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classmodels_1_1EnemyShip_a5e303de4f6d0e728d8610b75732a83f4}{move\-Amount\-\_\-}
+\item 
+int \hyperlink{classmodels_1_1EnemyShip_ae281306bb3d1401e513a1b3bbef5a61b}{points\-\_\-}
+\item 
+bool \hyperlink{classmodels_1_1EnemyShip_aff3aa6732d42716ab66fff75e4fe541b}{dir\-Switch}
+\item 
+double \hyperlink{classmodels_1_1EnemyShip_a2d95522beb6de8ac6d24fd1dd49969ed}{travelled\-\_\-}
+\item 
+bool \hyperlink{classmodels_1_1EnemyShip_ae53fe129fa8a1b4a083844091838e5e1}{move\-Down\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classmodels_1_1EnemyShip_a80ebc0b6a1e58ab2f963f087786dcd8f}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!\-Enemy\-Ship@{\-Enemy\-Ship}}
+\index{\-Enemy\-Ship@{\-Enemy\-Ship}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{\-Enemy\-Ship}]{\setlength{\rightskip}{0pt plus 5cm}{\bf models\-::\-Enemy\-Ship\-::\-Enemy\-Ship} (
+\begin{DoxyParamCaption}
+\item[{{\bf factories\-::\-Data\-Parser}}]{, }
+\item[{int}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}}\label{d1/d22/classmodels_1_1EnemyShip_a80ebc0b6a1e58ab2f963f087786dcd8f}
+\hypertarget{classmodels_1_1EnemyShip_a17c83db2f35e566465f75a78ead3b444}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!$\sim$\-Enemy\-Ship@{$\sim$\-Enemy\-Ship}}
+\index{$\sim$\-Enemy\-Ship@{$\sim$\-Enemy\-Ship}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{$\sim$\-Enemy\-Ship}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf models\-::\-Enemy\-Ship\-::$\sim$\-Enemy\-Ship} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_a17c83db2f35e566465f75a78ead3b444}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmodels_1_1EnemyShip_a25d00521cb35008d405cb9e1300eb9ae}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!collided@{collided}}
+\index{collided@{collided}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{collided}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Enemy\-Ship\-::collided} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Model} $>$}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_a25d00521cb35008d405cb9e1300eb9ae}
+
+
+\-Specifies what this object should do when it collided with another entity. 
+
+
+
+\-Reimplemented from \hyperlink{classmodels_1_1Ship_aaa5808c580620f89bb0a04d3583a112e}{models\-::\-Ship}.
+
+\hypertarget{classmodels_1_1EnemyShip_a2e431ef058cc7ba92da1ab4d349a884d}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!get\-Points@{get\-Points}}
+\index{get\-Points@{get\-Points}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{get\-Points}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf models\-::\-Enemy\-Ship\-::get\-Points} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/d22/classmodels_1_1EnemyShip_a2e431ef058cc7ba92da1ab4d349a884d}
+
+
+\-Returns the amount of points destroying this ship awards the player. 
+
+\hypertarget{classmodels_1_1EnemyShip_a858923dce4ae65652ed4513d5da9fb1d}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!move\-Left@{move\-Left}}
+\index{move\-Left@{move\-Left}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{move\-Left}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Enemy\-Ship\-::move\-Left} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_a858923dce4ae65652ed4513d5da9fb1d}
+
+
+\-Move the spaceship. \-This method takes care of every movement of the enemyships. 
+
+
+
+\-Reimplemented from \hyperlink{classmodels_1_1MovingObject_a0e24c202d5627a1e8222ad36c2850fac}{models\-::\-Moving\-Object}.
+
+\hypertarget{classmodels_1_1EnemyShip_aa25f4cfb211186150ac3b229722b07ae}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!shoot@{shoot}}
+\index{shoot@{shoot}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{shoot}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Enemy\-Ship\-::shoot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_aa25f4cfb211186150ac3b229722b07ae}
+\-Returns whether or not it is ok to shoot. \begin{DoxyReturn}{\-Returns}
+\-True if the ship is able to shoot. \-False if it is not. 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{classmodels_1_1Ship_afc4a82da0df7e98ba74ca068946358f5}{models\-::\-Ship}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classmodels_1_1EnemyShip_aff3aa6732d42716ab66fff75e4fe541b}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!dir\-Switch@{dir\-Switch}}
+\index{dir\-Switch@{dir\-Switch}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Enemy\-Ship\-::dir\-Switch}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_aff3aa6732d42716ab66fff75e4fe541b}
+\hypertarget{classmodels_1_1EnemyShip_a5e303de4f6d0e728d8610b75732a83f4}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!move\-Amount\-\_\-@{move\-Amount\-\_\-}}
+\index{move\-Amount\-\_\-@{move\-Amount\-\_\-}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{move\-Amount\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf models\-::\-Enemy\-Ship\-::move\-Amount\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_a5e303de4f6d0e728d8610b75732a83f4}
+\hypertarget{classmodels_1_1EnemyShip_ae53fe129fa8a1b4a083844091838e5e1}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!move\-Down\-\_\-@{move\-Down\-\_\-}}
+\index{move\-Down\-\_\-@{move\-Down\-\_\-}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{move\-Down\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Enemy\-Ship\-::move\-Down\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_ae53fe129fa8a1b4a083844091838e5e1}
+\hypertarget{classmodels_1_1EnemyShip_ae281306bb3d1401e513a1b3bbef5a61b}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!points\-\_\-@{points\-\_\-}}
+\index{points\-\_\-@{points\-\_\-}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{points\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf models\-::\-Enemy\-Ship\-::points\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_ae281306bb3d1401e513a1b3bbef5a61b}
+\hypertarget{classmodels_1_1EnemyShip_a2d95522beb6de8ac6d24fd1dd49969ed}{\index{models\-::\-Enemy\-Ship@{models\-::\-Enemy\-Ship}!travelled\-\_\-@{travelled\-\_\-}}
+\index{travelled\-\_\-@{travelled\-\_\-}!models::EnemyShip@{models\-::\-Enemy\-Ship}}
+\subsubsection[{travelled\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf models\-::\-Enemy\-Ship\-::travelled\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d22/classmodels_1_1EnemyShip_a2d95522beb6de8ac6d24fd1dd49969ed}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/models/\hyperlink{EnemyShip_8h}{\-Enemy\-Ship.\-h}\end{DoxyCompactItemize}

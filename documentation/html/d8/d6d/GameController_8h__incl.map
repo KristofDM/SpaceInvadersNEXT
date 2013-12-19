@@ -1,0 +1,34 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$d3/d5f/Game_8h.html" title="Game.h" alt="" coords="953,83,1020,112"/>
+<area shape="rect" id="node17" href="$da/d66/AbstractFactory_8h.html" title="factories/AbstractFactory.h" alt="" coords="435,469,613,499"/>
+<area shape="rect" id="node57" href="$d5/d7f/SpaceShipFactory_8h.html" title="factories/SpaceShipFactory.h" alt="" coords="1507,160,1701,189"/>
+<area shape="rect" id="node117" href="$db/d7d/HUDFactory_8h.html" title="factories/HUDFactory.h" alt="" coords="907,237,1067,267"/>
+<area shape="rect" id="node137" href="$d5/dd5/ShieldFactory_8h.html" title="factories/ShieldFactory.h" alt="" coords="195,392,360,421"/>
+<area shape="rect" id="node151" href="$d9/d9b/EnemyShipFactory_8h.html" title="factories/EnemyShipFactory.h" alt="" coords="2048,160,2245,189"/>
+<area shape="rect" id="node19" href="$de/d4a/Controller_8h.html" title="../observers/controllers/Controller.h" alt="" coords="627,547,853,576"/>
+<area shape="rect" id="node26" href="$d3/d5a/Model_8h.html" title="../../models/Model.h" alt="" coords="1271,701,1409,731"/>
+<area shape="rect" id="node47" href="$d2/d73/ModelView_8h.html" title="../views/ModelView.h" alt="" coords="980,624,1127,653"/>
+<area shape="rect" id="node32" href="$d8/df1/Observer_8h.html" title="../observers/Observer.h" alt="" coords="1096,779,1253,808"/>
+<area shape="rect" id="node34" href="$d8/d8a/Exception_8h.html" title="../Exception.h" alt="" coords="552,856,653,885"/>
+<area shape="rect" id="node39" href="$dd/dbf/DataParser_8h.html" title="../factories/DataParser.h" alt="" coords="1277,779,1443,808"/>
+<area shape="rect" id="node60" href="$dc/d18/SpaceShipView_8h.html" title="../observers/views/SpaceShipView.h" alt="" coords="1864,469,2099,499"/>
+<area shape="rect" id="node64" href="$d5/d9f/SpaceShip_8h.html" title="../models/SpaceShip.h" alt="" coords="1915,392,2069,421"/>
+<area shape="rect" id="node85" href="$d3/dc8/SpaceShipController_8h.html" title="../observers/controllers/SpaceShipController.h" alt="" coords="1460,237,1748,267"/>
+<area shape="rect" id="node66" href="$d6/d03/Ship_8h.html" title="Ship.h" alt="" coords="1600,469,1659,499"/>
+<area shape="rect" id="node71" href="$d4/d9a/Bullet_8h.html" title="Bullet.h" alt="" coords="1525,547,1592,576"/>
+<area shape="rect" id="node74" href="$d7/d6d/MovingObject_8h.html" title="MovingObject.h" alt="" coords="1431,624,1543,653"/>
+<area shape="rect" id="node78" href="$d7/d9b/Shield_8h.html" title="Shield.h" alt="" coords="1285,547,1355,576"/>
+<area shape="rect" id="node81" href="$d5/d33/StaticObject_8h.html" title="StaticObject.h" alt="" coords="1252,624,1356,653"/>
+<area shape="rect" id="node87" href="$de/daa/ShipController_8h.html" title="ShipController.h" alt="" coords="1489,315,1604,344"/>
+<area shape="rect" id="node90" href="$d7/d2f/MovingObjectController_8h.html" title="MovingObjectController.h" alt="" coords="1032,469,1200,499"/>
+<area shape="rect" id="node97" href="$dc/d80/BulletController_8h.html" title="BulletController.h" alt="" coords="679,469,801,499"/>
+<area shape="rect" id="node102" href="$d2/de9/BulletView_8h.html" title="../views/BulletView.h" alt="" coords="1275,469,1419,499"/>
+<area shape="rect" id="node110" href="$da/d20/BulletFactory_8h.html" title="../../factories/BulletFactory.h" alt="" coords="688,392,875,421"/>
+<area shape="rect" id="node120" href="$d7/df9/HUDView_8h.html" title="../observers/views/HUDView.h" alt="" coords="899,392,1101,421"/>
+<area shape="rect" id="node125" href="$d0/d0b/HUD_8h.html" title="../../models/HUD.h" alt="" coords="1443,469,1576,499"/>
+<area shape="rect" id="node129" href="$d4/d24/HUDController_8h.html" title="../observers/controllers/HUDController.h" alt="" coords="941,315,1197,344"/>
+<area shape="rect" id="node131" href="$d3/dcc/StaticController_8h.html" title="StaticController.h" alt="" coords="216,469,339,499"/>
+<area shape="rect" id="node139" href="$d1/de9/GameParser_8h.html" title="GameParser.h" alt="" coords="619,701,725,731"/>
+<area shape="rect" id="node155" href="$db/d21/EnemyShipController_8h.html" title="../observers/controllers/EnemyShipController.h" alt="" coords="2000,237,2293,267"/>
+<area shape="rect" id="node158" href="$d8/d00/EnemyShip_8h.html" title="../../models/EnemyShip.h" alt="" coords="2100,315,2271,344"/>
+</map>

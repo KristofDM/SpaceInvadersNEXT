@@ -1,0 +1,138 @@
+\hypertarget{classfactories_1_1GameParser}{\section{factories\-:\-:\-Game\-Parser \-Class \-Reference}
+\label{d0/dc6/classfactories_1_1GameParser}\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}}
+}
+
+
+{\ttfamily \#include $<$\-Game\-Parser.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfactories_1_1GameParser_a5489978eb2e4a70c9e11ccba4c0a3eaa}{\-Game\-Parser} ()
+\item 
+virtual \hyperlink{classfactories_1_1GameParser_aef9939aab10de9f5d822a7c3012205ec}{$\sim$\-Game\-Parser} ()
+\item 
+void \hyperlink{classfactories_1_1GameParser_a37478c9c37d5b4c1c8710c6fe12c9cf1}{parse\-Game} (std\-::string)
+\item 
+std\-::string \hyperlink{classfactories_1_1GameParser_ab7c58c48edd369657cdc0ef969c66716}{get\-Space\-Ship\-X\-M\-L} () const 
+\item 
+\hyperlink{EnemyShipFactory_8h_ac956ecc007fb2927f31ad7a9ab11662c}{info\-Tuple} \hyperlink{classfactories_1_1GameParser_a32c336b1b1c11dc7a090e45516b3208f}{get\-Shield\-Info} () const 
+\item 
+std\-::vector$<$ \hyperlink{EnemyShipFactory_8h_ac956ecc007fb2927f31ad7a9ab11662c}{info\-Tuple} $>$ \hyperlink{classfactories_1_1GameParser_ae843cd142fb42c3e885652bd97df9745}{get\-Enemy\-Info} () const 
+\item 
+double \hyperlink{classfactories_1_1GameParser_acdaa0830dbc111796fece6ce1381f12b}{get\-Speed\-Mult} () const 
+\item 
+std\-::string \hyperlink{classfactories_1_1GameParser_aef3a20c6f2b4cec0fda8bea8150e9bfd}{get\-File\-Name} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classfactories_1_1GameParser_aa4941f13a1b2c0148a2bb79830ad663f}{parse\-Row} (\-Ti\-Xml\-Element $\ast$, int, double)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classfactories_1_1GameParser_a9db6aca324777c1e49ac03bc46ca982b}{file\-\_\-}
+\item 
+std\-::string \hyperlink{classfactories_1_1GameParser_a67d451e1bbc18bde57e2d23de432a53d}{space\-Ship\-X\-M\-L\-\_\-}
+\item 
+\hyperlink{EnemyShipFactory_8h_ac956ecc007fb2927f31ad7a9ab11662c}{info\-Tuple} \hyperlink{classfactories_1_1GameParser_a06cf40ec918bb6a1b279501a8006c79b}{shield\-Info\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{EnemyShipFactory_8h_ac956ecc007fb2927f31ad7a9ab11662c}{info\-Tuple} $>$ \hyperlink{classfactories_1_1GameParser_a4f47365bc9e1c11e696aca260371f56e}{enemy\-Info\-\_\-}
+\item 
+double \hyperlink{classfactories_1_1GameParser_a22d4c56cbf9304bede16b232f814f95c}{speed\-Multiplier\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classfactories_1_1GameParser_a5489978eb2e4a70c9e11ccba4c0a3eaa}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!\-Game\-Parser@{\-Game\-Parser}}
+\index{\-Game\-Parser@{\-Game\-Parser}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{\-Game\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf factories\-::\-Game\-Parser\-::\-Game\-Parser} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/dc6/classfactories_1_1GameParser_a5489978eb2e4a70c9e11ccba4c0a3eaa}
+\hypertarget{classfactories_1_1GameParser_aef9939aab10de9f5d822a7c3012205ec}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!$\sim$\-Game\-Parser@{$\sim$\-Game\-Parser}}
+\index{$\sim$\-Game\-Parser@{$\sim$\-Game\-Parser}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{$\sim$\-Game\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf factories\-::\-Game\-Parser\-::$\sim$\-Game\-Parser} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/dc6/classfactories_1_1GameParser_aef9939aab10de9f5d822a7c3012205ec}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classfactories_1_1GameParser_ae843cd142fb42c3e885652bd97df9745}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!get\-Enemy\-Info@{get\-Enemy\-Info}}
+\index{get\-Enemy\-Info@{get\-Enemy\-Info}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{get\-Enemy\-Info}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf info\-Tuple}$>$ {\bf factories\-::\-Game\-Parser\-::get\-Enemy\-Info} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/dc6/classfactories_1_1GameParser_ae843cd142fb42c3e885652bd97df9745}
+\hypertarget{classfactories_1_1GameParser_aef3a20c6f2b4cec0fda8bea8150e9bfd}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!get\-File\-Name@{get\-File\-Name}}
+\index{get\-File\-Name@{get\-File\-Name}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{get\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf factories\-::\-Game\-Parser\-::get\-File\-Name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/dc6/classfactories_1_1GameParser_aef3a20c6f2b4cec0fda8bea8150e9bfd}
+\hypertarget{classfactories_1_1GameParser_a32c336b1b1c11dc7a090e45516b3208f}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!get\-Shield\-Info@{get\-Shield\-Info}}
+\index{get\-Shield\-Info@{get\-Shield\-Info}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{get\-Shield\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf info\-Tuple} {\bf factories\-::\-Game\-Parser\-::get\-Shield\-Info} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/dc6/classfactories_1_1GameParser_a32c336b1b1c11dc7a090e45516b3208f}
+\hypertarget{classfactories_1_1GameParser_ab7c58c48edd369657cdc0ef969c66716}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!get\-Space\-Ship\-X\-M\-L@{get\-Space\-Ship\-X\-M\-L}}
+\index{get\-Space\-Ship\-X\-M\-L@{get\-Space\-Ship\-X\-M\-L}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{get\-Space\-Ship\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf factories\-::\-Game\-Parser\-::get\-Space\-Ship\-X\-M\-L} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/dc6/classfactories_1_1GameParser_ab7c58c48edd369657cdc0ef969c66716}
+\hypertarget{classfactories_1_1GameParser_acdaa0830dbc111796fece6ce1381f12b}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!get\-Speed\-Mult@{get\-Speed\-Mult}}
+\index{get\-Speed\-Mult@{get\-Speed\-Mult}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{get\-Speed\-Mult}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf factories\-::\-Game\-Parser\-::get\-Speed\-Mult} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/dc6/classfactories_1_1GameParser_acdaa0830dbc111796fece6ce1381f12b}
+\hypertarget{classfactories_1_1GameParser_a37478c9c37d5b4c1c8710c6fe12c9cf1}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!parse\-Game@{parse\-Game}}
+\index{parse\-Game@{parse\-Game}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{parse\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf factories\-::\-Game\-Parser\-::parse\-Game} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{}
+\end{DoxyParamCaption}
+)}}\label{d0/dc6/classfactories_1_1GameParser_a37478c9c37d5b4c1c8710c6fe12c9cf1}
+\hypertarget{classfactories_1_1GameParser_aa4941f13a1b2c0148a2bb79830ad663f}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!parse\-Row@{parse\-Row}}
+\index{parse\-Row@{parse\-Row}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{parse\-Row}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf factories\-::\-Game\-Parser\-::parse\-Row} (
+\begin{DoxyParamCaption}
+\item[{\-Ti\-Xml\-Element $\ast$}]{, }
+\item[{int}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/dc6/classfactories_1_1GameParser_aa4941f13a1b2c0148a2bb79830ad663f}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classfactories_1_1GameParser_a4f47365bc9e1c11e696aca260371f56e}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!enemy\-Info\-\_\-@{enemy\-Info\-\_\-}}
+\index{enemy\-Info\-\_\-@{enemy\-Info\-\_\-}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{enemy\-Info\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf info\-Tuple}$>$ {\bf factories\-::\-Game\-Parser\-::enemy\-Info\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/dc6/classfactories_1_1GameParser_a4f47365bc9e1c11e696aca260371f56e}
+\hypertarget{classfactories_1_1GameParser_a9db6aca324777c1e49ac03bc46ca982b}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!file\-\_\-@{file\-\_\-}}
+\index{file\-\_\-@{file\-\_\-}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{file\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf factories\-::\-Game\-Parser\-::file\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/dc6/classfactories_1_1GameParser_a9db6aca324777c1e49ac03bc46ca982b}
+\hypertarget{classfactories_1_1GameParser_a06cf40ec918bb6a1b279501a8006c79b}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!shield\-Info\-\_\-@{shield\-Info\-\_\-}}
+\index{shield\-Info\-\_\-@{shield\-Info\-\_\-}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{shield\-Info\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf info\-Tuple} {\bf factories\-::\-Game\-Parser\-::shield\-Info\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/dc6/classfactories_1_1GameParser_a06cf40ec918bb6a1b279501a8006c79b}
+\hypertarget{classfactories_1_1GameParser_a67d451e1bbc18bde57e2d23de432a53d}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!space\-Ship\-X\-M\-L\-\_\-@{space\-Ship\-X\-M\-L\-\_\-}}
+\index{space\-Ship\-X\-M\-L\-\_\-@{space\-Ship\-X\-M\-L\-\_\-}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{space\-Ship\-X\-M\-L\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf factories\-::\-Game\-Parser\-::space\-Ship\-X\-M\-L\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/dc6/classfactories_1_1GameParser_a67d451e1bbc18bde57e2d23de432a53d}
+\hypertarget{classfactories_1_1GameParser_a22d4c56cbf9304bede16b232f814f95c}{\index{factories\-::\-Game\-Parser@{factories\-::\-Game\-Parser}!speed\-Multiplier\-\_\-@{speed\-Multiplier\-\_\-}}
+\index{speed\-Multiplier\-\_\-@{speed\-Multiplier\-\_\-}!factories::GameParser@{factories\-::\-Game\-Parser}}
+\subsubsection[{speed\-Multiplier\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf factories\-::\-Game\-Parser\-::speed\-Multiplier\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/dc6/classfactories_1_1GameParser_a22d4c56cbf9304bede16b232f814f95c}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/factories/\hyperlink{GameParser_8h}{\-Game\-Parser.\-h}\end{DoxyCompactItemize}

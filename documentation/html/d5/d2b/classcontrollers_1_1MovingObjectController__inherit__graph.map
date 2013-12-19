@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node7" href="$d8/dcc/classcontrollers_1_1ShipController.html" title="{controllers::ShipController\n||+ ShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ gameInput()\l+ setFlags()\l+ getFatalCollision()\l}" alt="" coords="144,686,315,858"/>
+<area shape="rect" id="node2" href="$d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ update()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="156,158,303,469"/>
+<area shape="rect" id="node4" href="$d0/d3a/classobservers_1_1Observer.html" title="{observers::Observer\n||+ update()\l+ ~Observer()\l}" alt="" coords="160,6,299,109"/>
+<area shape="rect" id="node9" href="$df/dd1/classcontrollers_1_1EnemyShipController.html" title="{controllers::EnemyShipController\n||+ EnemyShipController()\l+ ~EnemyShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ getPoints()\l}" alt="" coords="5,916,219,1071"/>
+<area shape="rect" id="node11" href="$d9/d89/classcontrollers_1_1SpaceShipController.html" title="{controllers::SpaceShipController\n||+ SpaceShipController()\l+ ~SpaceShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ getSpaceShip()\l+ checkDead()\l}" alt="" coords="243,907,451,1079"/>
+</map>

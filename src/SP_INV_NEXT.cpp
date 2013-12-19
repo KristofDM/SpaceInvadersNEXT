@@ -27,7 +27,7 @@ int main() {
 		std::cout << e.what() << std::endl;
 	}
 
-    controllers::GameController gameController(800, 600, window);
+    game::GameController gameController(800, 600, window);
     gameController.setUp();
 
     while (window.isOpen()) {
@@ -43,7 +43,7 @@ int main() {
 				case sf::Event::KeyPressed:
 					if (event.key.code == sf::Keyboard::Y && gameController.endGame()) {
 						// RESET GAME
-						gameController = controllers::GameController(800, 600, window);
+						gameController = game::GameController(800, 600, window);
 						gameController.setUp();
 					}
 					else if (event.key.code == sf::Keyboard::N && gameController.endGame()) {

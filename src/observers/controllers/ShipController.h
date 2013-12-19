@@ -11,12 +11,6 @@
 #include <memory>
 #include "MovingObjectController.h"
 #include "../../models/Ship.h"
-#include "../../factories/DataParser.h"
-#include "../../models/Bullet.h"
-#include "BulletController.h"
-#include "../views/BulletView.h"
-#include "../../factories/MainFactory.h"
-#include "../../factories/Factory.h"
 
 #include "../../factories/AbstractFactory.h"
 #include "../../factories/BulletFactory.h"

@@ -9,8 +9,9 @@
 #define GAMECONTROLLER_H_
 
 #include "Game.h"
+#include "GameView.h"
 
-namespace controllers {
+namespace game {
 
 class GameController {
 public:
@@ -30,11 +31,13 @@ public:
 	//! Check if the Game has ended.
 	bool endGame();
 private:
-
 	//! Game model. Contains all controllers etc.
-	models::Game game_;
+	Game game_;
+
+	//! Game view. Takes care of the rendering.
+	GameView gameView_;
 };
 
-} /* namespace controllers */
+} /* namespace game */
 
 #endif /* GAMECONTROLLER_H_ */

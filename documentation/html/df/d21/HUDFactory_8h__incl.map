@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$da/d66/AbstractFactory_8h.html" title="AbstractFactory.h" alt="" coords="71,160,196,189"/>
+<area shape="rect" id="node49" href="$d7/df9/HUDView_8h.html" title="../observers/views/HUDView.h" alt="" coords="497,160,700,189"/>
+<area shape="rect" id="node54" href="$d0/d0b/HUD_8h.html" title="../../models/HUD.h" alt="" coords="357,237,491,267"/>
+<area shape="rect" id="node75" href="$d4/d24/HUDController_8h.html" title="../observers/controllers/HUDController.h" alt="" coords="167,83,423,112"/>
+<area shape="rect" id="node5" href="$de/d4a/Controller_8h.html" title="../observers/controllers/Controller.h" alt="" coords="52,315,279,344"/>
+<area shape="rect" id="node15" href="$d3/d5a/Model_8h.html" title="../../models/Model.h" alt="" coords="652,469,791,499"/>
+<area shape="rect" id="node39" href="$d2/d73/ModelView_8h.html" title="../views/ModelView.h" alt="" coords="344,392,491,421"/>
+<area shape="rect" id="node23" href="$d8/df1/Observer_8h.html" title="../observers/Observer.h" alt="" coords="763,547,920,576"/>
+<area shape="rect" id="node25" href="$d8/d8a/Exception_8h.html" title="../Exception.h" alt="" coords="745,624,847,653"/>
+<area shape="rect" id="node31" href="$dd/dbf/DataParser_8h.html" title="../factories/DataParser.h" alt="" coords="523,547,688,576"/>
+<area shape="rect" id="node59" href="$d6/d03/Ship_8h.html" title="../../models/Ship.h" alt="" coords="708,237,836,267"/>
+<area shape="rect" id="node56" href="$d5/d33/StaticObject_8h.html" title="StaticObject.h" alt="" coords="616,392,720,421"/>
+<area shape="rect" id="node64" href="$d4/d9a/Bullet_8h.html" title="Bullet.h" alt="" coords="845,315,912,344"/>
+<area shape="rect" id="node67" href="$d7/d6d/MovingObject_8h.html" title="MovingObject.h" alt="" coords="896,392,1008,421"/>
+<area shape="rect" id="node71" href="$d7/d9b/Shield_8h.html" title="Shield.h" alt="" coords="701,315,771,344"/>
+<area shape="rect" id="node77" href="$d3/dcc/StaticController_8h.html" title="StaticController.h" alt="" coords="228,160,351,189"/>
+</map>

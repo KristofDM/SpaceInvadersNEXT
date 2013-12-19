@@ -1,0 +1,184 @@
+\hypertarget{classmodels_1_1StaticObject}{\section{models\-:\-:\-Static\-Object \-Class \-Reference}
+\label{dc/d3c/classmodels_1_1StaticObject}\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}}
+}
+
+
+{\ttfamily \#include $<$\-Static\-Object.\-h$>$}
+
+
+
+\-Inheritance diagram for models\-:\-:\-Static\-Object\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d7/db1/classmodels_1_1StaticObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\-Collaboration diagram for models\-:\-:\-Static\-Object\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{de/d1a/classmodels_1_1StaticObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodels_1_1StaticObject_a6906ebe9fe1515063a52e7f4634efc12}{\-Static\-Object} (\hyperlink{namespacemodels_adec64ede5178a8b8fed882b3790d423d}{\-E\-Orientation})
+\item 
+virtual \hyperlink{classmodels_1_1StaticObject_a76a08cf45b5db6bbb3743e9922ab42e6}{$\sim$\-Static\-Object} ()
+\item 
+virtual void \hyperlink{classmodels_1_1StaticObject_ab65a9e6a413fd913a62c612d6aab31f6}{move\-Left} ()
+\item 
+virtual void \hyperlink{classmodels_1_1StaticObject_aae350f824f62b97d9f925fb6a0f12d34}{move\-Right} ()
+\item 
+virtual void \hyperlink{classmodels_1_1StaticObject_ab2a4c782bde30f8afc34aad64692728a}{move\-Up} ()
+\item 
+virtual void \hyperlink{classmodels_1_1StaticObject_a7968700aa9bc166e5940b9e6fd816966}{move\-Down} ()
+\item 
+virtual bool \hyperlink{classmodels_1_1StaticObject_aed475f7fdbef72b9c6763cd1d530da37}{shoot} ()
+\item 
+virtual unsigned int \hyperlink{classmodels_1_1StaticObject_a216b997d3c40a76d0bb69c1863202272}{get\-Damage} ()=0
+\begin{DoxyCompactList}\small\item\em \-Returns the amount of damage taken when collided with this object. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classmodels_1_1StaticObject_ab75af94c0785c0e6dddbd2006078c136}{collided} (std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$)=0
+\begin{DoxyCompactList}\small\item\em \-Determines what happens when this object collides with another \-Entity. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmodels_1_1StaticObject_a822eec0669be0374e03d5183d24d13c9}{set\-Flags} (bool, bool)
+\begin{DoxyCompactList}\small\item\em \-Sets flags in the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classmodels_1_1StaticObject_a6906ebe9fe1515063a52e7f4634efc12}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!\-Static\-Object@{\-Static\-Object}}
+\index{\-Static\-Object@{\-Static\-Object}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{\-Static\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf models\-::\-Static\-Object\-::\-Static\-Object} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-Orientation}}]{}
+\end{DoxyParamCaption}
+)}}\label{dc/d3c/classmodels_1_1StaticObject_a6906ebe9fe1515063a52e7f4634efc12}
+\hypertarget{classmodels_1_1StaticObject_a76a08cf45b5db6bbb3743e9922ab42e6}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!$\sim$\-Static\-Object@{$\sim$\-Static\-Object}}
+\index{$\sim$\-Static\-Object@{$\sim$\-Static\-Object}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{$\sim$\-Static\-Object}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf models\-::\-Static\-Object\-::$\sim$\-Static\-Object} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_a76a08cf45b5db6bbb3743e9922ab42e6}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmodels_1_1StaticObject_ab75af94c0785c0e6dddbd2006078c136}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!collided@{collided}}
+\index{collided@{collided}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{collided}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Static\-Object\-::collided} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Model} $>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_ab75af94c0785c0e6dddbd2006078c136}
+
+
+\-Determines what happens when this object collides with another \-Entity. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a27a9b03a4e57a960e1303d7c4b85817c}{models\-::\-Model}.
+
+
+
+\-Implemented in \hyperlink{classmodels_1_1HUD_a40cf78366537ffdd42d31b38bd172fae}{models\-::\-H\-U\-D}, and \hyperlink{classmodels_1_1Shield_aace9fad1f5bb8ba868dc5c47d8ac170a}{models\-::\-Shield}.
+
+\hypertarget{classmodels_1_1StaticObject_a216b997d3c40a76d0bb69c1863202272}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!get\-Damage@{get\-Damage}}
+\index{get\-Damage@{get\-Damage}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{get\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int {\bf models\-::\-Static\-Object\-::get\-Damage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_a216b997d3c40a76d0bb69c1863202272}
+
+
+\-Returns the amount of damage taken when collided with this object. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a503f6b5be2c6502733fe747be050a296}{models\-::\-Model}.
+
+
+
+\-Implemented in \hyperlink{classmodels_1_1Shield_a50210fb74fa1592a36c8897e3b54244d}{models\-::\-Shield}, and \hyperlink{classmodels_1_1HUD_aee06209660cb6adb125e7ea2d5a9f8a5}{models\-::\-H\-U\-D}.
+
+\hypertarget{classmodels_1_1StaticObject_a7968700aa9bc166e5940b9e6fd816966}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!move\-Down@{move\-Down}}
+\index{move\-Down@{move\-Down}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{move\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Static\-Object\-::move\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_a7968700aa9bc166e5940b9e6fd816966}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_ae6dce0ff02579fc145e09959b4f07a92}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1StaticObject_ab65a9e6a413fd913a62c612d6aab31f6}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!move\-Left@{move\-Left}}
+\index{move\-Left@{move\-Left}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{move\-Left}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Static\-Object\-::move\-Left} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_ab65a9e6a413fd913a62c612d6aab31f6}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_aeec183545b665d49bf574dc6a5d6c164}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1StaticObject_aae350f824f62b97d9f925fb6a0f12d34}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!move\-Right@{move\-Right}}
+\index{move\-Right@{move\-Right}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{move\-Right}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Static\-Object\-::move\-Right} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_aae350f824f62b97d9f925fb6a0f12d34}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a69c77dcd339e471b724b3ec6f5f60470}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1StaticObject_ab2a4c782bde30f8afc34aad64692728a}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!move\-Up@{move\-Up}}
+\index{move\-Up@{move\-Up}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{move\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Static\-Object\-::move\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_ab2a4c782bde30f8afc34aad64692728a}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a905973d6e2909463f6438cc5fe67ddce}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1StaticObject_a822eec0669be0374e03d5183d24d13c9}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!set\-Flags@{set\-Flags}}
+\index{set\-Flags@{set\-Flags}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{set\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Static\-Object\-::set\-Flags} (
+\begin{DoxyParamCaption}
+\item[{bool}]{, }
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_a822eec0669be0374e03d5183d24d13c9}
+
+
+\-Sets flags in the object. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a6d7b6dcb496d16d11b0d0e47a0e0a57e}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1StaticObject_aed475f7fdbef72b9c6763cd1d530da37}{\index{models\-::\-Static\-Object@{models\-::\-Static\-Object}!shoot@{shoot}}
+\index{shoot@{shoot}!models::StaticObject@{models\-::\-Static\-Object}}
+\subsubsection[{shoot}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Static\-Object\-::shoot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{dc/d3c/classmodels_1_1StaticObject_aed475f7fdbef72b9c6763cd1d530da37}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a388ad317aa487941903b6bd2845639e5}{models\-::\-Model}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/models/\hyperlink{StaticObject_8h}{\-Static\-Object.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$d8/df6/classviews_1_1BulletView.html" title="{views::BulletView\n||+ BulletView()\l+ ~BulletView()\l+ update()\l+ draw()\l}" alt="" coords="5,447,131,585"/>
+<area shape="rect" id="node7" href="$d0/d97/classviews_1_1HUDView.html" title="{views::HUDView\n|&#45; spaceShip_\l&#45; font_\l&#45; score_\l&#45; lives_\l&#45; endMsg_\l&#45; level_\l|+ HUDView()\l+ ~HUDView()\l+ update()\l+ draw()\l+ drawEnd()\l}" alt="" coords="155,395,277,637"/>
+<area shape="rect" id="node9" href="$d7/d5c/classviews_1_1SpaceShipView.html" title="{views::SpaceShipView\n||+ SpaceShipView()\l+ update()\l+ draw()\l}" alt="" coords="301,456,456,576"/>
+<area shape="rect" id="node2" href="$d0/d3a/classobservers_1_1Observer.html" title="{observers::Observer\n||+ update()\l+ ~Observer()\l}" alt="" coords="147,6,285,109"/>
+</map>

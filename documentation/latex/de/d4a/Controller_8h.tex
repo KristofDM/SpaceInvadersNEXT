@@ -1,0 +1,69 @@
+\hypertarget{Controller_8h}{\section{src/observers/controllers/\-Controller.h \-File \-Reference}
+\label{de/d4a/Controller_8h}\index{src/observers/controllers/\-Controller.\-h@{src/observers/controllers/\-Controller.\-h}}
+}
+{\ttfamily \#include $<$tuple$>$}\*
+{\ttfamily \#include $<$list$>$}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$memory$>$}\*
+{\ttfamily \#include \char`\"{}../../models/\-Model.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}../views/\-Model\-View.\-h\char`\"{}}\*
+\-Include dependency graph for \-Controller.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d8b/Controller_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dfa/Controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcontrollers_1_1Controller}{controllers\-::\-Controller}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacecontrollers}{controllers}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classmodels_1_1Model}{models\-::\-Model} $>$ \hyperlink{Controller_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr}
+\item 
+typedef std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classviews_1_1ModelView}{views\-::\-Model\-View} $>$ \hyperlink{Controller_8h_a8ca0a41a38eb52be242997413482c0cf}{model\-View\-Ptr}
+\item 
+typedef std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classcontrollers_1_1Controller}{controllers\-::\-Controller} $>$ \hyperlink{namespacecontrollers_ab74cf2ed38c0b0460698b4eb6fe8bec5}{controllers\-::controller\-Ptr}
+\item 
+typedef std\-::tuple$<$ \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr}, \*
+\hyperlink{Controller_8h_a8ca0a41a38eb52be242997413482c0cf}{model\-View\-Ptr}, std\-::shared\-\_\-ptr\*
+$<$ \-Controller $>$ $>$ \hyperlink{namespacecontrollers_afa9121480272f6c66b98dfad7aa403d3}{controllers\-::mvc\-Triple}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacecontrollers_aebbb0610800fdb6dd92c2904e0de1c2f}{controllers\-::\-E\-Move\-Direction} \{ \hyperlink{namespacecontrollers_aebbb0610800fdb6dd92c2904e0de1c2fa26de7184e3b3fe1d6dd44536f0b28812}{controllers\-::x}, 
+\hyperlink{namespacecontrollers_aebbb0610800fdb6dd92c2904e0de1c2fa2285ac806535d815cc3cc194efc6651f}{controllers\-::y}, 
+\hyperlink{namespacecontrollers_aebbb0610800fdb6dd92c2904e0de1c2fac46d7418488c39238f293626b89ec5c4}{controllers\-::xy}, 
+\hyperlink{namespacecontrollers_aebbb0610800fdb6dd92c2904e0de1c2fa73c0526e372af131bdf90d5b56456915}{controllers\-::none}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{Controller_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{\index{\-Controller.\-h@{\-Controller.\-h}!model\-Ptr@{model\-Ptr}}
+\index{model\-Ptr@{model\-Ptr}!Controller.h@{\-Controller.\-h}}
+\subsubsection[{model\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf models\-::\-Model}$>$ {\bf model\-Ptr}}}\label{de/d4a/Controller_8h_a78966ddb517fca8d2b29a2bc5c31e74e}
+\hypertarget{Controller_8h_a8ca0a41a38eb52be242997413482c0cf}{\index{\-Controller.\-h@{\-Controller.\-h}!model\-View\-Ptr@{model\-View\-Ptr}}
+\index{model\-View\-Ptr@{model\-View\-Ptr}!Controller.h@{\-Controller.\-h}}
+\subsubsection[{model\-View\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf views\-::\-Model\-View}$>$ {\bf model\-View\-Ptr}}}\label{de/d4a/Controller_8h_a8ca0a41a38eb52be242997413482c0cf}

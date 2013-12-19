@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$db/db2/classfactories_1_1BulletFactory.html" title="{factories::BulletFactory\n||+ BulletFactory()\l+ ~BulletFactory()\l+ getEntity()\l+ getEntity()\l+ getEntity()\l}" alt="" coords="5,173,163,328"/>
+<area shape="rect" id="node5" href="$d4/df0/classfactories_1_1EnemyShipFactory.html" title="{factories::EnemyShipFactory\n|&#45; counter_\l|+ EnemyShipFactory()\l+ ~EnemyShipFactory()\l+ getEntity()\l+ getEntity()\l+ getEntity()\l}" alt="" coords="187,173,376,328"/>
+<area shape="rect" id="node7" href="$d5/d6e/classfactories_1_1HUDFactory.html" title="{factories::HUDFactory\n||+ HUDFactory()\l+ ~HUDFactory()\l+ getEntity()\l+ getEntity()\l+ getEntity()\l}" alt="" coords="400,173,555,328"/>
+<area shape="rect" id="node9" href="$df/d2f/classfactories_1_1ShieldFactory.html" title="{factories::ShieldFactory\n|&#45; counter_\l|+ ShieldFactory()\l+ ~ShieldFactory()\l+ getEntity()\l+ getEntity()\l+ getEntity()\l}" alt="" coords="579,173,739,328"/>
+<area shape="rect" id="node11" href="$dd/dd6/classfactories_1_1SpaceShipFactory.html" title="{factories::SpaceShipFactory\n||+ SpaceShipFactory()\l+ ~SpaceShipFactory()\l+ getEntity()\l+ getEntity()\l+ getEntity()\l}" alt="" coords="763,173,949,328"/>
+</map>

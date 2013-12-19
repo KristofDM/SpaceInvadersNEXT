@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$d6/dbb/classmodels_1_1HUD.html" title="{models::HUD\n|&#45; totalScore_\l&#45; level_\l|+ HUD()\l+ ~HUD()\l+ getDamage()\l+ collided()\l+ changePoints()\l+ addLevel()\l+ getTotalScore()\l+ getLevel()\l}" alt="" coords="5,691,128,915"/>
+<area shape="rect" id="node7" href="$d1/d8f/classmodels_1_1Shield.html" title="{models::Shield\n|&#45; lives_\l&#45; damage_\l|+ Shield()\l+ ~Shield()\l+ collided()\l+ getDamage()\l}" alt="" coords="152,725,261,880"/>
+<area shape="rect" id="node2" href="$dd/db5/classmodels_1_1Model.html" title="{models::Model\n|# texture_\l# sprite_\l# orientation_\l# deleted_\l# invincible_\l# registry_\l|+ Model()\l+ ~Model()\l+ attach()\l+ detach()\l+ getSprite()\l+ getPosition()\l+ setUp()\l+ getBounds()\l+ moveLeft()\l+ moveRight()\land 11 more...# notify()\l}" alt="" coords="57,6,215,351"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$d5/dd0/classmodels_1_1Bullet.html" title="{models::Bullet\n|&#45; damage_\l&#45; owner_\l&#45; initPosition_\l|+ Bullet()\l+ ~Bullet()\l+ setUp()\l+ getOwner()\l+ getDamage()\l+ collided()\l}" alt="" coords="5,785,115,991"/>
+<area shape="rect" id="node7" href="$d0/d37/classmodels_1_1Ship.html" title="{models::Ship\n|# lives_\l# fireRate_\l# damage_\l# shootTimer_\l# invincibleTimer_\l# shooting_\l# fatalCollision_\l|+ Ship()\l+ getLives()\l+ setLives()\l+ getFireRate()\l+ setFireRate()\l+ ~Ship()\l+ shoot()\l+ collided()\l+ getDamage()\l+ setFlags()\l+ getFatalCollision()\l}" alt="" coords="139,707,277,1069"/>
+<area shape="rect" id="node2" href="$dd/db5/classmodels_1_1Model.html" title="{models::Model\n|# texture_\l# sprite_\l# orientation_\l# deleted_\l# invincible_\l# registry_\l|+ Model()\l+ ~Model()\l+ attach()\l+ detach()\l+ getSprite()\l+ getPosition()\l+ setUp()\l+ getBounds()\l+ moveLeft()\l+ moveRight()\land 11 more...# notify()\l}" alt="" coords="55,6,212,351"/>
+<area shape="rect" id="node9" href="$d1/d22/classmodels_1_1EnemyShip.html" title="{models::EnemyShip\n|&#45; moveAmount_\l&#45; points_\l&#45; dirSwitch\l&#45; travelled_\l&#45; moveDown_\l|+ EnemyShip()\l+ ~EnemyShip()\l+ moveLeft()\l+ collided()\l+ getPoints()\l+ shoot()\l}" alt="" coords="59,1118,197,1359"/>
+<area shape="rect" id="node11" href="$d2/d9b/classmodels_1_1SpaceShip.html" title="{models::SpaceShip\n||+ SpaceShip()\l+ ~SpaceShip()\l}" alt="" coords="221,1187,355,1290"/>
+</map>

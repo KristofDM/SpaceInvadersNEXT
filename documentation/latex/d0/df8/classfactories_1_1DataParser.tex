@@ -1,0 +1,240 @@
+\hypertarget{classfactories_1_1DataParser}{\section{factories\-:\-:\-Data\-Parser \-Class \-Reference}
+\label{d0/df8/classfactories_1_1DataParser}\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}}
+}
+
+
+{\ttfamily \#include $<$\-Data\-Parser.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfactories_1_1DataParser_aac17dc8db51596aca733fa922e1a63b9}{\-Data\-Parser} ()
+\begin{DoxyCompactList}\small\item\em \-Divides the data file file in three parts\-: model\-\_\-, view\-\_\- and controller\-\_\-. \-Extracts info from all of these parts. \end{DoxyCompactList}\item 
+virtual \hyperlink{classfactories_1_1DataParser_ada5bd61bf142b53c761b651dbbb300e6}{$\sim$\-Data\-Parser} ()
+\item 
+void \hyperlink{classfactories_1_1DataParser_ac46afc028909e2879ccc6049396371b5}{parse\-Object} (std\-::string)
+\item 
+\hyperlink{namespacefactories_ab925b318a5bc89d3bc8a7e3fdc364023}{\-E\-Data\-Type} \hyperlink{classfactories_1_1DataParser_aef51f61d8415bd0ca5645a85a7698412}{get\-Type} () const 
+\item 
+sf\-::\-Vector2f \hyperlink{classfactories_1_1DataParser_a3e0e635185cfd30d7580da30fd3fae71}{get\-Pos} () const 
+\item 
+int \hyperlink{classfactories_1_1DataParser_adedcdaf3f1eda6b1d4ed078c11d71b1e}{get\-Lives} () const 
+\item 
+int \hyperlink{classfactories_1_1DataParser_a55ad897d093a9076f97756adad963081}{get\-Fire\-Rate} () const 
+\item 
+double \hyperlink{classfactories_1_1DataParser_abdd71ea54b23d6fb94561300d72a1fa2}{get\-Speed} () const 
+\item 
+int \hyperlink{classfactories_1_1DataParser_a62a533de7d1b80a486c5e99271b3a9d9}{get\-Space} () const 
+\item 
+int \hyperlink{classfactories_1_1DataParser_afcd3558ab77010523582314345574b37}{get\-Points} () const 
+\item 
+std\-::string \hyperlink{classfactories_1_1DataParser_af75268ebfca8319cfdf33f1532e20c01}{get\-Sprite\-Path} () const 
+\item 
+double \hyperlink{classfactories_1_1DataParser_a9c9e6de122e3ccd430c13d2012fb19e2}{get\-Scale} () const 
+\item 
+int \hyperlink{classfactories_1_1DataParser_a6dacf31e0201c6e4deda4e416bcc1429}{get\-Move\-Direction} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classfactories_1_1DataParser_aff4d87532fb4ea2cc3d6166bf1d6934f}{parse\-View} (\-Ti\-Xml\-Element $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Parses view portion of the data file. \end{DoxyCompactList}\item 
+void \hyperlink{classfactories_1_1DataParser_ae362aee1c8a1a248fd8129b506cb72bf}{parse\-Model} (\-Ti\-Xml\-Element $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Parses model portion of the data file. \end{DoxyCompactList}\item 
+void \hyperlink{classfactories_1_1DataParser_aeeb7f4731dd6c48feac275d54dc2808b}{parse\-Controller} (\-Ti\-Xml\-Element $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Parses controller portion of the data file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacefactories_ab925b318a5bc89d3bc8a7e3fdc364023}{\-E\-Data\-Type} \hyperlink{classfactories_1_1DataParser_a689111b4c6ee7488a62c3fb1ff89cd5d}{type\-\_\-}
+\item 
+sf\-::\-Vector2f \hyperlink{classfactories_1_1DataParser_a17196c20323b1bbba5fa757ba3410ce9}{pos\-\_\-}
+\item 
+int \hyperlink{classfactories_1_1DataParser_ae04c212ba61b90896985daecb19461fa}{lives\-\_\-}
+\item 
+int \hyperlink{classfactories_1_1DataParser_afe2e18bbfd11122f94fe4d8b06a9e87c}{fire\-Rate\-\_\-}
+\item 
+double \hyperlink{classfactories_1_1DataParser_a97b951f150540316e0c279beefe40a1b}{speed\-\_\-}
+\item 
+int \hyperlink{classfactories_1_1DataParser_ac8b695251d0e8259a2b0143efc133438}{space\-\_\-}
+\item 
+int \hyperlink{classfactories_1_1DataParser_a32f00f55f35b1d564d66e6465b6b8e11}{points\-\_\-}
+\item 
+std\-::string \hyperlink{classfactories_1_1DataParser_a5cca04bb7449e4801c349c7432491d10}{sprite\-\_\-}
+\item 
+double \hyperlink{classfactories_1_1DataParser_ae71e4885db9d3e59d16f102169b21e05}{scale\-\_\-}
+\item 
+int \hyperlink{classfactories_1_1DataParser_a20d5f4c18a9d02ce373908ae3bc6e7b4}{move\-Direction\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classfactories_1_1DataParser_aac17dc8db51596aca733fa922e1a63b9}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!\-Data\-Parser@{\-Data\-Parser}}
+\index{\-Data\-Parser@{\-Data\-Parser}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{\-Data\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf factories\-::\-Data\-Parser\-::\-Data\-Parser} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/df8/classfactories_1_1DataParser_aac17dc8db51596aca733fa922e1a63b9}
+
+
+\-Divides the data file file in three parts\-: model\-\_\-, view\-\_\- and controller\-\_\-. \-Extracts info from all of these parts. 
+
+\hypertarget{classfactories_1_1DataParser_ada5bd61bf142b53c761b651dbbb300e6}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!$\sim$\-Data\-Parser@{$\sim$\-Data\-Parser}}
+\index{$\sim$\-Data\-Parser@{$\sim$\-Data\-Parser}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{$\sim$\-Data\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf factories\-::\-Data\-Parser\-::$\sim$\-Data\-Parser} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_ada5bd61bf142b53c761b651dbbb300e6}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classfactories_1_1DataParser_a55ad897d093a9076f97756adad963081}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Fire\-Rate@{get\-Fire\-Rate}}
+\index{get\-Fire\-Rate@{get\-Fire\-Rate}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Fire\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::get\-Fire\-Rate} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_a55ad897d093a9076f97756adad963081}
+\hypertarget{classfactories_1_1DataParser_adedcdaf3f1eda6b1d4ed078c11d71b1e}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Lives@{get\-Lives}}
+\index{get\-Lives@{get\-Lives}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Lives}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::get\-Lives} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_adedcdaf3f1eda6b1d4ed078c11d71b1e}
+\hypertarget{classfactories_1_1DataParser_a6dacf31e0201c6e4deda4e416bcc1429}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Move\-Direction@{get\-Move\-Direction}}
+\index{get\-Move\-Direction@{get\-Move\-Direction}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Move\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::get\-Move\-Direction} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_a6dacf31e0201c6e4deda4e416bcc1429}
+\hypertarget{classfactories_1_1DataParser_afcd3558ab77010523582314345574b37}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Points@{get\-Points}}
+\index{get\-Points@{get\-Points}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Points}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::get\-Points} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_afcd3558ab77010523582314345574b37}
+\hypertarget{classfactories_1_1DataParser_a3e0e635185cfd30d7580da30fd3fae71}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Pos@{get\-Pos}}
+\index{get\-Pos@{get\-Pos}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f {\bf factories\-::\-Data\-Parser\-::get\-Pos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_a3e0e635185cfd30d7580da30fd3fae71}
+\hypertarget{classfactories_1_1DataParser_a9c9e6de122e3ccd430c13d2012fb19e2}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Scale@{get\-Scale}}
+\index{get\-Scale@{get\-Scale}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf factories\-::\-Data\-Parser\-::get\-Scale} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_a9c9e6de122e3ccd430c13d2012fb19e2}
+\hypertarget{classfactories_1_1DataParser_a62a533de7d1b80a486c5e99271b3a9d9}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Space@{get\-Space}}
+\index{get\-Space@{get\-Space}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Space}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::get\-Space} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_a62a533de7d1b80a486c5e99271b3a9d9}
+\hypertarget{classfactories_1_1DataParser_abdd71ea54b23d6fb94561300d72a1fa2}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Speed@{get\-Speed}}
+\index{get\-Speed@{get\-Speed}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf factories\-::\-Data\-Parser\-::get\-Speed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_abdd71ea54b23d6fb94561300d72a1fa2}
+\hypertarget{classfactories_1_1DataParser_af75268ebfca8319cfdf33f1532e20c01}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Sprite\-Path@{get\-Sprite\-Path}}
+\index{get\-Sprite\-Path@{get\-Sprite\-Path}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Sprite\-Path}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf factories\-::\-Data\-Parser\-::get\-Sprite\-Path} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_af75268ebfca8319cfdf33f1532e20c01}
+\hypertarget{classfactories_1_1DataParser_aef51f61d8415bd0ca5645a85a7698412}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-Data\-Type} {\bf factories\-::\-Data\-Parser\-::get\-Type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{d0/df8/classfactories_1_1DataParser_aef51f61d8415bd0ca5645a85a7698412}
+\hypertarget{classfactories_1_1DataParser_aeeb7f4731dd6c48feac275d54dc2808b}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!parse\-Controller@{parse\-Controller}}
+\index{parse\-Controller@{parse\-Controller}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{parse\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf factories\-::\-Data\-Parser\-::parse\-Controller} (
+\begin{DoxyParamCaption}
+\item[{\-Ti\-Xml\-Element $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_aeeb7f4731dd6c48feac275d54dc2808b}
+
+
+\-Parses controller portion of the data file. 
+
+\hypertarget{classfactories_1_1DataParser_ae362aee1c8a1a248fd8129b506cb72bf}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!parse\-Model@{parse\-Model}}
+\index{parse\-Model@{parse\-Model}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{parse\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf factories\-::\-Data\-Parser\-::parse\-Model} (
+\begin{DoxyParamCaption}
+\item[{\-Ti\-Xml\-Element $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_ae362aee1c8a1a248fd8129b506cb72bf}
+
+
+\-Parses model portion of the data file. 
+
+\hypertarget{classfactories_1_1DataParser_ac46afc028909e2879ccc6049396371b5}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!parse\-Object@{parse\-Object}}
+\index{parse\-Object@{parse\-Object}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{parse\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf factories\-::\-Data\-Parser\-::parse\-Object} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{}
+\end{DoxyParamCaption}
+)}}\label{d0/df8/classfactories_1_1DataParser_ac46afc028909e2879ccc6049396371b5}
+\hypertarget{classfactories_1_1DataParser_aff4d87532fb4ea2cc3d6166bf1d6934f}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!parse\-View@{parse\-View}}
+\index{parse\-View@{parse\-View}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{parse\-View}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf factories\-::\-Data\-Parser\-::parse\-View} (
+\begin{DoxyParamCaption}
+\item[{\-Ti\-Xml\-Element $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_aff4d87532fb4ea2cc3d6166bf1d6934f}
+
+
+\-Parses view portion of the data file. 
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classfactories_1_1DataParser_afe2e18bbfd11122f94fe4d8b06a9e87c}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!fire\-Rate\-\_\-@{fire\-Rate\-\_\-}}
+\index{fire\-Rate\-\_\-@{fire\-Rate\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{fire\-Rate\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::fire\-Rate\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_afe2e18bbfd11122f94fe4d8b06a9e87c}
+\hypertarget{classfactories_1_1DataParser_ae04c212ba61b90896985daecb19461fa}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!lives\-\_\-@{lives\-\_\-}}
+\index{lives\-\_\-@{lives\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{lives\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::lives\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_ae04c212ba61b90896985daecb19461fa}
+\hypertarget{classfactories_1_1DataParser_a20d5f4c18a9d02ce373908ae3bc6e7b4}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!move\-Direction\-\_\-@{move\-Direction\-\_\-}}
+\index{move\-Direction\-\_\-@{move\-Direction\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{move\-Direction\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::move\-Direction\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_a20d5f4c18a9d02ce373908ae3bc6e7b4}
+\hypertarget{classfactories_1_1DataParser_a32f00f55f35b1d564d66e6465b6b8e11}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!points\-\_\-@{points\-\_\-}}
+\index{points\-\_\-@{points\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{points\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::points\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_a32f00f55f35b1d564d66e6465b6b8e11}
+\hypertarget{classfactories_1_1DataParser_a17196c20323b1bbba5fa757ba3410ce9}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!pos\-\_\-@{pos\-\_\-}}
+\index{pos\-\_\-@{pos\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{pos\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f {\bf factories\-::\-Data\-Parser\-::pos\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_a17196c20323b1bbba5fa757ba3410ce9}
+\hypertarget{classfactories_1_1DataParser_ae71e4885db9d3e59d16f102169b21e05}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!scale\-\_\-@{scale\-\_\-}}
+\index{scale\-\_\-@{scale\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{scale\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf factories\-::\-Data\-Parser\-::scale\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_ae71e4885db9d3e59d16f102169b21e05}
+\hypertarget{classfactories_1_1DataParser_ac8b695251d0e8259a2b0143efc133438}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!space\-\_\-@{space\-\_\-}}
+\index{space\-\_\-@{space\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{space\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf factories\-::\-Data\-Parser\-::space\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_ac8b695251d0e8259a2b0143efc133438}
+\hypertarget{classfactories_1_1DataParser_a97b951f150540316e0c279beefe40a1b}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!speed\-\_\-@{speed\-\_\-}}
+\index{speed\-\_\-@{speed\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{speed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf factories\-::\-Data\-Parser\-::speed\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_a97b951f150540316e0c279beefe40a1b}
+\hypertarget{classfactories_1_1DataParser_a5cca04bb7449e4801c349c7432491d10}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!sprite\-\_\-@{sprite\-\_\-}}
+\index{sprite\-\_\-@{sprite\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{sprite\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf factories\-::\-Data\-Parser\-::sprite\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_a5cca04bb7449e4801c349c7432491d10}
+\hypertarget{classfactories_1_1DataParser_a689111b4c6ee7488a62c3fb1ff89cd5d}{\index{factories\-::\-Data\-Parser@{factories\-::\-Data\-Parser}!type\-\_\-@{type\-\_\-}}
+\index{type\-\_\-@{type\-\_\-}!factories::DataParser@{factories\-::\-Data\-Parser}}
+\subsubsection[{type\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-Data\-Type} {\bf factories\-::\-Data\-Parser\-::type\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d0/df8/classfactories_1_1DataParser_a689111b4c6ee7488a62c3fb1ff89cd5d}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/factories/\hyperlink{DataParser_8h}{\-Data\-Parser.\-h}\end{DoxyCompactItemize}

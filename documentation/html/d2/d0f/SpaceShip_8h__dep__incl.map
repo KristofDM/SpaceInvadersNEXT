@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$d5/d7f/SpaceShipFactory_8h.html" title="src/factories/SpaceShipFactory.h" alt="" coords="5,160,221,189"/>
+<area shape="rect" id="node9" href="$d3/dc8/SpaceShipController_8h.html" title="src/observers/controllers/SpaceShipController.h" alt="" coords="71,83,369,112"/>
+<area shape="rect" id="node12" href="$d8/d00/EnemyShip_8h.html" title="src/models/EnemyShip.h" alt="" coords="393,83,561,112"/>
+<area shape="rect" id="node5" href="$d3/d5f/Game_8h.html" title="src/Game.h" alt="" coords="243,315,333,344"/>
+<area shape="rect" id="node7" href="$da/d92/GameController_8h.html" title="src/GameController.h" alt="" coords="215,392,361,421"/>
+<area shape="rect" id="node14" href="$db/d21/EnemyShipController_8h.html" title="src/observers/controllers/EnemyShipController.h" alt="" coords="245,160,547,189"/>
+<area shape="rect" id="node16" href="$d9/d9b/EnemyShipFactory_8h.html" title="src/factories/EnemyShipFactory.h" alt="" coords="287,237,505,267"/>
+</map>

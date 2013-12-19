@@ -1,0 +1,221 @@
+\hypertarget{classmodels_1_1Ship}{\section{models\-:\-:\-Ship \-Class \-Reference}
+\label{d0/d37/classmodels_1_1Ship}\index{models\-::\-Ship@{models\-::\-Ship}}
+}
+
+
+{\ttfamily \#include $<$\-Ship.\-h$>$}
+
+
+
+\-Inheritance diagram for models\-:\-:\-Ship\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d9/d8d/classmodels_1_1Ship__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\-Collaboration diagram for models\-:\-:\-Ship\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d4/d0a/classmodels_1_1Ship__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodels_1_1Ship_a5138678b499d6d15c4b7ebef7e6d01d5}{\-Ship} (int, int, double, \hyperlink{namespacemodels_adec64ede5178a8b8fed882b3790d423d}{\-E\-Orientation})
+\item 
+virtual int \hyperlink{classmodels_1_1Ship_af26c5ca97e37197f48ea983a668035f6}{get\-Lives} ()
+\item 
+void \hyperlink{classmodels_1_1Ship_a79a5082391e2107638d45a51ce9770c2}{set\-Lives} (int)
+\item 
+int \hyperlink{classmodels_1_1Ship_a72f0be3703de59176bf176a7a06fcd39}{get\-Fire\-Rate} ()
+\item 
+void \hyperlink{classmodels_1_1Ship_aa06aba3051126d29e6e942eec54b350d}{set\-Fire\-Rate} (int)
+\item 
+virtual \hyperlink{classmodels_1_1Ship_aa193577f5d3e0ff3ca6e3223090d3e71}{$\sim$\-Ship} ()
+\item 
+virtual bool \hyperlink{classmodels_1_1Ship_afc4a82da0df7e98ba74ca068946358f5}{shoot} ()
+\item 
+virtual bool \hyperlink{classmodels_1_1Ship_aaa5808c580620f89bb0a04d3583a112e}{collided} (std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$)
+\begin{DoxyCompactList}\small\item\em \-Determines what happens when this object collides with another \-Entity. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{classmodels_1_1Ship_acf8c86d8f95c22f990c37628ed40491e}{get\-Damage} ()
+\begin{DoxyCompactList}\small\item\em \-Returns the amount of damage taken when collided with this object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmodels_1_1Ship_a75c0e291076162e3efb9679c5896d515}{set\-Flags} (bool, bool)
+\begin{DoxyCompactList}\small\item\em \-Sets flags in the object. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classmodels_1_1Ship_af67b94824ab048b3623497ccbaa7fd3c}{get\-Fatal\-Collision} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classmodels_1_1Ship_aeaaf9231898ee877f11000788806409a}{lives\-\_\-}
+\item 
+int \hyperlink{classmodels_1_1Ship_a4dcc94b7be2dc539754dbbd2e67e6f74}{fire\-Rate\-\_\-}
+\item 
+unsigned int \hyperlink{classmodels_1_1Ship_a41dd819c1d1c044f8ca84f21cd0a7fd1}{damage\-\_\-}
+\item 
+sf\-::\-Clock \hyperlink{classmodels_1_1Ship_a286ba7211706245e5b7a6315a26edf57}{shoot\-Timer\-\_\-}
+\item 
+sf\-::\-Clock \hyperlink{classmodels_1_1Ship_a9cb7f675d84df220454d5bc946457174}{invincible\-Timer\-\_\-}
+\item 
+bool \hyperlink{classmodels_1_1Ship_ac9326d94309c9c1a649076aba1c9fc4f}{shooting\-\_\-}
+\item 
+bool \hyperlink{classmodels_1_1Ship_a8b88697951b82f60dacfd9fac6e38f0e}{fatal\-Collision\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classmodels_1_1Ship_a5138678b499d6d15c4b7ebef7e6d01d5}{\index{models\-::\-Ship@{models\-::\-Ship}!\-Ship@{\-Ship}}
+\index{\-Ship@{\-Ship}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{\-Ship}]{\setlength{\rightskip}{0pt plus 5cm}{\bf models\-::\-Ship\-::\-Ship} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{double}]{, }
+\item[{{\bf \-E\-Orientation}}]{}
+\end{DoxyParamCaption}
+)}}\label{d0/d37/classmodels_1_1Ship_a5138678b499d6d15c4b7ebef7e6d01d5}
+\hypertarget{classmodels_1_1Ship_aa193577f5d3e0ff3ca6e3223090d3e71}{\index{models\-::\-Ship@{models\-::\-Ship}!$\sim$\-Ship@{$\sim$\-Ship}}
+\index{$\sim$\-Ship@{$\sim$\-Ship}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{$\sim$\-Ship}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf models\-::\-Ship\-::$\sim$\-Ship} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_aa193577f5d3e0ff3ca6e3223090d3e71}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmodels_1_1Ship_aaa5808c580620f89bb0a04d3583a112e}{\index{models\-::\-Ship@{models\-::\-Ship}!collided@{collided}}
+\index{collided@{collided}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{collided}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Ship\-::collided} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Model} $>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_aaa5808c580620f89bb0a04d3583a112e}
+
+
+\-Determines what happens when this object collides with another \-Entity. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1MovingObject_ad2a0d1c543cfabaee82eea455c185d6a}{models\-::\-Moving\-Object}.
+
+
+
+\-Reimplemented in \hyperlink{classmodels_1_1EnemyShip_a25d00521cb35008d405cb9e1300eb9ae}{models\-::\-Enemy\-Ship}.
+
+\hypertarget{classmodels_1_1Ship_acf8c86d8f95c22f990c37628ed40491e}{\index{models\-::\-Ship@{models\-::\-Ship}!get\-Damage@{get\-Damage}}
+\index{get\-Damage@{get\-Damage}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{get\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int {\bf models\-::\-Ship\-::get\-Damage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_acf8c86d8f95c22f990c37628ed40491e}
+
+
+\-Returns the amount of damage taken when collided with this object. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1MovingObject_acd4fa7beb87308c2b3c7c08caa486d2b}{models\-::\-Moving\-Object}.
+
+\hypertarget{classmodels_1_1Ship_af67b94824ab048b3623497ccbaa7fd3c}{\index{models\-::\-Ship@{models\-::\-Ship}!get\-Fatal\-Collision@{get\-Fatal\-Collision}}
+\index{get\-Fatal\-Collision@{get\-Fatal\-Collision}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{get\-Fatal\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Ship\-::get\-Fatal\-Collision} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_af67b94824ab048b3623497ccbaa7fd3c}
+\hypertarget{classmodels_1_1Ship_a72f0be3703de59176bf176a7a06fcd39}{\index{models\-::\-Ship@{models\-::\-Ship}!get\-Fire\-Rate@{get\-Fire\-Rate}}
+\index{get\-Fire\-Rate@{get\-Fire\-Rate}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{get\-Fire\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf models\-::\-Ship\-::get\-Fire\-Rate} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d0/d37/classmodels_1_1Ship_a72f0be3703de59176bf176a7a06fcd39}
+\hypertarget{classmodels_1_1Ship_af26c5ca97e37197f48ea983a668035f6}{\index{models\-::\-Ship@{models\-::\-Ship}!get\-Lives@{get\-Lives}}
+\index{get\-Lives@{get\-Lives}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{get\-Lives}]{\setlength{\rightskip}{0pt plus 5cm}virtual int {\bf models\-::\-Ship\-::get\-Lives} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_af26c5ca97e37197f48ea983a668035f6}
+\hypertarget{classmodels_1_1Ship_aa06aba3051126d29e6e942eec54b350d}{\index{models\-::\-Ship@{models\-::\-Ship}!set\-Fire\-Rate@{set\-Fire\-Rate}}
+\index{set\-Fire\-Rate@{set\-Fire\-Rate}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{set\-Fire\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Ship\-::set\-Fire\-Rate} (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{d0/d37/classmodels_1_1Ship_aa06aba3051126d29e6e942eec54b350d}
+\hypertarget{classmodels_1_1Ship_a75c0e291076162e3efb9679c5896d515}{\index{models\-::\-Ship@{models\-::\-Ship}!set\-Flags@{set\-Flags}}
+\index{set\-Flags@{set\-Flags}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{set\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Ship\-::set\-Flags} (
+\begin{DoxyParamCaption}
+\item[{bool}]{, }
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_a75c0e291076162e3efb9679c5896d515}
+
+
+\-Sets flags in the object. 
+
+
+
+\-Reimplemented from \hyperlink{classmodels_1_1MovingObject_a626081fda45cd2b9aca3561c07e87d14}{models\-::\-Moving\-Object}.
+
+\hypertarget{classmodels_1_1Ship_a79a5082391e2107638d45a51ce9770c2}{\index{models\-::\-Ship@{models\-::\-Ship}!set\-Lives@{set\-Lives}}
+\index{set\-Lives@{set\-Lives}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{set\-Lives}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Ship\-::set\-Lives} (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{d0/d37/classmodels_1_1Ship_a79a5082391e2107638d45a51ce9770c2}
+\hypertarget{classmodels_1_1Ship_afc4a82da0df7e98ba74ca068946358f5}{\index{models\-::\-Ship@{models\-::\-Ship}!shoot@{shoot}}
+\index{shoot@{shoot}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{shoot}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Ship\-::shoot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_afc4a82da0df7e98ba74ca068946358f5}
+
+
+\-Reimplemented from \hyperlink{classmodels_1_1MovingObject_a452872617ed6b1a334bfed4efcd5d3a0}{models\-::\-Moving\-Object}.
+
+
+
+\-Reimplemented in \hyperlink{classmodels_1_1EnemyShip_aa25f4cfb211186150ac3b229722b07ae}{models\-::\-Enemy\-Ship}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classmodels_1_1Ship_a41dd819c1d1c044f8ca84f21cd0a7fd1}{\index{models\-::\-Ship@{models\-::\-Ship}!damage\-\_\-@{damage\-\_\-}}
+\index{damage\-\_\-@{damage\-\_\-}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{damage\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf models\-::\-Ship\-::damage\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_a41dd819c1d1c044f8ca84f21cd0a7fd1}
+\hypertarget{classmodels_1_1Ship_a8b88697951b82f60dacfd9fac6e38f0e}{\index{models\-::\-Ship@{models\-::\-Ship}!fatal\-Collision\-\_\-@{fatal\-Collision\-\_\-}}
+\index{fatal\-Collision\-\_\-@{fatal\-Collision\-\_\-}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{fatal\-Collision\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Ship\-::fatal\-Collision\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_a8b88697951b82f60dacfd9fac6e38f0e}
+\hypertarget{classmodels_1_1Ship_a4dcc94b7be2dc539754dbbd2e67e6f74}{\index{models\-::\-Ship@{models\-::\-Ship}!fire\-Rate\-\_\-@{fire\-Rate\-\_\-}}
+\index{fire\-Rate\-\_\-@{fire\-Rate\-\_\-}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{fire\-Rate\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf models\-::\-Ship\-::fire\-Rate\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_a4dcc94b7be2dc539754dbbd2e67e6f74}
+\hypertarget{classmodels_1_1Ship_a9cb7f675d84df220454d5bc946457174}{\index{models\-::\-Ship@{models\-::\-Ship}!invincible\-Timer\-\_\-@{invincible\-Timer\-\_\-}}
+\index{invincible\-Timer\-\_\-@{invincible\-Timer\-\_\-}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{invincible\-Timer\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Clock {\bf models\-::\-Ship\-::invincible\-Timer\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_a9cb7f675d84df220454d5bc946457174}
+\hypertarget{classmodels_1_1Ship_aeaaf9231898ee877f11000788806409a}{\index{models\-::\-Ship@{models\-::\-Ship}!lives\-\_\-@{lives\-\_\-}}
+\index{lives\-\_\-@{lives\-\_\-}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{lives\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf models\-::\-Ship\-::lives\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_aeaaf9231898ee877f11000788806409a}
+\hypertarget{classmodels_1_1Ship_ac9326d94309c9c1a649076aba1c9fc4f}{\index{models\-::\-Ship@{models\-::\-Ship}!shooting\-\_\-@{shooting\-\_\-}}
+\index{shooting\-\_\-@{shooting\-\_\-}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{shooting\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Ship\-::shooting\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_ac9326d94309c9c1a649076aba1c9fc4f}
+\hypertarget{classmodels_1_1Ship_a286ba7211706245e5b7a6315a26edf57}{\index{models\-::\-Ship@{models\-::\-Ship}!shoot\-Timer\-\_\-@{shoot\-Timer\-\_\-}}
+\index{shoot\-Timer\-\_\-@{shoot\-Timer\-\_\-}!models::Ship@{models\-::\-Ship}}
+\subsubsection[{shoot\-Timer\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Clock {\bf models\-::\-Ship\-::shoot\-Timer\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d0/d37/classmodels_1_1Ship_a286ba7211706245e5b7a6315a26edf57}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/models/\hyperlink{Ship_8h}{\-Ship.\-h}\end{DoxyCompactItemize}

@@ -116,7 +116,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=RNA Stem Loop Visualizer
+CMAKE_PROJECT_NAME:STATIC=SPACE INVADERS
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -177,6 +177,12 @@ SFML_WINDOW_LIBRARY_DEBUG:FILEPATH=SFML_WINDOW_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
 SFML_WINDOW_LIBRARY_RELEASE:FILEPATH=/usr/lib/libsfml-window.so
+
+//Value Computed by CMake
+SPACE INVADERS_BINARY_DIR:STATIC=/home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT
+
+//Value Computed by CMake
+SPACE INVADERS_SOURCE_DIR:STATIC=/home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT
 
 
 ########################

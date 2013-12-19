@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$d7/d9b/Shield_8h.html" title="src/models/Shield.h" alt="" coords="337,83,473,112"/>
+<area shape="rect" id="node42" href="$d0/d0b/HUD_8h.html" title="src/models/HUD.h" alt="" coords="743,160,873,189"/>
+<area shape="rect" id="node5" href="$d6/d03/Ship_8h.html" title="src/models/Ship.h" alt="" coords="343,160,468,189"/>
+<area shape="rect" id="node39" href="$d5/dd5/ShieldFactory_8h.html" title="src/factories/ShieldFactory.h" alt="" coords="5,469,195,499"/>
+<area shape="rect" id="node7" href="$d5/d9f/SpaceShip_8h.html" title="src/models/SpaceShip.h" alt="" coords="443,237,605,267"/>
+<area shape="rect" id="node18" href="$d8/d00/EnemyShip_8h.html" title="src/models/EnemyShip.h" alt="" coords="131,315,299,344"/>
+<area shape="rect" id="node26" href="$de/daa/ShipController_8h.html" title="src/observers/controllers/ShipController.h" alt="" coords="157,237,419,267"/>
+<area shape="rect" id="node30" href="$d7/df9/HUDView_8h.html" title="src/observers/views/HUDView.h" alt="" coords="629,237,843,267"/>
+<area shape="rect" id="node9" href="$d5/d7f/SpaceShipFactory_8h.html" title="src/factories/SpaceShipFactory.h" alt="" coords="440,392,656,421"/>
+<area shape="rect" id="node15" href="$d3/dc8/SpaceShipController_8h.html" title="src/observers/controllers/SpaceShipController.h" alt="" coords="323,315,621,344"/>
+<area shape="rect" id="node11" href="$d3/d5f/Game_8h.html" title="src/Game.h" alt="" coords="429,547,520,576"/>
+<area shape="rect" id="node13" href="$da/d92/GameController_8h.html" title="src/GameController.h" alt="" coords="401,624,548,653"/>
+<area shape="rect" id="node20" href="$db/d21/EnemyShipController_8h.html" title="src/observers/controllers/EnemyShipController.h" alt="" coords="64,392,365,421"/>
+<area shape="rect" id="node22" href="$d9/d9b/EnemyShipFactory_8h.html" title="src/factories/EnemyShipFactory.h" alt="" coords="292,469,511,499"/>
+<area shape="rect" id="node32" href="$db/d7d/HUDFactory_8h.html" title="src/factories/HUDFactory.h" alt="" coords="735,392,916,421"/>
+<area shape="rect" id="node35" href="$d4/d24/HUDController_8h.html" title="src/observers/controllers/HUDController.h" alt="" coords="747,315,1013,344"/>
+</map>

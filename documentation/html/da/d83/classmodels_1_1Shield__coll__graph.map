@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$dc/d3c/classmodels_1_1StaticObject.html" title="{models::StaticObject\n||+ StaticObject()\l+ ~StaticObject()\l+ moveLeft()\l+ moveRight()\l+ moveUp()\l+ moveDown()\l+ shoot()\l+ getDamage()\l+ collided()\l+ setFlags()\l}" alt="" coords="12,401,156,642"/>
+<area shape="rect" id="node4" href="$dd/db5/classmodels_1_1Model.html" title="{models::Model\n|# texture_\l# sprite_\l# orientation_\l# deleted_\l# invincible_\l# registry_\l|+ Model()\l+ ~Model()\l+ attach()\l+ detach()\l+ getSprite()\l+ getPosition()\l+ setUp()\l+ getBounds()\l+ moveLeft()\l+ moveRight()\land 11 more...# notify()\l}" alt="" coords="5,6,163,351"/>
+</map>

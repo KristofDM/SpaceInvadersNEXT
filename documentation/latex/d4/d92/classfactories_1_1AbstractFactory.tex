@@ -1,0 +1,73 @@
+\hypertarget{classfactories_1_1AbstractFactory}{\section{factories\-:\-:\-Abstract\-Factory \-Class \-Reference}
+\label{d4/d92/classfactories_1_1AbstractFactory}\index{factories\-::\-Abstract\-Factory@{factories\-::\-Abstract\-Factory}}
+}
+
+
+{\ttfamily \#include $<$\-Abstract\-Factory.\-h$>$}
+
+
+
+\-Inheritance diagram for factories\-:\-:\-Abstract\-Factory\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/db6/classfactories_1_1AbstractFactory__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{Game_8h_a21b04f6cf2d5990b82725fac5ea2ce9a}{controller\-Ptr} \hyperlink{classfactories_1_1AbstractFactory_a18220cbcb9acb58ee704142f33975abe}{get\-Entity} (std\-::string, sf\-::\-Render\-Window \&)=0
+\item 
+virtual \hyperlink{Game_8h_a21b04f6cf2d5990b82725fac5ea2ce9a}{controller\-Ptr} \hyperlink{classfactories_1_1AbstractFactory_a916e94392336a3e6a28a090faeb62b8b}{get\-Entity} (std\-::string, \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr}, sf\-::\-Render\-Window \&)=0
+\item 
+virtual \hyperlink{Game_8h_a21b04f6cf2d5990b82725fac5ea2ce9a}{controller\-Ptr} \hyperlink{classfactories_1_1AbstractFactory_a5f440d7b3410e85f7079dac8326ae06c}{get\-Entity} (std\-::string, int, int, sf\-::\-Render\-Window \&)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classfactories_1_1AbstractFactory_a18220cbcb9acb58ee704142f33975abe}{\index{factories\-::\-Abstract\-Factory@{factories\-::\-Abstract\-Factory}!get\-Entity@{get\-Entity}}
+\index{get\-Entity@{get\-Entity}!factories::AbstractFactory@{factories\-::\-Abstract\-Factory}}
+\subsubsection[{get\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf controller\-Ptr} {\bf factories\-::\-Abstract\-Factory\-::get\-Entity} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{, }
+\item[{sf\-::\-Render\-Window \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{d4/d92/classfactories_1_1AbstractFactory_a18220cbcb9acb58ee704142f33975abe}
+
+
+\-Implemented in \hyperlink{classfactories_1_1BulletFactory_ab04bbad8513b1ddb8045c89885a2fa8e}{factories\-::\-Bullet\-Factory}, \hyperlink{classfactories_1_1HUDFactory_ae5675b73f28d2477442c86af51dce2c2}{factories\-::\-H\-U\-D\-Factory}, \hyperlink{classfactories_1_1EnemyShipFactory_a5b7044ae923235d2cb1940b06ebd22cb}{factories\-::\-Enemy\-Ship\-Factory}, \hyperlink{classfactories_1_1ShieldFactory_a32b4bc425dc0854110fa9dbf18663c7c}{factories\-::\-Shield\-Factory}, and \hyperlink{classfactories_1_1SpaceShipFactory_aff6bc8b01b4205907cff3268715a669d}{factories\-::\-Space\-Ship\-Factory}.
+
+\hypertarget{classfactories_1_1AbstractFactory_a916e94392336a3e6a28a090faeb62b8b}{\index{factories\-::\-Abstract\-Factory@{factories\-::\-Abstract\-Factory}!get\-Entity@{get\-Entity}}
+\index{get\-Entity@{get\-Entity}!factories::AbstractFactory@{factories\-::\-Abstract\-Factory}}
+\subsubsection[{get\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf controller\-Ptr} {\bf factories\-::\-Abstract\-Factory\-::get\-Entity} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{, }
+\item[{{\bf model\-Ptr}}]{, }
+\item[{sf\-::\-Render\-Window \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{d4/d92/classfactories_1_1AbstractFactory_a916e94392336a3e6a28a090faeb62b8b}
+
+
+\-Implemented in \hyperlink{classfactories_1_1EnemyShipFactory_a405f286b52252db71b1eddbfde7da672}{factories\-::\-Enemy\-Ship\-Factory}, \hyperlink{classfactories_1_1ShieldFactory_a8752c0c8b1f9a39139aa948ec13a737b}{factories\-::\-Shield\-Factory}, \hyperlink{classfactories_1_1SpaceShipFactory_a82c8c58cb74b30d5c7d1e50f91b93811}{factories\-::\-Space\-Ship\-Factory}, \hyperlink{classfactories_1_1BulletFactory_a52d80d4c23a55808219029ae7ad898a4}{factories\-::\-Bullet\-Factory}, and \hyperlink{classfactories_1_1HUDFactory_a1e6ed81c506d5c249ccd368df8bceccb}{factories\-::\-H\-U\-D\-Factory}.
+
+\hypertarget{classfactories_1_1AbstractFactory_a5f440d7b3410e85f7079dac8326ae06c}{\index{factories\-::\-Abstract\-Factory@{factories\-::\-Abstract\-Factory}!get\-Entity@{get\-Entity}}
+\index{get\-Entity@{get\-Entity}!factories::AbstractFactory@{factories\-::\-Abstract\-Factory}}
+\subsubsection[{get\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf controller\-Ptr} {\bf factories\-::\-Abstract\-Factory\-::get\-Entity} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{sf\-::\-Render\-Window \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{d4/d92/classfactories_1_1AbstractFactory_a5f440d7b3410e85f7079dac8326ae06c}
+
+
+\-Implemented in \hyperlink{classfactories_1_1EnemyShipFactory_acb4c098348b33aa774696952171b2c7b}{factories\-::\-Enemy\-Ship\-Factory}, \hyperlink{classfactories_1_1BulletFactory_a1e8e14ec9380341eb3522d60fdaf659e}{factories\-::\-Bullet\-Factory}, \hyperlink{classfactories_1_1HUDFactory_a991c959cad9bc072b9785da1db3b2e3b}{factories\-::\-H\-U\-D\-Factory}, \hyperlink{classfactories_1_1ShieldFactory_ae7c23542c065b4340474af3f9c0ad598}{factories\-::\-Shield\-Factory}, and \hyperlink{classfactories_1_1SpaceShipFactory_aa52f4097c0d4ffbad9bfe1b9b49eec05}{factories\-::\-Space\-Ship\-Factory}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/factories/\hyperlink{AbstractFactory_8h}{\-Abstract\-Factory.\-h}\end{DoxyCompactItemize}

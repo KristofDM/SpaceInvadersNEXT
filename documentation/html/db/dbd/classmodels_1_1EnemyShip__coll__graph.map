@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$d0/d37/classmodels_1_1Ship.html" title="{models::Ship\n|# lives_\l# fireRate_\l# damage_\l# shootTimer_\l# invincibleTimer_\l# shooting_\l# fatalCollision_\l|+ Ship()\l+ getLives()\l+ setLives()\l+ getFireRate()\l+ setFireRate()\l+ ~Ship()\l+ shoot()\l+ collided()\l+ getDamage()\l+ setFlags()\l+ getFatalCollision()\l}" alt="" coords="15,707,153,1069"/>
+<area shape="rect" id="node4" href="$d7/d35/classmodels_1_1MovingObject.html" title="{models::MovingObject\n|# speed_\l|+ MovingObject()\l+ ~MovingObject()\l+ moveLeft()\l+ moveRight()\l+ moveUp()\l+ moveDown()\l+ shoot()\l+ getDamage()\l+ collided()\l+ setFlags()\l+ changeSpeed()\l}" alt="" coords="8,400,160,659"/>
+<area shape="rect" id="node6" href="$dd/db5/classmodels_1_1Model.html" title="{models::Model\n|# texture_\l# sprite_\l# orientation_\l# deleted_\l# invincible_\l# registry_\l|+ Model()\l+ ~Model()\l+ attach()\l+ detach()\l+ getSprite()\l+ getPosition()\l+ setUp()\l+ getBounds()\l+ moveLeft()\l+ moveRight()\land 11 more...# notify()\l}" alt="" coords="5,6,163,351"/>
+</map>

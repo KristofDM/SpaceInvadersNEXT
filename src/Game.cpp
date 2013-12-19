@@ -7,7 +7,7 @@
 
 #include "Game.h"
 
-namespace models {
+namespace game {
 
 Game::Game(unsigned int width, unsigned int height, sf::RenderWindow& window)
 	: width_(width),
@@ -148,6 +148,10 @@ void Game::render() {
 	}
 }
 
+std::vector<controllerPtr> Game::getEntities() {
+	return entityControllers_;
+}
+
 void Game::setupEnemies(factories::GameParser game) {
 	std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::EnemyShipFactory>();
 	int space = 0;
@@ -266,4 +270,4 @@ void Game::setupControllers(factories::GameParser game) {
 
 
 
-} /* namespace models */
+} /* namespace game */

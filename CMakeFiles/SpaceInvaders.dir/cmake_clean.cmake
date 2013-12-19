@@ -1,6 +1,5 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o"
-  "CMakeFiles/SpaceInvaders.dir/src/factories/AbstractFactory.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o"
@@ -33,6 +32,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o"
+  "CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o"
   "CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o"

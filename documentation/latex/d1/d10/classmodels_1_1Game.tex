@@ -1,0 +1,249 @@
+\hypertarget{classmodels_1_1Game}{\section{models\-:\-:\-Game \-Class \-Reference}
+\label{d1/d10/classmodels_1_1Game}\index{models\-::\-Game@{models\-::\-Game}}
+}
+
+
+{\ttfamily \#include $<$\-Game.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodels_1_1Game_a85dec1f7a60ae8186c365ec2efdae935}{\-Game} (unsigned int, unsigned int, sf\-::\-Render\-Window \&)
+\begin{DoxyCompactList}\small\item\em \-Constructor. \-Constructs its data members with init values. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmodels_1_1Game_ad6e6eb7b7a5c6939b516a60675c50b24}{$\sim$\-Game} ()
+\item 
+void \hyperlink{classmodels_1_1Game_a30a27b13488119c9a9f0bd7d495d15e8}{cycle} ()
+\begin{DoxyCompactList}\small\item\em \-Perform one game cycle. \end{DoxyCompactList}\item 
+void \hyperlink{classmodels_1_1Game_a38b9def8205c6cd4fd9d47c998630c06}{render} ()
+\begin{DoxyCompactList}\small\item\em \-Render one frame. \end{DoxyCompactList}\item 
+void \hyperlink{classmodels_1_1Game_a99432743b4653c203206b9d16247d5fb}{set\-Up} ()
+\begin{DoxyCompactList}\small\item\em \-Set up the game. \end{DoxyCompactList}\item 
+bool \hyperlink{classmodels_1_1Game_ac25ef390a1971452e9e11487ac921452}{end\-Game} ()
+\item 
+void \hyperlink{classmodels_1_1Game_a7f60260cbabc90392de533dc5d0c05be}{next\-Level} ()
+\begin{DoxyCompactList}\small\item\em \-Advance to next level. \end{DoxyCompactList}\item 
+\hyperlink{classmodels_1_1Game}{\-Game} \& \hyperlink{classmodels_1_1Game_af4ed76a8886164e57ef756f1d31e8205}{operator=} (const \hyperlink{classmodels_1_1Game}{\-Game} rhs)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmodels_1_1Game_a2e8709abb710f1e457708b484e8f74b4}{setup\-Controllers} (\hyperlink{classfactories_1_1GameParser}{factories\-::\-Game\-Parser})
+\item 
+void \hyperlink{classmodels_1_1Game_a96212db580e00ec03ff329a79e6acae5}{determine\-Shooters} ()
+\item 
+void \hyperlink{classmodels_1_1Game_a3d8ec799ce9642902f7c3afb3ae53a92}{setup\-Enemies} (\hyperlink{classfactories_1_1GameParser}{factories\-::\-Game\-Parser})
+\item 
+bool \hyperlink{classmodels_1_1Game_a84d775508848479bc8b2bc71666a6b70}{check\-For\-Next\-Level} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classmodels_1_1Game_a2d35c6907ba8c23ff04437ed5ba43600}{width\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Field width. (== window\-\_\- width) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classmodels_1_1Game_a3f90aed51cc96528ec30c06c140f62be}{height\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Field height. (== window\-\_\- height) \end{DoxyCompactList}\item 
+sf\-::\-Render\-Window \& \hyperlink{classmodels_1_1Game_a6060ca52bfe25a1c0c6f9938ed7392c1}{window\-\_\-}
+\item 
+bool \hyperlink{classmodels_1_1Game_affccbd7e23754678c146a35bc5bad15e}{game\-Over\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-True if the game is over. \end{DoxyCompactList}\item 
+double \hyperlink{classmodels_1_1Game_a7d27674020645d1e5e2babfcf09cd6af}{level\-Multiplier\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Tells us how much faster the aliens need to go in the next level. \end{DoxyCompactList}\item 
+int \hyperlink{classmodels_1_1Game_a874b7370f21b44afa1e4aa30cfa84e1a}{level\-\_\-}
+\item 
+std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classcontrollers_1_1SpaceShipController}{controllers\-::\-Space\-Ship\-Controller} $>$ \hyperlink{classmodels_1_1Game_a73891e3039540572f4117da47cb20723}{space\-Ship\-Controller\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-The controller to the space\-Ship the player has control over. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{Game_8h_a21b04f6cf2d5990b82725fac5ea2ce9a}{controller\-Ptr} $>$ \hyperlink{classmodels_1_1Game_a46a3c85ae7b12a4189b3a62c02a7e860}{entity\-Controllers\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-A vector of all controllers in the game. (\-Excluding \-Game\-Controller) \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::vector\*
+$<$ std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classcontrollers_1_1EnemyShipController}{controllers\-::\-Enemy\-Ship\-Controller} $>$ $>$ $>$ \hyperlink{classmodels_1_1Game_a54c84476de2bf7bcb1455c490d8dea3a}{enemies\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-A matrix containing pointers to the \-Enemy\-Ships. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classcontrollers_1_1HUDController}{controllers\-::\-H\-U\-D\-Controller} $>$ \hyperlink{classmodels_1_1Game_a82397bfc1f7dc49aae6c06bcfc095c70}{\-H\-U\-D\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-The controller that takes care of the \hyperlink{classmodels_1_1HUD}{\-H\-U\-D}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classmodels_1_1Game_a85dec1f7a60ae8186c365ec2efdae935}{\index{models\-::\-Game@{models\-::\-Game}!\-Game@{\-Game}}
+\index{\-Game@{\-Game}!models::Game@{models\-::\-Game}}
+\subsubsection[{\-Game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf models\-::\-Game\-::\-Game} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{int, }
+\item[{unsigned}]{int, }
+\item[{sf\-::\-Render\-Window \&}]{}
+\end{DoxyParamCaption}
+)}}\label{d1/d10/classmodels_1_1Game_a85dec1f7a60ae8186c365ec2efdae935}
+
+
+\-Constructor. \-Constructs its data members with init values. 
+
+\hypertarget{classmodels_1_1Game_ad6e6eb7b7a5c6939b516a60675c50b24}{\index{models\-::\-Game@{models\-::\-Game}!$\sim$\-Game@{$\sim$\-Game}}
+\index{$\sim$\-Game@{$\sim$\-Game}!models::Game@{models\-::\-Game}}
+\subsubsection[{$\sim$\-Game}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf models\-::\-Game\-::$\sim$\-Game} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_ad6e6eb7b7a5c6939b516a60675c50b24}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmodels_1_1Game_a84d775508848479bc8b2bc71666a6b70}{\index{models\-::\-Game@{models\-::\-Game}!check\-For\-Next\-Level@{check\-For\-Next\-Level}}
+\index{check\-For\-Next\-Level@{check\-For\-Next\-Level}!models::Game@{models\-::\-Game}}
+\subsubsection[{check\-For\-Next\-Level}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Game\-::check\-For\-Next\-Level} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a84d775508848479bc8b2bc71666a6b70}
+\hypertarget{classmodels_1_1Game_a30a27b13488119c9a9f0bd7d495d15e8}{\index{models\-::\-Game@{models\-::\-Game}!cycle@{cycle}}
+\index{cycle@{cycle}!models::Game@{models\-::\-Game}}
+\subsubsection[{cycle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Game\-::cycle} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/d10/classmodels_1_1Game_a30a27b13488119c9a9f0bd7d495d15e8}
+
+
+\-Perform one game cycle. 
+
+\hypertarget{classmodels_1_1Game_a96212db580e00ec03ff329a79e6acae5}{\index{models\-::\-Game@{models\-::\-Game}!determine\-Shooters@{determine\-Shooters}}
+\index{determine\-Shooters@{determine\-Shooters}!models::Game@{models\-::\-Game}}
+\subsubsection[{determine\-Shooters}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Game\-::determine\-Shooters} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a96212db580e00ec03ff329a79e6acae5}
+\hypertarget{classmodels_1_1Game_ac25ef390a1971452e9e11487ac921452}{\index{models\-::\-Game@{models\-::\-Game}!end\-Game@{end\-Game}}
+\index{end\-Game@{end\-Game}!models::Game@{models\-::\-Game}}
+\subsubsection[{end\-Game}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Game\-::end\-Game} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/d10/classmodels_1_1Game_ac25ef390a1971452e9e11487ac921452}
+\-Lets it caller know whether or not the game has ended. \begin{DoxyReturn}{\-Returns}
+\-True if the game has ended, false if not. 
+\end{DoxyReturn}
+\hypertarget{classmodels_1_1Game_a7f60260cbabc90392de533dc5d0c05be}{\index{models\-::\-Game@{models\-::\-Game}!next\-Level@{next\-Level}}
+\index{next\-Level@{next\-Level}!models::Game@{models\-::\-Game}}
+\subsubsection[{next\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Game\-::next\-Level} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/d10/classmodels_1_1Game_a7f60260cbabc90392de533dc5d0c05be}
+
+
+\-Advance to next level. 
+
+\hypertarget{classmodels_1_1Game_af4ed76a8886164e57ef756f1d31e8205}{\index{models\-::\-Game@{models\-::\-Game}!operator=@{operator=}}
+\index{operator=@{operator=}!models::Game@{models\-::\-Game}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Game}\& models\-::\-Game\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Game}}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{d1/d10/classmodels_1_1Game_af4ed76a8886164e57ef756f1d31e8205}
+\hypertarget{classmodels_1_1Game_a38b9def8205c6cd4fd9d47c998630c06}{\index{models\-::\-Game@{models\-::\-Game}!render@{render}}
+\index{render@{render}!models::Game@{models\-::\-Game}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Game\-::render} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/d10/classmodels_1_1Game_a38b9def8205c6cd4fd9d47c998630c06}
+
+
+\-Render one frame. 
+
+\hypertarget{classmodels_1_1Game_a99432743b4653c203206b9d16247d5fb}{\index{models\-::\-Game@{models\-::\-Game}!set\-Up@{set\-Up}}
+\index{set\-Up@{set\-Up}!models::Game@{models\-::\-Game}}
+\subsubsection[{set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Game\-::set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d1/d10/classmodels_1_1Game_a99432743b4653c203206b9d16247d5fb}
+
+
+\-Set up the game. 
+
+\hypertarget{classmodels_1_1Game_a2e8709abb710f1e457708b484e8f74b4}{\index{models\-::\-Game@{models\-::\-Game}!setup\-Controllers@{setup\-Controllers}}
+\index{setup\-Controllers@{setup\-Controllers}!models::Game@{models\-::\-Game}}
+\subsubsection[{setup\-Controllers}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Game\-::setup\-Controllers} (
+\begin{DoxyParamCaption}
+\item[{{\bf factories\-::\-Game\-Parser}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a2e8709abb710f1e457708b484e8f74b4}
+\hypertarget{classmodels_1_1Game_a3d8ec799ce9642902f7c3afb3ae53a92}{\index{models\-::\-Game@{models\-::\-Game}!setup\-Enemies@{setup\-Enemies}}
+\index{setup\-Enemies@{setup\-Enemies}!models::Game@{models\-::\-Game}}
+\subsubsection[{setup\-Enemies}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Game\-::setup\-Enemies} (
+\begin{DoxyParamCaption}
+\item[{{\bf factories\-::\-Game\-Parser}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a3d8ec799ce9642902f7c3afb3ae53a92}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classmodels_1_1Game_a54c84476de2bf7bcb1455c490d8dea3a}{\index{models\-::\-Game@{models\-::\-Game}!enemies\-\_\-@{enemies\-\_\-}}
+\index{enemies\-\_\-@{enemies\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{enemies\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::vector$<$std\-::shared\-\_\-ptr$<${\bf controllers\-::\-Enemy\-Ship\-Controller}$>$ $>$ $>$ {\bf models\-::\-Game\-::enemies\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a54c84476de2bf7bcb1455c490d8dea3a}
+
+
+\-A matrix containing pointers to the \-Enemy\-Ships. 
+
+\hypertarget{classmodels_1_1Game_a46a3c85ae7b12a4189b3a62c02a7e860}{\index{models\-::\-Game@{models\-::\-Game}!entity\-Controllers\-\_\-@{entity\-Controllers\-\_\-}}
+\index{entity\-Controllers\-\_\-@{entity\-Controllers\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{entity\-Controllers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf controller\-Ptr}$>$ {\bf models\-::\-Game\-::entity\-Controllers\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a46a3c85ae7b12a4189b3a62c02a7e860}
+
+
+\-A vector of all controllers in the game. (\-Excluding \-Game\-Controller) 
+
+\hypertarget{classmodels_1_1Game_affccbd7e23754678c146a35bc5bad15e}{\index{models\-::\-Game@{models\-::\-Game}!game\-Over\-\_\-@{game\-Over\-\_\-}}
+\index{game\-Over\-\_\-@{game\-Over\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{game\-Over\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Game\-::game\-Over\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_affccbd7e23754678c146a35bc5bad15e}
+
+
+\-True if the game is over. 
+
+\hypertarget{classmodels_1_1Game_a3f90aed51cc96528ec30c06c140f62be}{\index{models\-::\-Game@{models\-::\-Game}!height\-\_\-@{height\-\_\-}}
+\index{height\-\_\-@{height\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{height\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf models\-::\-Game\-::height\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a3f90aed51cc96528ec30c06c140f62be}
+
+
+\-Field height. (== window\-\_\- height) 
+
+\hypertarget{classmodels_1_1Game_a82397bfc1f7dc49aae6c06bcfc095c70}{\index{models\-::\-Game@{models\-::\-Game}!\-H\-U\-D\-\_\-@{\-H\-U\-D\-\_\-}}
+\index{\-H\-U\-D\-\_\-@{\-H\-U\-D\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{\-H\-U\-D\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf controllers\-::\-H\-U\-D\-Controller}$>$ {\bf models\-::\-Game\-::\-H\-U\-D\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a82397bfc1f7dc49aae6c06bcfc095c70}
+
+
+\-The controller that takes care of the \hyperlink{classmodels_1_1HUD}{\-H\-U\-D}. 
+
+\hypertarget{classmodels_1_1Game_a874b7370f21b44afa1e4aa30cfa84e1a}{\index{models\-::\-Game@{models\-::\-Game}!level\-\_\-@{level\-\_\-}}
+\index{level\-\_\-@{level\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{level\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf models\-::\-Game\-::level\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a874b7370f21b44afa1e4aa30cfa84e1a}
+\hypertarget{classmodels_1_1Game_a7d27674020645d1e5e2babfcf09cd6af}{\index{models\-::\-Game@{models\-::\-Game}!level\-Multiplier\-\_\-@{level\-Multiplier\-\_\-}}
+\index{level\-Multiplier\-\_\-@{level\-Multiplier\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{level\-Multiplier\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf models\-::\-Game\-::level\-Multiplier\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a7d27674020645d1e5e2babfcf09cd6af}
+
+
+\-Tells us how much faster the aliens need to go in the next level. 
+
+\hypertarget{classmodels_1_1Game_a73891e3039540572f4117da47cb20723}{\index{models\-::\-Game@{models\-::\-Game}!space\-Ship\-Controller\-\_\-@{space\-Ship\-Controller\-\_\-}}
+\index{space\-Ship\-Controller\-\_\-@{space\-Ship\-Controller\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{space\-Ship\-Controller\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf controllers\-::\-Space\-Ship\-Controller}$>$ {\bf models\-::\-Game\-::space\-Ship\-Controller\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a73891e3039540572f4117da47cb20723}
+
+
+\-The controller to the space\-Ship the player has control over. 
+
+\hypertarget{classmodels_1_1Game_a2d35c6907ba8c23ff04437ed5ba43600}{\index{models\-::\-Game@{models\-::\-Game}!width\-\_\-@{width\-\_\-}}
+\index{width\-\_\-@{width\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{width\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf models\-::\-Game\-::width\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a2d35c6907ba8c23ff04437ed5ba43600}
+
+
+\-Field width. (== window\-\_\- width) 
+
+\hypertarget{classmodels_1_1Game_a6060ca52bfe25a1c0c6f9938ed7392c1}{\index{models\-::\-Game@{models\-::\-Game}!window\-\_\-@{window\-\_\-}}
+\index{window\-\_\-@{window\-\_\-}!models::Game@{models\-::\-Game}}
+\subsubsection[{window\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Render\-Window\& {\bf models\-::\-Game\-::window\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d1/d10/classmodels_1_1Game_a6060ca52bfe25a1c0c6f9938ed7392c1}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Game_8h}{\-Game.\-h}\end{DoxyCompactItemize}

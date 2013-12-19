@@ -33,7 +33,6 @@ add_definitions(-DDATADIR="../${CMAKE_SOURCE_DIR}/Data/")
 
 # Lists all sourcefiles (no testfiles and no main)
 set(SRC
-    src/factories/AbstractFactory.cpp
     src/factories/BulletFactory.cpp
     src/factories/DataParser.cpp
     src/factories/EnemyShipFactory.cpp
@@ -66,6 +65,7 @@ set(SRC
     src/Exception.cpp
     src/Game.cpp
     src/GameController.cpp
+    src/GameView.cpp
     src/tinyXML/tinystr.cpp
     src/tinyXML/tinyxml.cpp
     src/tinyXML/tinyxmlerror.cpp

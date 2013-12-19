@@ -7,11 +7,13 @@
 
 #include "GameController.h"
 
-namespace controllers {
+namespace game {
 
 GameController::GameController(int width, int height, sf::RenderWindow& window)
-	: game_(width, height, window)
-{}
+	: game_(width, height, window),
+	  gameView_(std::make_shared<game::Game>(game_))
+{
+}
 
 GameController::~GameController() {
 	// TODO Auto-generated destructor stub
@@ -23,6 +25,7 @@ void GameController::cycle() {
 
 void GameController::render() {
 	game_.render();
+	// TODO: use GameView?
 }
 
 void GameController::setUp() {
@@ -30,9 +33,9 @@ void GameController::setUp() {
 }
 
 bool GameController::endGame() {
-	game_.endGame();
+	return game_.endGame();
 }
 
 
 
-} /* namespace controllers */
+} /* namespace game */

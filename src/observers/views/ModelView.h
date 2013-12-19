@@ -22,12 +22,14 @@ namespace views {
 class ModelView : public observers::Observer{
 public:
 	ModelView(modelPtr, factories::DataParser, sf::RenderWindow&);
-//	ModelView(modelPtr, factories::DataParser);
 
+	//! Update the view.
 	virtual void update() = 0;
 
+	//! Draw the entity.
 	virtual void draw();
 
+	//! Return the entity.
 	modelPtr getModel();
 
 	sf::RenderWindow& getWindow();

@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$de/d4a/Controller_8h.html" title="Controller.h" alt="" coords="288,83,376,112"/>
+<area shape="rect" id="node47" href="$d7/d6d/MovingObject_8h.html" title="../../models/MovingObject.h" alt="" coords="439,83,620,112"/>
+<area shape="rect" id="node13" href="$d3/d5a/Model_8h.html" title="../../models/Model.h" alt="" coords="541,237,680,267"/>
+<area shape="rect" id="node37" href="$d2/d73/ModelView_8h.html" title="../views/ModelView.h" alt="" coords="259,160,405,189"/>
+<area shape="rect" id="node21" href="$d8/df1/Observer_8h.html" title="../observers/Observer.h" alt="" coords="736,315,893,344"/>
+<area shape="rect" id="node23" href="$d8/d8a/Exception_8h.html" title="../Exception.h" alt="" coords="300,392,401,421"/>
+<area shape="rect" id="node29" href="$dd/dbf/DataParser_8h.html" title="../factories/DataParser.h" alt="" coords="413,315,579,344"/>
+</map>

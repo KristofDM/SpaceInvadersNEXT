@@ -12,6 +12,7 @@
 #include "../observers/views/SpaceShipView.h"
 #include "../observers/controllers/EnemyShipController.h"
 #include "../models/EnemyShip.h"
+#include "GameParser.h"
 
 // amount, space, file, order, moveAmount, speed
 typedef std::tuple<int, int, std::string, std::string, int, double> infoTuple;

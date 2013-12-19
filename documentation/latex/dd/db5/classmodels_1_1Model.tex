@@ -1,0 +1,393 @@
+\hypertarget{classmodels_1_1Model}{\section{models\-:\-:\-Model \-Class \-Reference}
+\label{dd/db5/classmodels_1_1Model}\index{models\-::\-Model@{models\-::\-Model}}
+}
+
+
+{\ttfamily \#include $<$\-Model.\-h$>$}
+
+
+
+\-Inheritance diagram for models\-:\-:\-Model\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dd/dc4/classmodels_1_1Model__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodels_1_1Model_abd9a509f4b8e0bd6970407dfac1e2303}{\-Model} (\hyperlink{namespacemodels_adec64ede5178a8b8fed882b3790d423d}{\-E\-Orientation})
+\item 
+virtual \hyperlink{classmodels_1_1Model_acda18e43859c8c9e0fd657d65e56ee21}{$\sim$\-Model} ()
+\item 
+void \hyperlink{classmodels_1_1Model_abd9e5c714ab6f70da2fa644bd79bd58a}{attach} (\hyperlink{classobservers_1_1Observer}{observers\-::\-Observer} $\ast$obs)
+\begin{DoxyCompactList}\small\item\em \-Attaches \-Observer to our registry. \end{DoxyCompactList}\item 
+void \hyperlink{classmodels_1_1Model_a56d90a5a413af33dcfda9f26e7f364c3}{detach} (\hyperlink{classobservers_1_1Observer}{observers\-::\-Observer} $\ast$obs)
+\begin{DoxyCompactList}\small\item\em \-Detaches \-Observer from our registry. \end{DoxyCompactList}\item 
+sf\-::\-Sprite \hyperlink{classmodels_1_1Model_ac64cdcca9d1eb00ab0efcf8ebfec9306}{get\-Sprite} () const 
+\begin{DoxyCompactList}\small\item\em \-Return the \-Entity's sprite. \end{DoxyCompactList}\item 
+sf\-::\-Vector2f \hyperlink{classmodels_1_1Model_a5cd9d2b543625d5f73ecaf0f8b52c29d}{get\-Position} () const 
+\begin{DoxyCompactList}\small\item\em \-Return the \-Entity's position. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmodels_1_1Model_a84e7f88ec595f610cca3a5d977c7900f}{set\-Up} (\hyperlink{classfactories_1_1DataParser}{factories\-::\-Data\-Parser} data, int space=0)
+\begin{DoxyCompactList}\small\item\em \-Set up the \-Entity with the delivered data. \end{DoxyCompactList}\item 
+sf\-::\-Float\-Rect \hyperlink{classmodels_1_1Model_a7922087cc2f5033eb5123e6bc5328434}{get\-Bounds} () const 
+\begin{DoxyCompactList}\small\item\em \-Returns the global bounds of the sprite. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmodels_1_1Model_aeec183545b665d49bf574dc6a5d6c164}{move\-Left} ()=0
+\item 
+virtual void \hyperlink{classmodels_1_1Model_a69c77dcd339e471b724b3ec6f5f60470}{move\-Right} ()=0
+\item 
+virtual void \hyperlink{classmodels_1_1Model_a905973d6e2909463f6438cc5fe67ddce}{move\-Up} ()=0
+\item 
+virtual void \hyperlink{classmodels_1_1Model_ae6dce0ff02579fc145e09959b4f07a92}{move\-Down} ()=0
+\item 
+virtual bool \hyperlink{classmodels_1_1Model_a388ad317aa487941903b6bd2845639e5}{shoot} ()=0
+\item 
+virtual bool \hyperlink{classmodels_1_1Model_a27a9b03a4e57a960e1303d7c4b85817c}{collided} (std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$)=0
+\begin{DoxyCompactList}\small\item\em \-Determines what happens when this object collides with another \-Entity. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{classmodels_1_1Model_a503f6b5be2c6502733fe747be050a296}{get\-Damage} ()=0
+\begin{DoxyCompactList}\small\item\em \-Returns the amount of damage taken when collided with this object. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classmodels_1_1Model_a38f1f6b751de4f613763373040589ee6}{check\-Collision} (std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$) const 
+\begin{DoxyCompactList}\small\item\em \-Check if a collision took place between this object and the parameter object. \end{DoxyCompactList}\item 
+\hyperlink{namespacemodels_adec64ede5178a8b8fed882b3790d423d}{\-E\-Orientation} \hyperlink{classmodels_1_1Model_ac4be513f4d41824ddcd81aa68e415af8}{get\-Orientation} () const 
+\begin{DoxyCompactList}\small\item\em \-Return the orientation of this object. \end{DoxyCompactList}\item 
+bool \hyperlink{classmodels_1_1Model_af156332192e292c757dee4a3af461f2e}{check\-Relevant} (unsigned int, unsigned int) const 
+\begin{DoxyCompactList}\small\item\em \-Check if this object is still relevant. (\-Inside the field etc.) \end{DoxyCompactList}\item 
+virtual std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$ \hyperlink{classmodels_1_1Model_a4e7847ad26d3a0c56a92b65e02c69066}{get\-Owner} ()
+\begin{DoxyCompactList}\small\item\em \-This will return the objects owner. \-By default this is itself. \end{DoxyCompactList}\item 
+void \hyperlink{classmodels_1_1Model_a874a270428e7809f3826d826cea78f84}{mark\-Deleted} ()
+\begin{DoxyCompactList}\small\item\em \-Set the deleted\-\_\- flag to true so we know it can be deleted. \end{DoxyCompactList}\item 
+bool \hyperlink{classmodels_1_1Model_a8e6993606e4cd7c40210a748d8b85f28}{get\-Deleted} ()
+\begin{DoxyCompactList}\small\item\em \-Returns the deleted\-\_\- flag to let the caller know if it's ok to delete this object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmodels_1_1Model_a6d7b6dcb496d16d11b0d0e47a0e0a57e}{set\-Flags} (bool, bool)=0
+\begin{DoxyCompactList}\small\item\em \-Sets flags in the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classmodels_1_1Model_a90376864f1df50fc813d8ef472382727}{notify} () const 
+\begin{DoxyCompactList}\small\item\em \-Notifies all observers of \hyperlink{classmodels_1_1Model}{\-Model} changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\-::\-Texture \hyperlink{classmodels_1_1Model_a3e56b29353979d719b3ca9efbac66cfd}{texture\-\_\-}
+\begin{DoxyCompactList}\small\item\em sprite\-\_\- is a member of the model because it's used in logic. (\-Data collision etc. is calculated with sprite\-\_\- methods.) \-It also hold the position etc. \end{DoxyCompactList}\item 
+sf\-::\-Sprite \hyperlink{classmodels_1_1Model_a5d3856c0bb519b2926d1cbfcb54d2bfe}{sprite\-\_\-}
+\item 
+\hyperlink{namespacemodels_adec64ede5178a8b8fed882b3790d423d}{\-E\-Orientation} \hyperlink{classmodels_1_1Model_aef96d568332ec355a18198c262425748}{orientation\-\_\-}
+\item 
+bool \hyperlink{classmodels_1_1Model_a8561dc3408ef6d0df91184bce30d03ff}{deleted\-\_\-}
+\item 
+bool \hyperlink{classmodels_1_1Model_a670ef11bf5ca17dc3ea90eed8885ffa5}{invincible\-\_\-}
+\item 
+std\-::vector\*
+$<$ \hyperlink{classobservers_1_1Observer}{observers\-::\-Observer} $\ast$ $>$ \hyperlink{classmodels_1_1Model_a1e36031a125a5b515e1dd62155b957a9}{registry\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Registry that holds all \-Obervers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classmodels_1_1Model_abd9a509f4b8e0bd6970407dfac1e2303}{\index{models\-::\-Model@{models\-::\-Model}!\-Model@{\-Model}}
+\index{\-Model@{\-Model}!models::Model@{models\-::\-Model}}
+\subsubsection[{\-Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf models\-::\-Model\-::\-Model} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-Orientation}}]{}
+\end{DoxyParamCaption}
+)}}\label{dd/db5/classmodels_1_1Model_abd9a509f4b8e0bd6970407dfac1e2303}
+\hypertarget{classmodels_1_1Model_acda18e43859c8c9e0fd657d65e56ee21}{\index{models\-::\-Model@{models\-::\-Model}!$\sim$\-Model@{$\sim$\-Model}}
+\index{$\sim$\-Model@{$\sim$\-Model}!models::Model@{models\-::\-Model}}
+\subsubsection[{$\sim$\-Model}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf models\-::\-Model\-::$\sim$\-Model} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_acda18e43859c8c9e0fd657d65e56ee21}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmodels_1_1Model_abd9e5c714ab6f70da2fa644bd79bd58a}{\index{models\-::\-Model@{models\-::\-Model}!attach@{attach}}
+\index{attach@{attach}!models::Model@{models\-::\-Model}}
+\subsubsection[{attach}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Model\-::attach} (
+\begin{DoxyParamCaption}
+\item[{{\bf observers\-::\-Observer} $\ast$}]{obs}
+\end{DoxyParamCaption}
+)}}\label{dd/db5/classmodels_1_1Model_abd9e5c714ab6f70da2fa644bd79bd58a}
+
+
+\-Attaches \-Observer to our registry. 
+
+\hypertarget{classmodels_1_1Model_a38f1f6b751de4f613763373040589ee6}{\index{models\-::\-Model@{models\-::\-Model}!check\-Collision@{check\-Collision}}
+\index{check\-Collision@{check\-Collision}!models::Model@{models\-::\-Model}}
+\subsubsection[{check\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Model\-::check\-Collision} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Model} $>$}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a38f1f6b751de4f613763373040589ee6}
+
+
+\-Check if a collision took place between this object and the parameter object. 
+
+\hypertarget{classmodels_1_1Model_af156332192e292c757dee4a3af461f2e}{\index{models\-::\-Model@{models\-::\-Model}!check\-Relevant@{check\-Relevant}}
+\index{check\-Relevant@{check\-Relevant}!models::Model@{models\-::\-Model}}
+\subsubsection[{check\-Relevant}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Model\-::check\-Relevant} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{int, }
+\item[{unsigned}]{int}
+\end{DoxyParamCaption}
+) const}}\label{dd/db5/classmodels_1_1Model_af156332192e292c757dee4a3af461f2e}
+
+
+\-Check if this object is still relevant. (\-Inside the field etc.) 
+
+\hypertarget{classmodels_1_1Model_a27a9b03a4e57a960e1303d7c4b85817c}{\index{models\-::\-Model@{models\-::\-Model}!collided@{collided}}
+\index{collided@{collided}!models::Model@{models\-::\-Model}}
+\subsubsection[{collided}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Model\-::collided} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Model} $>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a27a9b03a4e57a960e1303d7c4b85817c}
+
+
+\-Determines what happens when this object collides with another \-Entity. 
+
+
+
+\-Implemented in \hyperlink{classmodels_1_1Ship_aaa5808c580620f89bb0a04d3583a112e}{models\-::\-Ship}, \hyperlink{classmodels_1_1Bullet_ac6cf8da945be2c61d75a50772ff1898d}{models\-::\-Bullet}, \hyperlink{classmodels_1_1MovingObject_ad2a0d1c543cfabaee82eea455c185d6a}{models\-::\-Moving\-Object}, \hyperlink{classmodels_1_1StaticObject_ab75af94c0785c0e6dddbd2006078c136}{models\-::\-Static\-Object}, \hyperlink{classmodels_1_1EnemyShip_a25d00521cb35008d405cb9e1300eb9ae}{models\-::\-Enemy\-Ship}, \hyperlink{classmodels_1_1HUD_a40cf78366537ffdd42d31b38bd172fae}{models\-::\-H\-U\-D}, and \hyperlink{classmodels_1_1Shield_aace9fad1f5bb8ba868dc5c47d8ac170a}{models\-::\-Shield}.
+
+\hypertarget{classmodels_1_1Model_a56d90a5a413af33dcfda9f26e7f364c3}{\index{models\-::\-Model@{models\-::\-Model}!detach@{detach}}
+\index{detach@{detach}!models::Model@{models\-::\-Model}}
+\subsubsection[{detach}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Model\-::detach} (
+\begin{DoxyParamCaption}
+\item[{{\bf observers\-::\-Observer} $\ast$}]{obs}
+\end{DoxyParamCaption}
+)}}\label{dd/db5/classmodels_1_1Model_a56d90a5a413af33dcfda9f26e7f364c3}
+
+
+\-Detaches \-Observer from our registry. 
+
+\hypertarget{classmodels_1_1Model_a7922087cc2f5033eb5123e6bc5328434}{\index{models\-::\-Model@{models\-::\-Model}!get\-Bounds@{get\-Bounds}}
+\index{get\-Bounds@{get\-Bounds}!models::Model@{models\-::\-Model}}
+\subsubsection[{get\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Float\-Rect {\bf models\-::\-Model\-::get\-Bounds} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/db5/classmodels_1_1Model_a7922087cc2f5033eb5123e6bc5328434}
+
+
+\-Returns the global bounds of the sprite. 
+
+\hypertarget{classmodels_1_1Model_a503f6b5be2c6502733fe747be050a296}{\index{models\-::\-Model@{models\-::\-Model}!get\-Damage@{get\-Damage}}
+\index{get\-Damage@{get\-Damage}!models::Model@{models\-::\-Model}}
+\subsubsection[{get\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int {\bf models\-::\-Model\-::get\-Damage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a503f6b5be2c6502733fe747be050a296}
+
+
+\-Returns the amount of damage taken when collided with this object. 
+
+
+
+\-Implemented in \hyperlink{classmodels_1_1Ship_acf8c86d8f95c22f990c37628ed40491e}{models\-::\-Ship}, \hyperlink{classmodels_1_1MovingObject_acd4fa7beb87308c2b3c7c08caa486d2b}{models\-::\-Moving\-Object}, \hyperlink{classmodels_1_1StaticObject_a216b997d3c40a76d0bb69c1863202272}{models\-::\-Static\-Object}, \hyperlink{classmodels_1_1Bullet_a6758e5f6e995947136edec2d99dacbb7}{models\-::\-Bullet}, \hyperlink{classmodels_1_1Shield_a50210fb74fa1592a36c8897e3b54244d}{models\-::\-Shield}, and \hyperlink{classmodels_1_1HUD_aee06209660cb6adb125e7ea2d5a9f8a5}{models\-::\-H\-U\-D}.
+
+\hypertarget{classmodels_1_1Model_a8e6993606e4cd7c40210a748d8b85f28}{\index{models\-::\-Model@{models\-::\-Model}!get\-Deleted@{get\-Deleted}}
+\index{get\-Deleted@{get\-Deleted}!models::Model@{models\-::\-Model}}
+\subsubsection[{get\-Deleted}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Model\-::get\-Deleted} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dd/db5/classmodels_1_1Model_a8e6993606e4cd7c40210a748d8b85f28}
+
+
+\-Returns the deleted\-\_\- flag to let the caller know if it's ok to delete this object. 
+
+\hypertarget{classmodels_1_1Model_ac4be513f4d41824ddcd81aa68e415af8}{\index{models\-::\-Model@{models\-::\-Model}!get\-Orientation@{get\-Orientation}}
+\index{get\-Orientation@{get\-Orientation}!models::Model@{models\-::\-Model}}
+\subsubsection[{get\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-Orientation} {\bf models\-::\-Model\-::get\-Orientation} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/db5/classmodels_1_1Model_ac4be513f4d41824ddcd81aa68e415af8}
+
+
+\-Return the orientation of this object. 
+
+\hypertarget{classmodels_1_1Model_a4e7847ad26d3a0c56a92b65e02c69066}{\index{models\-::\-Model@{models\-::\-Model}!get\-Owner@{get\-Owner}}
+\index{get\-Owner@{get\-Owner}!models::Model@{models\-::\-Model}}
+\subsubsection[{get\-Owner}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::shared\-\_\-ptr$<${\bf \-Model}$>$ {\bf models\-::\-Model\-::get\-Owner} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a4e7847ad26d3a0c56a92b65e02c69066}
+
+
+\-This will return the objects owner. \-By default this is itself. 
+
+
+
+\-Reimplemented in \hyperlink{classmodels_1_1Bullet_a85bdcde6c229ca15331b31b41d857c74}{models\-::\-Bullet}.
+
+\hypertarget{classmodels_1_1Model_a5cd9d2b543625d5f73ecaf0f8b52c29d}{\index{models\-::\-Model@{models\-::\-Model}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!models::Model@{models\-::\-Model}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f {\bf models\-::\-Model\-::get\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/db5/classmodels_1_1Model_a5cd9d2b543625d5f73ecaf0f8b52c29d}
+
+
+\-Return the \-Entity's position. 
+
+\hypertarget{classmodels_1_1Model_ac64cdcca9d1eb00ab0efcf8ebfec9306}{\index{models\-::\-Model@{models\-::\-Model}!get\-Sprite@{get\-Sprite}}
+\index{get\-Sprite@{get\-Sprite}!models::Model@{models\-::\-Model}}
+\subsubsection[{get\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Sprite {\bf models\-::\-Model\-::get\-Sprite} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{dd/db5/classmodels_1_1Model_ac64cdcca9d1eb00ab0efcf8ebfec9306}
+
+
+\-Return the \-Entity's sprite. 
+
+\hypertarget{classmodels_1_1Model_a874a270428e7809f3826d826cea78f84}{\index{models\-::\-Model@{models\-::\-Model}!mark\-Deleted@{mark\-Deleted}}
+\index{mark\-Deleted@{mark\-Deleted}!models::Model@{models\-::\-Model}}
+\subsubsection[{mark\-Deleted}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf models\-::\-Model\-::mark\-Deleted} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dd/db5/classmodels_1_1Model_a874a270428e7809f3826d826cea78f84}
+
+
+\-Set the deleted\-\_\- flag to true so we know it can be deleted. 
+
+\hypertarget{classmodels_1_1Model_ae6dce0ff02579fc145e09959b4f07a92}{\index{models\-::\-Model@{models\-::\-Model}!move\-Down@{move\-Down}}
+\index{move\-Down@{move\-Down}!models::Model@{models\-::\-Model}}
+\subsubsection[{move\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Model\-::move\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_ae6dce0ff02579fc145e09959b4f07a92}
+
+
+\-Implemented in \hyperlink{classmodels_1_1MovingObject_a1f17c868da5ea06e0706a712e5a89512}{models\-::\-Moving\-Object}, and \hyperlink{classmodels_1_1StaticObject_a7968700aa9bc166e5940b9e6fd816966}{models\-::\-Static\-Object}.
+
+\hypertarget{classmodels_1_1Model_aeec183545b665d49bf574dc6a5d6c164}{\index{models\-::\-Model@{models\-::\-Model}!move\-Left@{move\-Left}}
+\index{move\-Left@{move\-Left}!models::Model@{models\-::\-Model}}
+\subsubsection[{move\-Left}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Model\-::move\-Left} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_aeec183545b665d49bf574dc6a5d6c164}
+
+
+\-Implemented in \hyperlink{classmodels_1_1EnemyShip_a858923dce4ae65652ed4513d5da9fb1d}{models\-::\-Enemy\-Ship}, \hyperlink{classmodels_1_1MovingObject_a0e24c202d5627a1e8222ad36c2850fac}{models\-::\-Moving\-Object}, and \hyperlink{classmodels_1_1StaticObject_ab65a9e6a413fd913a62c612d6aab31f6}{models\-::\-Static\-Object}.
+
+\hypertarget{classmodels_1_1Model_a69c77dcd339e471b724b3ec6f5f60470}{\index{models\-::\-Model@{models\-::\-Model}!move\-Right@{move\-Right}}
+\index{move\-Right@{move\-Right}!models::Model@{models\-::\-Model}}
+\subsubsection[{move\-Right}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Model\-::move\-Right} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a69c77dcd339e471b724b3ec6f5f60470}
+
+
+\-Implemented in \hyperlink{classmodels_1_1MovingObject_a77842733e08b05c007ec25755dac2c17}{models\-::\-Moving\-Object}, and \hyperlink{classmodels_1_1StaticObject_aae350f824f62b97d9f925fb6a0f12d34}{models\-::\-Static\-Object}.
+
+\hypertarget{classmodels_1_1Model_a905973d6e2909463f6438cc5fe67ddce}{\index{models\-::\-Model@{models\-::\-Model}!move\-Up@{move\-Up}}
+\index{move\-Up@{move\-Up}!models::Model@{models\-::\-Model}}
+\subsubsection[{move\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Model\-::move\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a905973d6e2909463f6438cc5fe67ddce}
+
+
+\-Implemented in \hyperlink{classmodels_1_1MovingObject_aec9555fba2a2efd000f99b3f29cb02eb}{models\-::\-Moving\-Object}, and \hyperlink{classmodels_1_1StaticObject_ab2a4c782bde30f8afc34aad64692728a}{models\-::\-Static\-Object}.
+
+\hypertarget{classmodels_1_1Model_a90376864f1df50fc813d8ef472382727}{\index{models\-::\-Model@{models\-::\-Model}!notify@{notify}}
+\index{notify@{notify}!models::Model@{models\-::\-Model}}
+\subsubsection[{notify}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Model\-::notify} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a90376864f1df50fc813d8ef472382727}
+
+
+\-Notifies all observers of \hyperlink{classmodels_1_1Model}{\-Model} changes. 
+
+\hypertarget{classmodels_1_1Model_a6d7b6dcb496d16d11b0d0e47a0e0a57e}{\index{models\-::\-Model@{models\-::\-Model}!set\-Flags@{set\-Flags}}
+\index{set\-Flags@{set\-Flags}!models::Model@{models\-::\-Model}}
+\subsubsection[{set\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Model\-::set\-Flags} (
+\begin{DoxyParamCaption}
+\item[{bool}]{, }
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a6d7b6dcb496d16d11b0d0e47a0e0a57e}
+
+
+\-Sets flags in the object. 
+
+
+
+\-Implemented in \hyperlink{classmodels_1_1Ship_a75c0e291076162e3efb9679c5896d515}{models\-::\-Ship}, \hyperlink{classmodels_1_1MovingObject_a626081fda45cd2b9aca3561c07e87d14}{models\-::\-Moving\-Object}, and \hyperlink{classmodels_1_1StaticObject_a822eec0669be0374e03d5183d24d13c9}{models\-::\-Static\-Object}.
+
+\hypertarget{classmodels_1_1Model_a84e7f88ec595f610cca3a5d977c7900f}{\index{models\-::\-Model@{models\-::\-Model}!set\-Up@{set\-Up}}
+\index{set\-Up@{set\-Up}!models::Model@{models\-::\-Model}}
+\subsubsection[{set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Model\-::set\-Up} (
+\begin{DoxyParamCaption}
+\item[{{\bf factories\-::\-Data\-Parser}}]{data, }
+\item[{int}]{space = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a84e7f88ec595f610cca3a5d977c7900f}
+
+
+\-Set up the \-Entity with the delivered data. 
+
+
+
+\-Reimplemented in \hyperlink{classmodels_1_1Bullet_a72304e5742e10d6eed1ee71ede9c8281}{models\-::\-Bullet}.
+
+\hypertarget{classmodels_1_1Model_a388ad317aa487941903b6bd2845639e5}{\index{models\-::\-Model@{models\-::\-Model}!shoot@{shoot}}
+\index{shoot@{shoot}!models::Model@{models\-::\-Model}}
+\subsubsection[{shoot}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Model\-::shoot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a388ad317aa487941903b6bd2845639e5}
+
+
+\-Implemented in \hyperlink{classmodels_1_1Ship_afc4a82da0df7e98ba74ca068946358f5}{models\-::\-Ship}, \hyperlink{classmodels_1_1EnemyShip_aa25f4cfb211186150ac3b229722b07ae}{models\-::\-Enemy\-Ship}, \hyperlink{classmodels_1_1MovingObject_a452872617ed6b1a334bfed4efcd5d3a0}{models\-::\-Moving\-Object}, and \hyperlink{classmodels_1_1StaticObject_aed475f7fdbef72b9c6763cd1d530da37}{models\-::\-Static\-Object}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classmodels_1_1Model_a8561dc3408ef6d0df91184bce30d03ff}{\index{models\-::\-Model@{models\-::\-Model}!deleted\-\_\-@{deleted\-\_\-}}
+\index{deleted\-\_\-@{deleted\-\_\-}!models::Model@{models\-::\-Model}}
+\subsubsection[{deleted\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Model\-::deleted\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a8561dc3408ef6d0df91184bce30d03ff}
+\hypertarget{classmodels_1_1Model_a670ef11bf5ca17dc3ea90eed8885ffa5}{\index{models\-::\-Model@{models\-::\-Model}!invincible\-\_\-@{invincible\-\_\-}}
+\index{invincible\-\_\-@{invincible\-\_\-}!models::Model@{models\-::\-Model}}
+\subsubsection[{invincible\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf models\-::\-Model\-::invincible\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a670ef11bf5ca17dc3ea90eed8885ffa5}
+\hypertarget{classmodels_1_1Model_aef96d568332ec355a18198c262425748}{\index{models\-::\-Model@{models\-::\-Model}!orientation\-\_\-@{orientation\-\_\-}}
+\index{orientation\-\_\-@{orientation\-\_\-}!models::Model@{models\-::\-Model}}
+\subsubsection[{orientation\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-Orientation} {\bf models\-::\-Model\-::orientation\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_aef96d568332ec355a18198c262425748}
+\hypertarget{classmodels_1_1Model_a1e36031a125a5b515e1dd62155b957a9}{\index{models\-::\-Model@{models\-::\-Model}!registry\-\_\-@{registry\-\_\-}}
+\index{registry\-\_\-@{registry\-\_\-}!models::Model@{models\-::\-Model}}
+\subsubsection[{registry\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf observers\-::\-Observer}$\ast$$>$ {\bf models\-::\-Model\-::registry\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a1e36031a125a5b515e1dd62155b957a9}
+
+
+\-Registry that holds all \-Obervers. 
+
+\hypertarget{classmodels_1_1Model_a5d3856c0bb519b2926d1cbfcb54d2bfe}{\index{models\-::\-Model@{models\-::\-Model}!sprite\-\_\-@{sprite\-\_\-}}
+\index{sprite\-\_\-@{sprite\-\_\-}!models::Model@{models\-::\-Model}}
+\subsubsection[{sprite\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Sprite {\bf models\-::\-Model\-::sprite\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a5d3856c0bb519b2926d1cbfcb54d2bfe}
+\hypertarget{classmodels_1_1Model_a3e56b29353979d719b3ca9efbac66cfd}{\index{models\-::\-Model@{models\-::\-Model}!texture\-\_\-@{texture\-\_\-}}
+\index{texture\-\_\-@{texture\-\_\-}!models::Model@{models\-::\-Model}}
+\subsubsection[{texture\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Texture {\bf models\-::\-Model\-::texture\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{dd/db5/classmodels_1_1Model_a3e56b29353979d719b3ca9efbac66cfd}
+
+
+sprite\-\_\- is a member of the model because it's used in logic. (\-Data collision etc. is calculated with sprite\-\_\- methods.) \-It also hold the position etc. 
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/models/\hyperlink{Model_8h}{\-Model.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,155 @@
+\hypertarget{classmodels_1_1Bullet}{\section{models\-:\-:\-Bullet \-Class \-Reference}
+\label{d5/dd0/classmodels_1_1Bullet}\index{models\-::\-Bullet@{models\-::\-Bullet}}
+}
+
+
+{\ttfamily \#include $<$\-Bullet.\-h$>$}
+
+
+
+\-Inheritance diagram for models\-:\-:\-Bullet\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d7/df3/classmodels_1_1Bullet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\-Collaboration diagram for models\-:\-:\-Bullet\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d2/dd1/classmodels_1_1Bullet__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodels_1_1Bullet_a7b2bb4b533e13f58b9dac3b7c5afd379}{\-Bullet} (std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$ owner, sf\-::\-Vector2f pos, \hyperlink{namespacemodels_adec64ede5178a8b8fed882b3790d423d}{\-E\-Orientation} orientation)
+\begin{DoxyCompactList}\small\item\em \-Construct its base class, set position and orientation. \end{DoxyCompactList}\item 
+virtual \hyperlink{classmodels_1_1Bullet_abc9b06c44a0c89111c448727aae04f88}{$\sim$\-Bullet} ()
+\item 
+virtual void \hyperlink{classmodels_1_1Bullet_a72304e5742e10d6eed1ee71ede9c8281}{set\-Up} (\hyperlink{classfactories_1_1DataParser}{factories\-::\-Data\-Parser}, int space=0)
+\begin{DoxyCompactList}\small\item\em \-Setup the entity. \end{DoxyCompactList}\item 
+virtual std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$ \hyperlink{classmodels_1_1Bullet_a85bdcde6c229ca15331b31b41d857c74}{get\-Owner} ()
+\begin{DoxyCompactList}\small\item\em \-Return the owner of this bullet object. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{classmodels_1_1Bullet_a6758e5f6e995947136edec2d99dacbb7}{get\-Damage} ()
+\begin{DoxyCompactList}\small\item\em \-Return the damage this bullet deals. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classmodels_1_1Bullet_ac6cf8da945be2c61d75a50772ff1898d}{collided} (std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$)
+\begin{DoxyCompactList}\small\item\em \-Specify what happens when this object has collided with another object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classmodels_1_1Bullet_a5256a31799415b2105c3f454fb7e9acc}{damage\-\_\-}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$ \hyperlink{classmodels_1_1Bullet_aa884cf4f6c09e8400524787990caa70c}{owner\-\_\-}
+\item 
+sf\-::\-Vector2f \hyperlink{classmodels_1_1Bullet_ab798801f3446f0c5ae72627673f06d20}{init\-Position\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classmodels_1_1Bullet_a7b2bb4b533e13f58b9dac3b7c5afd379}{\index{models\-::\-Bullet@{models\-::\-Bullet}!\-Bullet@{\-Bullet}}
+\index{\-Bullet@{\-Bullet}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{\-Bullet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf models\-::\-Bullet\-::\-Bullet} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Model} $>$}]{owner, }
+\item[{sf\-::\-Vector2f}]{pos, }
+\item[{{\bf \-E\-Orientation}}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{d5/dd0/classmodels_1_1Bullet_a7b2bb4b533e13f58b9dac3b7c5afd379}
+
+
+\-Construct its base class, set position and orientation. 
+
+\hypertarget{classmodels_1_1Bullet_abc9b06c44a0c89111c448727aae04f88}{\index{models\-::\-Bullet@{models\-::\-Bullet}!$\sim$\-Bullet@{$\sim$\-Bullet}}
+\index{$\sim$\-Bullet@{$\sim$\-Bullet}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{$\sim$\-Bullet}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf models\-::\-Bullet\-::$\sim$\-Bullet} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d5/dd0/classmodels_1_1Bullet_abc9b06c44a0c89111c448727aae04f88}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmodels_1_1Bullet_ac6cf8da945be2c61d75a50772ff1898d}{\index{models\-::\-Bullet@{models\-::\-Bullet}!collided@{collided}}
+\index{collided@{collided}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{collided}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Bullet\-::collided} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Model} $>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d5/dd0/classmodels_1_1Bullet_ac6cf8da945be2c61d75a50772ff1898d}
+
+
+\-Specify what happens when this object has collided with another object. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1MovingObject_ad2a0d1c543cfabaee82eea455c185d6a}{models\-::\-Moving\-Object}.
+
+\hypertarget{classmodels_1_1Bullet_a6758e5f6e995947136edec2d99dacbb7}{\index{models\-::\-Bullet@{models\-::\-Bullet}!get\-Damage@{get\-Damage}}
+\index{get\-Damage@{get\-Damage}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{get\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int {\bf models\-::\-Bullet\-::get\-Damage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d5/dd0/classmodels_1_1Bullet_a6758e5f6e995947136edec2d99dacbb7}
+
+
+\-Return the damage this bullet deals. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1MovingObject_acd4fa7beb87308c2b3c7c08caa486d2b}{models\-::\-Moving\-Object}.
+
+\hypertarget{classmodels_1_1Bullet_a85bdcde6c229ca15331b31b41d857c74}{\index{models\-::\-Bullet@{models\-::\-Bullet}!get\-Owner@{get\-Owner}}
+\index{get\-Owner@{get\-Owner}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{get\-Owner}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::shared\-\_\-ptr$<${\bf \-Model}$>$ {\bf models\-::\-Bullet\-::get\-Owner} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d5/dd0/classmodels_1_1Bullet_a85bdcde6c229ca15331b31b41d857c74}
+
+
+\-Return the owner of this bullet object. 
+
+
+
+\-Reimplemented from \hyperlink{classmodels_1_1Model_a4e7847ad26d3a0c56a92b65e02c69066}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1Bullet_a72304e5742e10d6eed1ee71ede9c8281}{\index{models\-::\-Bullet@{models\-::\-Bullet}!set\-Up@{set\-Up}}
+\index{set\-Up@{set\-Up}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Bullet\-::set\-Up} (
+\begin{DoxyParamCaption}
+\item[{{\bf factories\-::\-Data\-Parser}}]{, }
+\item[{int}]{space = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d5/dd0/classmodels_1_1Bullet_a72304e5742e10d6eed1ee71ede9c8281}
+
+
+\-Setup the entity. 
+
+
+
+\-Reimplemented from \hyperlink{classmodels_1_1Model_a84e7f88ec595f610cca3a5d977c7900f}{models\-::\-Model}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classmodels_1_1Bullet_a5256a31799415b2105c3f454fb7e9acc}{\index{models\-::\-Bullet@{models\-::\-Bullet}!damage\-\_\-@{damage\-\_\-}}
+\index{damage\-\_\-@{damage\-\_\-}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{damage\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf models\-::\-Bullet\-::damage\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/dd0/classmodels_1_1Bullet_a5256a31799415b2105c3f454fb7e9acc}
+\hypertarget{classmodels_1_1Bullet_ab798801f3446f0c5ae72627673f06d20}{\index{models\-::\-Bullet@{models\-::\-Bullet}!init\-Position\-\_\-@{init\-Position\-\_\-}}
+\index{init\-Position\-\_\-@{init\-Position\-\_\-}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{init\-Position\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f {\bf models\-::\-Bullet\-::init\-Position\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/dd0/classmodels_1_1Bullet_ab798801f3446f0c5ae72627673f06d20}
+\hypertarget{classmodels_1_1Bullet_aa884cf4f6c09e8400524787990caa70c}{\index{models\-::\-Bullet@{models\-::\-Bullet}!owner\-\_\-@{owner\-\_\-}}
+\index{owner\-\_\-@{owner\-\_\-}!models::Bullet@{models\-::\-Bullet}}
+\subsubsection[{owner\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf \-Model}$>$ {\bf models\-::\-Bullet\-::owner\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d5/dd0/classmodels_1_1Bullet_aa884cf4f6c09e8400524787990caa70c}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/models/\hyperlink{Bullet_8h}{\-Bullet.\-h}\end{DoxyCompactItemize}

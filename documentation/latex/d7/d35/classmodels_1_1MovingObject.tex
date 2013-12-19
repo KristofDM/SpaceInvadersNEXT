@@ -1,0 +1,217 @@
+\hypertarget{classmodels_1_1MovingObject}{\section{models\-:\-:\-Moving\-Object \-Class \-Reference}
+\label{d7/d35/classmodels_1_1MovingObject}\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}}
+}
+
+
+{\ttfamily \#include $<$\-Moving\-Object.\-h$>$}
+
+
+
+\-Inheritance diagram for models\-:\-:\-Moving\-Object\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{df/d17/classmodels_1_1MovingObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\-Collaboration diagram for models\-:\-:\-Moving\-Object\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/dd0/classmodels_1_1MovingObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodels_1_1MovingObject_a1c530e677ca2533d34905b14d7bbfbe4}{\-Moving\-Object} (double, \hyperlink{namespacemodels_adec64ede5178a8b8fed882b3790d423d}{\-E\-Orientation})
+\item 
+virtual \hyperlink{classmodels_1_1MovingObject_aaa787507c187de8ad0b7b6f36b185d97}{$\sim$\-Moving\-Object} ()
+\item 
+virtual void \hyperlink{classmodels_1_1MovingObject_a0e24c202d5627a1e8222ad36c2850fac}{move\-Left} ()
+\item 
+virtual void \hyperlink{classmodels_1_1MovingObject_a77842733e08b05c007ec25755dac2c17}{move\-Right} ()
+\item 
+virtual void \hyperlink{classmodels_1_1MovingObject_aec9555fba2a2efd000f99b3f29cb02eb}{move\-Up} ()
+\item 
+virtual void \hyperlink{classmodels_1_1MovingObject_a1f17c868da5ea06e0706a712e5a89512}{move\-Down} ()
+\item 
+virtual bool \hyperlink{classmodels_1_1MovingObject_a452872617ed6b1a334bfed4efcd5d3a0}{shoot} ()
+\item 
+virtual unsigned int \hyperlink{classmodels_1_1MovingObject_acd4fa7beb87308c2b3c7c08caa486d2b}{get\-Damage} ()=0
+\begin{DoxyCompactList}\small\item\em \-Returns the amount of damage taken when collided with this object. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classmodels_1_1MovingObject_ad2a0d1c543cfabaee82eea455c185d6a}{collided} (std\-::shared\-\_\-ptr$<$ \hyperlink{classmodels_1_1Model}{\-Model} $>$)=0
+\begin{DoxyCompactList}\small\item\em \-Determines what happens when this object collides with another \-Entity. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmodels_1_1MovingObject_a626081fda45cd2b9aca3561c07e87d14}{set\-Flags} (bool, bool)
+\begin{DoxyCompactList}\small\item\em \-Sets flags in the object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classmodels_1_1MovingObject_a4d77c816ebf7c519a3c1452abd68e3cf}{change\-Speed} (double)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classmodels_1_1MovingObject_a0907d8224b1935e2bf800f47ecc74f37}{speed\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classmodels_1_1MovingObject_a1c530e677ca2533d34905b14d7bbfbe4}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!\-Moving\-Object@{\-Moving\-Object}}
+\index{\-Moving\-Object@{\-Moving\-Object}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{\-Moving\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf models\-::\-Moving\-Object\-::\-Moving\-Object} (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{{\bf \-E\-Orientation}}]{}
+\end{DoxyParamCaption}
+)}}\label{d7/d35/classmodels_1_1MovingObject_a1c530e677ca2533d34905b14d7bbfbe4}
+\hypertarget{classmodels_1_1MovingObject_aaa787507c187de8ad0b7b6f36b185d97}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!$\sim$\-Moving\-Object@{$\sim$\-Moving\-Object}}
+\index{$\sim$\-Moving\-Object@{$\sim$\-Moving\-Object}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{$\sim$\-Moving\-Object}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf models\-::\-Moving\-Object\-::$\sim$\-Moving\-Object} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_aaa787507c187de8ad0b7b6f36b185d97}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmodels_1_1MovingObject_a4d77c816ebf7c519a3c1452abd68e3cf}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!change\-Speed@{change\-Speed}}
+\index{change\-Speed@{change\-Speed}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{change\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Moving\-Object\-::change\-Speed} (
+\begin{DoxyParamCaption}
+\item[{double}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_a4d77c816ebf7c519a3c1452abd68e3cf}
+\hypertarget{classmodels_1_1MovingObject_ad2a0d1c543cfabaee82eea455c185d6a}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!collided@{collided}}
+\index{collided@{collided}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{collided}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Moving\-Object\-::collided} (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf \-Model} $>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_ad2a0d1c543cfabaee82eea455c185d6a}
+
+
+\-Determines what happens when this object collides with another \-Entity. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a27a9b03a4e57a960e1303d7c4b85817c}{models\-::\-Model}.
+
+
+
+\-Implemented in \hyperlink{classmodels_1_1Ship_aaa5808c580620f89bb0a04d3583a112e}{models\-::\-Ship}, \hyperlink{classmodels_1_1Bullet_ac6cf8da945be2c61d75a50772ff1898d}{models\-::\-Bullet}, and \hyperlink{classmodels_1_1EnemyShip_a25d00521cb35008d405cb9e1300eb9ae}{models\-::\-Enemy\-Ship}.
+
+\hypertarget{classmodels_1_1MovingObject_acd4fa7beb87308c2b3c7c08caa486d2b}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!get\-Damage@{get\-Damage}}
+\index{get\-Damage@{get\-Damage}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{get\-Damage}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int {\bf models\-::\-Moving\-Object\-::get\-Damage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_acd4fa7beb87308c2b3c7c08caa486d2b}
+
+
+\-Returns the amount of damage taken when collided with this object. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a503f6b5be2c6502733fe747be050a296}{models\-::\-Model}.
+
+
+
+\-Implemented in \hyperlink{classmodels_1_1Ship_acf8c86d8f95c22f990c37628ed40491e}{models\-::\-Ship}, and \hyperlink{classmodels_1_1Bullet_a6758e5f6e995947136edec2d99dacbb7}{models\-::\-Bullet}.
+
+\hypertarget{classmodels_1_1MovingObject_a1f17c868da5ea06e0706a712e5a89512}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!move\-Down@{move\-Down}}
+\index{move\-Down@{move\-Down}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{move\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Moving\-Object\-::move\-Down} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_a1f17c868da5ea06e0706a712e5a89512}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_ae6dce0ff02579fc145e09959b4f07a92}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1MovingObject_a0e24c202d5627a1e8222ad36c2850fac}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!move\-Left@{move\-Left}}
+\index{move\-Left@{move\-Left}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{move\-Left}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Moving\-Object\-::move\-Left} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_a0e24c202d5627a1e8222ad36c2850fac}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_aeec183545b665d49bf574dc6a5d6c164}{models\-::\-Model}.
+
+
+
+\-Reimplemented in \hyperlink{classmodels_1_1EnemyShip_a858923dce4ae65652ed4513d5da9fb1d}{models\-::\-Enemy\-Ship}.
+
+\hypertarget{classmodels_1_1MovingObject_a77842733e08b05c007ec25755dac2c17}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!move\-Right@{move\-Right}}
+\index{move\-Right@{move\-Right}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{move\-Right}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Moving\-Object\-::move\-Right} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_a77842733e08b05c007ec25755dac2c17}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a69c77dcd339e471b724b3ec6f5f60470}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1MovingObject_aec9555fba2a2efd000f99b3f29cb02eb}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!move\-Up@{move\-Up}}
+\index{move\-Up@{move\-Up}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{move\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Moving\-Object\-::move\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_aec9555fba2a2efd000f99b3f29cb02eb}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a905973d6e2909463f6438cc5fe67ddce}{models\-::\-Model}.
+
+\hypertarget{classmodels_1_1MovingObject_a626081fda45cd2b9aca3561c07e87d14}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!set\-Flags@{set\-Flags}}
+\index{set\-Flags@{set\-Flags}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{set\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf models\-::\-Moving\-Object\-::set\-Flags} (
+\begin{DoxyParamCaption}
+\item[{bool}]{, }
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_a626081fda45cd2b9aca3561c07e87d14}
+
+
+\-Sets flags in the object. 
+
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a6d7b6dcb496d16d11b0d0e47a0e0a57e}{models\-::\-Model}.
+
+
+
+\-Reimplemented in \hyperlink{classmodels_1_1Ship_a75c0e291076162e3efb9679c5896d515}{models\-::\-Ship}.
+
+\hypertarget{classmodels_1_1MovingObject_a452872617ed6b1a334bfed4efcd5d3a0}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!shoot@{shoot}}
+\index{shoot@{shoot}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{shoot}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf models\-::\-Moving\-Object\-::shoot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_a452872617ed6b1a334bfed4efcd5d3a0}
+
+
+\-Implements \hyperlink{classmodels_1_1Model_a388ad317aa487941903b6bd2845639e5}{models\-::\-Model}.
+
+
+
+\-Reimplemented in \hyperlink{classmodels_1_1Ship_afc4a82da0df7e98ba74ca068946358f5}{models\-::\-Ship}, and \hyperlink{classmodels_1_1EnemyShip_aa25f4cfb211186150ac3b229722b07ae}{models\-::\-Enemy\-Ship}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classmodels_1_1MovingObject_a0907d8224b1935e2bf800f47ecc74f37}{\index{models\-::\-Moving\-Object@{models\-::\-Moving\-Object}!speed\-\_\-@{speed\-\_\-}}
+\index{speed\-\_\-@{speed\-\_\-}!models::MovingObject@{models\-::\-Moving\-Object}}
+\subsubsection[{speed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf models\-::\-Moving\-Object\-::speed\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{d7/d35/classmodels_1_1MovingObject_a0907d8224b1935e2bf800f47ecc74f37}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/models/\hyperlink{MovingObject_8h}{\-Moving\-Object.\-h}\end{DoxyCompactItemize}

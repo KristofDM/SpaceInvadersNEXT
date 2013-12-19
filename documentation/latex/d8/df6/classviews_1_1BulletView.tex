@@ -1,0 +1,95 @@
+\hypertarget{classviews_1_1BulletView}{\section{views\-:\-:\-Bullet\-View \-Class \-Reference}
+\label{d8/df6/classviews_1_1BulletView}\index{views\-::\-Bullet\-View@{views\-::\-Bullet\-View}}
+}
+
+
+{\ttfamily \#include $<$\-Bullet\-View.\-h$>$}
+
+
+
+\-Inheritance diagram for views\-:\-:\-Bullet\-View\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{dc/dfb/classviews_1_1BulletView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+\-Collaboration diagram for views\-:\-:\-Bullet\-View\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{dd/d3f/classviews_1_1BulletView__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classviews_1_1BulletView_aa0a2f2e62f057691f39aa14d90fbbbd1}{\-Bullet\-View} (\hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} model, \hyperlink{classfactories_1_1DataParser}{factories\-::\-Data\-Parser} data, sf\-::\-Render\-Window \&window)
+\item 
+virtual \hyperlink{classviews_1_1BulletView_a1d0375266600294d5e3824a74213c938}{$\sim$\-Bullet\-View} ()
+\item 
+virtual void \hyperlink{classviews_1_1BulletView_af144914d620bdbb47dc7165c1c270064}{update} ()
+\begin{DoxyCompactList}\small\item\em \-Updates our model. (\-Could check if there is an actual change and then update or could just always redraw.) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classviews_1_1BulletView_a3013f3aacf75ad108902a9117126dba4}{draw} ()
+\begin{DoxyCompactList}\small\item\em \-Renders our model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classviews_1_1BulletView_aa0a2f2e62f057691f39aa14d90fbbbd1}{\index{views\-::\-Bullet\-View@{views\-::\-Bullet\-View}!\-Bullet\-View@{\-Bullet\-View}}
+\index{\-Bullet\-View@{\-Bullet\-View}!views::BulletView@{views\-::\-Bullet\-View}}
+\subsubsection[{\-Bullet\-View}]{\setlength{\rightskip}{0pt plus 5cm}{\bf views\-::\-Bullet\-View\-::\-Bullet\-View} (
+\begin{DoxyParamCaption}
+\item[{{\bf model\-Ptr}}]{model, }
+\item[{{\bf factories\-::\-Data\-Parser}}]{data, }
+\item[{sf\-::\-Render\-Window \&}]{window}
+\end{DoxyParamCaption}
+)}}\label{d8/df6/classviews_1_1BulletView_aa0a2f2e62f057691f39aa14d90fbbbd1}
+\-Constructor, constructs base object and subscribes to the change-\/propagation mechanism of the model (the \-Observer registry). \-Also sets up the relationship to the controller. \-After the controller is initialized the view displays itself on the screen. \hypertarget{classviews_1_1BulletView_a1d0375266600294d5e3824a74213c938}{\index{views\-::\-Bullet\-View@{views\-::\-Bullet\-View}!$\sim$\-Bullet\-View@{$\sim$\-Bullet\-View}}
+\index{$\sim$\-Bullet\-View@{$\sim$\-Bullet\-View}!views::BulletView@{views\-::\-Bullet\-View}}
+\subsubsection[{$\sim$\-Bullet\-View}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf views\-::\-Bullet\-View\-::$\sim$\-Bullet\-View} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d8/df6/classviews_1_1BulletView_a1d0375266600294d5e3824a74213c938}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classviews_1_1BulletView_a3013f3aacf75ad108902a9117126dba4}{\index{views\-::\-Bullet\-View@{views\-::\-Bullet\-View}!draw@{draw}}
+\index{draw@{draw}!views::BulletView@{views\-::\-Bullet\-View}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf views\-::\-Bullet\-View\-::draw} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d8/df6/classviews_1_1BulletView_a3013f3aacf75ad108902a9117126dba4}
+
+
+\-Renders our model. 
+
+
+
+\-Reimplemented from \hyperlink{classviews_1_1ModelView_a3e17923ec58fe6950a6e114cef22ad9b}{views\-::\-Model\-View}.
+
+\hypertarget{classviews_1_1BulletView_af144914d620bdbb47dc7165c1c270064}{\index{views\-::\-Bullet\-View@{views\-::\-Bullet\-View}!update@{update}}
+\index{update@{update}!views::BulletView@{views\-::\-Bullet\-View}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf views\-::\-Bullet\-View\-::update} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d8/df6/classviews_1_1BulletView_af144914d620bdbb47dc7165c1c270064}
+
+
+\-Updates our model. (\-Could check if there is an actual change and then update or could just always redraw.) 
+
+
+
+\-Implements \hyperlink{classviews_1_1ModelView_a230b5304a78ff899254ab90b288f620c}{views\-::\-Model\-View}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/observers/views/\hyperlink{BulletView_8h}{\-Bullet\-View.\-h}\end{DoxyCompactItemize}

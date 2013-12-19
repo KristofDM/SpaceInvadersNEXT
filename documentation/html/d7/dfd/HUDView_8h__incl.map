@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$d2/d73/ModelView_8h.html" title="ModelView.h" alt="" coords="721,237,817,267"/>
+<area shape="rect" id="node40" href="$d0/d0b/HUD_8h.html" title="../../models/HUD.h" alt="" coords="5,160,139,189"/>
+<area shape="rect" id="node45" href="$d6/d03/Ship_8h.html" title="../../models/Ship.h" alt="" coords="419,83,547,112"/>
+<area shape="rect" id="node15" href="$d3/d5a/Model_8h.html" title="../../models/Model.h" alt="" coords="467,315,605,344"/>
+<area shape="rect" id="node24" href="$d8/d8a/Exception_8h.html" title="../Exception.h" alt="" coords="1035,469,1136,499"/>
+<area shape="rect" id="node30" href="$dd/dbf/DataParser_8h.html" title="../factories/DataParser.h" alt="" coords="832,392,997,421"/>
+<area shape="rect" id="node22" href="$d8/df1/Observer_8h.html" title="../observers/Observer.h" alt="" coords="405,392,563,421"/>
+<area shape="rect" id="node42" href="$d5/d33/StaticObject_8h.html" title="StaticObject.h" alt="" coords="213,237,317,267"/>
+<area shape="rect" id="node50" href="$d4/d9a/Bullet_8h.html" title="Bullet.h" alt="" coords="485,160,552,189"/>
+<area shape="rect" id="node53" href="$d7/d6d/MovingObject_8h.html" title="MovingObject.h" alt="" coords="392,237,504,267"/>
+<area shape="rect" id="node57" href="$d7/d9b/Shield_8h.html" title="Shield.h" alt="" coords="320,160,389,189"/>
+</map>
