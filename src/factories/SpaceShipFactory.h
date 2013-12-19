@@ -19,7 +19,10 @@ class SpaceShipFactory : public AbstractFactory {
 public:
 	SpaceShipFactory();
 	virtual ~SpaceShipFactory();
+
+	//! Constructs a controllerPtr to a SpaceShip.
 	virtual controllerPtr getEntity(std::string, sf::RenderWindow&);
+
 	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&) { return nullptr; };
 	virtual controllerPtr getEntity(std::string, int, int, sf::RenderWindow&) { return nullptr; }
 };

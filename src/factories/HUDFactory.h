@@ -19,7 +19,10 @@ class HUDFactory : public AbstractFactory {
 public:
 	HUDFactory();
 	virtual ~HUDFactory();
+
+	//! Constructs a controllerPtr to a HUD.
 	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&);
+
 	virtual controllerPtr getEntity(std::string, sf::RenderWindow&) { return nullptr; }
 	virtual controllerPtr getEntity(std::string, int, int, sf::RenderWindow&) { return nullptr; }
 };

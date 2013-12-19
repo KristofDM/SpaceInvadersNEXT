@@ -1,0 +1,1481 @@
+desc: --massif-out-file=output.txt
+cmd: ./SP_INV_NEXT
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=17571425
+mem_heap_B=349199
+mem_heap_extra_B=14225
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=26741621
+mem_heap_B=549731
+mem_heap_extra_B=20293
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=42491489
+mem_heap_B=650083
+mem_heap_extra_B=23877
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=60501973
+mem_heap_B=2402233
+mem_heap_extra_B=46655
+mem_stacks_B=0
+heap_tree=detailed
+n27: 2402233 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 438981 in 412 places, all below massif's threshold (01.00%)
+ n2: 201600 0x676B809: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+  n1: 115584 0x676EF53: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 115584 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 115584 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 115584 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n1: 115584 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+       n2: 115584 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n1: 86016 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 86016 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+          n1: 86016 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+           n1: 86016 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+            n0: 86016 0x4344F6: main (SP_INV_NEXT.cpp:14)
+        n1: 29568 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 29568 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n1: 29568 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+           n1: 29568 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+            n1: 29568 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+             n0: 29568 0x4344F6: main (SP_INV_NEXT.cpp:14)
+  n1: 86016 0x676EF6B: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 86016 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 86016 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 86016 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n1: 86016 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+       n1: 86016 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n1: 86016 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 86016 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+          n1: 86016 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+           n1: 86016 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+            n0: 86016 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n2: 171936 0xA6775E9: tgsi_exec_machine_create (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 85968 0xA65E124: draw_vs_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 85968 0xA64658A: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 85968 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 85968 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 85968 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 85968 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 85968 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 85968 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 85968 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 85968 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 85968 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 85968 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n1: 85968 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 85968 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                    n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+  n1: 85968 0xA64782C: draw_gs_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 85968 0xA646596: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 85968 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 85968 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 85968 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 85968 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 85968 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 85968 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 85968 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 85968 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 85968 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 85968 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n1: 85968 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 85968 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                    n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n2: 171936 0x9586AD9: tgsi_exec_machine_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 85968 0x9577D84: draw_vs_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 85968 0x95658CA: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 85968 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 85968 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 85968 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 85968 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 85968 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 85968 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 85968 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 85968 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 85968 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 85968 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 85968 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 85968 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+  n1: 85968 0x9566ABC: draw_gs_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 85968 0x95658D6: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 85968 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 85968 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 85968 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 85968 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 85968 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 85968 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 85968 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 85968 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 85968 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 85968 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 85968 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 85968 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 165888 0x6745E07: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+  n2: 165888 0x6749C27: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 82944 0x6749EAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 82944 0x676EC94: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 82944 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n1: 82944 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+       n1: 82944 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 82944 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n2: 82944 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n1: 82944 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n1: 82944 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n1: 82944 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+             n1: 82944 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+              n1: 82944 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+               n0: 82944 0x4344F6: main (SP_INV_NEXT.cpp:14)
+          n0: 0 in 1 place, below massif's threshold (01.00%)
+   n1: 82944 0x6749E42: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 82944 0x676EC94: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 82944 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n1: 82944 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+       n1: 82944 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 82944 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n2: 82944 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n1: 82944 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n1: 82944 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n1: 82944 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+             n1: 82944 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+              n1: 82944 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+               n0: 82944 0x4344F6: main (SP_INV_NEXT.cpp:14)
+          n0: 0 in 1 place, below massif's threshold (01.00%)
+ n2: 135520 0xB558138: llvm::PMTopLevelManager::findAnalysisUsage(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+  n3: 133760 0xB558B56: llvm::PMTopLevelManager::schedulePass(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+   n1: 73920 0xB55AE05: llvm::FunctionPassManager::add(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+    n0: 73920 in 48 places, all below massif's threshold (01.00%)
+   n2: 49280 0xB558CA1: llvm::PMTopLevelManager::schedulePass(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+    n1: 31680 0xB55AE05: llvm::FunctionPassManager::add(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+     n0: 31680 in 12 places, all below massif's threshold (01.00%)
+    n0: 17600 in 2 places, all below massif's threshold (01.00%)
+   n0: 10560 in 2 places, all below massif's threshold (01.00%)
+  n0: 1760 in 1 place, below massif's threshold (01.00%)
+ n1: 99360 0x9AD1DEE: _mesa_NewHashTable (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n0: 99360 in 12 places, all below massif's threshold (01.00%)
+ n1: 96000 0xB428459: llvm::createGreedyRegisterAllocator() (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+  n1: 96000 0xB386D1A: llvm::LLVMTargetMachine::addCommonCodeGenPasses(llvm::PassManagerBase&, llvm::CodeGenOpt::Level, bool, llvm::MCContext*&) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+   n1: 96000 0xB38742C: llvm::LLVMTargetMachine::addPassesToEmitMachineCode(llvm::PassManagerBase&, llvm::JITCodeEmitter&, llvm::CodeGenOpt::Level, bool) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+    n1: 96000 0xB655155: llvm::JIT::JIT(llvm::Module*, llvm::TargetMachine&, llvm::TargetJITInfo&, llvm::JITMemoryManager*, llvm::CodeGenOpt::Level, bool) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+     n1: 96000 0xB65524F: llvm::JIT::createJIT(llvm::Module*, std::string*, llvm::JITMemoryManager*, llvm::CodeGenOpt::Level, bool, llvm::TargetMachine*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+      n1: 96000 0xB599AF1: llvm::EngineBuilder::create() (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+       n2: 96000 0xB5A4739: LLVMCreateJITCompilerForModule (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+        n1: 48000 0x95DFAF0: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 48000 0x95DFBD9: gallivm_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 48000 0x9565AF3: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 48000 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+            n1: 48000 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+             n1: 48000 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+              n1: 48000 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+               n1: 48000 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+                n1: 48000 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                 n1: 48000 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                  n1: 48000 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                   n1: 48000 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+                    n1: 48000 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                     n1: 48000 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                      n1: 48000 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                       n1: 48000 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                        n1: 48000 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                         n0: 48000 0x4344F6: main (SP_INV_NEXT.cpp:14)
+        n1: 48000 0xA703840: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+         n1: 48000 0xA703929: gallivm_create (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+          n1: 48000 0xA6467B3: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+           n1: 48000 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+            n1: 48000 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+             n1: 48000 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+              n1: 48000 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+               n1: 48000 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+                n1: 48000 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+                 n1: 48000 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                  n1: 48000 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                   n1: 48000 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                    n1: 48000 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+                     n1: 48000 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                      n1: 48000 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                       n1: 48000 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                        n1: 48000 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                         n1: 48000 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                          n0: 48000 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 92136 0x9A8F51E: _mesa_create_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n1: 92136 0xA72A8A9: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 92136 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 92136 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 92136 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 92136 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 92136 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 92136 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 92136 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n1: 92136 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n1: 92136 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n1: 92136 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+             n1: 92136 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+              n1: 92136 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+               n1: 92136 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                n0: 92136 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 81920 0xA409E5D: nouveau_pushbuf_init (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+  n1: 81920 0xA409B6D: nouveau_channel_alloc (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+   n1: 81920 0x956067E: nouveau_screen_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 81920 0x9548652: nvc0_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 81920 0x94C1C57: nouveau_drm_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 81920 0x94BC337: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 81920 0x94BFAFF: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 81920 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 81920 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n1: 81920 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 81920 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 81920 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 81920 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n2: 81920 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 40960 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 40960 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 40960 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 40960 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 40960 0x4344F6: main (SP_INV_NEXT.cpp:14)
+               n1: 40960 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 40960 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 40960 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 40960 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 40960 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                    n0: 40960 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 66720 0xA726A55: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 66720 0x9B073F9: _mesa_alloc_shared_state (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+   n1: 66720 0x9A8F468: _mesa_initialize_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+    n1: 66720 0x9A8F53D: _mesa_create_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+     n1: 66720 0xA72A8A9: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 66720 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 66720 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 66720 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 66720 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 66720 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 66720 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 66720 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 66720 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 66720 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 66720 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 66720 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 66720 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 66720 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 66720 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 66512 0xA726A1D: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 66512 0x9B07412: _mesa_alloc_shared_state (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+   n1: 66512 0x9A8F468: _mesa_initialize_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+    n1: 66512 0x9A8F53D: _mesa_create_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+     n1: 66512 0xA72A8A9: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 66512 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 66512 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 66512 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 66512 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 66512 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 66512 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 66512 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 66512 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 66512 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 66512 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 66512 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 66512 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 66512 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 66512 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n2: 66048 0x94BC82D: driCreateConfigs (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 33024 0x94C1325: dri_init_screen_helper (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 33024 0x94BFB47: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 33024 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 33024 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n1: 33024 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+       n1: 33024 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 33024 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 33024 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n1: 33024 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n0: 33024 in 2 places, all below massif's threshold (01.00%)
+  n1: 33024 0x94C13B3: dri_init_screen_helper (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 33024 0x94BFB47: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 33024 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 33024 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n1: 33024 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+       n1: 33024 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 33024 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 33024 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n1: 33024 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n0: 33024 in 2 places, all below massif's threshold (01.00%)
+ n1: 65536 0x9549C3A: nvc0_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 65536 0x94C1C57: nouveau_drm_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 65536 0x94BC337: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 65536 0x94BFAFF: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 65536 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 65536 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+       n1: 65536 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 65536 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 65536 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n1: 65536 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n2: 65536 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n1: 32768 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+             n1: 32768 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+              n1: 32768 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+               n1: 32768 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                n0: 32768 0x4344F6: main (SP_INV_NEXT.cpp:14)
+            n1: 32768 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+             n1: 32768 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 32768 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+               n1: 32768 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                n1: 32768 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                 n0: 32768 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n2: 64512 0x6CB40EF: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 43008 0x50C9EA4: ??? (in /usr/lib/libsfml-window.so.2.0)
+   n0: 43008 in 2 places, all below massif's threshold (01.00%)
+  n0: 21504 in 2 places, all below massif's threshold (01.00%)
+ n1: 62976 0x82434ED: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 62976 0x82467F2: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 62976 0x6CC2DB0: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n2: 62976 0x6CB392F: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n1: 41984 0x50C9EA4: ??? (in /usr/lib/libsfml-window.so.2.0)
+      n0: 41984 in 2 places, all below massif's threshold (01.00%)
+     n0: 20992 in 2 places, all below massif's threshold (01.00%)
+ n1: 57344 0xA409E73: nouveau_pushbuf_init (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+  n1: 57344 0xA409B6D: nouveau_channel_alloc (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+   n1: 57344 0x956067E: nouveau_screen_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 57344 0x9548652: nvc0_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 57344 0x94C1C57: nouveau_drm_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 57344 0x94BC337: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 57344 0x94BFAFF: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 57344 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 57344 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n1: 57344 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 57344 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 57344 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 57344 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n2: 57344 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 28672 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 28672 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 28672 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 28672 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 28672 0x4344F6: main (SP_INV_NEXT.cpp:14)
+               n1: 28672 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 28672 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 28672 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 28672 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 28672 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                    n0: 28672 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n2: 49152 0x6CB3D1C: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 32768 0x50C9EA4: ??? (in /usr/lib/libsfml-window.so.2.0)
+   n0: 32768 in 2 places, all below massif's threshold (01.00%)
+  n0: 16384 in 2 places, all below massif's threshold (01.00%)
+ n1: 32896 0x9AD537F: _mesa_align_malloc (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n0: 32896 in 3 places, all below massif's threshold (01.00%)
+ n1: 32224 0xBB795E5: llvm::RegisterTargetMachine<llvm::X86_64TargetMachine>::Allocator(llvm::Target const&, llvm::StringRef, llvm::StringRef, llvm::StringRef, llvm::Reloc::Model, llvm::CodeModel::Model) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+  n1: 32224 0xB5A51E1: llvm::EngineBuilder::selectTarget(llvm::Module*, llvm::StringRef, llvm::StringRef, llvm::SmallVectorImpl<std::string> const&, llvm::Reloc::Model, llvm::CodeModel::Model, std::string*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+   n1: 32224 0xB599ABB: llvm::EngineBuilder::create() (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+    n1: 32224 0xB5A4739: LLVMCreateJITCompilerForModule (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+     n0: 32224 in 2 places, all below massif's threshold (01.00%)
+ n1: 28284 0x82436D7: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 28284 0x82467F2: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 28284 0x6CC2DB0: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 28284 0x6CB392F: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n0: 28284 in 3 places, all below massif's threshold (01.00%)
+ n1: 27648 0xB7668FA: llvm::DenseMap<unsigned int, std::pair<unsigned int, unsigned int>, llvm::DenseMapInfo<unsigned int>, llvm::DenseMapInfo<std::pair<unsigned int, unsigned int> > >::operator[](unsigned int const&) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+  n1: 27648 0xBB65182: llvm::X86InstrInfo::AddTableEntry(llvm::DenseMap<unsigned int, std::pair<unsigned int, unsigned int>, llvm::DenseMapInfo<unsigned int>, llvm::DenseMapInfo<std::pair<unsigned int, unsigned int> > >&, llvm::DenseMap<unsigned int, std::pair<unsigned int, unsigned int>, llvm::DenseMapInfo<unsigned int>, llvm::DenseMapInfo<std::pair<unsigned int, unsigned int> > >&, unsigned int, unsigned int, unsigned int) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+   n0: 27648 in 4 places, all below massif's threshold (01.00%)
+ n1: 26112 0x956CB8A: draw_alloc_temp_verts (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n0: 26112 in 7 places, all below massif's threshold (01.00%)
+ n1: 26112 0xA651B5A: draw_alloc_temp_verts (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n0: 26112 in 7 places, all below massif's threshold (01.00%)
+ n1: 25440 0xA4099CE: nouveau_channel_alloc (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+  n1: 25440 0x956067E: nouveau_screen_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 25440 0x9548652: nvc0_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 25440 0x94C1C57: nouveau_drm_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 25440 0x94BC337: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 25440 0x94BFAFF: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 25440 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 25440 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 25440 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n1: 25440 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 25440 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 25440 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+             n1: 25440 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n0: 25440 in 2 places, all below massif's threshold (01.00%)
+ n1: 24864 0x676E08C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+  n0: 24864 in 3 places, all below massif's threshold (01.00%)
+ n1: 24576 0xBB6579A: llvm::DenseMap<unsigned int, std::pair<unsigned int, unsigned int>, llvm::DenseMapInfo<unsigned int>, llvm::DenseMapInfo<std::pair<unsigned int, unsigned int> > >::grow(unsigned int) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+  n2: 24576 0xBB651B6: llvm::X86InstrInfo::AddTableEntry(llvm::DenseMap<unsigned int, std::pair<unsigned int, unsigned int>, llvm::DenseMapInfo<unsigned int>, llvm::DenseMapInfo<std::pair<unsigned int, unsigned int> > >&, llvm::DenseMap<unsigned int, std::pair<unsigned int, unsigned int>, llvm::DenseMapInfo<unsigned int>, llvm::DenseMapInfo<std::pair<unsigned int, unsigned int> > >&, unsigned int, unsigned int, unsigned int) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+   n1: 24576 0xBB65592: llvm::X86InstrInfo::X86InstrInfo(llvm::X86TargetMachine&) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+    n1: 24576 0xBB7870E: llvm::X86_64TargetMachine::X86_64TargetMachine(llvm::Target const&, llvm::StringRef, llvm::StringRef, llvm::StringRef, llvm::Reloc::Model, llvm::CodeModel::Model) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+     n1: 24576 0xBB79627: llvm::RegisterTargetMachine<llvm::X86_64TargetMachine>::Allocator(llvm::Target const&, llvm::StringRef, llvm::StringRef, llvm::StringRef, llvm::Reloc::Model, llvm::CodeModel::Model) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+      n1: 24576 0xB5A51E1: llvm::EngineBuilder::selectTarget(llvm::Module*, llvm::StringRef, llvm::StringRef, llvm::SmallVectorImpl<std::string> const&, llvm::Reloc::Model, llvm::CodeModel::Model, std::string*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+       n1: 24576 0xB599ABB: llvm::EngineBuilder::create() (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+        n1: 24576 0xB5A4739: LLVMCreateJITCompilerForModule (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+         n0: 24576 in 2 places, all below massif's threshold (01.00%)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=5
+#-----------
+time=74095752
+mem_heap_B=2486905
+mem_heap_extra_B=49679
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=92884010
+mem_heap_B=3253894
+mem_heap_extra_B=52962
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=104911377
+mem_heap_B=3642855
+mem_heap_extra_B=71225
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=123867412
+mem_heap_B=4362711
+mem_heap_extra_B=69977
+mem_stacks_B=0
+heap_tree=detailed
+n22: 4362711 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 929799 in 494 places, all below massif's threshold (01.00%)
+ n2: 516096 0x676B809: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+  n1: 258048 0x676EF53: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 258048 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 258048 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 258048 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n2: 258048 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+       n2: 172032 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n1: 86016 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 86016 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+          n1: 86016 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+           n1: 86016 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+            n0: 86016 0x4344F6: main (SP_INV_NEXT.cpp:14)
+        n1: 86016 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 86016 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n1: 86016 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+           n1: 86016 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+            n1: 86016 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+             n0: 86016 0x4344F6: main (SP_INV_NEXT.cpp:14)
+       n1: 86016 0x50C9E4F: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n1: 86016 0x50C5349: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 86016 0x50C792C: sf::Window::create(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.0)
+          n1: 86016 0x4E533EF: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+           n0: 86016 0x4344F6: main (SP_INV_NEXT.cpp:14)
+  n1: 258048 0x676EF6B: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 258048 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 258048 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 258048 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n2: 258048 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+       n2: 172032 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n1: 86016 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 86016 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+          n1: 86016 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+           n1: 86016 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+            n0: 86016 0x4344F6: main (SP_INV_NEXT.cpp:14)
+        n1: 86016 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 86016 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n1: 86016 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+           n1: 86016 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+            n1: 86016 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+             n0: 86016 0x4344F6: main (SP_INV_NEXT.cpp:14)
+       n1: 86016 0x50C9E4F: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n1: 86016 0x50C5349: ??? (in /usr/lib/libsfml-window.so.2.0)
+         n1: 86016 0x50C792C: sf::Window::create(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.0)
+          n1: 86016 0x4E533EF: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+           n0: 86016 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n2: 515808 0x9586AD9: tgsi_exec_machine_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 257904 0x9577D84: draw_vs_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 257904 0x95658CA: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 257904 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 257904 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 257904 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n2: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 85968 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+               n1: 85968 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                    n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+              n1: 85968 0x50C9E4F: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 85968 0x50C5349: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C792C: sf::Window::create(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x4E533EF: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                  n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+  n1: 257904 0x9566ABC: draw_gs_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 257904 0x95658D6: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 257904 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 257904 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 257904 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n2: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 85968 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+               n1: 85968 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                    n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+              n1: 85968 0x50C9E4F: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 85968 0x50C5349: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C792C: sf::Window::create(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x4E533EF: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                  n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n2: 515808 0xA6775E9: tgsi_exec_machine_create (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 257904 0xA65E124: draw_vs_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 257904 0xA64658A: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 257904 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 257904 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 257904 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n2: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                    n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+                n1: 85968 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                    n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                     n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+               n1: 85968 0x50C9E4F: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C5349: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C792C: sf::Window::create(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x4E533EF: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+  n1: 257904 0xA64782C: draw_gs_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 257904 0xA646596: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 257904 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 257904 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 257904 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n2: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                    n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+                n1: 85968 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                   n1: 85968 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                    n1: 85968 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                     n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+               n1: 85968 0x50C9E4F: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 85968 0x50C5349: ??? (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 85968 0x50C792C: sf::Window::create(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 85968 0x4E533EF: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 85968 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 276408 0x9A8F51E: _mesa_create_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n1: 276408 0xA72A8A9: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 276408 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 276408 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 276408 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 276408 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 276408 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 276408 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 276408 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n2: 276408 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n2: 184272 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n1: 92136 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+             n1: 92136 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+              n1: 92136 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+               n1: 92136 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                n0: 92136 0x4344F6: main (SP_INV_NEXT.cpp:14)
+            n1: 92136 0x50C4E2C: ??? (in /usr/lib/libsfml-window.so.2.0)
+             n1: 92136 0x50C5143: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 92136 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+               n1: 92136 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                n1: 92136 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                 n0: 92136 0x4344F6: main (SP_INV_NEXT.cpp:14)
+           n1: 92136 0x50C9E4F: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n1: 92136 0x50C5349: ??? (in /usr/lib/libsfml-window.so.2.0)
+             n1: 92136 0x50C792C: sf::Window::create(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.0)
+              n1: 92136 0x4E533EF: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+               n0: 92136 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n3: 164224 0x9AD537F: _mesa_align_malloc (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n1: 65536 0x9B56F06: vbo_exec_vtx_init (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+   n1: 65536 0x9B497CB: vbo_exec_init (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+    n1: 65536 0x9B49487: _vbo_CreateContext (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+     n1: 65536 0xA72A900: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 65536 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 65536 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 65536 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 65536 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 65536 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 65536 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 65536 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 65536 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 65536 0x50C9E4F: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 65536 0x50C5349: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 65536 0x50C792C: sf::Window::create(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 65536 0x4E533EF: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                  n0: 65536 0x4344F6: main (SP_INV_NEXT.cpp:14)
+              n0: 0 in 1 place, below massif's threshold (01.00%)
+  n2: 49536 0x9B41B41: _math_matrix_ctr (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+   n1: 49152 0x9AD9A27: ??? (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+    n0: 49152 in 4 places, all below massif's threshold (01.00%)
+   n0: 384 in 2 places, all below massif's threshold (01.00%)
+  n1: 49152 0x9B41C0D: _math_matrix_alloc_inv (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+   n1: 49152 0x9AD9A37: ??? (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+    n0: 49152 in 4 places, all below massif's threshold (01.00%)
+ n1: 149040 0x9AD1DEE: _mesa_NewHashTable (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n0: 149040 in 12 places, all below massif's threshold (01.00%)
+ n2: 135520 0xB558138: llvm::PMTopLevelManager::findAnalysisUsage(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+  n3: 133760 0xB558B56: llvm::PMTopLevelManager::schedulePass(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+   n1: 73920 0xB55AE05: llvm::FunctionPassManager::add(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+    n0: 73920 in 48 places, all below massif's threshold (01.00%)
+   n1: 49280 0xB558CA1: llvm::PMTopLevelManager::schedulePass(llvm::Pass*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+    n0: 49280 in 3 places, all below massif's threshold (01.00%)
+   n0: 10560 in 2 places, all below massif's threshold (01.00%)
+  n0: 1760 in 1 place, below massif's threshold (01.00%)
+ n1: 122880 0xA409E5D: nouveau_pushbuf_init (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+  n1: 122880 0xA409B6D: nouveau_channel_alloc (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+   n1: 122880 0x956067E: nouveau_screen_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 122880 0x9548652: nvc0_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 122880 0x94C1C57: nouveau_drm_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 122880 0x94BC337: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 122880 0x94BFAFF: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 122880 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 122880 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n1: 122880 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 122880 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 122880 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 122880 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 81920 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n0: 81920 in 2 places, all below massif's threshold (01.00%)
+              n0: 40960 in 1 place, below massif's threshold (01.00%)
+ n2: 99072 0x94BC82D: driCreateConfigs (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 49536 0x94C1325: dri_init_screen_helper (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 49536 0x94BFB47: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 49536 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 49536 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n1: 49536 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+       n1: 49536 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 49536 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 49536 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n0: 49536 in 2 places, all below massif's threshold (01.00%)
+  n1: 49536 0x94C13B3: dri_init_screen_helper (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 49536 0x94BFB47: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 49536 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 49536 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n1: 49536 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+       n1: 49536 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 49536 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 49536 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+          n0: 49536 in 2 places, all below massif's threshold (01.00%)
+ n1: 98304 0x9549C3A: nvc0_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 98304 0x94C1C57: nouveau_drm_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 98304 0x94BC337: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 98304 0x94BFAFF: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 98304 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 98304 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+       n1: 98304 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 98304 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 98304 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n2: 98304 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n1: 65536 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n0: 65536 in 2 places, all below massif's threshold (01.00%)
+           n0: 32768 in 1 place, below massif's threshold (01.00%)
+ n1: 96000 0xB428459: llvm::createGreedyRegisterAllocator() (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+  n1: 96000 0xB386D1A: llvm::LLVMTargetMachine::addCommonCodeGenPasses(llvm::PassManagerBase&, llvm::CodeGenOpt::Level, bool, llvm::MCContext*&) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+   n1: 96000 0xB38742C: llvm::LLVMTargetMachine::addPassesToEmitMachineCode(llvm::PassManagerBase&, llvm::JITCodeEmitter&, llvm::CodeGenOpt::Level, bool) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+    n1: 96000 0xB655155: llvm::JIT::JIT(llvm::Module*, llvm::TargetMachine&, llvm::TargetJITInfo&, llvm::JITMemoryManager*, llvm::CodeGenOpt::Level, bool) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+     n1: 96000 0xB65524F: llvm::JIT::createJIT(llvm::Module*, std::string*, llvm::JITMemoryManager*, llvm::CodeGenOpt::Level, bool, llvm::TargetMachine*) (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+      n1: 96000 0xB599AF1: llvm::EngineBuilder::create() (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+       n2: 96000 0xB5A4739: LLVMCreateJITCompilerForModule (in /usr/lib/x86_64-linux-gnu/libLLVM-3.0.so.1)
+        n1: 48000 0x95DFAF0: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 48000 0x95DFBD9: gallivm_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 48000 0x9565AF3: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 48000 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+            n1: 48000 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+             n1: 48000 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+              n1: 48000 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+               n1: 48000 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+                n1: 48000 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                 n1: 48000 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                  n1: 48000 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                   n1: 48000 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+                    n1: 48000 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                     n1: 48000 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                      n1: 48000 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                       n1: 48000 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                        n1: 48000 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                         n0: 48000 0x4344F6: main (SP_INV_NEXT.cpp:14)
+        n1: 48000 0xA703840: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+         n1: 48000 0xA703929: gallivm_create (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+          n1: 48000 0xA6467B3: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+           n1: 48000 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+            n1: 48000 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+             n1: 48000 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+              n1: 48000 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+               n1: 48000 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+                n1: 48000 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+                 n1: 48000 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                  n1: 48000 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                   n1: 48000 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+                    n1: 48000 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+                     n1: 48000 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                      n1: 48000 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                       n1: 48000 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                        n1: 48000 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                         n1: 48000 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                          n0: 48000 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 86016 0x6CB40EF: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n0: 86016 in 4 places, all below massif's threshold (01.00%)
+ n1: 86016 0xA409E73: nouveau_pushbuf_init (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+  n1: 86016 0xA409B6D: nouveau_channel_alloc (in /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.1.0.0)
+   n1: 86016 0x956067E: nouveau_screen_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 86016 0x9548652: nvc0_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 86016 0x94C1C57: nouveau_drm_screen_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 86016 0x94BC337: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 86016 0x94BFAFF: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 86016 0x94BD189: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 86016 0x676EDED: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n1: 86016 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 86016 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 86016 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 86016 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 57344 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n0: 57344 in 2 places, all below massif's threshold (01.00%)
+              n0: 28672 in 1 place, below massif's threshold (01.00%)
+ n1: 83968 0x82434ED: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 83968 0x82467F2: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 83968 0x6CC2DB0: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 83968 0x6CB392F: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+     n0: 83968 in 4 places, all below massif's threshold (01.00%)
+ n2: 78336 0xA651B5A: draw_alloc_temp_verts (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 48960 0xA64EF68: draw_clip_stage (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 48960 0xA64A9DF: draw_pipeline_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 48960 0xA646564: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 48960 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 48960 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 48960 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 48960 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+         n1: 48960 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 48960 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 48960 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+            n1: 48960 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 48960 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n1: 48960 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+               n1: 48960 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n0: 48960 in 2 places, all below massif's threshold (01.00%)
+  n0: 29376 in 6 places, all below massif's threshold (01.00%)
+ n2: 78336 0x956CB8A: draw_alloc_temp_verts (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 48960 0x956B028: draw_clip_stage (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 48960 0x9569C6F: draw_pipeline_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 48960 0x95658A4: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 48960 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 48960 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 48960 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 48960 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 48960 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 48960 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 48960 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 48960 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 48960 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n1: 48960 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n0: 48960 in 2 places, all below massif's threshold (01.00%)
+  n0: 29376 in 6 places, all below massif's threshold (01.00%)
+ n1: 70488 0x9B490EA: _vbo_CreateContext (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n1: 70488 0xA72A900: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 70488 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 70488 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 70488 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 70488 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 70488 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 70488 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 70488 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n2: 70488 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n1: 46992 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n0: 46992 in 2 places, all below massif's threshold (01.00%)
+           n0: 23496 in 1 place, below massif's threshold (01.00%)
+ n1: 66720 0xA726A55: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 66720 0x9B073F9: _mesa_alloc_shared_state (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+   n1: 66720 0x9A8F468: _mesa_initialize_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+    n1: 66720 0x9A8F53D: _mesa_create_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+     n1: 66720 0xA72A8A9: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 66720 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 66720 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 66720 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 66720 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 66720 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 66720 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 66720 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 66720 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 66720 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 66720 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 66720 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 66720 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 66720 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 66720 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 66512 0xA726A1D: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 66512 0x9B07412: _mesa_alloc_shared_state (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+   n1: 66512 0x9A8F468: _mesa_initialize_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+    n1: 66512 0x9A8F53D: _mesa_create_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+     n1: 66512 0xA72A8A9: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 66512 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 66512 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 66512 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 66512 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 66512 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 66512 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 66512 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 66512 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 66512 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 66512 0x50C508A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n1: 66512 0x50C59D2: sf::GlResource::GlResource() (in /usr/lib/libsfml-window.so.2.0)
+                 n1: 66512 0x50C70EB: sf::Window::Window() (in /usr/lib/libsfml-window.so.2.0)
+                  n1: 66512 0x4E533B8: sf::RenderWindow::RenderWindow(sf::VideoMode, std::string const&, unsigned int, sf::ContextSettings const&) (in /usr/lib/libsfml-graphics.so.2.0)
+                   n0: 66512 0x4344F6: main (SP_INV_NEXT.cpp:14)
+ n1: 65536 0x6CB3D1C: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n0: 65536 in 4 places, all below massif's threshold (01.00%)
+ n1: 61824 0x9A8EB93: _mesa_alloc_dispatch_table (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n0: 61824 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=9
+#-----------
+time=144767820
+mem_heap_B=7451196
+mem_heap_extra_B=70276
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=164773943
+mem_heap_B=9548348
+mem_heap_extra_B=74308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=200446161
+mem_heap_B=13742652
+mem_heap_extra_B=74308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=200462004
+mem_heap_B=13742652
+mem_heap_extra_B=74308
+mem_stacks_B=0
+heap_tree=detailed
+n8: 13742652 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8388608 0x4E43EFE: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+  n1: 8388608 0x4E454D9: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+   n1: 8388608 0x4E45F73: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+    n1: 8388608 0x4E4CF21: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+     n1: 8388608 0x4E5195B: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+      n1: 8388608 0x4E59A1D: sf::Texture::loadFromFile(std::string const&, sf::Rect<int> const&) (in /usr/lib/libsfml-graphics.so.2.0)
+       n0: 8388608 0x43459F: main (SP_INV_NEXT.cpp:21)
+ n0: 2332308 in 511 places, all below massif's threshold (01.00%)
+ n1: 1048576 0x4E451C2: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+  n1: 1048576 0x4E45F73: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+   n1: 1048576 0x4E4CF21: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+    n1: 1048576 0x4E5195B: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+     n1: 1048576 0x4E59A1D: sf::Texture::loadFromFile(std::string const&, sf::Rect<int> const&) (in /usr/lib/libsfml-graphics.so.2.0)
+      n0: 1048576 0x43459F: main (SP_INV_NEXT.cpp:21)
+ n2: 516096 0x676B809: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+  n1: 258048 0x676EF53: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 258048 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 258048 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 258048 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n2: 258048 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+       n1: 172032 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n0: 172032 in 2 places, all below massif's threshold (01.00%)
+       n0: 86016 in 1 place, below massif's threshold (01.00%)
+  n1: 258048 0x676EF6B: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 258048 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 258048 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 258048 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n2: 258048 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+       n1: 172032 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n0: 172032 in 2 places, all below massif's threshold (01.00%)
+       n0: 86016 in 1 place, below massif's threshold (01.00%)
+ n2: 515808 0xA6775E9: tgsi_exec_machine_create (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 257904 0xA65E124: draw_vs_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 257904 0xA64658A: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 257904 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 257904 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 257904 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n0: 171936 in 2 places, all below massif's threshold (01.00%)
+               n0: 85968 in 1 place, below massif's threshold (01.00%)
+  n1: 257904 0xA64782C: draw_gs_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 257904 0xA646596: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 257904 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 257904 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 257904 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n0: 171936 in 2 places, all below massif's threshold (01.00%)
+               n0: 85968 in 1 place, below massif's threshold (01.00%)
+ n2: 515808 0x9586AD9: tgsi_exec_machine_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 257904 0x9577D84: draw_vs_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 257904 0x95658CA: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 257904 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 257904 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 257904 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n0: 171936 in 2 places, all below massif's threshold (01.00%)
+              n0: 85968 in 1 place, below massif's threshold (01.00%)
+  n1: 257904 0x9566ABC: draw_gs_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 257904 0x95658D6: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 257904 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 257904 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 257904 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n0: 171936 in 2 places, all below massif's threshold (01.00%)
+              n0: 85968 in 1 place, below massif's threshold (01.00%)
+ n1: 276408 0x9A8F51E: _mesa_create_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n1: 276408 0xA72A8A9: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 276408 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 276408 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 276408 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 276408 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 276408 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 276408 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 276408 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n2: 276408 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n1: 184272 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n0: 184272 in 2 places, all below massif's threshold (01.00%)
+           n0: 92136 in 1 place, below massif's threshold (01.00%)
+ n1: 149040 0x9AD1DEE: _mesa_NewHashTable (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n0: 149040 in 12 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=13
+#-----------
+time=265053012
+mem_heap_B=16888380
+mem_heap_extra_B=78340
+mem_stacks_B=0
+heap_tree=peak
+n7: 16888380 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8388608 0x4E43EFE: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+  n1: 8388608 0x4E454D9: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+   n1: 8388608 0x4E45F73: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+    n1: 8388608 0x4E4CF21: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+     n1: 8388608 0x4E5195B: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+      n1: 8388608 0x4E59A1D: sf::Texture::loadFromFile(std::string const&, sf::Rect<int> const&) (in /usr/lib/libsfml-graphics.so.2.0)
+       n0: 8388608 0x43459F: main (SP_INV_NEXT.cpp:21)
+ n1: 4194304 0x4E3FCF3: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+  n1: 4194304 0x4E45C07: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+   n1: 4194304 0x4E45F73: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+    n1: 4194304 0x4E4CF21: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+     n1: 4194304 0x4E5195B: ??? (in /usr/lib/libsfml-graphics.so.2.0)
+      n1: 4194304 0x4E59A1D: sf::Texture::loadFromFile(std::string const&, sf::Rect<int> const&) (in /usr/lib/libsfml-graphics.so.2.0)
+       n0: 4194304 0x43459F: main (SP_INV_NEXT.cpp:21)
+ n0: 2481348 in 513 places, all below massif's threshold (01.00%)
+ n2: 516096 0x676B809: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+  n1: 258048 0x676EF53: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 258048 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 258048 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 258048 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n2: 258048 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+       n1: 172032 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n0: 172032 in 2 places, all below massif's threshold (01.00%)
+       n0: 86016 in 1 place, below massif's threshold (01.00%)
+  n1: 258048 0x676EF6B: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+   n1: 258048 0x674A377: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+    n1: 258048 0x6746A16: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+     n1: 258048 0x6746B0A: glXGetConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+      n2: 258048 0x50C9877: ??? (in /usr/lib/libsfml-window.so.2.0)
+       n1: 172032 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+        n0: 172032 in 2 places, all below massif's threshold (01.00%)
+       n0: 86016 in 1 place, below massif's threshold (01.00%)
+ n2: 515808 0x9586AD9: tgsi_exec_machine_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+  n1: 257904 0x9577D84: draw_vs_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 257904 0x95658CA: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 257904 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 257904 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 257904 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n0: 171936 in 2 places, all below massif's threshold (01.00%)
+              n0: 85968 in 1 place, below massif's threshold (01.00%)
+  n1: 257904 0x9566ABC: draw_gs_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+   n1: 257904 0x95658D6: draw_init (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+    n1: 257904 0x9565A67: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 257904 0x954EE02: nvc0_create (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 257904 0xA72F230: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+        n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+           n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+              n1: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n0: 171936 in 2 places, all below massif's threshold (01.00%)
+              n0: 85968 in 1 place, below massif's threshold (01.00%)
+ n2: 515808 0xA6775E9: tgsi_exec_machine_create (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+  n1: 257904 0xA65E124: draw_vs_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 257904 0xA64658A: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 257904 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 257904 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 257904 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n0: 171936 in 2 places, all below massif's threshold (01.00%)
+               n0: 85968 in 1 place, below massif's threshold (01.00%)
+  n1: 257904 0xA64782C: draw_gs_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 257904 0xA646596: draw_init (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 257904 0xA646727: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+     n1: 257904 0xA72BEFB: st_init_draw (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+      n1: 257904 0xA72A943: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+       n1: 257904 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+        n1: 257904 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+         n1: 257904 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+          n1: 257904 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+           n1: 257904 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+            n1: 257904 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+             n1: 257904 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+              n2: 257904 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+               n1: 171936 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+                n0: 171936 in 2 places, all below massif's threshold (01.00%)
+               n0: 85968 in 1 place, below massif's threshold (01.00%)
+ n1: 276408 0x9A8F51E: _mesa_create_context (in /usr/lib/x86_64-linux-gnu/dri/libdricore.so)
+  n1: 276408 0xA72A8A9: st_create_context (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+   n1: 276408 0xA72F259: ??? (in /usr/lib/x86_64-linux-gnu/dri/libgallium.so)
+    n1: 276408 0x94C0993: dri_create_context (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+     n1: 276408 0x94BCE43: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+      n1: 276408 0x94BCF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so)
+       n1: 276408 0x676EBD1: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+        n1: 276408 0x674833C: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+         n1: 276408 0x6748A93: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2)
+          n2: 276408 0x50C9BFB: ??? (in /usr/lib/libsfml-window.so.2.0)
+           n1: 184272 0x50C9F5A: ??? (in /usr/lib/libsfml-window.so.2.0)
+            n0: 184272 in 2 places, all below massif's threshold (01.00%)
+           n0: 92136 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=14
+#-----------
+time=278549442
+mem_heap_B=8499750
+mem_heap_extra_B=74306
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=294459701
+mem_heap_B=8706069
+mem_heap_extra_B=87987
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=314134006
+mem_heap_B=5008640
+mem_heap_extra_B=103872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=335708195
+mem_heap_B=5033681
+mem_heap_extra_B=104631
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=358895713
+mem_heap_B=5033681
+mem_heap_extra_B=104631
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=371628711
+mem_heap_B=5033681
+mem_heap_extra_B=104631
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=383381897
+mem_heap_B=5042649
+mem_heap_extra_B=105175
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=395760798
+mem_heap_B=5042649
+mem_heap_extra_B=105159
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=410157789
+mem_heap_B=5044801
+mem_heap_extra_B=105319
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=424880435
+mem_heap_B=5047049
+mem_heap_extra_B=105415
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=441778767
+mem_heap_B=5049161
+mem_heap_extra_B=105559
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=460087911
+mem_heap_B=5044893
+mem_heap_extra_B=105315
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=481596751
+mem_heap_B=5044893
+mem_heap_extra_B=105315
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=504159059
+mem_heap_B=5049357
+mem_heap_extra_B=105555
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=527667456
+mem_heap_B=5044033
+mem_heap_extra_B=105175
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=539558201
+mem_heap_B=5043569
+mem_heap_extra_B=105151
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=562793998
+mem_heap_B=5039273
+mem_heap_extra_B=104935
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=576377043
+mem_heap_B=5041409
+mem_heap_extra_B=105039
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=589818340
+mem_heap_B=5039249
+mem_heap_extra_B=104911
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=603496238
+mem_heap_B=5041361
+mem_heap_extra_B=105071
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=617950070
+mem_heap_B=5033277
+mem_heap_extra_B=104587
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=633811619
+mem_heap_B=5035429
+mem_heap_extra_B=104683
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=650044428
+mem_heap_B=5033229
+mem_heap_extra_B=104579
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=667544731
+mem_heap_B=5033229
+mem_heap_extra_B=104547
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=684982489
+mem_heap_B=5035501
+mem_heap_extra_B=104683
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=703160848
+mem_heap_B=5031101
+mem_heap_extra_B=104427
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=720583996
+mem_heap_B=5026557
+mem_heap_extra_B=104139
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=739556931
+mem_heap_B=5028805
+mem_heap_extra_B=104267
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=760005995
+mem_heap_B=5026573
+mem_heap_extra_B=104155
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=780606190
+mem_heap_B=5026573
+mem_heap_extra_B=104155
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=802008556
+mem_heap_B=5026541
+mem_heap_extra_B=104115
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=823625779
+mem_heap_B=5024309
+mem_heap_extra_B=104003
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=846484472
+mem_heap_B=5019861
+mem_heap_extra_B=103771
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=868616702
+mem_heap_B=5019717
+mem_heap_extra_B=103659
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=891762256
+mem_heap_B=5027149
+mem_heap_extra_B=104179
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=897069441
+mem_heap_B=636314
+mem_heap_extra_B=16142
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=897134665
+mem_heap_B=620821
+mem_heap_extra_B=15907
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=897150600
+mem_heap_B=537509
+mem_heap_extra_B=15043
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=897212699
+mem_heap_B=537373
+mem_heap_extra_B=15003
+mem_stacks_B=0
+heap_tree=empty
