@@ -242,13 +242,13 @@ bool Game::checkForNextLevel() {
 void Game::setupControllers(factories::GameParser game) {
 	// Make our factory.
 	std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::SpaceShipFactory>();
-	controllerPtr spaceC = factory->getEntity(game.getSpaceShipXML(), window_);
+	controllerPtr spaceC = factory->getController(game.getSpaceShipXML(), window_);
 	entityControllers_.push_back(spaceC);
 	spaceShipController_ = std::dynamic_pointer_cast<controllers::SpaceShipController>(spaceC);
 
 	// Set up HUD
 	factory = std::make_shared<factories::HUDFactory>();
-	controllerPtr HUD = factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_);
+	controllerPtr HUD = factory->getController(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_);
     HUD_ = std::dynamic_pointer_cast<controllers::HUDController>(HUD);
 
 	// Setup shields
@@ -258,7 +258,7 @@ void Game::setupControllers(factories::GameParser game) {
 	std::string file = std::get<2>(shieldInfo);
 
 	for (int i = 0; i < amount; i++) {
-		entityControllers_.push_back(factory->getEntity(game.getFileName(), window_));
+		entityControllers_.push_back(factory->getController(game.getFileName(), window_));
 	}
 
 	this->setupEnemies(game);

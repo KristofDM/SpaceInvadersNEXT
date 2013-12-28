@@ -121,31 +121,31 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#aaa5808c580620f89bb0a04d3583a112e" title="Determines what happens when this object collides with another Entity.">collided</a>(std::shared_ptr&lt;Model&gt;);
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042         <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#acf8c86d8f95c22f990c37628ed40491e" title="Returns the amount of damage taken when collided with this object.">getDamage</a>();
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a75c0e291076162e3efb9679c5896d515" title="Sets flags in the object.">setFlags</a>(<span class="keywordtype">bool</span>, <span class="keywordtype">bool</span>);
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#af67b94824ab048b3623497ccbaa7fd3c">getFatalCollision</a>() <span class="keyword">const</span>;
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 <span class="keyword">protected</span>:
-<a name="l00049"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#aeaaf9231898ee877f11000788806409a">00049</a>         <span class="keywordtype">int</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#aeaaf9231898ee877f11000788806409a">lives_</a>;
-<a name="l00050"></a>00050 
-<a name="l00051"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a4dcc94b7be2dc539754dbbd2e67e6f74">00051</a>         <span class="keywordtype">int</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a4dcc94b7be2dc539754dbbd2e67e6f74">fireRate_</a>;
-<a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a286ba7211706245e5b7a6315a26edf57">00053</a>         sf::Clock <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a286ba7211706245e5b7a6315a26edf57">shootTimer_</a>;
-<a name="l00054"></a>00054 
-<a name="l00055"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a9cb7f675d84df220454d5bc946457174">00055</a>         sf::Clock <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a9cb7f675d84df220454d5bc946457174">invincibleTimer_</a>;
+<a name="l00045"></a>00045         <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#acf8c86d8f95c22f990c37628ed40491e">getDamage</a>();
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a75c0e291076162e3efb9679c5896d515" title="Sets flags in the object.">setFlags</a>(<span class="keywordtype">bool</span>, <span class="keywordtype">bool</span>);
+<a name="l00048"></a>00048 
+<a name="l00052"></a>00052         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#af67b94824ab048b3623497ccbaa7fd3c">getFatalCollision</a>() <span class="keyword">const</span>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="keyword">protected</span>:
+<a name="l00055"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#aeaaf9231898ee877f11000788806409a">00055</a>         <span class="keywordtype">int</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#aeaaf9231898ee877f11000788806409a">lives_</a>;
 <a name="l00056"></a>00056 
-<a name="l00057"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a41dd819c1d1c044f8ca84f21cd0a7fd1">00057</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a41dd819c1d1c044f8ca84f21cd0a7fd1">damage_</a>;
+<a name="l00057"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a4dcc94b7be2dc539754dbbd2e67e6f74">00057</a>         <span class="keywordtype">int</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a4dcc94b7be2dc539754dbbd2e67e6f74">fireRate_</a>;
 <a name="l00058"></a>00058 
-<a name="l00059"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#ac9326d94309c9c1a649076aba1c9fc4f">00059</a>         <span class="keywordtype">bool</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#ac9326d94309c9c1a649076aba1c9fc4f">shooting_</a>;
+<a name="l00059"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a286ba7211706245e5b7a6315a26edf57">00059</a>         sf::Clock <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a286ba7211706245e5b7a6315a26edf57">shootTimer_</a>;
 <a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a8b88697951b82f60dacfd9fac6e38f0e">00061</a>         <span class="keywordtype">bool</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a8b88697951b82f60dacfd9fac6e38f0e">fatalCollision_</a>;
-<a name="l00062"></a>00062 };
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 } <span class="comment">/* namespace models */</span>
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="preprocessor">#endif </span><span class="comment">/* SHIP_H_ */</span>
+<a name="l00061"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a9cb7f675d84df220454d5bc946457174">00061</a>         sf::Clock <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a9cb7f675d84df220454d5bc946457174">invincibleTimer_</a>;
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a41dd819c1d1c044f8ca84f21cd0a7fd1">00063</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a41dd819c1d1c044f8ca84f21cd0a7fd1">damage_</a>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#ac9326d94309c9c1a649076aba1c9fc4f">00065</a>         <span class="keywordtype">bool</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#ac9326d94309c9c1a649076aba1c9fc4f">shooting_</a>;
+<a name="l00066"></a>00066 
+<a name="l00067"></a><a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a8b88697951b82f60dacfd9fac6e38f0e">00067</a>         <span class="keywordtype">bool</span> <a class="code" href="../../d0/d37/classmodels_1_1Ship.html#a8b88697951b82f60dacfd9fac6e38f0e">fatalCollision_</a>;
+<a name="l00068"></a>00068 };
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 } <span class="comment">/* namespace models */</span>
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="preprocessor">#endif </span><span class="comment">/* SHIP_H_ */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -164,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 28 2013 11:14:48 for Space Invaders NEXT by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 28 2013 14:45:57 for Space Invaders NEXT by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

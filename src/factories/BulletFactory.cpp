@@ -18,7 +18,7 @@ BulletFactory::~BulletFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-controllerPtr BulletFactory::getEntity(std::string file, modelPtr owner, sf::RenderWindow& window) {
+controllerPtr BulletFactory::getController(std::string file, modelPtr owner, sf::RenderWindow& window) {
 	factories::DataParser data;
 	data.parseObject(file);
 

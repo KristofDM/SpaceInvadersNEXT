@@ -18,7 +18,7 @@ SpaceShipFactory::~SpaceShipFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-controllerPtr SpaceShipFactory::getEntity(std::string file, sf::RenderWindow& window) {
+controllerPtr SpaceShipFactory::getController(std::string file, sf::RenderWindow& window) {
 	DataParser data;
 	data.parseObject(file);
 

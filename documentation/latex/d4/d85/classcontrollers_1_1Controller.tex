@@ -7,8 +7,7 @@
 
 
 
-\-Inheritance diagram for controllers\-:\-:\-Controller\-:
-\nopagebreak
+\-Inheritance diagram for controllers\-:\-:\-Controller\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@
 \end{figure}
 
 
-\-Collaboration diagram for controllers\-:\-:\-Controller\-:
-\nopagebreak
+\-Collaboration diagram for controllers\-:\-:\-Controller\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,6 +29,8 @@
 \hyperlink{classcontrollers_1_1Controller_a3c74d4726b4e635f261d4dafa5c7807f}{\-Controller} (\hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr}, \hyperlink{Controller_8h_a8ca0a41a38eb52be242997413482c0cf}{model\-View\-Ptr}, \hyperlink{classfactories_1_1DataParser}{factories\-::\-Data\-Parser})
 \item 
 virtual \hyperlink{classcontrollers_1_1Controller_a26a8767e0333b5dd5fa023cb5f624182}{$\sim$\-Controller} ()
+\item 
+virtual void \hyperlink{classcontrollers_1_1Controller_abbcb9381c698fa83c6867a2f65bebcf8}{update} ()
 \item 
 virtual void \hyperlink{classcontrollers_1_1Controller_ae4eb0768c65456a1ffe84260c5713013}{handle\-Move\-Input} (unsigned int, unsigned int)=0
 \item 
@@ -190,6 +190,17 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 \-Gives the ability to set two flags. \-These will usually be the invincible and shooting flags. 
 
 \-Reimplemented in \hyperlink{classcontrollers_1_1ShipController_aba9b143d8f08e65db262fbabc846ed38}{controllers\-::\-Ship\-Controller}, and \hyperlink{classcontrollers_1_1StaticController_a984d6aca74ea9108462d5906f2853a72}{controllers\-::\-Static\-Controller}.
+
+\hypertarget{classcontrollers_1_1Controller_abbcb9381c698fa83c6867a2f65bebcf8}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!update@{update}}
+\index{update@{update}!controllers::Controller@{controllers\-::\-Controller}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf controllers\-::\-Controller\-::update} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_abbcb9381c698fa83c6867a2f65bebcf8}
+
+
+\-Implements \hyperlink{classobservers_1_1Observer_a71872e29ecdc6a13a99afa39e536710c}{observers\-::\-Observer}.
 
 
 

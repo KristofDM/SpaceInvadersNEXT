@@ -17,7 +17,7 @@ ShieldFactory::~ShieldFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-controllerPtr ShieldFactory::getEntity(std::string file, sf::RenderWindow& window) {
+controllerPtr ShieldFactory::getController(std::string file, sf::RenderWindow& window) {
 	GameParser game;
 	game.parseGame(file);
 

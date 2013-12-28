@@ -20,11 +20,11 @@ enum EDataType {ship, ammotype, enemyship, none};
 
 class DataParser {
 public:
-	//! Divides the data file file in three parts: model_, view_ and controller_. Extracts info from all of these parts.
 	DataParser();
 
 	virtual ~DataParser();
 
+	//! Parses the provided dataFile to usable information for classes.
 	void parseObject(std::string);
 
 	EDataType getType() const;

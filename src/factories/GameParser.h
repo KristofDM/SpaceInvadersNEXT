@@ -15,7 +15,7 @@
 #include "../tinyXML/tinyxml.h"
 #include "../Exception.h"
 
-// amount, space, file, order, moveAmount, speed
+//! In the format: amount, space, file, order, moveAmount, speed
 typedef std::tuple<int, int, std::string, std::string, int, double> infoTuple;
 
 namespace factories {

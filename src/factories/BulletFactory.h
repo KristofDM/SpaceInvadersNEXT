@@ -21,10 +21,10 @@ public:
 	virtual ~BulletFactory();
 
 	//! Constructs a controllerPtr to a Bullet.
-	virtual controllerPtr getEntity(std::string, modelPtr, sf::RenderWindow&);
+	virtual controllerPtr getController(std::string, modelPtr, sf::RenderWindow&);
 
-	virtual controllerPtr getEntity(std::string, sf::RenderWindow&) { return nullptr; }
-	virtual controllerPtr getEntity(std::string, int, int, sf::RenderWindow&) { return nullptr; }
+	virtual controllerPtr getController(std::string, sf::RenderWindow&) { return nullptr; }
+	virtual controllerPtr getController(std::string, int, int, sf::RenderWindow&) { return nullptr; }
 };
 
 } /* namespace factories */

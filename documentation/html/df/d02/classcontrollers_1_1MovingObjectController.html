@@ -111,14 +111,14 @@ Inheritance diagram for controllers::MovingObjectController:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d2b/classcontrollers_1_1MovingObjectController__inherit__graph.png" border="0" usemap="#controllers_1_1MovingObjectController_inherit__map" alt="Inheritance graph"/></div>
 <map name="controllers_1_1MovingObjectController_inherit__map" id="controllers_1_1MovingObjectController_inherit__map">
-<area shape="rect" id="node7" href="../../d8/dcc/classcontrollers_1_1ShipController.html" title="{controllers::ShipController\n||+ ShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ gameInput()\l+ setFlags()\l+ getFatalCollision()\l}" alt="" coords="144,667,315,839"/><area shape="rect" id="node2" href="../../d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="156,157,303,451"/><area shape="rect" id="node4" href="../../d0/d3a/classobservers_1_1Observer.html" title="{observers::Observer\n||+ update()\l+ ~Observer()\l}" alt="" coords="160,6,299,109"/><area shape="rect" id="node9" href="../../df/dd1/classcontrollers_1_1EnemyShipController.html" title="{controllers::EnemyShipController\n||+ EnemyShipController()\l+ ~EnemyShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ getPoints()\l}" alt="" coords="5,897,219,1052"/><area shape="rect" id="node11" href="../../d9/d89/classcontrollers_1_1SpaceShipController.html" title="{controllers::SpaceShipController\n||+ SpaceShipController()\l+ ~SpaceShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ getSpaceShip()\l+ checkDead()\l}" alt="" coords="243,889,451,1061"/></map>
+<area shape="rect" id="node7" href="../../d8/dcc/classcontrollers_1_1ShipController.html" title="{controllers::ShipController\n||+ ShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ gameInput()\l+ setFlags()\l+ getFatalCollision()\l}" alt="" coords="144,686,315,858"/><area shape="rect" id="node2" href="../../d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ update()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="156,158,303,469"/><area shape="rect" id="node4" href="../../d0/d3a/classobservers_1_1Observer.html" title="{observers::Observer\n||+ update()\l+ ~Observer()\l}" alt="" coords="160,6,299,109"/><area shape="rect" id="node9" href="../../df/dd1/classcontrollers_1_1EnemyShipController.html" title="{controllers::EnemyShipController\n||+ EnemyShipController()\l+ ~EnemyShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ getPoints()\l}" alt="" coords="5,916,219,1071"/><area shape="rect" id="node11" href="../../d9/d89/classcontrollers_1_1SpaceShipController.html" title="{controllers::SpaceShipController\n||+ SpaceShipController()\l+ ~SpaceShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ getSpaceShip()\l+ checkDead()\l}" alt="" coords="243,907,451,1079"/></map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for controllers::MovingObjectController:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d5d/classcontrollers_1_1MovingObjectController__coll__graph.png" border="0" usemap="#controllers_1_1MovingObjectController_coll__map" alt="Collaboration graph"/></div>
 <map name="controllers_1_1MovingObjectController_coll__map" id="controllers_1_1MovingObjectController_coll__map">
-<area shape="rect" id="node2" href="../../d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="45,157,192,451"/><area shape="rect" id="node4" href="../../d0/d3a/classobservers_1_1Observer.html" title="{observers::Observer\n||+ update()\l+ ~Observer()\l}" alt="" coords="49,6,188,109"/></map>
+<area shape="rect" id="node2" href="../../d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ update()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="45,158,192,469"/><area shape="rect" id="node4" href="../../d0/d3a/classobservers_1_1Observer.html" title="{observers::Observer\n||+ update()\l+ ~Observer()\l}" alt="" coords="49,6,188,109"/></map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="../../d6/de8/classcontrollers_1_1MovingObjectController-members.html">List of all members.</a></p>
@@ -194,6 +194,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Changes the speed of the moving object. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">multiplier</td><td>The amount by which the speed needs to be increased/decreased. A value of 2 will double the speed for example. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -218,7 +225,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 28 2013 11:14:49 for Space Invaders NEXT by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 28 2013 14:46:01 for Space Invaders NEXT by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

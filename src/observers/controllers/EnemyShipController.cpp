@@ -29,7 +29,7 @@ void EnemyShipController::handleShooting(std::vector<controllerPtr>& entities) {
 	if (model_->shoot()) {
 		// Shoot!
 		std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::BulletFactory>();
-		entities.push_back(factory->getEntity("Data/regularAmmo.xml", model_, view_->getWindow()));
+		entities.push_back(factory->getController("Data/regularAmmo.xml", model_, view_->getWindow()));
 	}
 }
 

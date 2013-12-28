@@ -20,7 +20,7 @@ EnemyShipFactory::~EnemyShipFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-controllerPtr EnemyShipFactory::getEntity(std::string file, int row, int space, sf::RenderWindow& window) {
+controllerPtr EnemyShipFactory::getController(std::string file, int row, int space, sf::RenderWindow& window) {
 	GameParser game;
 	game.parseGame(file);
 

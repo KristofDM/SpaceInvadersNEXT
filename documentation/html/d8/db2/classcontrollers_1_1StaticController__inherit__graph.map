@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node7" href="$dc/dc4/classcontrollers_1_1HUDController.html" title="{controllers::HUDController\n||+ HUDController()\l+ ~HUDController()\l+ changePoints()\l+ addLevel()\l+ drawEnd()\l}" alt="" coords="7,701,183,856"/>
-<area shape="rect" id="node2" href="$d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="21,157,168,451"/>
+<area shape="rect" id="node7" href="$dc/dc4/classcontrollers_1_1HUDController.html" title="{controllers::HUDController\n||+ HUDController()\l+ ~HUDController()\l+ changePoints()\l+ addLevel()\l+ drawEnd()\l}" alt="" coords="7,720,183,875"/>
+<area shape="rect" id="node2" href="$d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ update()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="21,158,168,469"/>
 <area shape="rect" id="node4" href="$d0/d3a/classobservers_1_1Observer.html" title="{observers::Observer\n||+ update()\l+ ~Observer()\l}" alt="" coords="25,6,164,109"/>
 </map>
