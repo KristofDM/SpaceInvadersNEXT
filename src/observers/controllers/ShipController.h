@@ -31,6 +31,9 @@ public:
 
 	virtual void setFlags(bool, bool);
 
+	/**
+	 * @return Returns true if there was a fatal collision.
+	 */
 	virtual bool getFatalCollision();
 
 };

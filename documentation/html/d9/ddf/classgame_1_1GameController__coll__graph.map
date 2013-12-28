@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$d1/d82/classgame_1_1GameView.html" title="{game::GameView\n|&#45; game_\l&#45; entities_\l|+ GameView()\l+ ~GameView()\l+ render()\l}" alt="" coords="5,162,131,299"/>
+<area shape="rect" id="node4" href="$db/d26/classgame_1_1Game.html" title="{game::Game\n|&#45; width_\l&#45; height_\l&#45; window_\l&#45; gameOver_\l&#45; levelMultiplier_\l&#45; level_\l&#45; spaceShipController_\l&#45; entityControllers_\l&#45; enemies_\l&#45; HUD_\l|+ Game()\l+ ~Game()\l+ cycle()\l+ render()\l+ setUp()\l+ endGame()\l+ nextLevel()\l+ operator=()\l+ getEntities()\l&#45; setupControllers()\l&#45; determineShooters()\l&#45; setupEnemies()\l&#45; checkForNextLevel()\l}" alt="" coords="155,6,309,455"/>
+</map>

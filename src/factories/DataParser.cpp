@@ -15,11 +15,11 @@ DataParser::DataParser()
 	  lives_(-1),
 	  fireRate_(-1),
 	  speed_(-1),
+	  space_(0),
+	  points_(0),
 	  sprite_(),
 	  scale_(-1),
-	  moveDirection_(-1),
-	  space_(0),
-	  points_(0)
+	  moveDirection_(-1)
 {}
 
 // Parse datafiles.

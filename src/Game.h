@@ -81,12 +81,17 @@ private:
 	//! The controller that takes care of the HUD.
 	std::shared_ptr<controllers::HUDController> HUD_;
 
+	//! Sets up all controllers for our entities.
     void setupControllers(factories::GameParser);
 
+    //! Determines what enemyShips are allowed to shoot.
 	void determineShooters();
 
+	//! Constructs the enemyships with correct data etc.
 	void setupEnemies(factories::GameParser);
 
+	//! Checks whether or not it's time to go to the next level.
+	//! @return True if we should go to the next level. False if not.
 	bool checkForNextLevel();
 };
 

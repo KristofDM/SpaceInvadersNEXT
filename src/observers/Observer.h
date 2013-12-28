@@ -12,6 +12,7 @@ namespace observers {
 
 class Observer {
 public:
+	// Is called when the observed entity has changed.
 	virtual void update() = 0;
 	virtual ~Observer();
 };

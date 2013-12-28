@@ -19,14 +19,6 @@
 cmake_minimum_required(VERSION 2.6)
 project("SPACE INVADERS")
 
-# Some OS X changes
-IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-   # Mac OS X specific code
-   SET(OperatingSystem "Mac OS X")
-   SET (CMAKE_CXX_COMPILER "/usr/bin/clang++")
-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-
-
 # Define DATADIR, used to find textures and font
 add_definitions(-DGRAPHICS="../${CMAKE_SOURCE_DIR}/Graphics/")
 add_definitions(-DDATADIR="../${CMAKE_SOURCE_DIR}/Data/")
@@ -72,7 +64,7 @@ set(SRC
     src/tinyXML/tinyxmlparser.cpp)
 
 # Set flags
-set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wextra -std=c++11")
+set(CMAKE_CXX_FLAGS "-pedantic -Wall -std=c++11")
 
 # Set the CMake Modules library module path
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
@@ -86,7 +78,6 @@ add_executable(SpaceInvaders src/SP_INV_NEXT.cpp ${SRC})
 
 # Link executable with SFML
 target_link_libraries(SpaceInvaders ${SFML_LIBRARIES})
-
 
 # Install all executables into the bin directory.
 install(TARGETS SpaceInvaders DESTINATION ${PROJECT_SOURCE_DIR}/)

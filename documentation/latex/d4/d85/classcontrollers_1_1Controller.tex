@@ -32,8 +32,6 @@
 \item 
 virtual \hyperlink{classcontrollers_1_1Controller_a26a8767e0333b5dd5fa023cb5f624182}{$\sim$\-Controller} ()
 \item 
-virtual void \hyperlink{classcontrollers_1_1Controller_abbcb9381c698fa83c6867a2f65bebcf8}{update} ()
-\item 
 virtual void \hyperlink{classcontrollers_1_1Controller_ae4eb0768c65456a1ffe84260c5713013}{handle\-Move\-Input} (unsigned int, unsigned int)=0
 \item 
 virtual void \hyperlink{classcontrollers_1_1Controller_af489be7993b237aeb54e2d9974db0e04}{game\-Input} (std\-::vector$<$ \hyperlink{namespacecontrollers_ab74cf2ed38c0b0460698b4eb6fe8bec5}{controller\-Ptr} $>$ \&, unsigned int, unsigned int)=0
@@ -73,6 +71,15 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 \item[{{\bf factories\-::\-Data\-Parser}}]{}
 \end{DoxyParamCaption}
 )}}\label{d4/d85/classcontrollers_1_1Controller_a3c74d4726b4e635f261d4dafa5c7807f}
+
+\begin{DoxyParams}{\-Parameters}
+{\em model} & \-The model (\-Entity) this controller will control. \\
+\hline
+{\em view} & \-The view this controller will control (and which will take care of the rendering of the model. \\
+\hline
+{\em data} & \-Object containing additional information about our to-\/be constructed object. \\
+\hline
+\end{DoxyParams}
 \hypertarget{classcontrollers_1_1Controller_a26a8767e0333b5dd5fa023cb5f624182}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!$\sim$\-Controller@{$\sim$\-Controller}}
 \index{$\sim$\-Controller@{$\sim$\-Controller}!controllers::Controller@{controllers\-::\-Controller}}
 \subsubsection[{$\sim$\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf controllers\-::\-Controller\-::$\sim$\-Controller} (
@@ -90,6 +97,9 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 \item[{{\bf model\-Ptr}}]{}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_a4ff3575d684812eaa52371ee67c1d4c8}
+\-Lets the entity check if it has collided with the parameter object. \begin{DoxyReturn}{\-Returns}
+\-True if they collided, false if they didn't. 
+\end{DoxyReturn}
 \hypertarget{classcontrollers_1_1Controller_ae261028f5b18e70194e534240fd0ef76}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!check\-Relevant@{check\-Relevant}}
 \index{check\-Relevant@{check\-Relevant}!controllers::Controller@{controllers\-::\-Controller}}
 \subsubsection[{check\-Relevant}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf controllers\-::\-Controller\-::check\-Relevant} (
@@ -98,6 +108,9 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 \item[{unsigned}]{int}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_ae261028f5b18e70194e534240fd0ef76}
+\-Asks whether or not the \-Entity this controller has control over is still relevant. \begin{DoxyReturn}{\-Returns}
+\-True if it's still relevant, false if it isn't. 
+\end{DoxyReturn}
 \hypertarget{classcontrollers_1_1Controller_a4d2a32746f2dd3a7388a731733c329dd}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!collided@{collided}}
 \index{collided@{collided}!controllers::Controller@{controllers\-::\-Controller}}
 \subsubsection[{collided}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf controllers\-::\-Controller\-::collided} (
@@ -105,6 +118,11 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 \item[{{\bf model\-Ptr}}]{}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_a4d2a32746f2dd3a7388a731733c329dd}
+\-Lets the \-Entity know it has collided with the parameter object. \begin{DoxyReturn}{\-Returns}
+\-True if the effects of the collision were as we would think they were. (decreased hp etc.) 
+
+\-False if it failed. (\-Because the model was invincible for example.) 
+\end{DoxyReturn}
 \hypertarget{classcontrollers_1_1Controller_a8e28c0be4a528c8cdc4800ac6e377248}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!draw@{draw}}
 \index{draw@{draw}!controllers::Controller@{controllers\-::\-Controller}}
 \subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf controllers\-::\-Controller\-::draw} (
@@ -112,7 +130,7 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_a8e28c0be4a528c8cdc4800ac6e377248}
-\hypertarget{classcontrollers_1_1Controller_af489be7993b237aeb54e2d9974db0e04}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!game\-Input@{game\-Input}}
+\-Sends signal to the view that there needs to be rendered. \hypertarget{classcontrollers_1_1Controller_af489be7993b237aeb54e2d9974db0e04}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!game\-Input@{game\-Input}}
 \index{game\-Input@{game\-Input}!controllers::Controller@{controllers\-::\-Controller}}
 \subsubsection[{game\-Input}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf controllers\-::\-Controller\-::game\-Input} (
 \begin{DoxyParamCaption}
@@ -121,7 +139,7 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 \item[{unsigned}]{int}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_af489be7993b237aeb54e2d9974db0e04}
-
+\-Will take care of things like moving and shooting. 
 
 \-Implemented in \hyperlink{classcontrollers_1_1ShipController_aebf9d37f6891b5540824970c3c6911c4}{controllers\-::\-Ship\-Controller}, \hyperlink{classcontrollers_1_1BulletController_a376f6bef112f4d6afde4569ccf6f7cc1}{controllers\-::\-Bullet\-Controller}, and \hyperlink{classcontrollers_1_1StaticController_a0f8fc382d5ba77310050b5686139c89f}{controllers\-::\-Static\-Controller}.
 
@@ -132,6 +150,9 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_a011e62186a007b883fd1ffabd5f8755e}
+\begin{DoxyReturn}{\-Returns}
+\-Returns the \-Entity (model) it has control over. 
+\end{DoxyReturn}
 \hypertarget{classcontrollers_1_1Controller_ae4eb0768c65456a1ffe84260c5713013}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!handle\-Move\-Input@{handle\-Move\-Input}}
 \index{handle\-Move\-Input@{handle\-Move\-Input}!controllers::Controller@{controllers\-::\-Controller}}
 \subsubsection[{handle\-Move\-Input}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf controllers\-::\-Controller\-::handle\-Move\-Input} (
@@ -141,8 +162,15 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_ae4eb0768c65456a1ffe84260c5713013}
 
+\begin{DoxyParams}{\-Parameters}
+{\em height} & \-The height of our game area. \\
+\hline
+{\em width} & \-The width of our game area. \\
+\hline
+\end{DoxyParams}
 
-\-Implemented in \hyperlink{classcontrollers_1_1ShipController_abad8faa826ab23344c8512593a4c661f}{controllers\-::\-Ship\-Controller}, \hyperlink{classcontrollers_1_1BulletController_a0a7ff984d1b2e99685ba30f6c5c7f3c0}{controllers\-::\-Bullet\-Controller}, \hyperlink{classcontrollers_1_1SpaceShipController_a96d07a881e92ee0d2dfcdd14437b4825}{controllers\-::\-Space\-Ship\-Controller}, \hyperlink{classcontrollers_1_1EnemyShipController_ad8d8e2dc3e035695697afcde01770c48}{controllers\-::\-Enemy\-Ship\-Controller}, and \hyperlink{classcontrollers_1_1StaticController_abcbab9a654ce3797fd07fb18f1ab1e62}{controllers\-::\-Static\-Controller}.
+
+\-Implemented in \hyperlink{classcontrollers_1_1BulletController_a0a7ff984d1b2e99685ba30f6c5c7f3c0}{controllers\-::\-Bullet\-Controller}, \hyperlink{classcontrollers_1_1ShipController_abad8faa826ab23344c8512593a4c661f}{controllers\-::\-Ship\-Controller}, \hyperlink{classcontrollers_1_1SpaceShipController_a96d07a881e92ee0d2dfcdd14437b4825}{controllers\-::\-Space\-Ship\-Controller}, \hyperlink{classcontrollers_1_1EnemyShipController_ad8d8e2dc3e035695697afcde01770c48}{controllers\-::\-Enemy\-Ship\-Controller}, and \hyperlink{classcontrollers_1_1StaticController_abcbab9a654ce3797fd07fb18f1ab1e62}{controllers\-::\-Static\-Controller}.
 
 \hypertarget{classcontrollers_1_1Controller_a6136bf7657dc0c6716392388069085d8}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!mark\-Deleted@{mark\-Deleted}}
 \index{mark\-Deleted@{mark\-Deleted}!controllers::Controller@{controllers\-::\-Controller}}
@@ -151,7 +179,7 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_a6136bf7657dc0c6716392388069085d8}
-\hypertarget{classcontrollers_1_1Controller_af4b5bfdadbaaf98fe010d9381dca4e7a}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!set\-Flags@{set\-Flags}}
+\-Marks the model as ready to be deleted. \hypertarget{classcontrollers_1_1Controller_af4b5bfdadbaaf98fe010d9381dca4e7a}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!set\-Flags@{set\-Flags}}
 \index{set\-Flags@{set\-Flags}!controllers::Controller@{controllers\-::\-Controller}}
 \subsubsection[{set\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf controllers\-::\-Controller\-::set\-Flags} (
 \begin{DoxyParamCaption}
@@ -159,20 +187,9 @@ virtual \hyperlink{ModelView_8h_a78966ddb517fca8d2b29a2bc5c31e74e}{model\-Ptr} \
 \item[{bool}]{}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_af4b5bfdadbaaf98fe010d9381dca4e7a}
-
+\-Gives the ability to set two flags. \-These will usually be the invincible and shooting flags. 
 
 \-Reimplemented in \hyperlink{classcontrollers_1_1ShipController_aba9b143d8f08e65db262fbabc846ed38}{controllers\-::\-Ship\-Controller}, and \hyperlink{classcontrollers_1_1StaticController_a984d6aca74ea9108462d5906f2853a72}{controllers\-::\-Static\-Controller}.
-
-\hypertarget{classcontrollers_1_1Controller_abbcb9381c698fa83c6867a2f65bebcf8}{\index{controllers\-::\-Controller@{controllers\-::\-Controller}!update@{update}}
-\index{update@{update}!controllers::Controller@{controllers\-::\-Controller}}
-\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf controllers\-::\-Controller\-::update} (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{d4/d85/classcontrollers_1_1Controller_abbcb9381c698fa83c6867a2f65bebcf8}
-
-
-\-Implements \hyperlink{classobservers_1_1Observer_a71872e29ecdc6a13a99afa39e536710c}{observers\-::\-Observer}.
 
 
 

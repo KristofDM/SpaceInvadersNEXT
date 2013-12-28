@@ -110,39 +110,37 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00028"></a>00028 
 <a name="l00029"></a><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html">00029</a> <span class="keyword">class </span><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html">Controller</a> : <span class="keyword">public</span> observers::Observer{
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a>00031         <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a3c74d4726b4e635f261d4dafa5c7807f">Controller</a>(<a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a>, <a class="code" href="../../de/d4a/Controller_8h.html#a8ca0a41a38eb52be242997413482c0cf">modelViewPtr</a>, <a class="code" href="../../d0/df8/classfactories_1_1DataParser.html">factories::DataParser</a>);
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033         <span class="keyword">virtual</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a26a8767e0333b5dd5fa023cb5f624182">~Controller</a>();
-<a name="l00034"></a>00034 
-<a name="l00035"></a><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#abbcb9381c698fa83c6867a2f65bebcf8">00035</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#abbcb9381c698fa83c6867a2f65bebcf8">update</a>() { }; <span class="comment">// Not needed yet. (Change controller because of view)</span>
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#ae4eb0768c65456a1ffe84260c5713013">handleMoveInput</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>) = 0;
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#af489be7993b237aeb54e2d9974db0e04">gameInput</a>(std::vector&lt;controllerPtr&gt;&amp;, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>) = 0;
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#af4b5bfdadbaaf98fe010d9381dca4e7a">setFlags</a>(<span class="keywordtype">bool</span>, <span class="keywordtype">bool</span>);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#ae261028f5b18e70194e534240fd0ef76">checkRelevant</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a6136bf7657dc0c6716392388069085d8">markDeleted</a>();
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a4d2a32746f2dd3a7388a731733c329dd">collided</a>(<a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a>);
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a4ff3575d684812eaa52371ee67c1d4c8">checkCollision</a>(<a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a>);
+<a name="l00036"></a>00036         <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a3c74d4726b4e635f261d4dafa5c7807f">Controller</a>(<a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a>, <a class="code" href="../../de/d4a/Controller_8h.html#a8ca0a41a38eb52be242997413482c0cf">modelViewPtr</a>, <a class="code" href="../../d0/df8/classfactories_1_1DataParser.html">factories::DataParser</a>);
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038         <span class="keyword">virtual</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a26a8767e0333b5dd5fa023cb5f624182">~Controller</a>();
+<a name="l00039"></a>00039 
+<a name="l00044"></a>00044         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#ae4eb0768c65456a1ffe84260c5713013">handleMoveInput</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>) = 0;
+<a name="l00045"></a>00045 
+<a name="l00049"></a>00049         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#af489be7993b237aeb54e2d9974db0e04">gameInput</a>(std::vector&lt;controllerPtr&gt;&amp;, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>) = 0;
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a8e28c0be4a528c8cdc4800ac6e377248">draw</a>();
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053         <span class="keyword">virtual</span> <a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a011e62186a007b883fd1ffabd5f8755e">getModel</a>();
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="keyword">protected</span>:
-<a name="l00056"></a><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a4238e40666b91a3f95a9459233037e0b">00056</a>         <a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a4238e40666b91a3f95a9459233037e0b">model_</a>;
-<a name="l00057"></a><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#ad15a9e80d35f43a394775ab8292ee561">00057</a>         <a class="code" href="../../de/d4a/Controller_8h.html#a8ca0a41a38eb52be242997413482c0cf">modelViewPtr</a> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#ad15a9e80d35f43a394775ab8292ee561">view_</a>;
-<a name="l00058"></a><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a0bd9a0e7a7d6e7ef4ea4861e4e907016">00058</a>         <a class="code" href="../../de/d2c/namespacecontrollers.html#aebbb0610800fdb6dd92c2904e0de1c2f">EMoveDirection</a> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a0bd9a0e7a7d6e7ef4ea4861e4e907016">moveDir_</a>;
-<a name="l00059"></a>00059 };
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 } <span class="comment">/* namespace controllers */</span>
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="preprocessor">#endif </span><span class="comment">/* CONTROLLER_H_ */</span>
+<a name="l00054"></a>00054         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#af4b5bfdadbaaf98fe010d9381dca4e7a">setFlags</a>(<span class="keywordtype">bool</span>, <span class="keywordtype">bool</span>);
+<a name="l00055"></a>00055 
+<a name="l00060"></a>00060         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#ae261028f5b18e70194e534240fd0ef76">checkRelevant</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);
+<a name="l00061"></a>00061 
+<a name="l00065"></a>00065         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a6136bf7657dc0c6716392388069085d8">markDeleted</a>();
+<a name="l00066"></a>00066 
+<a name="l00072"></a>00072         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a4d2a32746f2dd3a7388a731733c329dd">collided</a>(<a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a>);
+<a name="l00073"></a>00073 
+<a name="l00078"></a>00078         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a4ff3575d684812eaa52371ee67c1d4c8">checkCollision</a>(<a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a>);
+<a name="l00079"></a>00079 
+<a name="l00083"></a>00083         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a8e28c0be4a528c8cdc4800ac6e377248">draw</a>();
+<a name="l00084"></a>00084 
+<a name="l00088"></a>00088         <span class="keyword">virtual</span> <a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a011e62186a007b883fd1ffabd5f8755e">getModel</a>();
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="keyword">protected</span>:
+<a name="l00091"></a><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a4238e40666b91a3f95a9459233037e0b">00091</a>         <a class="code" href="../../d2/d73/ModelView_8h.html#a78966ddb517fca8d2b29a2bc5c31e74e">modelPtr</a> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a4238e40666b91a3f95a9459233037e0b">model_</a>;
+<a name="l00092"></a><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#ad15a9e80d35f43a394775ab8292ee561">00092</a>         <a class="code" href="../../de/d4a/Controller_8h.html#a8ca0a41a38eb52be242997413482c0cf">modelViewPtr</a> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#ad15a9e80d35f43a394775ab8292ee561">view_</a>;
+<a name="l00093"></a><a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a0bd9a0e7a7d6e7ef4ea4861e4e907016">00093</a>         <a class="code" href="../../de/d2c/namespacecontrollers.html#aebbb0610800fdb6dd92c2904e0de1c2f">EMoveDirection</a> <a class="code" href="../../d4/d85/classcontrollers_1_1Controller.html#a0bd9a0e7a7d6e7ef4ea4861e4e907016">moveDir_</a>;
+<a name="l00094"></a>00094 };
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 } <span class="comment">/* namespace controllers */</span>
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="preprocessor">#endif </span><span class="comment">/* CONTROLLER_H_ */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -161,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 19 2013 14:40:35 for Space Invaders NEXT by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 28 2013 11:14:48 for Space Invaders NEXT by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

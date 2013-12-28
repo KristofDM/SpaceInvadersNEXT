@@ -91,29 +91,31 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define GAMECONTROLLER_H_</span>
 <a name="l00010"></a>00010 <span class="preprocessor"></span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="../../d3/d5f/Game_8h.html">Game.h</a>&quot;</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="../../de/d2c/namespacecontrollers.html">00013</a> <span class="keyword">namespace </span>controllers {
-<a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html">00015</a> <span class="keyword">class </span><a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html">GameController</a> {
-<a name="l00016"></a>00016 <span class="keyword">public</span>:
-<a name="l00018"></a>00018         <a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html#a124f9b3c86f81f813385e73117c805ce" title="Standard constructor. Will construct the Game model.">GameController</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, sf::RenderWindow&amp;);
-<a name="l00019"></a>00019         <span class="keyword">virtual</span> <a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html#af0d95561a2b71ff314c2189ba1aa1813">~GameController</a>();
-<a name="l00020"></a>00020 
-<a name="l00022"></a>00022         <span class="keywordtype">void</span> <a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html#a63a7adb459f00d81e41764c66da7281e" title="Command the Game model to perform one game cycle.">cycle</a>();
-<a name="l00023"></a>00023 
-<a name="l00025"></a>00025         <span class="keywordtype">void</span> <a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html#aa36f4f57aa30f891815fdb21925c4bef" title="Command the Game model to render everything on the screen.">render</a>();
-<a name="l00026"></a>00026 
-<a name="l00028"></a>00028         <span class="keywordtype">void</span> <a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html#afbd75649b81132d343c3f0b00451fc54" title="Command the Game model to set itself up.">setUp</a>();
-<a name="l00029"></a>00029 
-<a name="l00031"></a>00031         <span class="keywordtype">bool</span> <a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html#adf88d7f2b9a68bab0645e7a613f4556d" title="Check if the Game has ended.">endGame</a>();
-<a name="l00032"></a>00032 <span class="keyword">private</span>:
-<a name="l00033"></a>00033 
-<a name="l00035"></a><a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html#a255cfc430fc9e7bd9e843068accc825b">00035</a>         <a class="code" href="../../d1/d10/classmodels_1_1Game.html">models::Game</a> <a class="code" href="../../d9/d54/classcontrollers_1_1GameController.html#a255cfc430fc9e7bd9e843068accc825b" title="Game model. Contains all controllers etc.">game_</a>;
-<a name="l00036"></a>00036 };
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 } <span class="comment">/* namespace controllers */</span>
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="preprocessor">#endif </span><span class="comment">/* GAMECONTROLLER_H_ */</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="../../dc/db4/GameView_8h.html">GameView.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">namespace </span>game {
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="../../d6/d98/classgame_1_1GameController.html">00016</a> <span class="keyword">class </span><a class="code" href="../../d6/d98/classgame_1_1GameController.html">GameController</a> {
+<a name="l00017"></a>00017 <span class="keyword">public</span>:
+<a name="l00019"></a>00019         <a class="code" href="../../d6/d98/classgame_1_1GameController.html#abce6b33ccdc1dff31ccff55c7efe2572" title="Standard constructor. Will construct the Game model.">GameController</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, sf::RenderWindow&amp;);
+<a name="l00020"></a>00020         <span class="keyword">virtual</span> <a class="code" href="../../d6/d98/classgame_1_1GameController.html#a3c6f679a1d320ea6487cd58352bb8343">~GameController</a>();
+<a name="l00021"></a>00021 
+<a name="l00023"></a>00023         <span class="keywordtype">void</span> <a class="code" href="../../d6/d98/classgame_1_1GameController.html#aac7f448b867cb9f9ec3704040630d714" title="Command the Game model to perform one game cycle.">cycle</a>();
+<a name="l00024"></a>00024 
+<a name="l00026"></a>00026         <span class="keywordtype">void</span> <a class="code" href="../../d6/d98/classgame_1_1GameController.html#ac84067d08492936a5bbf2c3d0b114717" title="Command the Game model to render everything on the screen.">render</a>();
+<a name="l00027"></a>00027 
+<a name="l00029"></a>00029         <span class="keywordtype">void</span> <a class="code" href="../../d6/d98/classgame_1_1GameController.html#a2f1955c3f1fdffa39b3681f23b994e7c" title="Command the Game model to set itself up.">setUp</a>();
+<a name="l00030"></a>00030 
+<a name="l00032"></a>00032         <span class="keywordtype">bool</span> <a class="code" href="../../d6/d98/classgame_1_1GameController.html#a9164fe693057a279f7c3c45c76e6b835" title="Check if the Game has ended.">endGame</a>();
+<a name="l00033"></a>00033 <span class="keyword">private</span>:
+<a name="l00035"></a><a class="code" href="../../d6/d98/classgame_1_1GameController.html#ac98eb0a386ca0589d526db0299312df9">00035</a>         <a class="code" href="../../db/d26/classgame_1_1Game.html">Game</a> <a class="code" href="../../d6/d98/classgame_1_1GameController.html#ac98eb0a386ca0589d526db0299312df9" title="Game model. Contains all controllers etc.">game_</a>;
+<a name="l00036"></a>00036 
+<a name="l00038"></a><a class="code" href="../../d6/d98/classgame_1_1GameController.html#afe6a25ef2102a7baab0dd16e1b0d23af">00038</a>         <a class="code" href="../../d1/d82/classgame_1_1GameView.html">GameView</a> <a class="code" href="../../d6/d98/classgame_1_1GameController.html#afe6a25ef2102a7baab0dd16e1b0d23af" title="Game view. Takes care of the rendering.">gameView_</a>;
+<a name="l00039"></a>00039 };
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 } <span class="comment">/* namespace game */</span>
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="preprocessor">#endif </span><span class="comment">/* GAMECONTROLLER_H_ */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -132,7 +134,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 19 2013 14:40:35 for Space Invaders NEXT by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 28 2013 11:14:48 for Space Invaders NEXT by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

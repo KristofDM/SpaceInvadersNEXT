@@ -1,0 +1,131 @@
+\hypertarget{classgame_1_1GameController}{\section{game\-:\-:\-Game\-Controller \-Class \-Reference}
+\label{d6/d98/classgame_1_1GameController}\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}}
+}
+
+
+{\ttfamily \#include $<$\-Game\-Controller.\-h$>$}
+
+
+
+\-Collaboration diagram for game\-:\-:\-Game\-Controller\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d9/ddf/classgame_1_1GameController__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgame_1_1GameController_abce6b33ccdc1dff31ccff55c7efe2572}{\-Game\-Controller} (int, int, sf\-::\-Render\-Window \&)
+\begin{DoxyCompactList}\small\item\em \-Standard constructor. \-Will construct the \hyperlink{classgame_1_1Game}{\-Game} model. \end{DoxyCompactList}\item 
+virtual \hyperlink{classgame_1_1GameController_a3c6f679a1d320ea6487cd58352bb8343}{$\sim$\-Game\-Controller} ()
+\item 
+void \hyperlink{classgame_1_1GameController_aac7f448b867cb9f9ec3704040630d714}{cycle} ()
+\begin{DoxyCompactList}\small\item\em \-Command the \hyperlink{classgame_1_1Game}{\-Game} model to perform one game cycle. \end{DoxyCompactList}\item 
+void \hyperlink{classgame_1_1GameController_ac84067d08492936a5bbf2c3d0b114717}{render} ()
+\begin{DoxyCompactList}\small\item\em \-Command the \hyperlink{classgame_1_1Game}{\-Game} model to render everything on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classgame_1_1GameController_a2f1955c3f1fdffa39b3681f23b994e7c}{set\-Up} ()
+\begin{DoxyCompactList}\small\item\em \-Command the \hyperlink{classgame_1_1Game}{\-Game} model to set itself up. \end{DoxyCompactList}\item 
+bool \hyperlink{classgame_1_1GameController_a9164fe693057a279f7c3c45c76e6b835}{end\-Game} ()
+\begin{DoxyCompactList}\small\item\em \-Check if the \hyperlink{classgame_1_1Game}{\-Game} has ended. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgame_1_1Game}{\-Game} \hyperlink{classgame_1_1GameController_ac98eb0a386ca0589d526db0299312df9}{game\-\_\-}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classgame_1_1Game}{\-Game} model. \-Contains all controllers etc. \end{DoxyCompactList}\item 
+\hyperlink{classgame_1_1GameView}{\-Game\-View} \hyperlink{classgame_1_1GameController_afe6a25ef2102a7baab0dd16e1b0d23af}{game\-View\-\_\-}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classgame_1_1Game}{\-Game} view. \-Takes care of the rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classgame_1_1GameController_abce6b33ccdc1dff31ccff55c7efe2572}{\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}!\-Game\-Controller@{\-Game\-Controller}}
+\index{\-Game\-Controller@{\-Game\-Controller}!game::GameController@{game\-::\-Game\-Controller}}
+\subsubsection[{\-Game\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf game\-::\-Game\-Controller\-::\-Game\-Controller} (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{sf\-::\-Render\-Window \&}]{}
+\end{DoxyParamCaption}
+)}}\label{d6/d98/classgame_1_1GameController_abce6b33ccdc1dff31ccff55c7efe2572}
+
+
+\-Standard constructor. \-Will construct the \hyperlink{classgame_1_1Game}{\-Game} model. 
+
+\hypertarget{classgame_1_1GameController_a3c6f679a1d320ea6487cd58352bb8343}{\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}!$\sim$\-Game\-Controller@{$\sim$\-Game\-Controller}}
+\index{$\sim$\-Game\-Controller@{$\sim$\-Game\-Controller}!game::GameController@{game\-::\-Game\-Controller}}
+\subsubsection[{$\sim$\-Game\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf game\-::\-Game\-Controller\-::$\sim$\-Game\-Controller} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{d6/d98/classgame_1_1GameController_a3c6f679a1d320ea6487cd58352bb8343}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgame_1_1GameController_aac7f448b867cb9f9ec3704040630d714}{\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}!cycle@{cycle}}
+\index{cycle@{cycle}!game::GameController@{game\-::\-Game\-Controller}}
+\subsubsection[{cycle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf game\-::\-Game\-Controller\-::cycle} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d98/classgame_1_1GameController_aac7f448b867cb9f9ec3704040630d714}
+
+
+\-Command the \hyperlink{classgame_1_1Game}{\-Game} model to perform one game cycle. 
+
+\hypertarget{classgame_1_1GameController_a9164fe693057a279f7c3c45c76e6b835}{\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}!end\-Game@{end\-Game}}
+\index{end\-Game@{end\-Game}!game::GameController@{game\-::\-Game\-Controller}}
+\subsubsection[{end\-Game}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf game\-::\-Game\-Controller\-::end\-Game} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d98/classgame_1_1GameController_a9164fe693057a279f7c3c45c76e6b835}
+
+
+\-Check if the \hyperlink{classgame_1_1Game}{\-Game} has ended. 
+
+\hypertarget{classgame_1_1GameController_ac84067d08492936a5bbf2c3d0b114717}{\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}!render@{render}}
+\index{render@{render}!game::GameController@{game\-::\-Game\-Controller}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf game\-::\-Game\-Controller\-::render} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d98/classgame_1_1GameController_ac84067d08492936a5bbf2c3d0b114717}
+
+
+\-Command the \hyperlink{classgame_1_1Game}{\-Game} model to render everything on the screen. 
+
+\hypertarget{classgame_1_1GameController_a2f1955c3f1fdffa39b3681f23b994e7c}{\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}!set\-Up@{set\-Up}}
+\index{set\-Up@{set\-Up}!game::GameController@{game\-::\-Game\-Controller}}
+\subsubsection[{set\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf game\-::\-Game\-Controller\-::set\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{d6/d98/classgame_1_1GameController_a2f1955c3f1fdffa39b3681f23b994e7c}
+
+
+\-Command the \hyperlink{classgame_1_1Game}{\-Game} model to set itself up. 
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classgame_1_1GameController_ac98eb0a386ca0589d526db0299312df9}{\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}!game\-\_\-@{game\-\_\-}}
+\index{game\-\_\-@{game\-\_\-}!game::GameController@{game\-::\-Game\-Controller}}
+\subsubsection[{game\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Game} {\bf game\-::\-Game\-Controller\-::game\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d6/d98/classgame_1_1GameController_ac98eb0a386ca0589d526db0299312df9}
+
+
+\hyperlink{classgame_1_1Game}{\-Game} model. \-Contains all controllers etc. 
+
+\hypertarget{classgame_1_1GameController_afe6a25ef2102a7baab0dd16e1b0d23af}{\index{game\-::\-Game\-Controller@{game\-::\-Game\-Controller}!game\-View\-\_\-@{game\-View\-\_\-}}
+\index{game\-View\-\_\-@{game\-View\-\_\-}!game::GameController@{game\-::\-Game\-Controller}}
+\subsubsection[{game\-View\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Game\-View} {\bf game\-::\-Game\-Controller\-::game\-View\-\_\-}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{d6/d98/classgame_1_1GameController_afe6a25ef2102a7baab0dd16e1b0d23af}
+
+
+\hyperlink{classgame_1_1Game}{\-Game} view. \-Takes care of the rendering. 
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{GameController_8h}{\-Game\-Controller.\-h}\end{DoxyCompactItemize}

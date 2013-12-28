@@ -1,11 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$dd/db5/classmodels_1_1Model.html" title="models::Model" alt="" coords="5,85,112,115"/>
-<area shape="rect" id="node3" href="$d7/d35/classmodels_1_1MovingObject.html" title="models::MovingObject" alt="" coords="160,59,312,88"/>
-<area shape="rect" id="node13" href="$dc/d3c/classmodels_1_1StaticObject.html" title="models::StaticObject" alt="" coords="164,112,308,141"/>
-<area shape="rect" id="node5" href="$d5/dd0/classmodels_1_1Bullet.html" title="models::Bullet" alt="" coords="363,5,467,35"/>
-<area shape="rect" id="node7" href="$d0/d37/classmodels_1_1Ship.html" title="models::Ship" alt="" coords="365,59,464,88"/>
-<area shape="rect" id="node9" href="$d1/d22/classmodels_1_1EnemyShip.html" title="models::EnemyShip" alt="" coords="517,32,656,61"/>
-<area shape="rect" id="node11" href="$d2/d9b/classmodels_1_1SpaceShip.html" title="models::SpaceShip" alt="" coords="520,85,653,115"/>
-<area shape="rect" id="node15" href="$d6/dbb/classmodels_1_1HUD.html" title="models::HUD" alt="" coords="364,112,465,141"/>
-<area shape="rect" id="node17" href="$d1/d8f/classmodels_1_1Shield.html" title="models::Shield" alt="" coords="361,165,468,195"/>
+<area shape="rect" id="node1" href="$d1/d82/classgame_1_1GameView.html" title="game::GameView" alt="" coords="7,5,132,35"/>
 </map>

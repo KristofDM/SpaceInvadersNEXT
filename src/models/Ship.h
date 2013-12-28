@@ -39,10 +39,16 @@ public:
 
 	virtual bool collided(std::shared_ptr<Model>);
 
+	/**
+	 * @return The damage a collision with this ship delivers.
+	 */
 	virtual unsigned int getDamage();
 
 	virtual void setFlags(bool, bool);
 
+	/**
+	 * @return True if there was a fatal collision.
+	 */
 	virtual bool getFatalCollision() const;
 
 protected:
@@ -50,11 +56,11 @@ protected:
 
 	int fireRate_;
 
-	unsigned int damage_;
-
 	sf::Clock shootTimer_;
 
 	sf::Clock invincibleTimer_;
+
+	unsigned int damage_;
 
 	bool shooting_;
 

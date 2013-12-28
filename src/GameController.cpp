@@ -25,7 +25,6 @@ void GameController::cycle() {
 
 void GameController::render() {
 	game_.render();
-	// TODO: use GameView?
 }
 
 void GameController::setUp() {

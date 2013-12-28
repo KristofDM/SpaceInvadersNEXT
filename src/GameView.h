@@ -21,8 +21,8 @@ public:
 	void render();
 
 private:
-	std::shared_ptr<std::vector<controllerPtr> > entities_;
 	std::shared_ptr<Game> game_;
+	std::shared_ptr<std::vector<controllerPtr> > entities_;
 };
 
 } /* namespace game */

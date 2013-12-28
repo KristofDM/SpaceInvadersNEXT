@@ -23,12 +23,9 @@ Game::~Game() {
 }
 
 void Game::setUp() {
-
-	/**
-	 * Parse a game xml file and determine what models need to be made.
-	 * Iterate over models, setupModel(), setupView() and setupController() will take care of 1 each and will be added in our triplets.
+	/*
+	 * Parse the main game file.
 	 */
-
 	factories::GameParser gameP;
 	gameP.parseGame("Data/game1.xml");
 
@@ -43,6 +40,7 @@ void Game::cycle() {
 	HUD_->draw();
 	if (!this->endGame()) {
 		for (auto c : entityControllers_) {
+			// Gameinput will mainly take care of the shooting and moving of the entities.
 			c->gameInput(entityControllers_, width_, height_);
 		}
 
@@ -70,6 +68,7 @@ void Game::cycle() {
 			}
 		}
 
+		// Take care of our points and check if there was a fatal collision.
 		for (unsigned int i = 0; i < enemies_.size(); i++) {
 			for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
 				std::shared_ptr<controllers::EnemyShipController> c = enemies_.at(i).at(j);
@@ -120,7 +119,6 @@ void Game::cycle() {
 	}
 	else {
 		// Prompt for user input on what to do next. Restart or quit?
-
 		HUD_->drawEnd();
 	}
 }
@@ -130,7 +128,7 @@ void Game::determineShooters() {
 	for (unsigned int column = 0; column < enemies_.at(0).size(); column++) {
 		// Check highest column index.
 		int highest = -1;
-		for (int j = 0; j < enemies_.size(); j++) {
+		for (int j = 0; j < int(enemies_.size()); j++) {
 			if (enemies_.at(j).at(column) != 0 && j > highest) {
 				highest = j;
 			}
@@ -158,7 +156,7 @@ void Game::setupEnemies(factories::GameParser game) {
 	try {
 		std::vector<infoTuple> enemyInfo = game.getEnemyInfo();
 		for (unsigned int i = 0; i < enemyInfo.size(); i++) {
-			int amount = std::get<0>(enemyInfo.at(i));
+			unsigned int amount = std::get<0>(enemyInfo.at(i));
 			int space_amount = std::get<1>(enemyInfo.at(i));
 			std::string order = std::get<3>(enemyInfo.at(i));
 
@@ -217,7 +215,7 @@ void Game::nextLevel() {
 	gameP.parseGame("Data/game1.xml");
 	this->setupEnemies(gameP);
 
-//	// Increase their speed.
+	// Increase enemy speed.
 	for (unsigned int i = 0; i < enemies_.size(); i++) {
 		for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
 			if (enemies_.at(i).at(j) != nullptr) {
@@ -232,6 +230,7 @@ void Game::nextLevel() {
 bool Game::checkForNextLevel() {
 	for (unsigned int i = 0; i < enemies_.size(); i++) {
 		for (unsigned int j = 0; j < enemies_.at(i).size(); j++) {
+			// If all enemies are dead it's time for the next level.
 			if (enemies_.at(i).at(j) != nullptr) {
 				return false;
 			}
@@ -242,11 +241,11 @@ bool Game::checkForNextLevel() {
 
 void Game::setupControllers(factories::GameParser game) {
 	// Make our factory.
-
 	std::shared_ptr<factories::AbstractFactory> factory = std::make_shared<factories::SpaceShipFactory>();
 	controllerPtr spaceC = factory->getEntity(game.getSpaceShipXML(), window_);
 	entityControllers_.push_back(spaceC);
 	spaceShipController_ = std::dynamic_pointer_cast<controllers::SpaceShipController>(spaceC);
+
 	// Set up HUD
 	factory = std::make_shared<factories::HUDFactory>();
 	controllerPtr HUD = factory->getEntity(game.getSpaceShipXML(), spaceShipController_->getSpaceShip(), window_);
@@ -256,9 +255,7 @@ void Game::setupControllers(factories::GameParser game) {
     factory = std::make_shared<factories::ShieldFactory>();
 	infoTuple shieldInfo = game.getShieldInfo();
 	int amount = std::get<0>(shieldInfo);
-	int space_amount = std::get<1>(shieldInfo);
 	std::string file = std::get<2>(shieldInfo);
-	int space = 0;
 
 	for (int i = 0; i < amount; i++) {
 		entityControllers_.push_back(factory->getEntity(game.getFileName(), window_));
@@ -266,8 +263,5 @@ void Game::setupControllers(factories::GameParser game) {
 
 	this->setupEnemies(game);
 }
-
-
-
 
 } /* namespace game */

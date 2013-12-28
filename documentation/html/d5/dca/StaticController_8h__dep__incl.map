@@ -1,7 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$d4/d24/HUDController_8h.html" title="src/observers/controllers/HUDController.h" alt="" coords="5,83,272,112"/>
-<area shape="rect" id="node11" href="$d5/dd5/ShieldFactory_8h.html" title="src/factories/ShieldFactory.h" alt="" coords="244,160,433,189"/>
+<area shape="rect" id="node14" href="$d5/dd5/ShieldFactory_8h.html" title="src/factories/ShieldFactory.h" alt="" coords="244,160,433,189"/>
 <area shape="rect" id="node5" href="$db/d7d/HUDFactory_8h.html" title="src/factories/HUDFactory.h" alt="" coords="39,160,220,189"/>
 <area shape="rect" id="node7" href="$d3/d5f/Game_8h.html" title="src/Game.h" alt="" coords="188,237,279,267"/>
-<area shape="rect" id="node9" href="$da/d92/GameController_8h.html" title="src/GameController.h" alt="" coords="160,315,307,344"/>
+<area shape="rect" id="node9" href="$da/d92/GameController_8h.html" title="src/GameController.h" alt="" coords="160,392,307,421"/>
+<area shape="rect" id="node11" href="$dc/db4/GameView_8h.html" title="src/GameView.h" alt="" coords="223,315,340,344"/>
 </map>

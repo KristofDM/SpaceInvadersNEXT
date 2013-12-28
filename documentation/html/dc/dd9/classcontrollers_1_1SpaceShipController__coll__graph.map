@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$d8/dcc/classcontrollers_1_1ShipController.html" title="{controllers::ShipController\n||+ ShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ gameInput()\l+ setFlags()\l+ getFatalCollision()\l}" alt="" coords="33,686,204,858"/>
-<area shape="rect" id="node4" href="$df/d02/classcontrollers_1_1MovingObjectController.html" title="{controllers::MovingObjectController\n||+ MovingObjectController()\l+ ~MovingObjectController()\l+ changeSpeed()\l}" alt="" coords="5,517,232,637"/>
-<area shape="rect" id="node6" href="$d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ update()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="45,158,192,469"/>
+<area shape="rect" id="node2" href="$d8/dcc/classcontrollers_1_1ShipController.html" title="{controllers::ShipController\n||+ ShipController()\l+ handleMoveInput()\l+ handleShooting()\l+ gameInput()\l+ setFlags()\l+ getFatalCollision()\l}" alt="" coords="33,667,204,839"/>
+<area shape="rect" id="node4" href="$df/d02/classcontrollers_1_1MovingObjectController.html" title="{controllers::MovingObjectController\n||+ MovingObjectController()\l+ ~MovingObjectController()\l+ changeSpeed()\l}" alt="" coords="5,499,232,619"/>
+<area shape="rect" id="node6" href="$d4/d85/classcontrollers_1_1Controller.html" title="{controllers::Controller\n|# model_\l# view_\l# moveDir_\l|+ Controller()\l+ ~Controller()\l+ handleMoveInput()\l+ gameInput()\l+ setFlags()\l+ checkRelevant()\l+ markDeleted()\l+ collided()\l+ checkCollision()\l+ draw()\l+ getModel()\l}" alt="" coords="45,157,192,451"/>
 <area shape="rect" id="node8" href="$d0/d3a/classobservers_1_1Observer.html" title="{observers::Observer\n||+ update()\l+ ~Observer()\l}" alt="" coords="49,6,188,109"/>
 </map>

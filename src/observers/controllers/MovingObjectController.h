@@ -19,6 +19,10 @@ public:
 
 	virtual ~MovingObjectController();
 
+	/**
+	 * Changes the speed of the moving object.
+	 * @param multiplier The amount by which the speed needs to be increased/decreased. A value of 2 will double the speed for example.
+	 */
 	virtual void changeSpeed(double);
 };
 
