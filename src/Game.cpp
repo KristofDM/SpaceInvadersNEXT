@@ -166,7 +166,7 @@ void Game::setupEnemies(factories::GameParser game) {
 			}
 				for (auto c : order) {
 					if (c == 'x') {
-						controllerPtr enemyC = factory->getEntity(game.getFileName(), i, space, window_);
+						controllerPtr enemyC = factory->getController(game.getFileName(), i, space, window_);
 						std::shared_ptr<controllers::EnemyShipController> esc = std::dynamic_pointer_cast<controllers::EnemyShipController>(enemyC);
 						row.push_back(esc);
 						entityControllers_.push_back(enemyC);

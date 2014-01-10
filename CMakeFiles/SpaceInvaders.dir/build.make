@@ -31,11 +31,14 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT
+CMAKE_SOURCE_DIR = /home/uauser/git/SpaceInvadersNEXTFINISHED
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT
+CMAKE_BINARY_DIR = /home/uauser/git/SpaceInvadersNEXTFINISHED
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SpaceInvaders.dir/depend.make
@@ -48,17 +51,17 @@ include CMakeFiles/SpaceInvaders.dir/flags.make
 
 CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o: src/SP_INV_NEXT.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/SP_INV_NEXT.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/SP_INV_NEXT.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/SP_INV_NEXT.cpp > CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/SP_INV_NEXT.cpp > CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/SP_INV_NEXT.cpp -o CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/SP_INV_NEXT.cpp -o CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o.requires
@@ -71,17 +74,17 @@ CMakeFiles/SpaceInvaders.dir/src/SP_INV_NEXT.cpp.o.provides.build: CMakeFiles/Sp
 
 CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o: src/factories/BulletFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/BulletFactory.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/BulletFactory.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/BulletFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/BulletFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/BulletFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/BulletFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o.requires
@@ -94,17 +97,17 @@ CMakeFiles/SpaceInvaders.dir/src/factories/BulletFactory.cpp.o.provides.build: C
 
 CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o: src/factories/DataParser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/DataParser.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/DataParser.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/DataParser.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/DataParser.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/DataParser.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/DataParser.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o.requires
@@ -117,17 +120,17 @@ CMakeFiles/SpaceInvaders.dir/src/factories/DataParser.cpp.o.provides.build: CMak
 
 CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o: src/factories/EnemyShipFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/EnemyShipFactory.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/EnemyShipFactory.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/EnemyShipFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/EnemyShipFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/EnemyShipFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/EnemyShipFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o.requires
@@ -140,17 +143,17 @@ CMakeFiles/SpaceInvaders.dir/src/factories/EnemyShipFactory.cpp.o.provides.build
 
 CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.o: src/factories/GameParser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/GameParser.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/GameParser.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/GameParser.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/GameParser.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/GameParser.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/GameParser.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.o.requires
@@ -163,17 +166,17 @@ CMakeFiles/SpaceInvaders.dir/src/factories/GameParser.cpp.o.provides.build: CMak
 
 CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.o: src/factories/HUDFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/HUDFactory.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/HUDFactory.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/HUDFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/HUDFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/HUDFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/HUDFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.o.requires
@@ -186,17 +189,17 @@ CMakeFiles/SpaceInvaders.dir/src/factories/HUDFactory.cpp.o.provides.build: CMak
 
 CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.o: src/factories/ShieldFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/ShieldFactory.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/ShieldFactory.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/ShieldFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/ShieldFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/ShieldFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/ShieldFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.o.requires
@@ -209,17 +212,17 @@ CMakeFiles/SpaceInvaders.dir/src/factories/ShieldFactory.cpp.o.provides.build: C
 
 CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.o: src/factories/SpaceShipFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/SpaceShipFactory.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/SpaceShipFactory.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/SpaceShipFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/SpaceShipFactory.cpp > CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/factories/SpaceShipFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/factories/SpaceShipFactory.cpp -o CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.o.requires
@@ -232,17 +235,17 @@ CMakeFiles/SpaceInvaders.dir/src/factories/SpaceShipFactory.cpp.o.provides.build
 
 CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.o: src/models/Bullet.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Bullet.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Bullet.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Bullet.cpp > CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Bullet.cpp > CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Bullet.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Bullet.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.o.requires
@@ -255,17 +258,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/Bullet.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.o: src/models/EnemyShip.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/EnemyShip.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/EnemyShip.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/EnemyShip.cpp > CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/EnemyShip.cpp > CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/EnemyShip.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/EnemyShip.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.o.requires
@@ -278,17 +281,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/EnemyShip.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.o: src/models/HUD.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/HUD.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/HUD.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/HUD.cpp > CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/HUD.cpp > CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/HUD.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/HUD.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.o.requires
@@ -301,17 +304,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/HUD.cpp.o.provides.build: CMakeFiles/Spa
 
 CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.o: src/models/Model.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Model.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Model.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Model.cpp > CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Model.cpp > CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Model.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Model.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.o.requires
@@ -324,17 +327,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/Model.cpp.o.provides.build: CMakeFiles/S
 
 CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.o: src/models/MovingObject.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/MovingObject.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/MovingObject.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/MovingObject.cpp > CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/MovingObject.cpp > CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/MovingObject.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/MovingObject.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.o.requires
@@ -347,17 +350,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/MovingObject.cpp.o.provides.build: CMake
 
 CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.o: src/models/Shield.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Shield.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Shield.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Shield.cpp > CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Shield.cpp > CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Shield.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Shield.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.o.requires
@@ -370,17 +373,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/Shield.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.o: src/models/Ship.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Ship.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Ship.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Ship.cpp > CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Ship.cpp > CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/Ship.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/Ship.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.o.requires
@@ -393,17 +396,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/Ship.cpp.o.provides.build: CMakeFiles/Sp
 
 CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.o: src/models/SpaceShip.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/SpaceShip.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/SpaceShip.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/SpaceShip.cpp > CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/SpaceShip.cpp > CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/SpaceShip.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/SpaceShip.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.o.requires
@@ -416,17 +419,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/SpaceShip.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.o: src/models/StaticObject.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/StaticObject.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/StaticObject.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/StaticObject.cpp > CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/StaticObject.cpp > CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/models/StaticObject.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/models/StaticObject.cpp -o CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.o.requires
@@ -439,17 +442,17 @@ CMakeFiles/SpaceInvaders.dir/src/models/StaticObject.cpp.o.provides.build: CMake
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.o: src/observers/controllers/BulletController.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/BulletController.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/BulletController.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/BulletController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/BulletController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/BulletController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/BulletController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.o.requires
@@ -462,17 +465,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/controllers/BulletController.cpp.o.pr
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.o: src/observers/controllers/Controller.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/Controller.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/Controller.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/Controller.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/Controller.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/Controller.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/Controller.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.o.requires
@@ -485,17 +488,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/controllers/Controller.cpp.o.provides
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.o: src/observers/controllers/EnemyShipController.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/EnemyShipController.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/EnemyShipController.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/EnemyShipController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/EnemyShipController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/EnemyShipController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/EnemyShipController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.o.requires
@@ -508,17 +511,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/controllers/EnemyShipController.cpp.o
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.o: src/observers/controllers/HUDController.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/HUDController.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/HUDController.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/HUDController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/HUDController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/HUDController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/HUDController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.o.requires
@@ -531,17 +534,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/controllers/HUDController.cpp.o.provi
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.o: src/observers/controllers/MovingObjectController.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/MovingObjectController.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/MovingObjectController.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/MovingObjectController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/MovingObjectController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/MovingObjectController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/MovingObjectController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cpp.o.requires
@@ -554,17 +557,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/controllers/MovingObjectController.cp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.o: src/observers/controllers/ShipController.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/ShipController.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/ShipController.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/ShipController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/ShipController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/ShipController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/ShipController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.o.requires
@@ -577,17 +580,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/controllers/ShipController.cpp.o.prov
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.o: src/observers/controllers/SpaceShipController.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/SpaceShipController.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/SpaceShipController.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/SpaceShipController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/SpaceShipController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/SpaceShipController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/SpaceShipController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.o.requires
@@ -600,17 +603,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/controllers/SpaceShipController.cpp.o
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.o: src/observers/controllers/StaticController.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/StaticController.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/StaticController.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/StaticController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/StaticController.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/controllers/StaticController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/controllers/StaticController.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.o.requires
@@ -623,17 +626,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/controllers/StaticController.cpp.o.pr
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.o: src/observers/views/BulletView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/BulletView.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/BulletView.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/BulletView.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/BulletView.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/BulletView.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/BulletView.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.o.requires
@@ -646,17 +649,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/views/BulletView.cpp.o.provides.build
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.o: src/observers/views/HUDView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/HUDView.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/HUDView.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/HUDView.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/HUDView.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/HUDView.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/HUDView.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.o.requires
@@ -669,17 +672,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/views/HUDView.cpp.o.provides.build: C
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.o: src/observers/views/ModelView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/ModelView.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/ModelView.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/ModelView.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/ModelView.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/ModelView.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/ModelView.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.o.requires
@@ -692,17 +695,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/views/ModelView.cpp.o.provides.build:
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.o: src/observers/views/SpaceShipView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/SpaceShipView.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/SpaceShipView.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/SpaceShipView.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/SpaceShipView.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/views/SpaceShipView.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/views/SpaceShipView.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.o.requires
@@ -715,17 +718,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/views/SpaceShipView.cpp.o.provides.bu
 
 CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.o: src/observers/Observer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/Observer.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/Observer.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/Observer.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/Observer.cpp > CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/observers/Observer.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/observers/Observer.cpp -o CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.o.requires
@@ -738,17 +741,17 @@ CMakeFiles/SpaceInvaders.dir/src/observers/Observer.cpp.o.provides.build: CMakeF
 
 CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o: src/Exception.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/Exception.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/Exception.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/Exception.cpp > CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/Exception.cpp > CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/Exception.cpp -o CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/Exception.cpp -o CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o.requires
@@ -761,17 +764,17 @@ CMakeFiles/SpaceInvaders.dir/src/Exception.cpp.o.provides.build: CMakeFiles/Spac
 
 CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o: src/Game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/Game.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/Game.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/Game.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/Game.cpp > CMakeFiles/SpaceInvaders.dir/src/Game.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/Game.cpp > CMakeFiles/SpaceInvaders.dir/src/Game.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/Game.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/Game.cpp -o CMakeFiles/SpaceInvaders.dir/src/Game.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/Game.cpp -o CMakeFiles/SpaceInvaders.dir/src/Game.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o.requires
@@ -784,17 +787,17 @@ CMakeFiles/SpaceInvaders.dir/src/Game.cpp.o.provides.build: CMakeFiles/SpaceInva
 
 CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o: src/GameController.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/GameController.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/GameController.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/GameController.cpp > CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/GameController.cpp > CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/GameController.cpp -o CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/GameController.cpp -o CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o.requires
@@ -807,17 +810,17 @@ CMakeFiles/SpaceInvaders.dir/src/GameController.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o: src/GameView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/GameView.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/GameView.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/GameView.cpp > CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/GameView.cpp > CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/GameView.cpp -o CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/GameView.cpp -o CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o.requires
@@ -830,17 +833,17 @@ CMakeFiles/SpaceInvaders.dir/src/GameView.cpp.o.provides.build: CMakeFiles/Space
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o: src/tinyXML/tinystr.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinystr.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinystr.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinystr.cpp > CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinystr.cpp > CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinystr.cpp -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinystr.cpp -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o.requires
@@ -853,17 +856,17 @@ CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinystr.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o: src/tinyXML/tinyxml.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxml.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxml.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxml.cpp > CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxml.cpp > CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxml.cpp -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxml.cpp -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o.requires
@@ -876,17 +879,17 @@ CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxml.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o: src/tinyXML/tinyxmlerror.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxmlerror.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxmlerror.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxmlerror.cpp > CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxmlerror.cpp > CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxmlerror.cpp -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxmlerror.cpp -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o.requires
@@ -899,17 +902,17 @@ CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlerror.cpp.o.provides.build: CMak
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.o: CMakeFiles/SpaceInvaders.dir/flags.make
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.o: src/tinyXML/tinyxmlparser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.o -c /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxmlparser.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.o -c /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxmlparser.cpp
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxmlparser.cpp > CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxmlparser.cpp > CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.i
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/src/tinyXML/tinyxmlparser.cpp -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/git/SpaceInvadersNEXTFINISHED/src/tinyXML/tinyxmlparser.cpp -o CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.s
 
 CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.o.requires:
 .PHONY : CMakeFiles/SpaceInvaders.dir/src/tinyXML/tinyxmlparser.cpp.o.requires
@@ -1059,6 +1062,6 @@ CMakeFiles/SpaceInvaders.dir/clean:
 .PHONY : CMakeFiles/SpaceInvaders.dir/clean
 
 CMakeFiles/SpaceInvaders.dir/depend:
-	cd /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT /home/kristof/Dropbox/2BA_INF/Uni/GP2/SP_INV_NEXT/CMakeFiles/SpaceInvaders.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uauser/git/SpaceInvadersNEXTFINISHED && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uauser/git/SpaceInvadersNEXTFINISHED /home/uauser/git/SpaceInvadersNEXTFINISHED /home/uauser/git/SpaceInvadersNEXTFINISHED /home/uauser/git/SpaceInvadersNEXTFINISHED /home/uauser/git/SpaceInvadersNEXTFINISHED/CMakeFiles/SpaceInvaders.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SpaceInvaders.dir/depend
 
