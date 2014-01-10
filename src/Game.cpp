@@ -46,7 +46,6 @@ void Game::setUp() {
 }
 
 void Game::cycle() {
-	HUD_->draw();
 	if (!this->endGame()) {
 		for (auto c : entityControllers_) {
 			// Gameinput will mainly take care of the shooting and moving of the entities.
@@ -126,10 +125,6 @@ void Game::cycle() {
 			this->nextLevel();
 		}
 	}
-	else {
-		// Prompt for user input on what to do next. Restart or quit?
-		HUD_->drawEnd();
-	}
 }
 
 void Game::determineShooters() {
@@ -150,6 +145,11 @@ void Game::determineShooters() {
 }
 
 void Game::render() {
+	window_.draw(bgSprite_);
+	HUD_->draw();
+	if (this->endGame()) {
+		HUD_->drawEnd();
+	}
 	for (auto controller : entityControllers_) {
 		controller->draw();
 	}
@@ -171,7 +171,7 @@ void Game::setupEnemies(factories::GameParser game) {
 
 			std::vector<std::shared_ptr<controllers::EnemyShipController> > row;
 			if (order.size() != amount) {
-				throw Exception("Every row order should have the same amount of characters as the maxSize of all the enemy rows.");
+				throw Exception("Every row order should have the same amount of characters as the maxSize of all the enemy rows.", 1);
 			}
 				for (auto c : order) {
 					if (c == 'x') {
@@ -186,7 +186,7 @@ void Game::setupEnemies(factories::GameParser game) {
 						space += space_amount;
 					}
 					else {
-						throw Exception("Invalid symbol in a row order. You can only use spaces and x'es for the order.");
+						throw Exception("Invalid symbol in a row order. You can only use spaces and x'es for the order.", 1);
 					}
 				}
 			space = 0;

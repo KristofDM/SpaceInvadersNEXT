@@ -17,10 +17,11 @@ int main(int argc, char* argv[]) {
 
     if (argc == 1) {
     	std::cout << "No game XML file specified: the standard game will launch." << std::endl;
+    	std::cout << "If you wish to run your own xml file use the following command: './SpaceInvaders gameXML-file'" << std::endl;
     	gameFile = "Data/game1.xml";
     }
     else if (argc == 2) {
-    	gameFile = argv[2];
+    	gameFile = argv[1];
     }
     else {
     	std::cout << "Invalid amount of parameters: either use 0 or 1 parameter (the game xml file)" << std::endl;
@@ -43,7 +44,7 @@ int main(int argc, char* argv[]) {
 				case sf::Event::KeyPressed:
 					if (event.key.code == sf::Keyboard::Y && gameController.endGame()) {
 						// RESET GAME
-						gameController = game::GameController(800, 600, window);
+						gameController = game::GameController(800, 600, window, gameFile);
 						gameController.setUp();
 					}
 					else if (event.key.code == sf::Keyboard::N && gameController.endGame()) {
@@ -57,7 +58,6 @@ int main(int argc, char* argv[]) {
         	}
         }
         window.clear();
-        window.draw(sprite_);
     	gameController.cycle();
     	gameController.endGame();
     	gameController.render();
