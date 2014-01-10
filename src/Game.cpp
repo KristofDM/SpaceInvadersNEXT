@@ -9,13 +9,14 @@
 
 namespace game {
 
-Game::Game(unsigned int width, unsigned int height, sf::RenderWindow& window)
+Game::Game(unsigned int width, unsigned int height, sf::RenderWindow& window, std::string gFile)
 	: width_(width),
 	  height_(height),
 	  window_(window),
 	  gameOver_(false),
 	  levelMultiplier_(1),
-	  level_(1)
+	  level_(1),
+	  gameFile_(gFile)
 {}
 
 Game::~Game() {
@@ -27,7 +28,15 @@ void Game::setUp() {
 	 * Parse the main game file.
 	 */
 	factories::GameParser gameP;
-	gameP.parseGame("Data/game1.xml");
+	gameP.parseGame(gameFile_);
+
+		// Load texture/sprite
+	if(!bgTex_.loadFromFile("Graphics/space-1.png")) {
+		std::cout << "Background image failed to load: continueing with black background." << std::endl;
+	}
+	else {
+		bgSprite_.setTexture(bgTex_);
+	}
 
 	levelMultiplier_ = gameP.getSpeedMult();
 

@@ -9,23 +9,23 @@
 
 #include "GameController.h"
 
-int main() {
-
+int main(int argc, char* argv[]) {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Space Invaders NEXT");
     window.setFramerateLimit(60);
-    sf::Texture texture_;
-    sf::Sprite sprite_;
 
-    try{
-    		// Load texture/sprite
-    		if(!texture_.loadFromFile("Graphics/space-1.png")) {
-    			throw Exception("Could not load sprite on location Graphics/space-1");
-    		}
-    		sprite_.setTexture(texture_);
-    	}
-	catch (Exception& e) {
-		std::cout << e.what() << std::endl;
-	}
+    std::string gameFile = "";
+
+    if (argc == 1) {
+    	std::cout << "No game XML file specified: the standard game will launch." << std::endl;
+    	gameFile = "Data/game1.xml";
+    }
+    else if (argc == 2) {
+    	gameFile = argv[2];
+    }
+    else {
+    	std::cout << "Invalid amount of parameters: either use 0 or 1 parameter (the game xml file)" << std::endl;
+    	exit(1);
+    }
 
     game::GameController gameController(800, 600, window);
     gameController.setUp();

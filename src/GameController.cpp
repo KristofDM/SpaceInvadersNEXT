@@ -9,8 +9,8 @@
 
 namespace game {
 
-GameController::GameController(int width, int height, sf::RenderWindow& window)
-	: game_(width, height, window),
+GameController::GameController(int width, int height, sf::RenderWindow& window, std::string gFile)
+	: game_(width, height, window, gFile),
 	  gameView_(std::make_shared<game::Game>(game_))
 {
 }

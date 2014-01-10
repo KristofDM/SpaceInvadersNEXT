@@ -29,7 +29,7 @@ namespace game {
 class Game {
 public:
 	//! Constructor. Constructs its data members with init values.
-	Game(unsigned int, unsigned int, sf::RenderWindow&);
+	Game(unsigned int, unsigned int, sf::RenderWindow&, std::string);
 
 	virtual ~Game();
 
@@ -59,6 +59,8 @@ private:
 	//! Field height. (== window_ height)
 	unsigned int height_;
 
+	sf::Texture bgTex_;
+	sf::Sprite bgSprite_;
 	sf::RenderWindow& window_;
 
 	//! True if the game is over.

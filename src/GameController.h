@@ -16,7 +16,7 @@ namespace game {
 class GameController {
 public:
 	//! Standard constructor. Will construct the Game model.
-	GameController(int, int, sf::RenderWindow&);
+	GameController(int, int, sf::RenderWindow&, gFile);
 	virtual ~GameController();
 
 	//! Command the Game model to perform one game cycle.
