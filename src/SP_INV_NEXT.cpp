@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
     	exit(1);
     }
 
-    game::GameController gameController(800, 600, window);
+    game::GameController gameController(800, 600, window, gameFile);
     gameController.setUp();
 
     while (window.isOpen()) {

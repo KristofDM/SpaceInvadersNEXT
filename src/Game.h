@@ -71,6 +71,8 @@ private:
 
 	int level_;
 
+	std::string gameFile_;
+
 	//! The controller to the spaceShip the player has control over.
 	std::shared_ptr<controllers::SpaceShipController> spaceShipController_;
 

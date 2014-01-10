@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <game>
+	<background file="Graphics/space-1.png" />
 	<spaceShip file="Data/SpaceShip.xml" />
 	<enemies maxSize="7" speed="1">
 		<row order="xxxxxxx" space="100" moveAmount="100" file="Data/enemyShip.xml"/>

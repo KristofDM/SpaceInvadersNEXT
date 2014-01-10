@@ -10,7 +10,12 @@
 namespace factories {
 
 GameParser::GameParser()
-	: file_("")
+	: file_(""),
+	  spaceShipXML_(),
+	  shieldInfo_(),
+	  enemyInfo_(),
+	  speedMultiplier_(0),
+	  bgFile_("none")
 {}
 
 GameParser::~GameParser() {
@@ -41,6 +46,10 @@ void GameParser::parseGame(std::string dataFile) {
 		if (oPart == "spaceShip") {
 			// Parse spaceship info
 			spaceShipXML_ = o->Attribute("file");
+		}
+		else if (oPart == "background") {
+			// parse background info.
+			bgFile_ = o->Attribute("file");
 		}
 		else if (oPart == "enemies") {
 			// Parse enemies
@@ -101,5 +110,10 @@ double GameParser::getSpeedMult() const{
 std::string GameParser::getFileName() const {
 	return file_;
 }
+
+std::string GameParser::getBGFile() const {
+	return bgFile_;
+}
+
 
 } /* namespace factories */

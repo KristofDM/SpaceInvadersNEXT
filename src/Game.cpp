@@ -31,8 +31,8 @@ void Game::setUp() {
 	gameP.parseGame(gameFile_);
 
 		// Load texture/sprite
-	if(!bgTex_.loadFromFile("Graphics/space-1.png")) {
-		std::cout << "Background image failed to load: continueing with black background." << std::endl;
+	if(!bgTex_.loadFromFile(gameP.getBGFile())) {
+		std::cout << "Background image failed to load: continuing with black background." << std::endl;
 	}
 	else {
 		bgSprite_.setTexture(bgTex_);

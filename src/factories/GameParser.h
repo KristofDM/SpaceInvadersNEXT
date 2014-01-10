@@ -33,7 +33,7 @@ public:
 	std::vector<infoTuple> getEnemyInfo() const;
 	double getSpeedMult() const;
 	std::string getFileName() const;
-
+	std::string getBGFile() const;
 private:
 	std::string file_;
 
@@ -44,6 +44,8 @@ private:
 	std::vector<infoTuple> enemyInfo_;
 
 	double speedMultiplier_;
+
+	std::string bgFile_;
 
 	void parseRow(TiXmlElement*, int, double);
 
