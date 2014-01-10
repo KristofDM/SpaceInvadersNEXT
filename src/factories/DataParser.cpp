@@ -56,7 +56,7 @@ void DataParser::parseObject(std::string dataFile) {
 					type_ = enemyship;
 				}
 				else {
-					throw(Exception(typeName + " is an unknown type of object."));
+					throw(Exception(typeName + " is an unknown type of object.", 1));
 				}
 			}
 			else if (oPart == "model") {
@@ -93,7 +93,7 @@ void DataParser::parseView(TiXmlElement* p) {
 			if(fieldName == "sprite") {
 				 TiXmlText* text = var->FirstChild()->ToText();
 				 if (text == NULL) {
-					 throw Exception("No sprite specified for object.");
+					 throw Exception("No sprite specified for object.", 1);
 				 }
 				 std::string name = text->Value();
 				 std::string location = "Graphics/" + name;
@@ -108,7 +108,7 @@ void DataParser::parseView(TiXmlElement* p) {
 				 scale_ = std::stod(value);
 			}
 			else {
-				throw Exception("Unknown fieldname: " + fieldName);
+				throw Exception("Unknown fieldname: " + fieldName, 1);
 			}
 		}
 	}

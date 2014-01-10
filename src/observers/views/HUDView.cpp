@@ -68,7 +68,6 @@ void HUDView::draw() {
 }
 
 void HUDView::drawEnd() {
-	std::cout << "yes yes yes" << std::endl;
 	endMsg_.setPosition(25, 50);
 	endMsg_.setFont(font_);
 	endMsg_.setColor(sf::Color(100, 100, 100));

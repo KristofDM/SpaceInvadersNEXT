@@ -32,7 +32,7 @@ void Model::setUp(factories::DataParser data, int space) {
 	try{
 		// Load texture/sprite
 		if(!texture_.loadFromFile(data.getSpritePath())) {
-			throw Exception("Could not load sprite on location " + data.getSpritePath());
+			throw Exception("Could not load sprite on location " + data.getSpritePath(), 1);
 		}
 		sprite_.setTexture(texture_);
 		sf::Vector2f position = data.getPos();

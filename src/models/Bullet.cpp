@@ -27,7 +27,7 @@ void Bullet::setUp(factories::DataParser data, int space) {
 
 		// Load texture/sprite
 		if(!texture_.loadFromFile(data.getSpritePath())) {
-			throw Exception("Could not load sprite on location " + data.getSpritePath());
+			throw Exception("Could not load sprite on location " + data.getSpritePath(), 1);
 		}
 		sprite_.setTexture(texture_);
 		sprite_.setPosition(initPosition_);

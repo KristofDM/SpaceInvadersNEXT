@@ -32,7 +32,7 @@ void GameParser::parseGame(std::string dataFile) {
 			std::cout << doc.ErrorDesc() << std::endl;
 			std::string errorMessage = doc.ErrorDesc();
 			errorMessage += " " + dataFile;
-			throw(Exception(errorMessage));
+			throw(Exception(errorMessage, 1));
 		}
 
 		TiXmlElement* object = doc.FirstChildElement();
@@ -64,7 +64,7 @@ void GameParser::parseGame(std::string dataFile) {
 			speedMultiplier_ = std::stod(o->Attribute("multiplier"));
 		}
 		else {
-			throw(Exception(oPart + " is not supported by the game parser."));
+			throw(Exception(oPart + " is not supported by the game parser.", 1));
 		}
 		}
 	}
@@ -82,7 +82,7 @@ void GameParser::parseRow(TiXmlElement* p, int amount, double speed) {
 				enemyInfo_.push_back(entry);
 			}
 			else {
-				throw(Exception(fieldName + " is not a valid enemy row."));
+				throw(Exception(fieldName + " is not a valid enemy row.", 1));
 			}
 		}
 	}
