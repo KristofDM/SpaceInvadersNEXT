@@ -96,7 +96,8 @@ bool EnemyShip::collided(std::shared_ptr<Model> other) {
 bool EnemyShip::shoot() {
 	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 	std::default_random_engine generator(seed);
-	std::uniform_int_distribution<int> distribution(0,499);
+	double test = 10000 * (1.0/double(fireRate_));
+	std::uniform_int_distribution<int> distribution(0, test);
     int number = distribution(generator);
 
 	if (shooting_ && number == 0) {
