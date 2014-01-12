@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.24)  28 DEC 2013 15:18
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.24)  12 JAN 2014 23:58
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -179,33 +179,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
-
-Overfull \hbox (6.123pt too wide) in paragraph at lines 15--16
-[]\OT1/cmr/m/n/10.95 Some ad-di-tional in-for-ma-tion about doc-u-men-ta-tion a
-nd the use of CMAKE
- []
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 20.
-[1
+(Font)              <10.95> on input line 29.
+ [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 54.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 63.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
- [2] [3] (./report.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
+ [3] [4] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3535 strings out of 495061
- 52512 string characters out of 1182620
+ 3541 strings out of 495061
+ 52548 string characters out of 1182620
  115965 words of memory out of 3000000
  6685 multiletter control sequences out of 15000+50000
  8979 words of font info for 32 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,6n,36p,288b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,36p,288b,345s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.p
 fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
@@ -213,9 +207,9 @@ re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-tex
 live/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public
 /amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (3 pages, 107165 bytes).
+Output written on report.pdf (4 pages, 109884 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

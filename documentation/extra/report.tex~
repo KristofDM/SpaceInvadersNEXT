@@ -12,17 +12,6 @@ As an exercise in the correct use of certain design patterns we had to make game
 In the following sections I'll explain and motivate my design. In particular my choice for a data driven system together with the use of the
 abstract factory and MVC/Observer pattern.
 
-\section{Usage}
-\begin{enumerate}
-\item Navigate to the build folder: cd build
-\item Use the command: cmake ..
-\item Use the command: make install
-\item Navigate to the bin folder: cd ../bin
-\item Run the program with optional parameter: ./Space\\ Invaders game-XML-FILE
-\end{enumerate}
-
-The optional parameter is an xml file that describes a game. Such as Data/game1.xml and Data/game2.xml.
-
 \section{Implementation}
 \subsection{Data driven system}
 Instead of immediately starting to program I chose to take the time to think about what I wanted to achieve with my version of space invaders.
@@ -31,10 +20,10 @@ I read the articles provided in the assignment and found the "The Guerrilla Guid
 I hadn't thought of the idea of a data driven system before. It opened up entire new possibilities that I thought were very nice.
 By using data instead of code to determine the properties of models the flexibility of my program increased enormously.
 I was able to build entirely different Space Invader games and gameplay experiences without touching my code.
-New types of enemy ships, playerships and bullets etc were easily made without recompiling or anything.
+New types of enemy ships, playerships and bullets etcetera were easily made without recompiling or anything.
 Different ship formations, increased level difficulty,... all modifiable by creating new files/editing files.
 
-This gives the developer (and players!) an easy way to create new levels and experiences.
+This gives the developer an easy way to create new levels and experiences, let alone the possibility of user generated games!
 \subsubsection{Concrete}
 To achieve this I used XML files in a certain hierarchical way and parsed them using the TinyXML library.
 
@@ -71,13 +60,6 @@ In my particular implementation controllers are driven by the user as well as th
 The most important class in my program is the Game class. It basically controls the game and holds information about the game such as the level etc.
 Important about this is that it contains no models or modelviews, it solely contains controllers as these should be the only way we can interact with our models and views.
 
-One thing I would like to add is that my implementation isn't 100\% 'clean'. I decided to add the sprites (and the mandatory textures) in the Model instead of the View class.
-The reason I chose for this is because editing the sprite's information was way more handy (and there were some very handy methods in sf::Sprite). if I would have put it in my View class I should've either:
-a) Made my View class accessible to my Models or b) keep information about the Model in a seperate format and change the sprite's info every time a change happens in our Model. (This is pretty much already implemented
-with the Observer pattern, it's used for other changes.)
-
-In hindsight it might have been better to do it as said in b). This way I could've made SFMLViews and for example OpenGLViews without messing with my Models. 
-
 \subsubsection{Observer}
 Both my controller and ModelView classes are derived from the Observer class.
 All models have a registry of Observers. Concretely, they have a vector of Observer pointers.
@@ -89,7 +71,7 @@ The Game class is the main class in the game. It holds information about the gam
 It holds a vector with smart pointers to all of our model controllers as well as a matrix of additional smart pointers to our enemy ships. The matrix is just used to easily determine what enemy ships are allowed to shoot.
 (Which should only be the bottom ones of each column.)
 
-Its cycle() method performs one game cycle. This means that it will take care of the shooting/moving of all the modelControllers, checks for collision detection (and lets the models react when they collide with eachother),
+Its cycle() method performs one game cycle. This means that it will take care of the shooting/moving of all the entityControllers, checks for collision detection (and lets the models react when they collide with eachother),
 check if the game has ended or a new level needs to be started, delete irrelevant models that are either out of our gamefield or dead.
 
 \section{Documentation}
