@@ -7,7 +7,7 @@
 	</model>
 	
 	<view>
-		<sprite>shield.png</sprite>
+		<sprite>../Graphics/shield.png</sprite>
 	</view>
 	
 	<controller>

@@ -9,7 +9,7 @@
 	</model>
 	
 	<view>
-		<sprite>spaceship1.png</sprite>
+		<sprite>../Graphics/spaceship1.png</sprite>
 		<scale>0.5</scale>
 	</view>
 	

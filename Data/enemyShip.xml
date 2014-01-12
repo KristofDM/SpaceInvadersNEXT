@@ -9,7 +9,7 @@
 	</model>
 	
 	<view>
-		<sprite>enemy1.png</sprite>
+		<sprite>../Graphics/enemy1.png</sprite>
 	</view>
 	
 	<controller>

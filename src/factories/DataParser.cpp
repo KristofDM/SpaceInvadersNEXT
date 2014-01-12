@@ -96,7 +96,7 @@ void DataParser::parseView(TiXmlElement* p) {
 					 throw Exception("No sprite specified for object.", 1);
 				 }
 				 std::string name = text->Value();
-				 std::string location = "Graphics/" + name;
+				 std::string location = name;
 				 sprite_ = location;
 			}
 			else if (fieldName == "scale") {

@@ -221,7 +221,7 @@ void Game::nextLevel() {
 
 	enemies_.clear();
 	factories::GameParser gameP;
-	gameP.parseGame("Data/game1.xml");
+	gameP.parseGame(gameFile_);
 	this->setupEnemies(gameP);
 
 	// Increase enemy speed.

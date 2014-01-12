@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
     if (argc == 1) {
     	std::cout << "No game XML file specified: the standard game will launch." << std::endl;
     	std::cout << "If you wish to run your own xml file use the following command: './SpaceInvaders gameXML-file'" << std::endl;
-    	gameFile = "Data/game1.xml";
+    	gameFile = "../Data/game1.xml";
     }
     else if (argc == 2) {
     	gameFile = argv[1];

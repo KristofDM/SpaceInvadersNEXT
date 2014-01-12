@@ -20,7 +20,7 @@ HUDFactory::~HUDFactory() {
 
 controllerPtr HUDFactory::getController(std::string file, modelPtr spaceShip, sf::RenderWindow& window) {
     sf::Font font;
-    if (!font.loadFromFile("Graphics/SPACEMAN.TTF"))
+    if (!font.loadFromFile("../Graphics/SPACEMAN.TTF"))
     {
     	std::cerr << "font didn't get loaded." << std::endl;
     }
