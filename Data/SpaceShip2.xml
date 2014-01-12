@@ -3,9 +3,9 @@
 	<type>ship</type>
 	<model>
 		<position x="400" y="550"/>
-		<lives>5</lives>
-		<fireRate>300</fireRate> <!-- expressed in rounds per minute-->
-		<speed>6</speed>
+		<lives>500</lives>
+		<fireRate>240</fireRate> <!-- expressed in rounds per minute-->
+		<speed>3</speed>
 	</model>
 	
 	<view>

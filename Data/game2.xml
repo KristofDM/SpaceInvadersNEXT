@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<game>
+	<background file="../Graphics/space_bg.jpg" />
+	<spaceShip file="../Data/SpaceShip.xml" />
+	<enemies maxSize="7" speed="1">
+		<row order="xxxxxxx" space="100" moveAmount="100" file="../Data/es1.xml"/>
+		<row order=" xxxxx " space="100" moveAmount="100" file="../Data/es2.xml"/>
+		<row order="  xxx  " space="100" moveAmount="100" file="../Data/es3.xml"/>
+		<row order="   x   " space="100" moveAmount="100" file="../Data/es4.xml"/>
+	</enemies>
+	<shield amount="3" space="200" file="../Data/shield1.xml"/>
+	<level multiplier="1.5" />
+</game>

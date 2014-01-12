@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<object>
+	<type>enemyship</type>
+	<model>
+		<position x="100" y="250"/>
+		<lives>1</lives>
+		<fireRate>60</fireRate> <!-- expressed in rounds per minute-->
+		<points>20</points>
+	</model>
+	
+	<view>
+		<sprite>../Graphics/ship3.png</sprite>
+	</view>
+	
+	<controller>
+		<move direction="x"/>
+	</controller>
+</object>
