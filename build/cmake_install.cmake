@@ -1,4 +1,4 @@
-# Install script for directory: /home/uauser/git/SpaceInvadersNEXTFINISHED
+# Install script for directory: /home/kristof/git/SpaceInvadersNEXT
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,19 +33,19 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  IF(EXISTS "$ENV{DESTDIR}/home/uauser/git/SpaceInvadersNEXTFINISHED/SpaceInvaders" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/uauser/git/SpaceInvadersNEXTFINISHED/SpaceInvaders")
+  IF(EXISTS "$ENV{DESTDIR}/home/kristof/git/SpaceInvadersNEXT/bin/SpaceInvaders" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/kristof/git/SpaceInvadersNEXT/bin/SpaceInvaders")
     FILE(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/uauser/git/SpaceInvadersNEXTFINISHED/SpaceInvaders"
+         FILE "$ENV{DESTDIR}/home/kristof/git/SpaceInvadersNEXT/bin/SpaceInvaders"
          RPATH "")
   ENDIF()
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/uauser/git/SpaceInvadersNEXTFINISHED/SpaceInvaders")
-FILE(INSTALL DESTINATION "/home/uauser/git/SpaceInvadersNEXTFINISHED" TYPE EXECUTABLE FILES "/home/uauser/git/SpaceInvadersNEXTFINISHED/SpaceInvaders")
-  IF(EXISTS "$ENV{DESTDIR}/home/uauser/git/SpaceInvadersNEXTFINISHED/SpaceInvaders" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/uauser/git/SpaceInvadersNEXTFINISHED/SpaceInvaders")
+   "/home/kristof/git/SpaceInvadersNEXT/bin/SpaceInvaders")
+FILE(INSTALL DESTINATION "/home/kristof/git/SpaceInvadersNEXT/bin" TYPE EXECUTABLE FILES "/home/kristof/git/SpaceInvadersNEXT/build/SpaceInvaders")
+  IF(EXISTS "$ENV{DESTDIR}/home/kristof/git/SpaceInvadersNEXT/bin/SpaceInvaders" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/kristof/git/SpaceInvadersNEXT/bin/SpaceInvaders")
     IF(CMAKE_INSTALL_DO_STRIP)
-      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/uauser/git/SpaceInvadersNEXTFINISHED/SpaceInvaders")
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/kristof/git/SpaceInvadersNEXT/bin/SpaceInvaders")
     ENDIF(CMAKE_INSTALL_DO_STRIP)
   ENDIF()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -56,7 +56,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/uauser/git/SpaceInvadersNEXTFINISHED/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/kristof/git/SpaceInvadersNEXT/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/uauser/git/SpaceInvadersNEXTFINISHED/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/kristof/git/SpaceInvadersNEXT/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

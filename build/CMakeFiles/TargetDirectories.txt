@@ -1,0 +1,1 @@
+/home/kristof/git/SpaceInvadersNEXT/build/CMakeFiles/SpaceInvaders.dir

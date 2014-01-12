@@ -15,7 +15,8 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # Last modified: 27 November 2013
-# By: Stijn Wouters & Kristof De Middelaer
+# By: Stijn Wouters
+# Edited by: Kristof De Middelaer
 cmake_minimum_required(VERSION 2.6)
 project("SPACE INVADERS")
 
@@ -67,7 +68,7 @@ set(SRC
 set(CMAKE_CXX_FLAGS "-pedantic -Wall -std=c++11")
 
 # Set the CMake Modules library module path
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/build/CMakeFiles")
 
 # Detect and add SFML
 find_package(SFML 2 REQUIRED COMPONENTS graphics window system)
@@ -80,4 +81,4 @@ add_executable(SpaceInvaders src/SP_INV_NEXT.cpp ${SRC})
 target_link_libraries(SpaceInvaders ${SFML_LIBRARIES})
 
 # Install all executables into the bin directory.
-install(TARGETS SpaceInvaders DESTINATION ${PROJECT_SOURCE_DIR}/)
+install(TARGETS SpaceInvaders DESTINATION ${PROJECT_SOURCE_DIR}/bin)
